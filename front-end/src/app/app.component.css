@@ -8,4 +8,6 @@
 
 .question-formfield {
     display: block;
+    width: 50%;
+    padding: 15px;
 }
