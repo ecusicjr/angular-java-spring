@@ -31,7 +31,14 @@ export class AppComponent implements OnInit {
   }
 
   submitForm() {
-    console.log(this.myForm.value);
+    const formValue = this.myForm.value;
+    if (formValue.question != "" && formValue.answer != ""){
+      this.api.postQuestion(formValue.question)
+        .subscribe(data => {
+          const questionID = data["id"];
+          this.api.postAnswer(questionID, formValue.answer);
+        });
+    }
   }
 
   getQuestions() {

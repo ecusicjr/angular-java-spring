@@ -48,6 +48,16 @@ class ApiService {
     getAnswers(questionID) {
         return this.http.get(`/questions/${questionID}/answers`);
     }
+    postQuestion(question) {
+        return this.http.post('/questions', {
+            title: question,
+        });
+    }
+    postAnswer(questionID, answer) {
+        return this.http.post(`/questions/${questionID}/answers`, {
+            text: answer,
+        });
+    }
 }
 ApiService.ɵfac = function ApiService_Factory(t) { return new (t || ApiService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
 ApiService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: ApiService, factory: ApiService.ɵfac, providedIn: 'root' });
@@ -152,7 +162,14 @@ class AppComponent {
         });
     }
     submitForm() {
-        console.log(this.myForm.value);
+        const formValue = this.myForm.value;
+        if (formValue.question != "" && formValue.answer != "") {
+            this.api.postQuestion(formValue.question)
+                .subscribe(data => {
+                const questionID = data["id"];
+                this.api.postAnswer(questionID, formValue.answer);
+            });
+        }
     }
     getQuestions() {
         this.api.getQuestions()

@@ -13,6 +13,18 @@ export class ApiService {
   }
 
   getAnswers(questionID) {
-    return this.http.get(`/questions/${questionID}/answers`)
+    return this.http.get(`/questions/${questionID}/answers`);
+  }
+
+  postQuestion(question){
+    return this.http.post('/questions', {
+      title: question,
+    });
+  }
+
+  postAnswer(questionID, answer){
+    return this.http.post(`/questions/${questionID}/answers`, {
+      text: answer,
+    });
   }
 }

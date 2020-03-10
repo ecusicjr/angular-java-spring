@@ -86,6 +86,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function getAnswers(questionID) {
           return this.http.get("/questions/".concat(questionID, "/answers"));
         }
+      }, {
+        key: "postQuestion",
+        value: function postQuestion(question) {
+          return this.http.post('/questions', {
+            title: question
+          });
+        }
+      }, {
+        key: "postAnswer",
+        value: function postAnswer(questionID, answer) {
+          return this.http.post("/questions/".concat(questionID, "/answers"), {
+            text: answer
+          });
+        }
       }]);
 
       return ApiService;
@@ -305,28 +319,38 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "submitForm",
         value: function submitForm() {
-          console.log(this.myForm.value);
+          var _this2 = this;
+
+          var formValue = this.myForm.value;
+
+          if (formValue.question != "" && formValue.answer != "") {
+            this.api.postQuestion(formValue.question).subscribe(function (data) {
+              var questionID = data["id"];
+
+              _this2.api.postAnswer(questionID, formValue.answer);
+            });
+          }
         }
       }, {
         key: "getQuestions",
         value: function getQuestions() {
-          var _this2 = this;
+          var _this3 = this;
 
           this.api.getQuestions().subscribe(function (data) {
-            _this2.questions = data['content'];
+            _this3.questions = data['content'];
 
-            _this2.getAnswers();
+            _this3.getAnswers();
           });
         }
       }, {
         key: "getAnswers",
         value: function getAnswers() {
-          var _this3 = this;
+          var _this4 = this;
 
           this.questions = this.questions.map(function (question) {
             var answers = [];
 
-            _this3.api.getAnswers(question.id).subscribe(function (data) {
+            _this4.api.getAnswers(question.id).subscribe(function (data) {
               var _iteratorNormalCompletion = true;
               var _didIteratorError = false;
               var _iteratorError = undefined;
