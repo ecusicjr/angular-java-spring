@@ -3,14 +3,14 @@
 </mat-toolbar>
 <form [formGroup]="myForm" (ngSubmit)="submitForm()" novalidate>
 
-  <mat-form-field>
+  <mat-form-field [className]="'question-formfield'">
     <input matInput placeholder="Question" formControlName="question">
     <mat-error *ngIf="errorHandling('question', 'required')">
       You must provide a <strong>question</strong>.
     </mat-error>
   </mat-form-field>
 
-  <mat-form-field>
+  <mat-form-field [className]="'question-formfield'">
     <input matInput placeholder="Answer" formControlName="answer">
     <mat-error *ngIf="errorHandling('answer', 'required')">
       You must provide an <strong>answer</strong>.

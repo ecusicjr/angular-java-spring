@@ -35,11 +35,11 @@ export class AppComponent implements OnInit {
     if (formValue.question != "" && formValue.answer != ""){
       this.api.postQuestion(formValue.question)
         .subscribe(data => {
-          console.log(data);
           const questionID = data["id"];
           this.api.postAnswer(questionID, formValue.answer)
             .subscribe(data => {
-              console.log(data);
+              this.myForm.reset();
+              this.getQuestions();
             });
         });
     }

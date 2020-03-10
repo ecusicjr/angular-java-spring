@@ -5,3 +5,7 @@
 .question li {
     list-style-type: none;
 }
+
+.question-formfield {
+    display: block;
+}
