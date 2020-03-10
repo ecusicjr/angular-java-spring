@@ -262,7 +262,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "ul");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, AppComponent_div_13_li_3_Template, 2, 1, "li", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, AppComponent_div_13_li_3_Template, 2, 1, "li", 7);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -399,8 +399,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       type: AppComponent,
       selectors: [["app-root"]],
       decls: 14,
-      vars: 7,
-      consts: [["novalidate", "", 3, "formGroup", "ngSubmit"], [3, "className"], ["matInput", "", "placeholder", "Question", "formControlName", "question"], [4, "ngIf"], ["matInput", "", "placeholder", "Answer", "formControlName", "answer"], [1, "button-wrapper"], ["mat-flat-button", "", "color", "primary"], [3, "className", 4, "ngFor", "ngForOf"], [4, "ngFor", "ngForOf"]],
+      vars: 8,
+      consts: [["novalidate", "", 3, "formGroup", "ngSubmit"], [3, "className"], ["matInput", "", "placeholder", "Question", "formControlName", "question"], [4, "ngIf"], ["matInput", "", "placeholder", "Answer", "formControlName", "answer"], ["mat-flat-button", "", "color", "primary"], [3, "className", 4, "ngFor", "ngForOf"], [4, "ngFor", "ngForOf"]],
       template: function AppComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-toolbar");
@@ -435,9 +435,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "button", 6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "button", 5);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Add");
 
@@ -447,7 +447,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](13, AppComponent_div_13_Template, 4, 3, "div", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](13, AppComponent_div_13_Template, 4, 3, "div", 6);
         }
 
         if (rf & 2) {
@@ -475,13 +475,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.errorHandling("answer", "required"));
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("className", "button-wrapper submit-button");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.questions);
         }
       },
       directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_3__["MatToolbar"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__["MatFormField"], _angular_material_input__WEBPACK_IMPORTED_MODULE_5__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _angular_material_button__WEBPACK_IMPORTED_MODULE_7__["MatButton"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__["MatError"]],
-      styles: [".question[_ngcontent-%COMP%] {\n    padding: 15px;\n}\n\n.question[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n    list-style-type: none;\n}\n\n.question-formfield[_ngcontent-%COMP%] {\n    display: block;\n    width: 50%;\n    padding: 15px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0FBQ2pCOztBQUVBO0lBQ0kscUJBQXFCO0FBQ3pCOztBQUVBO0lBQ0ksY0FBYztJQUNkLFVBQVU7SUFDVixhQUFhO0FBQ2pCIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucXVlc3Rpb24ge1xuICAgIHBhZGRpbmc6IDE1cHg7XG59XG5cbi5xdWVzdGlvbiBsaSB7XG4gICAgbGlzdC1zdHlsZS10eXBlOiBub25lO1xufVxuXG4ucXVlc3Rpb24tZm9ybWZpZWxkIHtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICB3aWR0aDogNTAlO1xuICAgIHBhZGRpbmc6IDE1cHg7XG59Il19 */"]
+      styles: [".question[_ngcontent-%COMP%] {\n    padding: 15px;\n}\n\n.question[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n    list-style-type: none;\n}\n\n.question-formfield[_ngcontent-%COMP%] {\n    display: block;\n    width: 50%;\n    padding: 15px;\n}\n\n.submit-button[_ngcontent-%COMP%] {\n    padding: 15px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0FBQ2pCOztBQUVBO0lBQ0kscUJBQXFCO0FBQ3pCOztBQUVBO0lBQ0ksY0FBYztJQUNkLFVBQVU7SUFDVixhQUFhO0FBQ2pCOztBQUVBO0lBQ0ksYUFBYTtBQUNqQiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnF1ZXN0aW9uIHtcbiAgICBwYWRkaW5nOiAxNXB4O1xufVxuXG4ucXVlc3Rpb24gbGkge1xuICAgIGxpc3Qtc3R5bGUtdHlwZTogbm9uZTtcbn1cblxuLnF1ZXN0aW9uLWZvcm1maWVsZCB7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgd2lkdGg6IDUwJTtcbiAgICBwYWRkaW5nOiAxNXB4O1xufVxuXG4uc3VibWl0LWJ1dHRvbiB7XG4gICAgcGFkZGluZzogMTVweDtcbn0iXX0= */"]
     });
     /*@__PURE__*/
 
