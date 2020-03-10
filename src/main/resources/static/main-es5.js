@@ -67,8 +67,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/common/http */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 
-    var apiUrl = '/api/v0';
-
     var ApiService =
     /*#__PURE__*/
     function () {
@@ -81,7 +79,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(ApiService, [{
         key: "getQuestions",
         value: function getQuestions() {
-          return this.http.get(apiUrl + '/questions');
+          return this.http.get('/questions');
         }
       }]);
 

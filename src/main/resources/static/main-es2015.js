@@ -38,13 +38,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const apiUrl = '/api/v0';
 class ApiService {
     constructor(http) {
         this.http = http;
     }
     getQuestions() {
-        return this.http.get(apiUrl + '/questions');
+        return this.http.get('/questions');
     }
 }
 ApiService.ɵfac = function ApiService_Factory(t) { return new (t || ApiService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
