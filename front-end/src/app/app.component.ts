@@ -20,6 +20,23 @@ export class AppComponent implements OnInit {
     this.api.getQuestions()
       .subscribe(data => {
         this.questions = data['content'];
+        this.getAnswers();
       });
+  }
+
+  getAnswers() {
+    this.questions = this.questions.map(question => {
+      const answers: any = [];
+      this.api.getAnswers(question.id)
+        .subscribe(data => {
+          for (const d of (data as any)){
+            answers.push({
+              text: d.text,
+            });
+          }
+        });
+        question.answers = answers;
+        return question;
+    })
   }
 }

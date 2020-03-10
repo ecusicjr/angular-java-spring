@@ -11,4 +11,8 @@ export class ApiService {
   getQuestions() {
     return this.http.get('/questions');
   }
+
+  getAnswers(questionID) {
+    return this.http.get(`/questions/${questionID}/answers`)
+  }
 }

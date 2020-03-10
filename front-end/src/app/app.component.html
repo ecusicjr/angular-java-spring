@@ -1,7 +1,9 @@
 <mat-toolbar>
   <span>{{ title }}</span>
 </mat-toolbar>
-<h2>Questions</h2>
-<ul>
-  <li *ngFor="let question of questions">{{ question.title }}</li>
-</ul>
+<div *ngFor="let question of questions">
+  {{ question.title }}
+  <ul>
+    <li *ngFor="let answer of question.answers">{{ answer.text }}</li>
+  </ul>
+</div>
