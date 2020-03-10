@@ -1,34 +1,14 @@
-function _get(target, property, receiver) { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(receiver); } return desc.value; }; } return _get(target, property, receiver || target); }
-
-function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _toArray(arr) { return _arrayWithHoles(arr) || _iterableToArray(arr) || _nonIterableRest(); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
 
 function isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _construct(Parent, args, Class) { if (isNativeReflectConstruct()) { _construct = Reflect.construct; } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+function _get(target, property, receiver) { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(receiver); } return desc.value; }; } return _get(target, property, receiver || target); }
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
 
 function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
@@ -40,9 +20,13452 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendor"], {
+  /***/
+  "./node_modules/@angular/animations/__ivy_ngcc__/fesm2015/animations.js":
+  /*!******************************************************************************!*\
+    !*** ./node_modules/@angular/animations/__ivy_ngcc__/fesm2015/animations.js ***!
+    \******************************************************************************/
+
+  /*! exports provided: AUTO_STYLE, AnimationBuilder, AnimationFactory, NoopAnimationPlayer, animate, animateChild, animation, group, keyframes, query, sequence, stagger, state, style, transition, trigger, useAnimation, ɵAnimationGroupPlayer, ɵPRE_STYLE */
+
+  /***/
+  function node_modulesAngularAnimations__ivy_ngcc__Fesm2015AnimationsJs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AUTO_STYLE", function () {
+      return AUTO_STYLE;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AnimationBuilder", function () {
+      return AnimationBuilder;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AnimationFactory", function () {
+      return AnimationFactory;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "NoopAnimationPlayer", function () {
+      return NoopAnimationPlayer;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "animate", function () {
+      return animate;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "animateChild", function () {
+      return animateChild;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "animation", function () {
+      return animation;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "group", function () {
+      return group;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "keyframes", function () {
+      return keyframes;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "query", function () {
+      return query;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "sequence", function () {
+      return sequence;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "stagger", function () {
+      return stagger;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "state", function () {
+      return state;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "style", function () {
+      return style;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "transition", function () {
+      return transition;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "trigger", function () {
+      return trigger;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "useAnimation", function () {
+      return useAnimation;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵAnimationGroupPlayer", function () {
+      return AnimationGroupPlayer;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵPRE_STYLE", function () {
+      return ɵPRE_STYLE;
+    });
+    /**
+     * @license Angular v9.0.5
+     * (c) 2010-2020 Google LLC. https://angular.io/
+     * License: MIT
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/src/animation_builder.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * An injectable service that produces an animation sequence programmatically within an
+     * Angular component or directive.
+     * Provided by the `BrowserAnimationsModule` or `NoopAnimationsModule`.
+     *
+     * \@usageNotes
+     *
+     * To use this service, add it to your component or directive as a dependency.
+     * The service is instantiated along with your component.
+     *
+     * Apps do not typically need to create their own animation players, but if you
+     * do need to, follow these steps:
+     *
+     * 1. Use the `build()` method to create a programmatic animation using the
+     * `animate()` function. The method returns an `AnimationFactory` instance.
+     *
+     * 2. Use the factory object to create an `AnimationPlayer` and attach it to a DOM element.
+     *
+     * 3. Use the player object to control the animation programmatically.
+     *
+     * For example:
+     *
+     * ```ts
+     * // import the service from BrowserAnimationsModule
+     * import {AnimationBuilder} from '\@angular/animations';
+     * // require the service as a dependency
+     * class MyCmp {
+     *   constructor(private _builder: AnimationBuilder) {}
+     *
+     *   makeAnimation(element: any) {
+     *     // first define a reusable animation
+     *     const myAnimation = this._builder.build([
+     *       style({ width: 0 }),
+     *       animate(1000, style({ width: '100px' }))
+     *     ]);
+     *
+     *     // use the returned factory object to create a player
+     *     const player = myAnimation.create(element);
+     *
+     *     player.play();
+     *   }
+     * }
+     * ```
+     *
+     * \@publicApi
+     * @abstract
+     */
+
+
+    var AnimationBuilder = function AnimationBuilder() {
+      _classCallCheck(this, AnimationBuilder);
+    };
+
+    if (false) {}
+    /**
+     * A factory object returned from the `AnimationBuilder`.`build()` method.
+     *
+     * \@publicApi
+     * @abstract
+     */
+
+
+    var AnimationFactory = function AnimationFactory() {
+      _classCallCheck(this, AnimationFactory);
+    };
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/src/animation_metadata.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @license
+     * Copyright Google Inc. All Rights Reserved.
+     *
+     * Use of this source code is governed by an MIT-style license that can be
+     * found in the LICENSE file at https://angular.io/license
+     */
+
+    /**
+     * Represents a set of CSS styles for use in an animation style.
+     * @record
+     */
+
+
+    function ɵStyleData() {}
+    /** @enum {number} */
+
+
+    var AnimationMetadataType = {
+      /**
+       * Associates a named animation state with a set of CSS styles.
+       * See `state()`
+       */
+      State: 0,
+
+      /**
+       * Data for a transition from one animation state to another.
+       * See `transition()`
+       */
+      Transition: 1,
+
+      /**
+       * Contains a set of animation steps.
+       * See `sequence()`
+       */
+      Sequence: 2,
+
+      /**
+       * Contains a set of animation steps.
+       * See `{@link animations/group group()}`
+       */
+      Group: 3,
+
+      /**
+       * Contains an animation step.
+       * See `animate()`
+       */
+      Animate: 4,
+
+      /**
+       * Contains a set of animation steps.
+       * See `keyframes()`
+       */
+      Keyframes: 5,
+
+      /**
+       * Contains a set of CSS property-value pairs into a named style.
+       * See `style()`
+       */
+      Style: 6,
+
+      /**
+       * Associates an animation with an entry trigger that can be attached to an element.
+       * See `trigger()`
+       */
+      Trigger: 7,
+
+      /**
+       * Contains a re-usable animation.
+       * See `animation()`
+       */
+      Reference: 8,
+
+      /**
+       * Contains data to use in executing child animations returned by a query.
+       * See `animateChild()`
+       */
+      AnimateChild: 9,
+
+      /**
+       * Contains animation parameters for a re-usable animation.
+       * See `useAnimation()`
+       */
+      AnimateRef: 10,
+
+      /**
+       * Contains child-animation query data.
+       * See `query()`
+       */
+      Query: 11,
+
+      /**
+       * Contains data for staggering an animation sequence.
+       * See `stagger()`
+       */
+      Stagger: 12
+    };
+    /**
+     * Specifies automatic styling.
+     *
+     * \@publicApi
+     * @type {?}
+     */
+
+    var AUTO_STYLE = '*';
+    /**
+     * Base for animation data structures.
+     *
+     * \@publicApi
+     * @record
+     */
+
+    function AnimationMetadata() {}
+
+    if (false) {}
+    /**
+     * Contains an animation trigger. Instantiated and returned by the
+     * `trigger()` function.
+     *
+     * \@publicApi
+     * @record
+     */
+
+
+    function AnimationTriggerMetadata() {}
+
+    if (false) {}
+    /**
+     * Encapsulates an animation state by associating a state name with a set of CSS styles.
+     * Instantiated and returned by the `state()` function.
+     *
+     * \@publicApi
+     * @record
+     */
+
+
+    function AnimationStateMetadata() {}
+
+    if (false) {}
+    /**
+     * Encapsulates an animation transition. Instantiated and returned by the
+     * `transition()` function.
+     *
+     * \@publicApi
+     * @record
+     */
+
+
+    function AnimationTransitionMetadata() {}
+
+    if (false) {}
+    /**
+     * Encapsulates a reusable animation, which is a collection of individual animation steps.
+     * Instantiated and returned by the `animation()` function, and
+     * passed to the `useAnimation()` function.
+     *
+     * \@publicApi
+     * @record
+     */
+
+
+    function AnimationReferenceMetadata() {}
+
+    if (false) {}
+    /**
+     * Encapsulates an animation query. Instantiated and returned by
+     * the `query()` function.
+     *
+     * \@publicApi
+     * @record
+     */
+
+
+    function AnimationQueryMetadata() {}
+
+    if (false) {}
+    /**
+     * Encapsulates a keyframes sequence. Instantiated and returned by
+     * the `keyframes()` function.
+     *
+     * \@publicApi
+     * @record
+     */
+
+
+    function AnimationKeyframesSequenceMetadata() {}
+
+    if (false) {}
+    /**
+     * Encapsulates an animation style. Instantiated and returned by
+     * the `style()` function.
+     *
+     * \@publicApi
+     * @record
+     */
+
+
+    function AnimationStyleMetadata() {}
+
+    if (false) {}
+    /**
+     * Encapsulates an animation step. Instantiated and returned by
+     * the `animate()` function.
+     *
+     * \@publicApi
+     * @record
+     */
+
+
+    function AnimationAnimateMetadata() {}
+
+    if (false) {}
+    /**
+     * Encapsulates a child animation, that can be run explicitly when the parent is run.
+     * Instantiated and returned by the `animateChild` function.
+     *
+     * \@publicApi
+     * @record
+     */
+
+
+    function AnimationAnimateChildMetadata() {}
+
+    if (false) {}
+    /**
+     * Encapsulates a reusable animation.
+     * Instantiated and returned by the `useAnimation()` function.
+     *
+     * \@publicApi
+     * @record
+     */
+
+
+    function AnimationAnimateRefMetadata() {}
+
+    if (false) {}
+    /**
+     * Encapsulates an animation sequence.
+     * Instantiated and returned by the `sequence()` function.
+     *
+     * \@publicApi
+     * @record
+     */
+
+
+    function AnimationSequenceMetadata() {}
+
+    if (false) {}
+    /**
+     * Encapsulates an animation group.
+     * Instantiated and returned by the `{\@link animations/group group()}` function.
+     *
+     * \@publicApi
+     * @record
+     */
+
+
+    function AnimationGroupMetadata() {}
+
+    if (false) {}
+    /**
+     * Encapsulates parameters for staggering the start times of a set of animation steps.
+     * Instantiated and returned by the `stagger()` function.
+     *
+     * \@publicApi
+     *
+     * @record
+     */
+
+
+    function AnimationStaggerMetadata() {}
+
+    if (false) {}
+    /**
+     * Creates a named animation trigger, containing a  list of `state()`
+     * and `transition()` entries to be evaluated when the expression
+     * bound to the trigger changes.
+     *
+     * \@usageNotes
+     * Define an animation trigger in the `animations` section of `\@Component` metadata.
+     * In the template, reference the trigger by name and bind it to a trigger expression that
+     * evaluates to a defined animation state, using the following format:
+     *
+     * `[\@triggerName]="expression"`
+     *
+     * Animation trigger bindings convert all values to strings, and then match the
+     * previous and current values against any linked transitions.
+     * Booleans can be specified as `1` or `true` and `0` or `false`.
+     *
+     * ### Usage Example
+     *
+     * The following example creates an animation trigger reference based on the provided
+     * name value.
+     * The provided animation value is expected to be an array consisting of state and
+     * transition declarations.
+     *
+     * ```typescript
+     * \@Component({
+     *   selector: "my-component",
+     *   templateUrl: "my-component-tpl.html",
+     *   animations: [
+     *     trigger("myAnimationTrigger", [
+     *       state(...),
+     *       state(...),
+     *       transition(...),
+     *       transition(...)
+     *     ])
+     *   ]
+     * })
+     * class MyComponent {
+     *   myStatusExp = "something";
+     * }
+     * ```
+     *
+     * The template associated with this component makes use of the defined trigger
+     * by binding to an element within its template code.
+     *
+     * ```html
+     * <!-- somewhere inside of my-component-tpl.html -->
+     * <div [\@myAnimationTrigger]="myStatusExp">...</div>
+     * ```
+     *
+     * ### Using an inline function
+     * The `transition` animation method also supports reading an inline function which can decide
+     * if its associated animation should be run.
+     *
+     * ```typescript
+     * // this method is run each time the `myAnimationTrigger` trigger value changes.
+     * function myInlineMatcherFn(fromState: string, toState: string, element: any, params: {[key:
+     * string]: any}): boolean {
+     *   // notice that `element` and `params` are also available here
+     *   return toState == 'yes-please-animate';
+     * }
+     *  /
+     *   selector: 'my-component',
+     *   templateUrl: 'my-component-tpl.html',
+     *   animations: [
+     *     trigger('myAnimationTrigger', [
+     *       transition(myInlineMatcherFn, [
+     *         // the animation sequence code
+     *       ]),
+     *     ])
+     *   ]
+     * })
+     * class MyComponent {
+     *   myStatusExp = "yes-please-animate";
+     * }
+     * ```
+     *
+     * ### Disabling Animations
+     * When true, the special animation control binding `\@.disabled` binding prevents
+     * all animations from rendering.
+     * Place the  `\@.disabled` binding on an element to disable
+     * animations on the element itself, as well as any inner animation triggers
+     * within the element.
+     *
+     * The following example shows how to use this feature:
+     *
+     * ```typescript /
+     *   selector: 'my-component',
+     *   template: `
+     *     <div [\@.disabled]="isDisabled">
+     *       <div [\@childAnimation]="exp"></div>
+     *     </div>
+     *   `,
+     *   animations: [
+     *     trigger("childAnimation", [
+     *       // ...
+     *     ])
+     *   ]
+     * })
+     * class MyComponent {
+     *   isDisabled = true;
+     *   exp = '...';
+     * }
+     * ```
+     *
+     * When `\@.disabled` is true, it prevents the `\@childAnimation` trigger from animating,
+     * along with any inner animations.
+     *
+     * ### Disable animations application-wide
+     * When an area of the template is set to have animations disabled,
+     * **all** inner components have their animations disabled as well.
+     * This means that you can disable all animations for an app
+     * by placing a host binding set on `\@.disabled` on the topmost Angular component.
+     *
+     * ```typescript
+     * import {Component, HostBinding} from '\@angular/core';
+     *  /
+     *   selector: 'app-component',
+     *   templateUrl: 'app.component.html',
+     * })
+     * class AppComponent {
+     * \@HostBinding('@.disabled')
+     *   public animationsDisabled = true;
+     * }
+     * ```
+     *
+     * ### Overriding disablement of inner animations
+     * Despite inner animations being disabled, a parent animation can `query()`
+     * for inner elements located in disabled areas of the template and still animate
+     * them if needed. This is also the case for when a sub animation is
+     * queried by a parent and then later animated using `animateChild()`.
+     *
+     * ### Detecting when an animation is disabled
+     * If a region of the DOM (or the entire application) has its animations disabled, the animation
+     * trigger callbacks still fire, but for zero seconds. When the callback fires, it provides
+     * an instance of an `AnimationEvent`. If animations are disabled,
+     * the `.disabled` flag on the event is true.
+     *
+     * \@publicApi
+     * @param {?} name An identifying string.
+     * @param {?} definitions  An animation definition object, containing an array of `state()`
+     * and `transition()` declarations.
+     *
+     * @return {?} An object that encapsulates the trigger data.
+     *
+     */
+
+
+    function trigger(name, definitions) {
+      return {
+        type: 7
+        /* Trigger */
+        ,
+        name: name,
+        definitions: definitions,
+        options: {}
+      };
+    }
+    /**
+     * Defines an animation step that combines styling information with timing information.
+     *
+     * \@usageNotes
+     * Call within an animation `sequence()`, `{\@link animations/group group()}`, or
+     * `transition()` call to specify an animation step
+     * that applies given style data to the parent animation for a given amount of time.
+     *
+     * ### Syntax Examples
+     * **Timing examples**
+     *
+     * The following examples show various `timings` specifications.
+     * - `animate(500)` : Duration is 500 milliseconds.
+     * - `animate("1s")` : Duration is 1000 milliseconds.
+     * - `animate("100ms 0.5s")` : Duration is 100 milliseconds, delay is 500 milliseconds.
+     * - `animate("5s ease-in")` : Duration is 5000 milliseconds, easing in.
+     * - `animate("5s 10ms cubic-bezier(.17,.67,.88,.1)")` : Duration is 5000 milliseconds, delay is 10
+     * milliseconds, easing according to a bezier curve.
+     *
+     * **Style examples**
+     *
+     * The following example calls `style()` to set a single CSS style.
+     * ```typescript
+     * animate(500, style({ background: "red" }))
+     * ```
+     * The following example calls `keyframes()` to set a CSS style
+     * to different values for successive keyframes.
+     * ```typescript
+     * animate(500, keyframes(
+     *  [
+     *   style({ background: "blue" })),
+     *   style({ background: "red" }))
+     *  ])
+     * ```
+     *
+     * \@publicApi
+     * @param {?} timings Sets `AnimateTimings` for the parent animation.
+     * A string in the format "duration [delay] [easing]".
+     *  - Duration and delay are expressed as a number and optional time unit,
+     * such as "1s" or "10ms" for one second and 10 milliseconds, respectively.
+     * The default unit is milliseconds.
+     *  - The easing value controls how the animation accelerates and decelerates
+     * during its runtime. Value is one of  `ease`, `ease-in`, `ease-out`,
+     * `ease-in-out`, or a `cubic-bezier()` function call.
+     * If not supplied, no easing is applied.
+     *
+     * For example, the string "1s 100ms ease-out" specifies a duration of
+     * 1000 milliseconds, and delay of 100 ms, and the "ease-out" easing style,
+     * which decelerates near the end of the duration.
+     * @param {?=} styles Sets AnimationStyles for the parent animation.
+     * A function call to either `style()` or `keyframes()`
+     * that returns a collection of CSS style entries to be applied to the parent animation.
+     * When null, uses the styles from the destination state.
+     * This is useful when describing an animation step that will complete an animation;
+     * see "Animating to the final state" in `transitions()`.
+     * @return {?} An object that encapsulates the animation step.
+     *
+     */
+
+
+    function animate(timings) {
+      var styles = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+      return {
+        type: 4
+        /* Animate */
+        ,
+        styles: styles,
+        timings: timings
+      };
+    }
+    /**
+     * \@description Defines a list of animation steps to be run in parallel.
+     *
+     * \@usageNotes
+     * Grouped animations are useful when a series of styles must be
+     * animated at different starting times and closed off at different ending times.
+     *
+     * When called within a `sequence()` or a
+     * `transition()` call, does not continue to the next
+     * instruction until all of the inner animation steps have completed.
+     *
+     * \@publicApi
+     * @param {?} steps An array of animation step objects.
+     * - When steps are defined by `style()` or `animate()`
+     * function calls, each call within the group is executed instantly.
+     * - To specify offset styles to be applied at a later time, define steps with
+     * `keyframes()`, or use `animate()` calls with a delay value.
+     * For example:
+     *
+     * ```typescript
+     * group([
+     *   animate("1s", style({ background: "black" })),
+     *   animate("2s", style({ color: "white" }))
+     * ])
+     * ```
+     *
+     * @param {?=} options An options object containing a delay and
+     * developer-defined parameters that provide styling defaults and
+     * can be overridden on invocation.
+     *
+     * @return {?} An object that encapsulates the group data.
+     *
+     */
+
+
+    function group(steps) {
+      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+      return {
+        type: 3
+        /* Group */
+        ,
+        steps: steps,
+        options: options
+      };
+    }
+    /**
+     * Defines a list of animation steps to be run sequentially, one by one.
+     *
+     * \@usageNotes
+     * When you pass an array of steps to a
+     * `transition()` call, the steps run sequentially by default.
+     * Compare this to the `{\@link animations/group group()}` call, which runs animation steps in parallel.
+     *
+     * When a sequence is used within a `{\@link animations/group group()}` or a `transition()` call,
+     * execution continues to the next instruction only after each of the inner animation
+     * steps have completed.
+     *
+     * \@publicApi
+     *
+     * @param {?} steps An array of animation step objects.
+     * - Steps defined by `style()` calls apply the styling data immediately.
+     * - Steps defined by `animate()` calls apply the styling data over time
+     *   as specified by the timing data.
+     *
+     * ```typescript
+     * sequence([
+     *   style({ opacity: 0 }),
+     *   animate("1s", style({ opacity: 1 }))
+     * ])
+     * ```
+     *
+     * @param {?=} options An options object containing a delay and
+     * developer-defined parameters that provide styling defaults and
+     * can be overridden on invocation.
+     *
+     * @return {?} An object that encapsulates the sequence data.
+     *
+     */
+
+
+    function sequence(steps) {
+      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+      return {
+        type: 2
+        /* Sequence */
+        ,
+        steps: steps,
+        options: options
+      };
+    }
+    /**
+     * Declares a key/value object containing CSS properties/styles that
+     * can then be used for an animation `state`, within an animation `sequence`,
+     * or as styling data for calls to `animate()` and `keyframes()`.
+     *
+     * \@usageNotes
+     * The following examples create animation styles that collect a set of
+     * CSS property values:
+     *
+     * ```typescript
+     * // string values for CSS properties
+     * style({ background: "red", color: "blue" })
+     *
+     * // numerical pixel values
+     * style({ width: 100, height: 0 })
+     * ```
+     *
+     * The following example uses auto-styling to allow a component to animate from
+     * a height of 0 up to the height of the parent element:
+     *
+     * ```
+     * style({ height: 0 }),
+     * animate("1s", style({ height: "*" }))
+     * ```
+     *
+     * \@publicApi
+     *
+     * @param {?} tokens A set of CSS styles or HTML styles associated with an animation state.
+     * The value can be any of the following:
+     * - A key-value style pair associating a CSS property with a value.
+     * - An array of key-value style pairs.
+     * - An asterisk (*), to use auto-styling, where styles are derived from the element
+     * being animated and applied to the animation when it starts.
+     *
+     * Auto-styling can be used to define a state that depends on layout or other
+     * environmental factors.
+     *
+     * @return {?} An object that encapsulates the style data.
+     *
+     */
+
+
+    function style(tokens) {
+      return {
+        type: 6
+        /* Style */
+        ,
+        styles: tokens,
+        offset: null
+      };
+    }
+    /**
+     * Declares an animation state within a trigger attached to an element.
+     *
+     * \@usageNotes
+     * Use the `trigger()` function to register states to an animation trigger.
+     * Use the `transition()` function to animate between states.
+     * When a state is active within a component, its associated styles persist on the element,
+     * even when the animation ends.
+     *
+     * \@publicApi
+     *
+     * @param {?} name One or more names for the defined state in a comma-separated string.
+     * The following reserved state names can be supplied to define a style for specific use
+     * cases:
+     *
+     * - `void` You can associate styles with this name to be used when
+     * the element is detached from the application. For example, when an `ngIf` evaluates
+     * to false, the state of the associated element is void.
+     *  - `*` (asterisk) Indicates the default state. You can associate styles with this name
+     * to be used as the fallback when the state that is being animated is not declared
+     * within the trigger.
+     *
+     * @param {?} styles A set of CSS styles associated with this state, created using the
+     * `style()` function.
+     * This set of styles persists on the element once the state has been reached.
+     * @param {?=} options Parameters that can be passed to the state when it is invoked.
+     * 0 or more key-value pairs.
+     * @return {?} An object that encapsulates the new state data.
+     *
+     */
+
+
+    function state(name, styles, options) {
+      return {
+        type: 0
+        /* State */
+        ,
+        name: name,
+        styles: styles,
+        options: options
+      };
+    }
+    /**
+     * Defines a set of animation styles, associating each style with an optional `offset` value.
+     *
+     * \@usageNotes
+     * Use with the `animate()` call. Instead of applying animations
+     * from the current state
+     * to the destination state, keyframes describe how each style entry is applied and at what point
+     * within the animation arc.
+     * Compare [CSS Keyframe Animations](https://www.w3schools.com/css/css3_animations.asp).
+     *
+     * ### Usage
+     *
+     * In the following example, the offset values describe
+     * when each `backgroundColor` value is applied. The color is red at the start, and changes to
+     * blue when 20% of the total time has elapsed.
+     *
+     * ```typescript
+     * // the provided offset values
+     * animate("5s", keyframes([
+     *   style({ backgroundColor: "red", offset: 0 }),
+     *   style({ backgroundColor: "blue", offset: 0.2 }),
+     *   style({ backgroundColor: "orange", offset: 0.3 }),
+     *   style({ backgroundColor: "black", offset: 1 })
+     * ]))
+     * ```
+     *
+     * If there are no `offset` values specified in the style entries, the offsets
+     * are calculated automatically.
+     *
+     * ```typescript
+     * animate("5s", keyframes([
+     *   style({ backgroundColor: "red" }) // offset = 0
+     *   style({ backgroundColor: "blue" }) // offset = 0.33
+     *   style({ backgroundColor: "orange" }) // offset = 0.66
+     *   style({ backgroundColor: "black" }) // offset = 1
+     * ]))
+     * ```
+     * \@publicApi
+     * @param {?} steps A set of animation styles with optional offset data.
+     * The optional `offset` value for a style specifies a percentage of the total animation
+     * time at which that style is applied.
+     * @return {?} An object that encapsulates the keyframes data.
+     *
+     */
+
+
+    function keyframes(steps) {
+      return {
+        type: 5
+        /* Keyframes */
+        ,
+        steps: steps
+      };
+    }
+    /**
+     * Declares an animation transition as a sequence of animation steps to run when a given
+     * condition is satisfied. The condition is a Boolean expression or function that compares
+     * the previous and current animation states, and returns true if this transition should occur.
+     * When the state criteria of a defined transition are met, the associated animation is
+     * triggered.
+     *
+     * \@usageNotes
+     * The template associated with a component binds an animation trigger to an element.
+     *
+     * ```HTML
+     * <!-- somewhere inside of my-component-tpl.html -->
+     * <div [\@myAnimationTrigger]="myStatusExp">...</div>
+     * ```
+     *
+     * All transitions are defined within an animation trigger,
+     * along with named states that the transitions change to and from.
+     *
+     * ```typescript
+     * trigger("myAnimationTrigger", [
+     *  // define states
+     *  state("on", style({ background: "green" })),
+     *  state("off", style({ background: "grey" })),
+     *  ...]
+     * ```
+     *
+     * Note that when you call the `sequence()` function within a `{\@link animations/group group()}`
+     * or a `transition()` call, execution does not continue to the next instruction
+     * until each of the inner animation steps have completed.
+     *
+     * ### Syntax examples
+     *
+     * The following examples define transitions between the two defined states (and default states),
+     * using various options:
+     *
+     * ```typescript
+     * // Transition occurs when the state value
+     * // bound to "myAnimationTrigger" changes from "on" to "off"
+     * transition("on => off", animate(500))
+     * // Run the same animation for both directions
+     * transition("on <=> off", animate(500))
+     * // Define multiple state-change pairs separated by commas
+     * transition("on => off, off => void", animate(500))
+     * ```
+     *
+     * ### Special values for state-change expressions
+     *
+     * - Catch-all state change for when an element is inserted into the page and the
+     * destination state is unknown:
+     *
+     * ```typescript
+     * transition("void => *", [
+     *  style({ opacity: 0 }),
+     *  animate(500)
+     *  ])
+     * ```
+     *
+     * - Capture a state change between any states:
+     *
+     *  `transition("* => *", animate("1s 0s"))`
+     *
+     * - Entry and exit transitions:
+     *
+     * ```typescript
+     * transition(":enter", [
+     *   style({ opacity: 0 }),
+     *   animate(500, style({ opacity: 1 }))
+     *   ]),
+     * transition(":leave", [
+     *   animate(500, style({ opacity: 0 }))
+     *   ])
+     * ```
+     *
+     * - Use `:increment` and `:decrement` to initiate transitions:
+     *
+     * ```typescript
+     * transition(":increment", group([
+     *  query(':enter', [
+     *     style({ left: '100%' }),
+     *     animate('0.5s ease-out', style('*'))
+     *   ]),
+     *  query(':leave', [
+     *     animate('0.5s ease-out', style({ left: '-100%' }))
+     *  ])
+     * ]))
+     *
+     * transition(":decrement", group([
+     *  query(':enter', [
+     *     style({ left: '100%' }),
+     *     animate('0.5s ease-out', style('*'))
+     *   ]),
+     *  query(':leave', [
+     *     animate('0.5s ease-out', style({ left: '-100%' }))
+     *  ])
+     * ]))
+     * ```
+     *
+     * ### State-change functions
+     *
+     * Here is an example of a `fromState` specified as a state-change function that invokes an
+     * animation when true:
+     *
+     * ```typescript
+     * transition((fromState, toState) =>
+     *  {
+     *   return fromState == "off" && toState == "on";
+     *  },
+     *  animate("1s 0s"))
+     * ```
+     *
+     * ### Animating to the final state
+     *
+     * If the final step in a transition is a call to `animate()` that uses a timing value
+     * with no style data, that step is automatically considered the final animation arc,
+     * for the element to reach the final state. Angular automatically adds or removes
+     * CSS styles to ensure that the element is in the correct final state.
+     *
+     * The following example defines a transition that starts by hiding the element,
+     * then makes sure that it animates properly to whatever state is currently active for trigger:
+     *
+     * ```typescript
+     * transition("void => *", [
+     *   style({ opacity: 0 }),
+     *   animate(500)
+     *  ])
+     * ```
+     * ### Boolean value matching
+     * If a trigger binding value is a Boolean, it can be matched using a transition expression
+     * that compares true and false or 1 and 0. For example:
+     *
+     * ```
+     * // in the template
+     * <div [\@openClose]="open ? true : false">...</div>
+     * // in the component metadata
+     * trigger('openClose', [
+     *   state('true', style({ height: '*' })),
+     *   state('false', style({ height: '0px' })),
+     *   transition('false <=> true', animate(500))
+     * ])
+     * ```
+     *
+     * \@publicApi
+     *
+     * @param {?} stateChangeExpr A Boolean expression or function that compares the previous and current
+     * animation states, and returns true if this transition should occur. Note that  "true" and "false"
+     * match 1 and 0, respectively. An expression is evaluated each time a state change occurs in the
+     * animation trigger element.
+     * The animation steps run when the expression evaluates to true.
+     *
+     * - A state-change string takes the form "state1 => state2", where each side is a defined animation
+     * state, or an asterix (*) to refer to a dynamic start or end state.
+     *   - The expression string can contain multiple comma-separated statements;
+     * for example "state1 => state2, state3 => state4".
+     *   - Special values `:enter` and `:leave` initiate a transition on the entry and exit states,
+     * equivalent to  "void => *"  and "* => void".
+     *   - Special values `:increment` and `:decrement` initiate a transition when a numeric value has
+     * increased or decreased in value.
+     * - A function is executed each time a state change occurs in the animation trigger element.
+     * The animation steps run when the function returns true.
+     *
+     * @param {?} steps One or more animation objects, as returned by the `animate()` or
+     * `sequence()` function, that form a transformation from one state to another.
+     * A sequence is used by default when you pass an array.
+     * @param {?=} options An options object that can contain a delay value for the start of the animation,
+     * and additional developer-defined parameters. Provided values for additional parameters are used
+     * as defaults, and override values can be passed to the caller on invocation.
+     * @return {?} An object that encapsulates the transition data.
+     *
+     */
+
+
+    function transition(stateChangeExpr, steps) {
+      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+      return {
+        type: 1
+        /* Transition */
+        ,
+        expr: stateChangeExpr,
+        animation: steps,
+        options: options
+      };
+    }
+    /**
+     * Produces a reusable animation that can be invoked in another animation or sequence,
+     * by calling the `useAnimation()` function.
+     *
+     * \@usageNotes
+     * The following example defines a reusable animation, providing some default parameter
+     * values.
+     *
+     * ```typescript
+     * var fadeAnimation = animation([
+     *   style({ opacity: '{{ start }}' }),
+     *   animate('{{ time }}',
+     *   style({ opacity: '{{ end }}'}))
+     *   ],
+     *   { params: { time: '1000ms', start: 0, end: 1 }});
+     * ```
+     *
+     * The following invokes the defined animation with a call to `useAnimation()`,
+     * passing in override parameter values.
+     *
+     * ```js
+     * useAnimation(fadeAnimation, {
+     *   params: {
+     *     time: '2s',
+     *     start: 1,
+     *     end: 0
+     *   }
+     * })
+     * ```
+     *
+     * If any of the passed-in parameter values are missing from this call,
+     * the default values are used. If one or more parameter values are missing before a step is
+     * animated, `useAnimation()` throws an error.
+     *
+     * \@publicApi
+     * @param {?} steps One or more animation objects, as returned by the `animate()`
+     * or `sequence()` function, that form a transformation from one state to another.
+     * A sequence is used by default when you pass an array.
+     * @param {?=} options An options object that can contain a delay value for the start of the
+     * animation, and additional developer-defined parameters.
+     * Provided values for additional parameters are used as defaults,
+     * and override values can be passed to the caller on invocation.
+     * @return {?} An object that encapsulates the animation data.
+     *
+     */
+
+
+    function animation(steps) {
+      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+      return {
+        type: 8
+        /* Reference */
+        ,
+        animation: steps,
+        options: options
+      };
+    }
+    /**
+     * Executes a queried inner animation element within an animation sequence.
+     *
+     * \@usageNotes
+     * Each time an animation is triggered in Angular, the parent animation
+     * has priority and any child animations are blocked. In order
+     * for a child animation to run, the parent animation must query each of the elements
+     * containing child animations, and run them using this function.
+     *
+     * Note that this feature is designed to be used with `query()` and it will only work
+     * with animations that are assigned using the Angular animation library. CSS keyframes
+     * and transitions are not handled by this API.
+     *
+     * \@publicApi
+     * @param {?=} options An options object that can contain a delay value for the start of the
+     * animation, and additional override values for developer-defined parameters.
+     * @return {?} An object that encapsulates the child animation data.
+     *
+     */
+
+
+    function animateChild() {
+      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+      return {
+        type: 9
+        /* AnimateChild */
+        ,
+        options: options
+      };
+    }
+    /**
+     * Starts a reusable animation that is created using the `animation()` function.
+     *
+     * \@publicApi
+     * @param {?} animation The reusable animation to start.
+     * @param {?=} options An options object that can contain a delay value for the start of
+     * the animation, and additional override values for developer-defined parameters.
+     * @return {?} An object that contains the animation parameters.
+     *
+     */
+
+
+    function useAnimation(animation) {
+      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+      return {
+        type: 10
+        /* AnimateRef */
+        ,
+        animation: animation,
+        options: options
+      };
+    }
+    /**
+     * Finds one or more inner elements within the current element that is
+     * being animated within a sequence. Use with `animate()`.
+     *
+     * \@usageNotes
+     * Tokens can be merged into a combined query selector string. For example:
+     *
+     * ```typescript
+     *  query(':self, .record:enter, .record:leave, \@subTrigger', [...])
+     * ```
+     *
+     * The `query()` function collects multiple elements and works internally by using
+     * `element.querySelectorAll`. Use the `limit` field of an options object to limit
+     * the total number of items to be collected. For example:
+     *
+     * ```js
+     * query('div', [
+     *   animate(...),
+     *   animate(...)
+     * ], { limit: 1 })
+     * ```
+     *
+     * By default, throws an error when zero items are found. Set the
+     * `optional` flag to ignore this error. For example:
+     *
+     * ```js
+     * query('.some-element-that-may-not-be-there', [
+     *   animate(...),
+     *   animate(...)
+     * ], { optional: true })
+     * ```
+     *
+     * ### Usage Example
+     *
+     * The following example queries for inner elements and animates them
+     * individually using `animate()`.
+     *
+     * ```typescript
+     * \@Component({
+     *   selector: 'inner',
+     *   template: `
+     *     <div [\@queryAnimation]="exp">
+     *       <h1>Title</h1>
+     *       <div class="content">
+     *         Blah blah blah
+     *       </div>
+     *     </div>
+     *   `,
+     *   animations: [
+     *    trigger('queryAnimation', [
+     *      transition('* => goAnimate', [
+     *        // hide the inner elements
+     *        query('h1', style({ opacity: 0 })),
+     *        query('.content', style({ opacity: 0 })),
+     *
+     *        // animate the inner elements in, one by one
+     *        query('h1', animate(1000, style({ opacity: 1 }))),
+     *        query('.content', animate(1000, style({ opacity: 1 }))),
+     *      ])
+     *    ])
+     *  ]
+     * })
+     * class Cmp {
+     *   exp = '';
+     *
+     *   goAnimate() {
+     *     this.exp = 'goAnimate';
+     *   }
+     * }
+     * ```
+     *
+     * \@publicApi
+     * @param {?} selector The element to query, or a set of elements that contain Angular-specific
+     * characteristics, specified with one or more of the following tokens.
+     *  - `query(":enter")` or `query(":leave")` : Query for newly inserted/removed elements.
+     *  - `query(":animating")` : Query all currently animating elements.
+     *  - `query("\@triggerName")` : Query elements that contain an animation trigger.
+     *  - `query("\@*")` : Query all elements that contain an animation triggers.
+     *  - `query(":self")` : Include the current element into the animation sequence.
+     *
+     * @param {?} animation One or more animation steps to apply to the queried element or elements.
+     * An array is treated as an animation sequence.
+     * @param {?=} options An options object. Use the 'limit' field to limit the total number of
+     * items to collect.
+     * @return {?} An object that encapsulates the query data.
+     *
+     */
+
+
+    function query(selector, animation) {
+      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+      return {
+        type: 11
+        /* Query */
+        ,
+        selector: selector,
+        animation: animation,
+        options: options
+      };
+    }
+    /**
+     * Use within an animation `query()` call to issue a timing gap after
+     * each queried item is animated.
+     *
+     * \@usageNotes
+     * In the following example, a container element wraps a list of items stamped out
+     * by an `ngFor`. The container element contains an animation trigger that will later be set
+     * to query for each of the inner items.
+     *
+     * Each time items are added, the opacity fade-in animation runs,
+     * and each removed item is faded out.
+     * When either of these animations occur, the stagger effect is
+     * applied after each item's animation is started.
+     *
+     * ```html
+     * <!-- list.component.html -->
+     * <button (click)="toggle()">Show / Hide Items</button>
+     * <hr />
+     * <div [\@listAnimation]="items.length">
+     *   <div *ngFor="let item of items">
+     *     {{ item }}
+     *   </div>
+     * </div>
+     * ```
+     *
+     * Here is the component code:
+     *
+     * ```typescript
+     * import {trigger, transition, style, animate, query, stagger} from '\@angular/animations';
+     * \@Component({
+     *   templateUrl: 'list.component.html',
+     *   animations: [
+     *     trigger('listAnimation', [
+     *     ...
+     *     ])
+     *   ]
+     * })
+     * class ListComponent {
+     *   items = [];
+     *
+     *   showItems() {
+     *     this.items = [0,1,2,3,4];
+     *   }
+     *
+     *   hideItems() {
+     *     this.items = [];
+     *   }
+     *
+     *   toggle() {
+     *     this.items.length ? this.hideItems() : this.showItems();
+     *    }
+     *  }
+     * ```
+     *
+     * Here is the animation trigger code:
+     *
+     * ```typescript
+     * trigger('listAnimation', [
+     *   transition('* => *', [ // each time the binding value changes
+     *     query(':leave', [
+     *       stagger(100, [
+     *         animate('0.5s', style({ opacity: 0 }))
+     *       ])
+     *     ]),
+     *     query(':enter', [
+     *       style({ opacity: 0 }),
+     *       stagger(100, [
+     *         animate('0.5s', style({ opacity: 1 }))
+     *       ])
+     *     ])
+     *   ])
+     * ])
+     * ```
+     *
+     * \@publicApi
+     * @param {?} timings A delay value.
+     * @param {?} animation One ore more animation steps.
+     * @return {?} An object that encapsulates the stagger data.
+     *
+     */
+
+
+    function stagger(timings, animation) {
+      return {
+        type: 12
+        /* Stagger */
+        ,
+        timings: timings,
+        animation: animation
+      };
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/src/util.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @license
+     * Copyright Google Inc. All Rights Reserved.
+     *
+     * Use of this source code is governed by an MIT-style license that can be
+     * found in the LICENSE file at https://angular.io/license
+     * @param {?} cb
+     * @return {?}
+     */
+
+
+    function scheduleMicroTask(cb) {
+      Promise.resolve(null).then(cb);
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/src/players/animation_player.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * Provides programmatic control of a reusable animation sequence,
+     * built using the `build()` method of `AnimationBuilder`. The `build()` method
+     * returns a factory, whose `create()` method instantiates and initializes this interface.
+     *
+     * @see `AnimationBuilder`
+     * @see `AnimationFactory`
+     * @see `animate()`
+     *
+     * \@publicApi
+     * @record
+     */
+
+
+    function AnimationPlayer() {}
+
+    if (false) {}
+    /**
+     * An empty programmatic controller for reusable animations.
+     * Used internally when animations are disabled, to avoid
+     * checking for the null case when an animation player is expected.
+     *
+     * @see `animate()`
+     * @see `AnimationPlayer`
+     * @see `GroupPlayer`
+     *
+     * \@publicApi
+     */
+
+
+    var NoopAnimationPlayer =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?=} duration
+       * @param {?=} delay
+       */
+      function NoopAnimationPlayer() {
+        var duration = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+        var delay = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
+        _classCallCheck(this, NoopAnimationPlayer);
+
+        this._onDoneFns = [];
+        this._onStartFns = [];
+        this._onDestroyFns = [];
+        this._started = false;
+        this._destroyed = false;
+        this._finished = false;
+        this.parentPlayer = null;
+        this.totalTime = duration + delay;
+      }
+      /**
+       * @private
+       * @return {?}
+       */
+
+
+      _createClass2(NoopAnimationPlayer, [{
+        key: "_onFinish",
+        value: function _onFinish() {
+          if (!this._finished) {
+            this._finished = true;
+
+            this._onDoneFns.forEach(
+            /**
+            * @param {?} fn
+            * @return {?}
+            */
+            function (fn) {
+              return fn();
+            });
+
+            this._onDoneFns = [];
+          }
+        }
+        /**
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "onStart",
+        value: function onStart(fn) {
+          this._onStartFns.push(fn);
+        }
+        /**
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "onDone",
+        value: function onDone(fn) {
+          this._onDoneFns.push(fn);
+        }
+        /**
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "onDestroy",
+        value: function onDestroy(fn) {
+          this._onDestroyFns.push(fn);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "hasStarted",
+        value: function hasStarted() {
+          return this._started;
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "init",
+        value: function init() {}
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "play",
+        value: function play() {
+          if (!this.hasStarted()) {
+            this._onStart();
+
+            this.triggerMicrotask();
+          }
+
+          this._started = true;
+        }
+        /**
+         * \@internal
+         * @return {?}
+         */
+
+      }, {
+        key: "triggerMicrotask",
+        value: function triggerMicrotask() {
+          var _this = this;
+
+          scheduleMicroTask(
+          /**
+          * @return {?}
+          */
+          function () {
+            return _this._onFinish();
+          });
+        }
+        /**
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "_onStart",
+        value: function _onStart() {
+          this._onStartFns.forEach(
+          /**
+          * @param {?} fn
+          * @return {?}
+          */
+          function (fn) {
+            return fn();
+          });
+
+          this._onStartFns = [];
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "pause",
+        value: function pause() {}
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "restart",
+        value: function restart() {}
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "finish",
+        value: function finish() {
+          this._onFinish();
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "destroy",
+        value: function destroy() {
+          if (!this._destroyed) {
+            this._destroyed = true;
+
+            if (!this.hasStarted()) {
+              this._onStart();
+            }
+
+            this.finish();
+
+            this._onDestroyFns.forEach(
+            /**
+            * @param {?} fn
+            * @return {?}
+            */
+            function (fn) {
+              return fn();
+            });
+
+            this._onDestroyFns = [];
+          }
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "reset",
+        value: function reset() {}
+        /**
+         * @param {?} position
+         * @return {?}
+         */
+
+      }, {
+        key: "setPosition",
+        value: function setPosition(position) {}
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "getPosition",
+        value: function getPosition() {
+          return 0;
+        }
+        /**
+         * \@internal
+         * @param {?} phaseName
+         * @return {?}
+         */
+
+      }, {
+        key: "triggerCallback",
+        value: function triggerCallback(phaseName) {
+          /** @type {?} */
+          var methods = phaseName == 'start' ? this._onStartFns : this._onDoneFns;
+          methods.forEach(
+          /**
+          * @param {?} fn
+          * @return {?}
+          */
+          function (fn) {
+            return fn();
+          });
+          methods.length = 0;
+        }
+      }]);
+
+      return NoopAnimationPlayer;
+    }();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/src/players/animation_group_player.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * A programmatic controller for a group of reusable animations.
+     * Used internally to control animations.
+     *
+     * @see `AnimationPlayer`
+     * @see `{\@link animations/group group()}`
+     *
+     */
+
+
+    var AnimationGroupPlayer =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} _players
+       */
+      function AnimationGroupPlayer(_players) {
+        var _this2 = this;
+
+        _classCallCheck(this, AnimationGroupPlayer);
+
+        this._onDoneFns = [];
+        this._onStartFns = [];
+        this._finished = false;
+        this._started = false;
+        this._destroyed = false;
+        this._onDestroyFns = [];
+        this.parentPlayer = null;
+        this.totalTime = 0;
+        this.players = _players;
+        /** @type {?} */
+
+        var doneCount = 0;
+        /** @type {?} */
+
+        var destroyCount = 0;
+        /** @type {?} */
+
+        var startCount = 0;
+        /** @type {?} */
+
+        var total = this.players.length;
+
+        if (total == 0) {
+          scheduleMicroTask(
+          /**
+          * @return {?}
+          */
+          function () {
+            return _this2._onFinish();
+          });
+        } else {
+          this.players.forEach(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            player.onDone(
+            /**
+            * @return {?}
+            */
+            function () {
+              if (++doneCount == total) {
+                _this2._onFinish();
+              }
+            });
+            player.onDestroy(
+            /**
+            * @return {?}
+            */
+            function () {
+              if (++destroyCount == total) {
+                _this2._onDestroy();
+              }
+            });
+            player.onStart(
+            /**
+            * @return {?}
+            */
+            function () {
+              if (++startCount == total) {
+                _this2._onStart();
+              }
+            });
+          });
+        }
+
+        this.totalTime = this.players.reduce(
+        /**
+        * @param {?} time
+        * @param {?} player
+        * @return {?}
+        */
+        function (time, player) {
+          return Math.max(time, player.totalTime);
+        }, 0);
+      }
+      /**
+       * @private
+       * @return {?}
+       */
+
+
+      _createClass2(AnimationGroupPlayer, [{
+        key: "_onFinish",
+        value: function _onFinish() {
+          if (!this._finished) {
+            this._finished = true;
+
+            this._onDoneFns.forEach(
+            /**
+            * @param {?} fn
+            * @return {?}
+            */
+            function (fn) {
+              return fn();
+            });
+
+            this._onDoneFns = [];
+          }
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "init",
+        value: function init() {
+          this.players.forEach(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            return player.init();
+          });
+        }
+        /**
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "onStart",
+        value: function onStart(fn) {
+          this._onStartFns.push(fn);
+        }
+        /**
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "_onStart",
+        value: function _onStart() {
+          if (!this.hasStarted()) {
+            this._started = true;
+
+            this._onStartFns.forEach(
+            /**
+            * @param {?} fn
+            * @return {?}
+            */
+            function (fn) {
+              return fn();
+            });
+
+            this._onStartFns = [];
+          }
+        }
+        /**
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "onDone",
+        value: function onDone(fn) {
+          this._onDoneFns.push(fn);
+        }
+        /**
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "onDestroy",
+        value: function onDestroy(fn) {
+          this._onDestroyFns.push(fn);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "hasStarted",
+        value: function hasStarted() {
+          return this._started;
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "play",
+        value: function play() {
+          if (!this.parentPlayer) {
+            this.init();
+          }
+
+          this._onStart();
+
+          this.players.forEach(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            return player.play();
+          });
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "pause",
+        value: function pause() {
+          this.players.forEach(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            return player.pause();
+          });
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "restart",
+        value: function restart() {
+          this.players.forEach(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            return player.restart();
+          });
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "finish",
+        value: function finish() {
+          this._onFinish();
+
+          this.players.forEach(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            return player.finish();
+          });
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "destroy",
+        value: function destroy() {
+          this._onDestroy();
+        }
+        /**
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "_onDestroy",
+        value: function _onDestroy() {
+          if (!this._destroyed) {
+            this._destroyed = true;
+
+            this._onFinish();
+
+            this.players.forEach(
+            /**
+            * @param {?} player
+            * @return {?}
+            */
+            function (player) {
+              return player.destroy();
+            });
+
+            this._onDestroyFns.forEach(
+            /**
+            * @param {?} fn
+            * @return {?}
+            */
+            function (fn) {
+              return fn();
+            });
+
+            this._onDestroyFns = [];
+          }
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "reset",
+        value: function reset() {
+          this.players.forEach(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            return player.reset();
+          });
+          this._destroyed = false;
+          this._finished = false;
+          this._started = false;
+        }
+        /**
+         * @param {?} p
+         * @return {?}
+         */
+
+      }, {
+        key: "setPosition",
+        value: function setPosition(p) {
+          /** @type {?} */
+          var timeAtPosition = p * this.totalTime;
+          this.players.forEach(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            /** @type {?} */
+            var position = player.totalTime ? Math.min(1, timeAtPosition / player.totalTime) : 1;
+            player.setPosition(position);
+          });
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "getPosition",
+        value: function getPosition() {
+          /** @type {?} */
+          var min = 0;
+          this.players.forEach(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            /** @type {?} */
+            var p = player.getPosition();
+            min = Math.min(p, min);
+          });
+          return min;
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "beforeDestroy",
+        value: function beforeDestroy() {
+          this.players.forEach(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            if (player.beforeDestroy) {
+              player.beforeDestroy();
+            }
+          });
+        }
+        /**
+         * \@internal
+         * @param {?} phaseName
+         * @return {?}
+         */
+
+      }, {
+        key: "triggerCallback",
+        value: function triggerCallback(phaseName) {
+          /** @type {?} */
+          var methods = phaseName == 'start' ? this._onStartFns : this._onDoneFns;
+          methods.forEach(
+          /**
+          * @param {?} fn
+          * @return {?}
+          */
+          function (fn) {
+            return fn();
+          });
+          methods.length = 0;
+        }
+      }]);
+
+      return AnimationGroupPlayer;
+    }();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/src/private_export.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var ɵPRE_STYLE = '!';
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/src/animations.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/public_api.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/index.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * Generated bundle index. Do not edit.
+     */
+    //# sourceMappingURL=animations.js.map
+
+    /***/
+  },
+
+  /***/
+  "./node_modules/@angular/animations/__ivy_ngcc__/fesm2015/browser.js":
+  /*!***************************************************************************!*\
+    !*** ./node_modules/@angular/animations/__ivy_ngcc__/fesm2015/browser.js ***!
+    \***************************************************************************/
+
+  /*! exports provided: AnimationDriver, ɵAnimation, ɵAnimationEngine, ɵAnimationStyleNormalizer, ɵCssKeyframesDriver, ɵCssKeyframesPlayer, ɵNoopAnimationDriver, ɵNoopAnimationStyleNormalizer, ɵWebAnimationsDriver, ɵWebAnimationsPlayer, ɵWebAnimationsStyleNormalizer, ɵallowPreviousPlayerStylesMerge, ɵangular_packages_animations_browser_browser_a, ɵcontainsElement, ɵinvokeQuery, ɵmatchesElement, ɵsupportsWebAnimations, ɵvalidateStyleProperty */
+
+  /***/
+  function node_modulesAngularAnimations__ivy_ngcc__Fesm2015BrowserJs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AnimationDriver", function () {
+      return AnimationDriver;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵAnimation", function () {
+      return Animation;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵAnimationEngine", function () {
+      return AnimationEngine;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵAnimationStyleNormalizer", function () {
+      return AnimationStyleNormalizer;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵCssKeyframesDriver", function () {
+      return CssKeyframesDriver;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵCssKeyframesPlayer", function () {
+      return CssKeyframesPlayer;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵNoopAnimationDriver", function () {
+      return NoopAnimationDriver;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵNoopAnimationStyleNormalizer", function () {
+      return NoopAnimationStyleNormalizer;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵWebAnimationsDriver", function () {
+      return WebAnimationsDriver;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵWebAnimationsPlayer", function () {
+      return WebAnimationsPlayer;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵWebAnimationsStyleNormalizer", function () {
+      return WebAnimationsStyleNormalizer;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵallowPreviousPlayerStylesMerge", function () {
+      return allowPreviousPlayerStylesMerge;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵangular_packages_animations_browser_browser_a", function () {
+      return SpecialCasedStyles;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵcontainsElement", function () {
+      return _containsElement;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵinvokeQuery", function () {
+      return invokeQuery;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵmatchesElement", function () {
+      return _matchesElement;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵsupportsWebAnimations", function () {
+      return supportsWebAnimations;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵvalidateStyleProperty", function () {
+      return _validateStyleProperty;
+    });
+    /* harmony import */
+
+
+    var _angular_animations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/animations */
+    "./node_modules/@angular/animations/__ivy_ngcc__/fesm2015/animations.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /**
+     * @license Angular v9.0.5
+     * (c) 2010-2020 Google LLC. https://angular.io/
+     * License: MIT
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/render/shared.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @return {?}
+     */
+
+
+    function isBrowser() {
+      return typeof window !== 'undefined' && typeof window.document !== 'undefined';
+    }
+    /**
+     * @return {?}
+     */
+
+
+    function isNode() {
+      // Checking only for `process` isn't enough to identify whether or not we're in a Node
+      // environment, because Webpack by default will polyfill the `process`. While we can discern
+      // that Webpack polyfilled it by looking at `process.browser`, it's very Webpack-specific and
+      // might not be future-proof. Instead we look at the stringified version of `process` which
+      // is `[object process]` in Node and `[object Object]` when polyfilled.
+      return typeof process !== 'undefined' && {}.toString.call(process) === '[object process]';
+    }
+    /**
+     * @param {?} players
+     * @return {?}
+     */
+
+
+    function optimizeGroupPlayer(players) {
+      switch (players.length) {
+        case 0:
+          return new _angular_animations__WEBPACK_IMPORTED_MODULE_0__["NoopAnimationPlayer"]();
+
+        case 1:
+          return players[0];
+
+        default:
+          return new _angular_animations__WEBPACK_IMPORTED_MODULE_0__["ɵAnimationGroupPlayer"](players);
+      }
+    }
+    /**
+     * @param {?} driver
+     * @param {?} normalizer
+     * @param {?} element
+     * @param {?} keyframes
+     * @param {?=} preStyles
+     * @param {?=} postStyles
+     * @return {?}
+     */
+
+
+    function normalizeKeyframes(driver, normalizer, element, keyframes) {
+      var preStyles = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : {};
+      var postStyles = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : {};
+
+      /** @type {?} */
+      var errors = [];
+      /** @type {?} */
+
+      var normalizedKeyframes = [];
+      /** @type {?} */
+
+      var previousOffset = -1;
+      /** @type {?} */
+
+      var previousKeyframe = null;
+      keyframes.forEach(
+      /**
+      * @param {?} kf
+      * @return {?}
+      */
+      function (kf) {
+        /** @type {?} */
+        var offset =
+        /** @type {?} */
+        kf['offset'];
+        /** @type {?} */
+
+        var isSameOffset = offset == previousOffset;
+        /** @type {?} */
+
+        var normalizedKeyframe = isSameOffset && previousKeyframe || {};
+        Object.keys(kf).forEach(
+        /**
+        * @param {?} prop
+        * @return {?}
+        */
+        function (prop) {
+          /** @type {?} */
+          var normalizedProp = prop;
+          /** @type {?} */
+
+          var normalizedValue = kf[prop];
+
+          if (prop !== 'offset') {
+            normalizedProp = normalizer.normalizePropertyName(normalizedProp, errors);
+
+            switch (normalizedValue) {
+              case _angular_animations__WEBPACK_IMPORTED_MODULE_0__["ɵPRE_STYLE"]:
+                normalizedValue = preStyles[prop];
+                break;
+
+              case _angular_animations__WEBPACK_IMPORTED_MODULE_0__["AUTO_STYLE"]:
+                normalizedValue = postStyles[prop];
+                break;
+
+              default:
+                normalizedValue = normalizer.normalizeStyleValue(prop, normalizedProp, normalizedValue, errors);
+                break;
+            }
+          }
+
+          normalizedKeyframe[normalizedProp] = normalizedValue;
+        });
+
+        if (!isSameOffset) {
+          normalizedKeyframes.push(normalizedKeyframe);
+        }
+
+        previousKeyframe = normalizedKeyframe;
+        previousOffset = offset;
+      });
+
+      if (errors.length) {
+        /** @type {?} */
+        var LINE_START = '\n - ';
+        throw new Error("Unable to animate due to the following errors:".concat(LINE_START).concat(errors.join(LINE_START)));
+      }
+
+      return normalizedKeyframes;
+    }
+    /**
+     * @param {?} player
+     * @param {?} eventName
+     * @param {?} event
+     * @param {?} callback
+     * @return {?}
+     */
+
+
+    function listenOnPlayer(player, eventName, event, callback) {
+      switch (eventName) {
+        case 'start':
+          player.onStart(
+          /**
+          * @return {?}
+          */
+          function () {
+            return callback(event && copyAnimationEvent(event, 'start', player));
+          });
+          break;
+
+        case 'done':
+          player.onDone(
+          /**
+          * @return {?}
+          */
+          function () {
+            return callback(event && copyAnimationEvent(event, 'done', player));
+          });
+          break;
+
+        case 'destroy':
+          player.onDestroy(
+          /**
+          * @return {?}
+          */
+          function () {
+            return callback(event && copyAnimationEvent(event, 'destroy', player));
+          });
+          break;
+      }
+    }
+    /**
+     * @param {?} e
+     * @param {?} phaseName
+     * @param {?} player
+     * @return {?}
+     */
+
+
+    function copyAnimationEvent(e, phaseName, player) {
+      /** @type {?} */
+      var totalTime = player.totalTime;
+      /** @type {?} */
+
+      var disabled =
+      /** @type {?} */
+      player.disabled ? true : false;
+      /** @type {?} */
+
+      var event = makeAnimationEvent(e.element, e.triggerName, e.fromState, e.toState, phaseName || e.phaseName, totalTime == undefined ? e.totalTime : totalTime, disabled);
+      /** @type {?} */
+
+      var data =
+      /** @type {?} */
+      e['_data'];
+
+      if (data != null) {
+        /** @type {?} */
+        event['_data'] = data;
+      }
+
+      return event;
+    }
+    /**
+     * @param {?} element
+     * @param {?} triggerName
+     * @param {?} fromState
+     * @param {?} toState
+     * @param {?=} phaseName
+     * @param {?=} totalTime
+     * @param {?=} disabled
+     * @return {?}
+     */
+
+
+    function makeAnimationEvent(element, triggerName, fromState, toState) {
+      var phaseName = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : '';
+      var totalTime = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 0;
+      var disabled = arguments.length > 6 ? arguments[6] : undefined;
+      return {
+        element: element,
+        triggerName: triggerName,
+        fromState: fromState,
+        toState: toState,
+        phaseName: phaseName,
+        totalTime: totalTime,
+        disabled: !!disabled
+      };
+    }
+    /**
+     * @param {?} map
+     * @param {?} key
+     * @param {?} defaultValue
+     * @return {?}
+     */
+
+
+    function getOrSetAsInMap(map, key, defaultValue) {
+      /** @type {?} */
+      var value;
+
+      if (map instanceof Map) {
+        value = map.get(key);
+
+        if (!value) {
+          map.set(key, value = defaultValue);
+        }
+      } else {
+        value = map[key];
+
+        if (!value) {
+          value = map[key] = defaultValue;
+        }
+      }
+
+      return value;
+    }
+    /**
+     * @param {?} command
+     * @return {?}
+     */
+
+
+    function parseTimelineCommand(command) {
+      /** @type {?} */
+      var separatorPos = command.indexOf(':');
+      /** @type {?} */
+
+      var id = command.substring(1, separatorPos);
+      /** @type {?} */
+
+      var action = command.substr(separatorPos + 1);
+      return [id, action];
+    }
+    /** @type {?} */
+
+
+    var _contains =
+    /**
+    * @param {?} elm1
+    * @param {?} elm2
+    * @return {?}
+    */
+    function _contains(elm1, elm2) {
+      return false;
+    };
+
+    var ɵ0 = _contains;
+    /** @type {?} */
+
+    var _matches =
+    /**
+    * @param {?} element
+    * @param {?} selector
+    * @return {?}
+    */
+    function _matches(element, selector) {
+      return false;
+    };
+
+    var ɵ1 = _matches;
+    /** @type {?} */
+
+    var _query =
+    /**
+    * @param {?} element
+    * @param {?} selector
+    * @param {?} multi
+    * @return {?}
+    */
+    function _query(element, selector, multi) {
+      return [];
+    };
+
+    var ɵ2 = _query; // Define utility methods for browsers and platform-server(domino) where Element
+    // and utility methods exist.
+
+    /** @type {?} */
+
+    var _isNode = isNode();
+
+    if (_isNode || typeof Element !== 'undefined') {
+      // this is well supported in all browsers
+      _contains =
+      /**
+      * @param {?} elm1
+      * @param {?} elm2
+      * @return {?}
+      */
+      function _contains(elm1, elm2) {
+        return (
+          /** @type {?} */
+          elm1.contains(elm2)
+        );
+      };
+
+      _matches =
+      /**
+      * @return {?}
+      */
+      function () {
+        if (_isNode || Element.prototype.matches) {
+          return (
+            /**
+            * @param {?} element
+            * @param {?} selector
+            * @return {?}
+            */
+            function (element, selector) {
+              return element.matches(selector);
+            }
+          );
+        } else {
+          /** @type {?} */
+          var proto =
+          /** @type {?} */
+          Element.prototype;
+          /** @type {?} */
+
+          var fn = proto.matchesSelector || proto.mozMatchesSelector || proto.msMatchesSelector || proto.oMatchesSelector || proto.webkitMatchesSelector;
+
+          if (fn) {
+            return (
+              /**
+              * @param {?} element
+              * @param {?} selector
+              * @return {?}
+              */
+              function (element, selector) {
+                return fn.apply(element, [selector]);
+              }
+            );
+          } else {
+            return _matches;
+          }
+        }
+      }();
+
+      _query =
+      /**
+      * @param {?} element
+      * @param {?} selector
+      * @param {?} multi
+      * @return {?}
+      */
+      function _query(element, selector, multi) {
+        /** @type {?} */
+        var results = [];
+
+        if (multi) {
+          results.push.apply(results, _toConsumableArray(element.querySelectorAll(selector)));
+        } else {
+          /** @type {?} */
+          var elm = element.querySelector(selector);
+
+          if (elm) {
+            results.push(elm);
+          }
+        }
+
+        return results;
+      };
+    }
+    /**
+     * @param {?} prop
+     * @return {?}
+     */
+
+
+    function containsVendorPrefix(prop) {
+      // Webkit is the only real popular vendor prefix nowadays
+      // cc: http://shouldiprefix.com/
+      return prop.substring(1, 6) == 'ebkit'; // webkit or Webkit
+    }
+    /** @type {?} */
+
+
+    var _CACHED_BODY = null;
+    /** @type {?} */
+
+    var _IS_WEBKIT = false;
+    /**
+     * @param {?} prop
+     * @return {?}
+     */
+
+    function _validateStyleProperty(prop) {
+      if (!_CACHED_BODY) {
+        _CACHED_BODY = getBodyNode() || {};
+        _IS_WEBKIT =
+        /** @type {?} */
+        _CACHED_BODY.style ? 'WebkitAppearance' in
+        /** @type {?} */
+        _CACHED_BODY.style : false;
+      }
+      /** @type {?} */
+
+
+      var result = true;
+
+      if (
+      /** @type {?} */
+      _CACHED_BODY.style && !containsVendorPrefix(prop)) {
+        result = prop in
+        /** @type {?} */
+        _CACHED_BODY.style;
+
+        if (!result && _IS_WEBKIT) {
+          /** @type {?} */
+          var camelProp = 'Webkit' + prop.charAt(0).toUpperCase() + prop.substr(1);
+          result = camelProp in
+          /** @type {?} */
+          _CACHED_BODY.style;
+        }
+      }
+
+      return result;
+    }
+    /**
+     * @return {?}
+     */
+
+
+    function getBodyNode() {
+      if (typeof document != 'undefined') {
+        return document.body;
+      }
+
+      return null;
+    }
+    /** @type {?} */
+
+
+    var _matchesElement = _matches;
+    /** @type {?} */
+
+    var _containsElement = _contains;
+    /** @type {?} */
+
+    var invokeQuery = _query;
+    /**
+     * @param {?} object
+     * @return {?}
+     */
+
+    function hypenatePropsObject(object) {
+      /** @type {?} */
+      var newObj = {};
+      Object.keys(object).forEach(
+      /**
+      * @param {?} prop
+      * @return {?}
+      */
+      function (prop) {
+        /** @type {?} */
+        var newProp = prop.replace(/([a-z])([A-Z])/g, '$1-$2');
+        newObj[newProp] = object[prop];
+      });
+      return newObj;
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/render/animation_driver.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * \@publicApi
+     */
+
+
+    var NoopAnimationDriver =
+    /*#__PURE__*/
+    function () {
+      function NoopAnimationDriver() {
+        _classCallCheck(this, NoopAnimationDriver);
+      }
+
+      _createClass2(NoopAnimationDriver, [{
+        key: "validateStyleProperty",
+
+        /**
+         * @param {?} prop
+         * @return {?}
+         */
+        value: function validateStyleProperty(prop) {
+          return _validateStyleProperty(prop);
+        }
+        /**
+         * @param {?} element
+         * @param {?} selector
+         * @return {?}
+         */
+
+      }, {
+        key: "matchesElement",
+        value: function matchesElement(element, selector) {
+          return _matchesElement(element, selector);
+        }
+        /**
+         * @param {?} elm1
+         * @param {?} elm2
+         * @return {?}
+         */
+
+      }, {
+        key: "containsElement",
+        value: function containsElement(elm1, elm2) {
+          return _containsElement(elm1, elm2);
+        }
+        /**
+         * @param {?} element
+         * @param {?} selector
+         * @param {?} multi
+         * @return {?}
+         */
+
+      }, {
+        key: "query",
+        value: function query(element, selector, multi) {
+          return invokeQuery(element, selector, multi);
+        }
+        /**
+         * @param {?} element
+         * @param {?} prop
+         * @param {?=} defaultValue
+         * @return {?}
+         */
+
+      }, {
+        key: "computeStyle",
+        value: function computeStyle(element, prop, defaultValue) {
+          return defaultValue || '';
+        }
+        /**
+         * @param {?} element
+         * @param {?} keyframes
+         * @param {?} duration
+         * @param {?} delay
+         * @param {?} easing
+         * @param {?=} previousPlayers
+         * @param {?=} scrubberAccessRequested
+         * @return {?}
+         */
+
+      }, {
+        key: "animate",
+        value: function animate(element, keyframes, duration, delay, easing) {
+          var previousPlayers = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : [];
+          var scrubberAccessRequested = arguments.length > 6 ? arguments[6] : undefined;
+          return new _angular_animations__WEBPACK_IMPORTED_MODULE_0__["NoopAnimationPlayer"](duration, delay);
+        }
+      }]);
+
+      return NoopAnimationDriver;
+    }();
+
+    NoopAnimationDriver.ɵfac = function NoopAnimationDriver_Factory(t) {
+      return new (t || NoopAnimationDriver)();
+    };
+
+    NoopAnimationDriver.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+      token: NoopAnimationDriver,
+      factory: NoopAnimationDriver.ɵfac
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](NoopAnimationDriver, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+      }], null, null);
+    })();
+    /**
+     * \@publicApi
+     * @abstract
+     */
+
+
+    var AnimationDriver = function AnimationDriver() {
+      _classCallCheck(this, AnimationDriver);
+    };
+
+    AnimationDriver.NOOP = new NoopAnimationDriver();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/util.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var ONE_SECOND = 1000;
+    /** @type {?} */
+
+    var SUBSTITUTION_EXPR_START = '{{';
+    /** @type {?} */
+
+    var SUBSTITUTION_EXPR_END = '}}';
+    /** @type {?} */
+
+    var ENTER_CLASSNAME = 'ng-enter';
+    /** @type {?} */
+
+    var LEAVE_CLASSNAME = 'ng-leave';
+    /** @type {?} */
+
+    var ENTER_SELECTOR = '.ng-enter';
+    /** @type {?} */
+
+    var LEAVE_SELECTOR = '.ng-leave';
+    /** @type {?} */
+
+    var NG_TRIGGER_CLASSNAME = 'ng-trigger';
+    /** @type {?} */
+
+    var NG_TRIGGER_SELECTOR = '.ng-trigger';
+    /** @type {?} */
+
+    var NG_ANIMATING_CLASSNAME = 'ng-animating';
+    /** @type {?} */
+
+    var NG_ANIMATING_SELECTOR = '.ng-animating';
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+
+    function resolveTimingValue(value) {
+      if (typeof value == 'number') return value;
+      /** @type {?} */
+
+      var matches = value.match(/^(-?[\.\d]+)(m?s)/);
+      if (!matches || matches.length < 2) return 0;
+      return _convertTimeValueToMS(parseFloat(matches[1]), matches[2]);
+    }
+    /**
+     * @param {?} value
+     * @param {?} unit
+     * @return {?}
+     */
+
+
+    function _convertTimeValueToMS(value, unit) {
+      switch (unit) {
+        case 's':
+          return value * ONE_SECOND;
+
+        default:
+          // ms or something else
+          return value;
+      }
+    }
+    /**
+     * @param {?} timings
+     * @param {?} errors
+     * @param {?=} allowNegativeValues
+     * @return {?}
+     */
+
+
+    function resolveTiming(timings, errors, allowNegativeValues) {
+      return timings.hasOwnProperty('duration') ?
+      /** @type {?} */
+      timings : parseTimeExpression(
+      /** @type {?} */
+      timings, errors, allowNegativeValues);
+    }
+    /**
+     * @param {?} exp
+     * @param {?} errors
+     * @param {?=} allowNegativeValues
+     * @return {?}
+     */
+
+
+    function parseTimeExpression(exp, errors, allowNegativeValues) {
+      /** @type {?} */
+      var regex = /^(-?[\.\d]+)(m?s)(?:\s+(-?[\.\d]+)(m?s))?(?:\s+([-a-z]+(?:\(.+?\))?))?$/i;
+      /** @type {?} */
+
+      var duration;
+      /** @type {?} */
+
+      var delay = 0;
+      /** @type {?} */
+
+      var easing = '';
+
+      if (typeof exp === 'string') {
+        /** @type {?} */
+        var matches = exp.match(regex);
+
+        if (matches === null) {
+          errors.push("The provided timing value \"".concat(exp, "\" is invalid."));
+          return {
+            duration: 0,
+            delay: 0,
+            easing: ''
+          };
+        }
+
+        duration = _convertTimeValueToMS(parseFloat(matches[1]), matches[2]);
+        /** @type {?} */
+
+        var delayMatch = matches[3];
+
+        if (delayMatch != null) {
+          delay = _convertTimeValueToMS(parseFloat(delayMatch), matches[4]);
+        }
+        /** @type {?} */
+
+
+        var easingVal = matches[5];
+
+        if (easingVal) {
+          easing = easingVal;
+        }
+      } else {
+        duration = exp;
+      }
+
+      if (!allowNegativeValues) {
+        /** @type {?} */
+        var containsErrors = false;
+        /** @type {?} */
+
+        var startIndex = errors.length;
+
+        if (duration < 0) {
+          errors.push("Duration values below 0 are not allowed for this animation step.");
+          containsErrors = true;
+        }
+
+        if (delay < 0) {
+          errors.push("Delay values below 0 are not allowed for this animation step.");
+          containsErrors = true;
+        }
+
+        if (containsErrors) {
+          errors.splice(startIndex, 0, "The provided timing value \"".concat(exp, "\" is invalid."));
+        }
+      }
+
+      return {
+        duration: duration,
+        delay: delay,
+        easing: easing
+      };
+    }
+    /**
+     * @param {?} obj
+     * @param {?=} destination
+     * @return {?}
+     */
+
+
+    function copyObj(obj) {
+      var destination = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      Object.keys(obj).forEach(
+      /**
+      * @param {?} prop
+      * @return {?}
+      */
+      function (prop) {
+        destination[prop] = obj[prop];
+      });
+      return destination;
+    }
+    /**
+     * @param {?} styles
+     * @return {?}
+     */
+
+
+    function normalizeStyles(styles) {
+      /** @type {?} */
+      var normalizedStyles = {};
+
+      if (Array.isArray(styles)) {
+        styles.forEach(
+        /**
+        * @param {?} data
+        * @return {?}
+        */
+        function (data) {
+          return copyStyles(data, false, normalizedStyles);
+        });
+      } else {
+        copyStyles(styles, false, normalizedStyles);
+      }
+
+      return normalizedStyles;
+    }
+    /**
+     * @param {?} styles
+     * @param {?} readPrototype
+     * @param {?=} destination
+     * @return {?}
+     */
+
+
+    function copyStyles(styles, readPrototype) {
+      var destination = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+      if (readPrototype) {
+        // we make use of a for-in loop so that the
+        // prototypically inherited properties are
+        // revealed from the backFill map
+        for (var prop in styles) {
+          destination[prop] = styles[prop];
+        }
+      } else {
+        copyObj(styles, destination);
+      }
+
+      return destination;
+    }
+    /**
+     * @param {?} element
+     * @param {?} key
+     * @param {?} value
+     * @return {?}
+     */
+
+
+    function getStyleAttributeString(element, key, value) {
+      // Return the key-value pair string to be added to the style attribute for the
+      // given CSS style key.
+      if (value) {
+        return key + ':' + value + ';';
+      } else {
+        return '';
+      }
+    }
+    /**
+     * @param {?} element
+     * @return {?}
+     */
+
+
+    function writeStyleAttribute(element) {
+      // Read the style property of the element and manually reflect it to the
+      // style attribute. This is needed because Domino on platform-server doesn't
+      // understand the full set of allowed CSS properties and doesn't reflect some
+      // of them automatically.
+
+      /** @type {?} */
+      var styleAttrValue = '';
+
+      for (var i = 0; i < element.style.length; i++) {
+        /** @type {?} */
+        var key = element.style.item(i);
+        styleAttrValue += getStyleAttributeString(element, key, element.style.getPropertyValue(key));
+      }
+
+      for (var _key in element.style) {
+        // Skip internal Domino properties that don't need to be reflected.
+        if (!element.style.hasOwnProperty(_key) || _key.startsWith('_')) {
+          continue;
+        }
+        /** @type {?} */
+
+
+        var dashKey = camelCaseToDashCase(_key);
+        styleAttrValue += getStyleAttributeString(element, dashKey, element.style[_key]);
+      }
+
+      element.setAttribute('style', styleAttrValue);
+    }
+    /**
+     * @param {?} element
+     * @param {?} styles
+     * @param {?=} formerStyles
+     * @return {?}
+     */
+
+
+    function setStyles(element, styles, formerStyles) {
+      if (element['style']) {
+        Object.keys(styles).forEach(
+        /**
+        * @param {?} prop
+        * @return {?}
+        */
+        function (prop) {
+          /** @type {?} */
+          var camelProp = dashCaseToCamelCase(prop);
+
+          if (formerStyles && !formerStyles.hasOwnProperty(prop)) {
+            formerStyles[prop] = element.style[camelProp];
+          }
+
+          element.style[camelProp] = styles[prop];
+        }); // On the server set the 'style' attribute since it's not automatically reflected.
+
+        if (isNode()) {
+          writeStyleAttribute(element);
+        }
+      }
+    }
+    /**
+     * @param {?} element
+     * @param {?} styles
+     * @return {?}
+     */
+
+
+    function eraseStyles(element, styles) {
+      if (element['style']) {
+        Object.keys(styles).forEach(
+        /**
+        * @param {?} prop
+        * @return {?}
+        */
+        function (prop) {
+          /** @type {?} */
+          var camelProp = dashCaseToCamelCase(prop);
+          element.style[camelProp] = '';
+        }); // On the server set the 'style' attribute since it's not automatically reflected.
+
+        if (isNode()) {
+          writeStyleAttribute(element);
+        }
+      }
+    }
+    /**
+     * @param {?} steps
+     * @return {?}
+     */
+
+
+    function normalizeAnimationEntry(steps) {
+      if (Array.isArray(steps)) {
+        if (steps.length == 1) return steps[0];
+        return Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["sequence"])(steps);
+      }
+
+      return (
+        /** @type {?} */
+        steps
+      );
+    }
+    /**
+     * @param {?} value
+     * @param {?} options
+     * @param {?} errors
+     * @return {?}
+     */
+
+
+    function validateStyleParams(value, options, errors) {
+      /** @type {?} */
+      var params = options.params || {};
+      /** @type {?} */
+
+      var matches = extractStyleParams(value);
+
+      if (matches.length) {
+        matches.forEach(
+        /**
+        * @param {?} varName
+        * @return {?}
+        */
+        function (varName) {
+          if (!params.hasOwnProperty(varName)) {
+            errors.push("Unable to resolve the local animation param ".concat(varName, " in the given list of values"));
+          }
+        });
+      }
+    }
+    /** @type {?} */
+
+
+    var PARAM_REGEX = new RegExp("".concat(SUBSTITUTION_EXPR_START, "\\s*(.+?)\\s*").concat(SUBSTITUTION_EXPR_END), 'g');
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+
+    function extractStyleParams(value) {
+      /** @type {?} */
+      var params = [];
+
+      if (typeof value === 'string') {
+        /** @type {?} */
+        var match;
+
+        while (match = PARAM_REGEX.exec(value)) {
+          params.push(
+          /** @type {?} */
+          match[1]);
+        }
+
+        PARAM_REGEX.lastIndex = 0;
+      }
+
+      return params;
+    }
+    /**
+     * @param {?} value
+     * @param {?} params
+     * @param {?} errors
+     * @return {?}
+     */
+
+
+    function interpolateParams(value, params, errors) {
+      /** @type {?} */
+      var original = value.toString();
+      /** @type {?} */
+
+      var str = original.replace(PARAM_REGEX,
+      /**
+      * @param {?} _
+      * @param {?} varName
+      * @return {?}
+      */
+      function (_, varName) {
+        /** @type {?} */
+        var localVal = params[varName]; // this means that the value was never overridden by the data passed in by the user
+
+        if (!params.hasOwnProperty(varName)) {
+          errors.push("Please provide a value for the animation param ".concat(varName));
+          localVal = '';
+        }
+
+        return localVal.toString();
+      }); // we do this to assert that numeric values stay as they are
+
+      return str == original ? value : str;
+    }
+    /**
+     * @param {?} iterator
+     * @return {?}
+     */
+
+
+    function iteratorToArray(iterator) {
+      /** @type {?} */
+      var arr = [];
+      /** @type {?} */
+
+      var item = iterator.next();
+
+      while (!item.done) {
+        arr.push(item.value);
+        item = iterator.next();
+      }
+
+      return arr;
+    }
+    /**
+     * @param {?} source
+     * @param {?} destination
+     * @return {?}
+     */
+
+
+    function mergeAnimationOptions(source, destination) {
+      if (source.params) {
+        /** @type {?} */
+        var p0 = source.params;
+
+        if (!destination.params) {
+          destination.params = {};
+        }
+        /** @type {?} */
+
+
+        var p1 = destination.params;
+        Object.keys(p0).forEach(
+        /**
+        * @param {?} param
+        * @return {?}
+        */
+        function (param) {
+          if (!p1.hasOwnProperty(param)) {
+            p1[param] = p0[param];
+          }
+        });
+      }
+
+      return destination;
+    }
+    /** @type {?} */
+
+
+    var DASH_CASE_REGEXP = /-+([a-z0-9])/g;
+    /**
+     * @param {?} input
+     * @return {?}
+     */
+
+    function dashCaseToCamelCase(input) {
+      return input.replace(DASH_CASE_REGEXP,
+      /**
+      * @param {...?} m
+      * @return {?}
+      */
+      function () {
+        for (var _len = arguments.length, m = new Array(_len), _key2 = 0; _key2 < _len; _key2++) {
+          m[_key2] = arguments[_key2];
+        }
+
+        return m[1].toUpperCase();
+      });
+    }
+    /**
+     * @param {?} input
+     * @return {?}
+     */
+
+
+    function camelCaseToDashCase(input) {
+      return input.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+    }
+    /**
+     * @param {?} duration
+     * @param {?} delay
+     * @return {?}
+     */
+
+
+    function allowPreviousPlayerStylesMerge(duration, delay) {
+      return duration === 0 || delay === 0;
+    }
+    /**
+     * @param {?} element
+     * @param {?} keyframes
+     * @param {?} previousStyles
+     * @return {?}
+     */
+
+
+    function balancePreviousStylesIntoKeyframes(element, keyframes, previousStyles) {
+      /** @type {?} */
+      var previousStyleProps = Object.keys(previousStyles);
+
+      if (previousStyleProps.length && keyframes.length) {
+        /** @type {?} */
+        var startingKeyframe = keyframes[0];
+        /** @type {?} */
+
+        var missingStyleProps = [];
+        previousStyleProps.forEach(
+        /**
+        * @param {?} prop
+        * @return {?}
+        */
+        function (prop) {
+          if (!startingKeyframe.hasOwnProperty(prop)) {
+            missingStyleProps.push(prop);
+          }
+
+          startingKeyframe[prop] = previousStyles[prop];
+        });
+
+        if (missingStyleProps.length) {
+          var _loop = function _loop() {
+            /** @type {?} */
+            var kf = keyframes[i];
+            missingStyleProps.forEach(
+            /**
+            * @param {?} prop
+            * @return {?}
+            */
+            function (prop) {
+              kf[prop] = computeStyle(element, prop);
+            });
+          };
+
+          // tslint:disable-next-line
+          for (var i = 1; i < keyframes.length; i++) {
+            _loop();
+          }
+        }
+      }
+
+      return keyframes;
+    }
+    /**
+     * @param {?} visitor
+     * @param {?} node
+     * @param {?} context
+     * @return {?}
+     */
+
+
+    function visitDslNode(visitor, node, context) {
+      switch (node.type) {
+        case 7
+        /* Trigger */
+        :
+          return visitor.visitTrigger(node, context);
+
+        case 0
+        /* State */
+        :
+          return visitor.visitState(node, context);
+
+        case 1
+        /* Transition */
+        :
+          return visitor.visitTransition(node, context);
+
+        case 2
+        /* Sequence */
+        :
+          return visitor.visitSequence(node, context);
+
+        case 3
+        /* Group */
+        :
+          return visitor.visitGroup(node, context);
+
+        case 4
+        /* Animate */
+        :
+          return visitor.visitAnimate(node, context);
+
+        case 5
+        /* Keyframes */
+        :
+          return visitor.visitKeyframes(node, context);
+
+        case 6
+        /* Style */
+        :
+          return visitor.visitStyle(node, context);
+
+        case 8
+        /* Reference */
+        :
+          return visitor.visitReference(node, context);
+
+        case 9
+        /* AnimateChild */
+        :
+          return visitor.visitAnimateChild(node, context);
+
+        case 10
+        /* AnimateRef */
+        :
+          return visitor.visitAnimateRef(node, context);
+
+        case 11
+        /* Query */
+        :
+          return visitor.visitQuery(node, context);
+
+        case 12
+        /* Stagger */
+        :
+          return visitor.visitStagger(node, context);
+
+        default:
+          throw new Error("Unable to resolve animation metadata node #".concat(node.type));
+      }
+    }
+    /**
+     * @param {?} element
+     * @param {?} prop
+     * @return {?}
+     */
+
+
+    function computeStyle(element, prop) {
+      return (
+        /** @type {?} */
+        window.getComputedStyle(element)[prop]
+      );
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/dsl/animation_transition_expr.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @license
+     * Copyright Google Inc. All Rights Reserved.
+     *
+     * Use of this source code is governed by an MIT-style license that can be
+     * found in the LICENSE file at https://angular.io/license
+     * @type {?}
+     */
+
+
+    var ANY_STATE = '*';
+    /**
+     * @param {?} transitionValue
+     * @param {?} errors
+     * @return {?}
+     */
+
+    function parseTransitionExpr(transitionValue, errors) {
+      /** @type {?} */
+      var expressions = [];
+
+      if (typeof transitionValue == 'string') {
+        transitionValue.split(/\s*,\s*/).forEach(
+        /**
+        * @param {?} str
+        * @return {?}
+        */
+        function (str) {
+          return parseInnerTransitionStr(str, expressions, errors);
+        });
+      } else {
+        expressions.push(
+        /** @type {?} */
+        transitionValue);
+      }
+
+      return expressions;
+    }
+    /**
+     * @param {?} eventStr
+     * @param {?} expressions
+     * @param {?} errors
+     * @return {?}
+     */
+
+
+    function parseInnerTransitionStr(eventStr, expressions, errors) {
+      if (eventStr[0] == ':') {
+        /** @type {?} */
+        var result = parseAnimationAlias(eventStr, errors);
+
+        if (typeof result == 'function') {
+          expressions.push(result);
+          return;
+        }
+
+        eventStr = result;
+      }
+      /** @type {?} */
+
+
+      var match = eventStr.match(/^(\*|[-\w]+)\s*(<?[=-]>)\s*(\*|[-\w]+)$/);
+
+      if (match == null || match.length < 4) {
+        errors.push("The provided transition expression \"".concat(eventStr, "\" is not supported"));
+        return expressions;
+      }
+      /** @type {?} */
+
+
+      var fromState = match[1];
+      /** @type {?} */
+
+      var separator = match[2];
+      /** @type {?} */
+
+      var toState = match[3];
+      expressions.push(makeLambdaFromStates(fromState, toState));
+      /** @type {?} */
+
+      var isFullAnyStateExpr = fromState == ANY_STATE && toState == ANY_STATE;
+
+      if (separator[0] == '<' && !isFullAnyStateExpr) {
+        expressions.push(makeLambdaFromStates(toState, fromState));
+      }
+    }
+    /**
+     * @param {?} alias
+     * @param {?} errors
+     * @return {?}
+     */
+
+
+    function parseAnimationAlias(alias, errors) {
+      switch (alias) {
+        case ':enter':
+          return 'void => *';
+
+        case ':leave':
+          return '* => void';
+
+        case ':increment':
+          return (
+            /**
+            * @param {?} fromState
+            * @param {?} toState
+            * @return {?}
+            */
+            function (fromState, toState) {
+              return parseFloat(toState) > parseFloat(fromState);
+            }
+          );
+
+        case ':decrement':
+          return (
+            /**
+            * @param {?} fromState
+            * @param {?} toState
+            * @return {?}
+            */
+            function (fromState, toState) {
+              return parseFloat(toState) < parseFloat(fromState);
+            }
+          );
+
+        default:
+          errors.push("The transition alias value \"".concat(alias, "\" is not supported"));
+          return '* => *';
+      }
+    } // DO NOT REFACTOR ... keep the follow set instantiations
+    // with the values intact (closure compiler for some reason
+    // removes follow-up lines that add the values outside of
+    // the constructor...
+
+    /** @type {?} */
+
+
+    var TRUE_BOOLEAN_VALUES = new Set(['true', '1']);
+    /** @type {?} */
+
+    var FALSE_BOOLEAN_VALUES = new Set(['false', '0']);
+    /**
+     * @param {?} lhs
+     * @param {?} rhs
+     * @return {?}
+     */
+
+    function makeLambdaFromStates(lhs, rhs) {
+      /** @type {?} */
+      var LHS_MATCH_BOOLEAN = TRUE_BOOLEAN_VALUES.has(lhs) || FALSE_BOOLEAN_VALUES.has(lhs);
+      /** @type {?} */
+
+      var RHS_MATCH_BOOLEAN = TRUE_BOOLEAN_VALUES.has(rhs) || FALSE_BOOLEAN_VALUES.has(rhs);
+      return (
+        /**
+        * @param {?} fromState
+        * @param {?} toState
+        * @return {?}
+        */
+        function (fromState, toState) {
+          /** @type {?} */
+          var lhsMatch = lhs == ANY_STATE || lhs == fromState;
+          /** @type {?} */
+
+          var rhsMatch = rhs == ANY_STATE || rhs == toState;
+
+          if (!lhsMatch && LHS_MATCH_BOOLEAN && typeof fromState === 'boolean') {
+            lhsMatch = fromState ? TRUE_BOOLEAN_VALUES.has(lhs) : FALSE_BOOLEAN_VALUES.has(lhs);
+          }
+
+          if (!rhsMatch && RHS_MATCH_BOOLEAN && typeof toState === 'boolean') {
+            rhsMatch = toState ? TRUE_BOOLEAN_VALUES.has(rhs) : FALSE_BOOLEAN_VALUES.has(rhs);
+          }
+
+          return lhsMatch && rhsMatch;
+        }
+      );
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/dsl/animation_ast_builder.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var SELF_TOKEN = ':self';
+    /** @type {?} */
+
+    var SELF_TOKEN_REGEX = new RegExp("s*".concat(SELF_TOKEN, "s*,?"), 'g');
+    /*
+     * [Validation]
+     * The visitor code below will traverse the animation AST generated by the animation verb functions
+     * (the output is a tree of objects) and attempt to perform a series of validations on the data. The
+     * following corner-cases will be validated:
+     *
+     * 1. Overlap of animations
+     * Given that a CSS property cannot be animated in more than one place at the same time, it's
+     * important that this behavior is detected and validated. The way in which this occurs is that
+     * each time a style property is examined, a string-map containing the property will be updated with
+     * the start and end times for when the property is used within an animation step.
+     *
+     * If there are two or more parallel animations that are currently running (these are invoked by the
+     * group()) on the same element then the validator will throw an error. Since the start/end timing
+     * values are collected for each property then if the current animation step is animating the same
+     * property and its timing values fall anywhere into the window of time that the property is
+     * currently being animated within then this is what causes an error.
+     *
+     * 2. Timing values
+     * The validator will validate to see if a timing value of `duration delay easing` or
+     * `durationNumber` is valid or not.
+     *
+     * (note that upon validation the code below will replace the timing data with an object containing
+     * {duration,delay,easing}.
+     *
+     * 3. Offset Validation
+     * Each of the style() calls are allowed to have an offset value when placed inside of keyframes().
+     * Offsets within keyframes() are considered valid when:
+     *
+     *   - No offsets are used at all
+     *   - Each style() entry contains an offset value
+     *   - Each offset is between 0 and 1
+     *   - Each offset is greater to or equal than the previous one
+     *
+     * Otherwise an error will be thrown.
+     */
+
+    /**
+     * @param {?} driver
+     * @param {?} metadata
+     * @param {?} errors
+     * @return {?}
+     */
+
+    function buildAnimationAst(driver, metadata, errors) {
+      return new AnimationAstBuilderVisitor(driver).build(metadata, errors);
+    }
+    /** @type {?} */
+
+
+    var ROOT_SELECTOR = '';
+
+    var AnimationAstBuilderVisitor =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} _driver
+       */
+      function AnimationAstBuilderVisitor(_driver) {
+        _classCallCheck(this, AnimationAstBuilderVisitor);
+
+        this._driver = _driver;
+      }
+      /**
+       * @param {?} metadata
+       * @param {?} errors
+       * @return {?}
+       */
+
+
+      _createClass2(AnimationAstBuilderVisitor, [{
+        key: "build",
+        value: function build(metadata, errors) {
+          /** @type {?} */
+          var context = new AnimationAstBuilderContext(errors);
+
+          this._resetContextStyleTimingState(context);
+
+          return (
+            /** @type {?} */
+            visitDslNode(this, normalizeAnimationEntry(metadata), context)
+          );
+        }
+        /**
+         * @private
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "_resetContextStyleTimingState",
+        value: function _resetContextStyleTimingState(context) {
+          context.currentQuerySelector = ROOT_SELECTOR;
+          context.collectedStyles = {};
+          context.collectedStyles[ROOT_SELECTOR] = {};
+          context.currentTime = 0;
+        }
+        /**
+         * @param {?} metadata
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitTrigger",
+        value: function visitTrigger(metadata, context) {
+          var _this3 = this;
+
+          /** @type {?} */
+          var queryCount = context.queryCount = 0;
+          /** @type {?} */
+
+          var depCount = context.depCount = 0;
+          /** @type {?} */
+
+          var states = [];
+          /** @type {?} */
+
+          var transitions = [];
+
+          if (metadata.name.charAt(0) == '@') {
+            context.errors.push('animation triggers cannot be prefixed with an `@` sign (e.g. trigger(\'@foo\', [...]))');
+          }
+
+          metadata.definitions.forEach(
+          /**
+          * @param {?} def
+          * @return {?}
+          */
+          function (def) {
+            _this3._resetContextStyleTimingState(context);
+
+            if (def.type == 0
+            /* State */
+            ) {
+                /** @type {?} */
+                var stateDef =
+                /** @type {?} */
+                def;
+                /** @type {?} */
+
+                var name = stateDef.name;
+                name.toString().split(/\s*,\s*/).forEach(
+                /**
+                * @param {?} n
+                * @return {?}
+                */
+                function (n) {
+                  stateDef.name = n;
+                  states.push(_this3.visitState(stateDef, context));
+                });
+                stateDef.name = name;
+              } else if (def.type == 1
+            /* Transition */
+            ) {
+                /** @type {?} */
+                var transition = _this3.visitTransition(
+                /** @type {?} */
+                def, context);
+
+                queryCount += transition.queryCount;
+                depCount += transition.depCount;
+                transitions.push(transition);
+              } else {
+              context.errors.push('only state() and transition() definitions can sit inside of a trigger()');
+            }
+          });
+          return {
+            type: 7
+            /* Trigger */
+            ,
+            name: metadata.name,
+            states: states,
+            transitions: transitions,
+            queryCount: queryCount,
+            depCount: depCount,
+            options: null
+          };
+        }
+        /**
+         * @param {?} metadata
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitState",
+        value: function visitState(metadata, context) {
+          /** @type {?} */
+          var styleAst = this.visitStyle(metadata.styles, context);
+          /** @type {?} */
+
+          var astParams = metadata.options && metadata.options.params || null;
+
+          if (styleAst.containsDynamicStyles) {
+            /** @type {?} */
+            var missingSubs = new Set();
+            /** @type {?} */
+
+            var params = astParams || {};
+            styleAst.styles.forEach(
+            /**
+            * @param {?} value
+            * @return {?}
+            */
+            function (value) {
+              if (isObject(value)) {
+                /** @type {?} */
+                var stylesObj =
+                /** @type {?} */
+                value;
+                Object.keys(stylesObj).forEach(
+                /**
+                * @param {?} prop
+                * @return {?}
+                */
+                function (prop) {
+                  extractStyleParams(stylesObj[prop]).forEach(
+                  /**
+                  * @param {?} sub
+                  * @return {?}
+                  */
+                  function (sub) {
+                    if (!params.hasOwnProperty(sub)) {
+                      missingSubs.add(sub);
+                    }
+                  });
+                });
+              }
+            });
+
+            if (missingSubs.size) {
+              /** @type {?} */
+              var missingSubsArr = iteratorToArray(missingSubs.values());
+              context.errors.push("state(\"".concat(metadata.name, "\", ...) must define default values for all the following style substitutions: ").concat(missingSubsArr.join(', ')));
+            }
+          }
+
+          return {
+            type: 0
+            /* State */
+            ,
+            name: metadata.name,
+            style: styleAst,
+            options: astParams ? {
+              params: astParams
+            } : null
+          };
+        }
+        /**
+         * @param {?} metadata
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitTransition",
+        value: function visitTransition(metadata, context) {
+          context.queryCount = 0;
+          context.depCount = 0;
+          /** @type {?} */
+
+          var animation = visitDslNode(this, normalizeAnimationEntry(metadata.animation), context);
+          /** @type {?} */
+
+          var matchers = parseTransitionExpr(metadata.expr, context.errors);
+          return {
+            type: 1
+            /* Transition */
+            ,
+            matchers: matchers,
+            animation: animation,
+            queryCount: context.queryCount,
+            depCount: context.depCount,
+            options: normalizeAnimationOptions(metadata.options)
+          };
+        }
+        /**
+         * @param {?} metadata
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitSequence",
+        value: function visitSequence(metadata, context) {
+          var _this4 = this;
+
+          return {
+            type: 2
+            /* Sequence */
+            ,
+            steps: metadata.steps.map(
+            /**
+            * @param {?} s
+            * @return {?}
+            */
+            function (s) {
+              return visitDslNode(_this4, s, context);
+            }),
+            options: normalizeAnimationOptions(metadata.options)
+          };
+        }
+        /**
+         * @param {?} metadata
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitGroup",
+        value: function visitGroup(metadata, context) {
+          var _this5 = this;
+
+          /** @type {?} */
+          var currentTime = context.currentTime;
+          /** @type {?} */
+
+          var furthestTime = 0;
+          /** @type {?} */
+
+          var steps = metadata.steps.map(
+          /**
+          * @param {?} step
+          * @return {?}
+          */
+          function (step) {
+            context.currentTime = currentTime;
+            /** @type {?} */
+
+            var innerAst = visitDslNode(_this5, step, context);
+            furthestTime = Math.max(furthestTime, context.currentTime);
+            return innerAst;
+          });
+          context.currentTime = furthestTime;
+          return {
+            type: 3
+            /* Group */
+            ,
+            steps: steps,
+            options: normalizeAnimationOptions(metadata.options)
+          };
+        }
+        /**
+         * @param {?} metadata
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitAnimate",
+        value: function visitAnimate(metadata, context) {
+          /** @type {?} */
+          var timingAst = constructTimingAst(metadata.timings, context.errors);
+          context.currentAnimateTimings = timingAst;
+          /** @type {?} */
+
+          var styleAst;
+          /** @type {?} */
+
+          var styleMetadata = metadata.styles ? metadata.styles : Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({});
+
+          if (styleMetadata.type == 5
+          /* Keyframes */
+          ) {
+              styleAst = this.visitKeyframes(
+              /** @type {?} */
+              styleMetadata, context);
+            } else {
+            /** @type {?} */
+            var _styleMetadata =
+            /** @type {?} */
+            metadata.styles;
+            /** @type {?} */
+
+            var isEmpty = false;
+
+            if (!_styleMetadata) {
+              isEmpty = true;
+              /** @type {?} */
+
+              var newStyleData = {};
+
+              if (timingAst.easing) {
+                newStyleData['easing'] = timingAst.easing;
+              }
+
+              _styleMetadata = Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])(newStyleData);
+            }
+
+            context.currentTime += timingAst.duration + timingAst.delay;
+            /** @type {?} */
+
+            var _styleAst = this.visitStyle(_styleMetadata, context);
+
+            _styleAst.isEmptyStep = isEmpty;
+            styleAst = _styleAst;
+          }
+
+          context.currentAnimateTimings = null;
+          return {
+            type: 4
+            /* Animate */
+            ,
+            timings: timingAst,
+            style: styleAst,
+            options: null
+          };
+        }
+        /**
+         * @param {?} metadata
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitStyle",
+        value: function visitStyle(metadata, context) {
+          /** @type {?} */
+          var ast = this._makeStyleAst(metadata, context);
+
+          this._validateStyleAst(ast, context);
+
+          return ast;
+        }
+        /**
+         * @private
+         * @param {?} metadata
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "_makeStyleAst",
+        value: function _makeStyleAst(metadata, context) {
+          /** @type {?} */
+          var styles = [];
+
+          if (Array.isArray(metadata.styles)) {
+            /** @type {?} */
+            metadata.styles.forEach(
+            /**
+            * @param {?} styleTuple
+            * @return {?}
+            */
+            function (styleTuple) {
+              if (typeof styleTuple == 'string') {
+                if (styleTuple == _angular_animations__WEBPACK_IMPORTED_MODULE_0__["AUTO_STYLE"]) {
+                  styles.push(styleTuple);
+                } else {
+                  context.errors.push("The provided style string value ".concat(styleTuple, " is not allowed."));
+                }
+              } else {
+                styles.push(styleTuple);
+              }
+            });
+          } else {
+            styles.push(metadata.styles);
+          }
+          /** @type {?} */
+
+
+          var containsDynamicStyles = false;
+          /** @type {?} */
+
+          var collectedEasing = null;
+          styles.forEach(
+          /**
+          * @param {?} styleData
+          * @return {?}
+          */
+          function (styleData) {
+            if (isObject(styleData)) {
+              /** @type {?} */
+              var styleMap =
+              /** @type {?} */
+              styleData;
+              /** @type {?} */
+
+              var easing = styleMap['easing'];
+
+              if (easing) {
+                collectedEasing =
+                /** @type {?} */
+                easing;
+                delete styleMap['easing'];
+              }
+
+              if (!containsDynamicStyles) {
+                for (var prop in styleMap) {
+                  /** @type {?} */
+                  var value = styleMap[prop];
+
+                  if (value.toString().indexOf(SUBSTITUTION_EXPR_START) >= 0) {
+                    containsDynamicStyles = true;
+                    break;
+                  }
+                }
+              }
+            }
+          });
+          return {
+            type: 6
+            /* Style */
+            ,
+            styles: styles,
+            easing: collectedEasing,
+            offset: metadata.offset,
+            containsDynamicStyles: containsDynamicStyles,
+            options: null
+          };
+        }
+        /**
+         * @private
+         * @param {?} ast
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "_validateStyleAst",
+        value: function _validateStyleAst(ast, context) {
+          var _this6 = this;
+
+          /** @type {?} */
+          var timings = context.currentAnimateTimings;
+          /** @type {?} */
+
+          var endTime = context.currentTime;
+          /** @type {?} */
+
+          var startTime = context.currentTime;
+
+          if (timings && startTime > 0) {
+            startTime -= timings.duration + timings.delay;
+          }
+
+          ast.styles.forEach(
+          /**
+          * @param {?} tuple
+          * @return {?}
+          */
+          function (tuple) {
+            if (typeof tuple == 'string') return;
+            Object.keys(tuple).forEach(
+            /**
+            * @param {?} prop
+            * @return {?}
+            */
+            function (prop) {
+              if (!_this6._driver.validateStyleProperty(prop)) {
+                context.errors.push("The provided animation property \"".concat(prop, "\" is not a supported CSS property for animations"));
+                return;
+              }
+              /** @type {?} */
+
+
+              var collectedStyles = context.collectedStyles[
+              /** @type {?} */
+              context.currentQuerySelector];
+              /** @type {?} */
+
+              var collectedEntry = collectedStyles[prop];
+              /** @type {?} */
+
+              var updateCollectedStyle = true;
+
+              if (collectedEntry) {
+                if (startTime != endTime && startTime >= collectedEntry.startTime && endTime <= collectedEntry.endTime) {
+                  context.errors.push("The CSS property \"".concat(prop, "\" that exists between the times of \"").concat(collectedEntry.startTime, "ms\" and \"").concat(collectedEntry.endTime, "ms\" is also being animated in a parallel animation between the times of \"").concat(startTime, "ms\" and \"").concat(endTime, "ms\""));
+                  updateCollectedStyle = false;
+                } // we always choose the smaller start time value since we
+                // want to have a record of the entire animation window where
+                // the style property is being animated in between
+
+
+                startTime = collectedEntry.startTime;
+              }
+
+              if (updateCollectedStyle) {
+                collectedStyles[prop] = {
+                  startTime: startTime,
+                  endTime: endTime
+                };
+              }
+
+              if (context.options) {
+                validateStyleParams(tuple[prop], context.options, context.errors);
+              }
+            });
+          });
+        }
+        /**
+         * @param {?} metadata
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitKeyframes",
+        value: function visitKeyframes(metadata, context) {
+          var _this7 = this;
+
+          /** @type {?} */
+          var ast = {
+            type: 5
+            /* Keyframes */
+            ,
+            styles: [],
+            options: null
+          };
+
+          if (!context.currentAnimateTimings) {
+            context.errors.push("keyframes() must be placed inside of a call to animate()");
+            return ast;
+          }
+          /** @type {?} */
+
+
+          var MAX_KEYFRAME_OFFSET = 1;
+          /** @type {?} */
+
+          var totalKeyframesWithOffsets = 0;
+          /** @type {?} */
+
+          var offsets = [];
+          /** @type {?} */
+
+          var offsetsOutOfOrder = false;
+          /** @type {?} */
+
+          var keyframesOutOfRange = false;
+          /** @type {?} */
+
+          var previousOffset = 0;
+          /** @type {?} */
+
+          var keyframes = metadata.steps.map(
+          /**
+          * @param {?} styles
+          * @return {?}
+          */
+          function (styles) {
+            /** @type {?} */
+            var style = _this7._makeStyleAst(styles, context);
+            /** @type {?} */
+
+
+            var offsetVal = style.offset != null ? style.offset : consumeOffset(style.styles);
+            /** @type {?} */
+
+            var offset = 0;
+
+            if (offsetVal != null) {
+              totalKeyframesWithOffsets++;
+              offset = style.offset = offsetVal;
+            }
+
+            keyframesOutOfRange = keyframesOutOfRange || offset < 0 || offset > 1;
+            offsetsOutOfOrder = offsetsOutOfOrder || offset < previousOffset;
+            previousOffset = offset;
+            offsets.push(offset);
+            return style;
+          });
+
+          if (keyframesOutOfRange) {
+            context.errors.push("Please ensure that all keyframe offsets are between 0 and 1");
+          }
+
+          if (offsetsOutOfOrder) {
+            context.errors.push("Please ensure that all keyframe offsets are in order");
+          }
+          /** @type {?} */
+
+
+          var length = metadata.steps.length;
+          /** @type {?} */
+
+          var generatedOffset = 0;
+
+          if (totalKeyframesWithOffsets > 0 && totalKeyframesWithOffsets < length) {
+            context.errors.push("Not all style() steps within the declared keyframes() contain offsets");
+          } else if (totalKeyframesWithOffsets == 0) {
+            generatedOffset = MAX_KEYFRAME_OFFSET / (length - 1);
+          }
+          /** @type {?} */
+
+
+          var limit = length - 1;
+          /** @type {?} */
+
+          var currentTime = context.currentTime;
+          /** @type {?} */
+
+          var currentAnimateTimings =
+          /** @type {?} */
+          context.currentAnimateTimings;
+          /** @type {?} */
+
+          var animateDuration = currentAnimateTimings.duration;
+          keyframes.forEach(
+          /**
+          * @param {?} kf
+          * @param {?} i
+          * @return {?}
+          */
+          function (kf, i) {
+            /** @type {?} */
+            var offset = generatedOffset > 0 ? i == limit ? 1 : generatedOffset * i : offsets[i];
+            /** @type {?} */
+
+            var durationUpToThisFrame = offset * animateDuration;
+            context.currentTime = currentTime + currentAnimateTimings.delay + durationUpToThisFrame;
+            currentAnimateTimings.duration = durationUpToThisFrame;
+
+            _this7._validateStyleAst(kf, context);
+
+            kf.offset = offset;
+            ast.styles.push(kf);
+          });
+          return ast;
+        }
+        /**
+         * @param {?} metadata
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitReference",
+        value: function visitReference(metadata, context) {
+          return {
+            type: 8
+            /* Reference */
+            ,
+            animation: visitDslNode(this, normalizeAnimationEntry(metadata.animation), context),
+            options: normalizeAnimationOptions(metadata.options)
+          };
+        }
+        /**
+         * @param {?} metadata
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitAnimateChild",
+        value: function visitAnimateChild(metadata, context) {
+          context.depCount++;
+          return {
+            type: 9
+            /* AnimateChild */
+            ,
+            options: normalizeAnimationOptions(metadata.options)
+          };
+        }
+        /**
+         * @param {?} metadata
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitAnimateRef",
+        value: function visitAnimateRef(metadata, context) {
+          return {
+            type: 10
+            /* AnimateRef */
+            ,
+            animation: this.visitReference(metadata.animation, context),
+            options: normalizeAnimationOptions(metadata.options)
+          };
+        }
+        /**
+         * @param {?} metadata
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitQuery",
+        value: function visitQuery(metadata, context) {
+          /** @type {?} */
+          var parentSelector =
+          /** @type {?} */
+          context.currentQuerySelector;
+          /** @type {?} */
+
+          var options =
+          /** @type {?} */
+          metadata.options || {};
+          context.queryCount++;
+          context.currentQuery = metadata;
+
+          var _normalizeSelector = normalizeSelector(metadata.selector),
+              _normalizeSelector2 = _slicedToArray(_normalizeSelector, 2),
+              selector = _normalizeSelector2[0],
+              includeSelf = _normalizeSelector2[1];
+
+          context.currentQuerySelector = parentSelector.length ? parentSelector + ' ' + selector : selector;
+          getOrSetAsInMap(context.collectedStyles, context.currentQuerySelector, {});
+          /** @type {?} */
+
+          var animation = visitDslNode(this, normalizeAnimationEntry(metadata.animation), context);
+          context.currentQuery = null;
+          context.currentQuerySelector = parentSelector;
+          return {
+            type: 11
+            /* Query */
+            ,
+            selector: selector,
+            limit: options.limit || 0,
+            optional: !!options.optional,
+            includeSelf: includeSelf,
+            animation: animation,
+            originalSelector: metadata.selector,
+            options: normalizeAnimationOptions(metadata.options)
+          };
+        }
+        /**
+         * @param {?} metadata
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitStagger",
+        value: function visitStagger(metadata, context) {
+          if (!context.currentQuery) {
+            context.errors.push("stagger() can only be used inside of query()");
+          }
+          /** @type {?} */
+
+
+          var timings = metadata.timings === 'full' ? {
+            duration: 0,
+            delay: 0,
+            easing: 'full'
+          } : resolveTiming(metadata.timings, context.errors, true);
+          return {
+            type: 12
+            /* Stagger */
+            ,
+            animation: visitDslNode(this, normalizeAnimationEntry(metadata.animation), context),
+            timings: timings,
+            options: null
+          };
+        }
+      }]);
+
+      return AnimationAstBuilderVisitor;
+    }();
+
+    if (false) {}
+    /**
+     * @param {?} selector
+     * @return {?}
+     */
+
+
+    function normalizeSelector(selector) {
+      /** @type {?} */
+      var hasAmpersand = selector.split(/\s*,\s*/).find(
+      /**
+      * @param {?} token
+      * @return {?}
+      */
+      function (token) {
+        return token == SELF_TOKEN;
+      }) ? true : false;
+
+      if (hasAmpersand) {
+        selector = selector.replace(SELF_TOKEN_REGEX, '');
+      } // the :enter and :leave selectors are filled in at runtime during timeline building
+
+
+      selector = selector.replace(/@\*/g, NG_TRIGGER_SELECTOR).replace(/@\w+/g,
+      /**
+      * @param {?} match
+      * @return {?}
+      */
+      function (match) {
+        return NG_TRIGGER_SELECTOR + '-' + match.substr(1);
+      }).replace(/:animating/g, NG_ANIMATING_SELECTOR);
+      return [selector, hasAmpersand];
+    }
+    /**
+     * @param {?} obj
+     * @return {?}
+     */
+
+
+    function normalizeParams(obj) {
+      return obj ? copyObj(obj) : null;
+    }
+
+    var AnimationAstBuilderContext =
+    /**
+     * @param {?} errors
+     */
+    function AnimationAstBuilderContext(errors) {
+      _classCallCheck(this, AnimationAstBuilderContext);
+
+      this.errors = errors;
+      this.queryCount = 0;
+      this.depCount = 0;
+      this.currentTransition = null;
+      this.currentQuery = null;
+      this.currentQuerySelector = null;
+      this.currentAnimateTimings = null;
+      this.currentTime = 0;
+      this.collectedStyles = {};
+      this.options = null;
+    };
+
+    if (false) {}
+    /**
+     * @param {?} styles
+     * @return {?}
+     */
+
+
+    function consumeOffset(styles) {
+      if (typeof styles == 'string') return null;
+      /** @type {?} */
+
+      var offset = null;
+
+      if (Array.isArray(styles)) {
+        styles.forEach(
+        /**
+        * @param {?} styleTuple
+        * @return {?}
+        */
+        function (styleTuple) {
+          if (isObject(styleTuple) && styleTuple.hasOwnProperty('offset')) {
+            /** @type {?} */
+            var obj =
+            /** @type {?} */
+            styleTuple;
+            offset = parseFloat(
+            /** @type {?} */
+            obj['offset']);
+            delete obj['offset'];
+          }
+        });
+      } else if (isObject(styles) && styles.hasOwnProperty('offset')) {
+        /** @type {?} */
+        var obj = styles;
+        offset = parseFloat(
+        /** @type {?} */
+        obj['offset']);
+        delete obj['offset'];
+      }
+
+      return offset;
+    }
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+
+
+    function isObject(value) {
+      return !Array.isArray(value) && typeof value == 'object';
+    }
+    /**
+     * @param {?} value
+     * @param {?} errors
+     * @return {?}
+     */
+
+
+    function constructTimingAst(value, errors) {
+      /** @type {?} */
+      var timings = null;
+
+      if (value.hasOwnProperty('duration')) {
+        timings =
+        /** @type {?} */
+        value;
+      } else if (typeof value == 'number') {
+        /** @type {?} */
+        var duration = resolveTiming(value, errors).duration;
+        return makeTimingAst(duration, 0, '');
+      }
+      /** @type {?} */
+
+
+      var strValue =
+      /** @type {?} */
+      value;
+      /** @type {?} */
+
+      var isDynamic = strValue.split(/\s+/).some(
+      /**
+      * @param {?} v
+      * @return {?}
+      */
+      function (v) {
+        return v.charAt(0) == '{' && v.charAt(1) == '{';
+      });
+
+      if (isDynamic) {
+        /** @type {?} */
+        var ast =
+        /** @type {?} */
+        makeTimingAst(0, 0, '');
+        ast.dynamic = true;
+        ast.strValue = strValue;
+        return (
+          /** @type {?} */
+          ast
+        );
+      }
+
+      timings = timings || resolveTiming(strValue, errors);
+      return makeTimingAst(timings.duration, timings.delay, timings.easing);
+    }
+    /**
+     * @param {?} options
+     * @return {?}
+     */
+
+
+    function normalizeAnimationOptions(options) {
+      if (options) {
+        options = copyObj(options);
+
+        if (options['params']) {
+          options['params'] =
+          /** @type {?} */
+          normalizeParams(options['params']);
+        }
+      } else {
+        options = {};
+      }
+
+      return options;
+    }
+    /**
+     * @param {?} duration
+     * @param {?} delay
+     * @param {?} easing
+     * @return {?}
+     */
+
+
+    function makeTimingAst(duration, delay, easing) {
+      return {
+        duration: duration,
+        delay: delay,
+        easing: easing
+      };
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/dsl/animation_timeline_instruction.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @record
+     */
+
+
+    function AnimationTimelineInstruction() {}
+
+    if (false) {}
+    /**
+     * @param {?} element
+     * @param {?} keyframes
+     * @param {?} preStyleProps
+     * @param {?} postStyleProps
+     * @param {?} duration
+     * @param {?} delay
+     * @param {?=} easing
+     * @param {?=} subTimeline
+     * @return {?}
+     */
+
+
+    function createTimelineInstruction(element, keyframes, preStyleProps, postStyleProps, duration, delay) {
+      var easing = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : null;
+      var subTimeline = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : false;
+      return {
+        type: 1
+        /* TimelineAnimation */
+        ,
+        element: element,
+        keyframes: keyframes,
+        preStyleProps: preStyleProps,
+        postStyleProps: postStyleProps,
+        duration: duration,
+        delay: delay,
+        totalTime: duration + delay,
+        easing: easing,
+        subTimeline: subTimeline
+      };
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/dsl/element_instruction_map.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+
+    var ElementInstructionMap =
+    /*#__PURE__*/
+    function () {
+      function ElementInstructionMap() {
+        _classCallCheck(this, ElementInstructionMap);
+
+        this._map = new Map();
+      }
+      /**
+       * @param {?} element
+       * @return {?}
+       */
+
+
+      _createClass2(ElementInstructionMap, [{
+        key: "consume",
+        value: function consume(element) {
+          /** @type {?} */
+          var instructions = this._map.get(element);
+
+          if (instructions) {
+            this._map.delete(element);
+          } else {
+            instructions = [];
+          }
+
+          return instructions;
+        }
+        /**
+         * @param {?} element
+         * @param {?} instructions
+         * @return {?}
+         */
+
+      }, {
+        key: "append",
+        value: function append(element, instructions) {
+          var _existingInstructions;
+
+          /** @type {?} */
+          var existingInstructions = this._map.get(element);
+
+          if (!existingInstructions) {
+            this._map.set(element, existingInstructions = []);
+          }
+
+          (_existingInstructions = existingInstructions).push.apply(_existingInstructions, _toConsumableArray(instructions));
+        }
+        /**
+         * @param {?} element
+         * @return {?}
+         */
+
+      }, {
+        key: "has",
+        value: function has(element) {
+          return this._map.has(element);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "clear",
+        value: function clear() {
+          this._map.clear();
+        }
+      }]);
+
+      return ElementInstructionMap;
+    }();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/dsl/animation_timeline_builder.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var ONE_FRAME_IN_MILLISECONDS = 1;
+    /** @type {?} */
+
+    var ENTER_TOKEN = ':enter';
+    /** @type {?} */
+
+    var ENTER_TOKEN_REGEX = new RegExp(ENTER_TOKEN, 'g');
+    /** @type {?} */
+
+    var LEAVE_TOKEN = ':leave';
+    /** @type {?} */
+
+    var LEAVE_TOKEN_REGEX = new RegExp(LEAVE_TOKEN, 'g');
+    /*
+     * The code within this file aims to generate web-animations-compatible keyframes from Angular's
+     * animation DSL code.
+     *
+     * The code below will be converted from:
+     *
+     * ```
+     * sequence([
+     *   style({ opacity: 0 }),
+     *   animate(1000, style({ opacity: 0 }))
+     * ])
+     * ```
+     *
+     * To:
+     * ```
+     * keyframes = [{ opacity: 0, offset: 0 }, { opacity: 1, offset: 1 }]
+     * duration = 1000
+     * delay = 0
+     * easing = ''
+     * ```
+     *
+     * For this operation to cover the combination of animation verbs (style, animate, group, etc...) a
+     * combination of prototypical inheritance, AST traversal and merge-sort-like algorithms are used.
+     *
+     * [AST Traversal]
+     * Each of the animation verbs, when executed, will return an string-map object representing what
+     * type of action it is (style, animate, group, etc...) and the data associated with it. This means
+     * that when functional composition mix of these functions is evaluated (like in the example above)
+     * then it will end up producing a tree of objects representing the animation itself.
+     *
+     * When this animation object tree is processed by the visitor code below it will visit each of the
+     * verb statements within the visitor. And during each visit it will build the context of the
+     * animation keyframes by interacting with the `TimelineBuilder`.
+     *
+     * [TimelineBuilder]
+     * This class is responsible for tracking the styles and building a series of keyframe objects for a
+     * timeline between a start and end time. The builder starts off with an initial timeline and each
+     * time the AST comes across a `group()`, `keyframes()` or a combination of the two wihtin a
+     * `sequence()` then it will generate a sub timeline for each step as well as a new one after
+     * they are complete.
+     *
+     * As the AST is traversed, the timing state on each of the timelines will be incremented. If a sub
+     * timeline was created (based on one of the cases above) then the parent timeline will attempt to
+     * merge the styles used within the sub timelines into itself (only with group() this will happen).
+     * This happens with a merge operation (much like how the merge works in mergesort) and it will only
+     * copy the most recently used styles from the sub timelines into the parent timeline. This ensures
+     * that if the styles are used later on in another phase of the animation then they will be the most
+     * up-to-date values.
+     *
+     * [How Missing Styles Are Updated]
+     * Each timeline has a `backFill` property which is responsible for filling in new styles into
+     * already processed keyframes if a new style shows up later within the animation sequence.
+     *
+     * ```
+     * sequence([
+     *   style({ width: 0 }),
+     *   animate(1000, style({ width: 100 })),
+     *   animate(1000, style({ width: 200 })),
+     *   animate(1000, style({ width: 300 }))
+     *   animate(1000, style({ width: 400, height: 400 })) // notice how `height` doesn't exist anywhere
+     * else
+     * ])
+     * ```
+     *
+     * What is happening here is that the `height` value is added later in the sequence, but is missing
+     * from all previous animation steps. Therefore when a keyframe is created it would also be missing
+     * from all previous keyframes up until where it is first used. For the timeline keyframe generation
+     * to properly fill in the style it will place the previous value (the value from the parent
+     * timeline) or a default value of `*` into the backFill object. Given that each of the keyframe
+     * styles are objects that prototypically inhert from the backFill object, this means that if a
+     * value is added into the backFill then it will automatically propagate any missing values to all
+     * keyframes. Therefore the missing `height` value will be properly filled into the already
+     * processed keyframes.
+     *
+     * When a sub-timeline is created it will have its own backFill property. This is done so that
+     * styles present within the sub-timeline do not accidentally seep into the previous/future timeline
+     * keyframes
+     *
+     * (For prototypically-inherited contents to be detected a `for(i in obj)` loop must be used.)
+     *
+     * [Validation]
+     * The code in this file is not responsible for validation. That functionality happens with within
+     * the `AnimationValidatorVisitor` code.
+     */
+
+    /**
+     * @param {?} driver
+     * @param {?} rootElement
+     * @param {?} ast
+     * @param {?} enterClassName
+     * @param {?} leaveClassName
+     * @param {?=} startingStyles
+     * @param {?=} finalStyles
+     * @param {?=} options
+     * @param {?=} subInstructions
+     * @param {?=} errors
+     * @return {?}
+     */
+
+    function buildAnimationTimelines(driver, rootElement, ast, enterClassName, leaveClassName) {
+      var startingStyles = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : {};
+      var finalStyles = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : {};
+      var options = arguments.length > 7 ? arguments[7] : undefined;
+      var subInstructions = arguments.length > 8 ? arguments[8] : undefined;
+      var errors = arguments.length > 9 && arguments[9] !== undefined ? arguments[9] : [];
+      return new AnimationTimelineBuilderVisitor().buildKeyframes(driver, rootElement, ast, enterClassName, leaveClassName, startingStyles, finalStyles, options, subInstructions, errors);
+    }
+
+    var AnimationTimelineBuilderVisitor =
+    /*#__PURE__*/
+    function () {
+      function AnimationTimelineBuilderVisitor() {
+        _classCallCheck(this, AnimationTimelineBuilderVisitor);
+      }
+
+      _createClass2(AnimationTimelineBuilderVisitor, [{
+        key: "buildKeyframes",
+
+        /**
+         * @param {?} driver
+         * @param {?} rootElement
+         * @param {?} ast
+         * @param {?} enterClassName
+         * @param {?} leaveClassName
+         * @param {?} startingStyles
+         * @param {?} finalStyles
+         * @param {?} options
+         * @param {?=} subInstructions
+         * @param {?=} errors
+         * @return {?}
+         */
+        value: function buildKeyframes(driver, rootElement, ast, enterClassName, leaveClassName, startingStyles, finalStyles, options, subInstructions) {
+          var errors = arguments.length > 9 && arguments[9] !== undefined ? arguments[9] : [];
+          subInstructions = subInstructions || new ElementInstructionMap();
+          /** @type {?} */
+
+          var context = new AnimationTimelineContext(driver, rootElement, subInstructions, enterClassName, leaveClassName, errors, []);
+          context.options = options;
+          context.currentTimeline.setStyles([startingStyles], null, context.errors, options);
+          visitDslNode(this, ast, context); // this checks to see if an actual animation happened
+
+          /** @type {?} */
+
+          var timelines = context.timelines.filter(
+          /**
+          * @param {?} timeline
+          * @return {?}
+          */
+          function (timeline) {
+            return timeline.containsAnimation();
+          });
+
+          if (timelines.length && Object.keys(finalStyles).length) {
+            /** @type {?} */
+            var tl = timelines[timelines.length - 1];
+
+            if (!tl.allowOnlyTimelineStyles()) {
+              tl.setStyles([finalStyles], null, context.errors, options);
+            }
+          }
+
+          return timelines.length ? timelines.map(
+          /**
+          * @param {?} timeline
+          * @return {?}
+          */
+          function (timeline) {
+            return timeline.buildKeyframes();
+          }) : [createTimelineInstruction(rootElement, [], [], [], 0, 0, '', false)];
+        }
+        /**
+         * @param {?} ast
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitTrigger",
+        value: function visitTrigger(ast, context) {} // these values are not visited in this AST
+
+        /**
+         * @param {?} ast
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitState",
+        value: function visitState(ast, context) {} // these values are not visited in this AST
+
+        /**
+         * @param {?} ast
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitTransition",
+        value: function visitTransition(ast, context) {} // these values are not visited in this AST
+
+        /**
+         * @param {?} ast
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitAnimateChild",
+        value: function visitAnimateChild(ast, context) {
+          /** @type {?} */
+          var elementInstructions = context.subInstructions.consume(context.element);
+
+          if (elementInstructions) {
+            /** @type {?} */
+            var innerContext = context.createSubContext(ast.options);
+            /** @type {?} */
+
+            var startTime = context.currentTimeline.currentTime;
+            /** @type {?} */
+
+            var endTime = this._visitSubInstructions(elementInstructions, innerContext,
+            /** @type {?} */
+            innerContext.options);
+
+            if (startTime != endTime) {
+              // we do this on the upper context because we created a sub context for
+              // the sub child animations
+              context.transformIntoNewTimeline(endTime);
+            }
+          }
+
+          context.previousNode = ast;
+        }
+        /**
+         * @param {?} ast
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitAnimateRef",
+        value: function visitAnimateRef(ast, context) {
+          /** @type {?} */
+          var innerContext = context.createSubContext(ast.options);
+          innerContext.transformIntoNewTimeline();
+          this.visitReference(ast.animation, innerContext);
+          context.transformIntoNewTimeline(innerContext.currentTimeline.currentTime);
+          context.previousNode = ast;
+        }
+        /**
+         * @private
+         * @param {?} instructions
+         * @param {?} context
+         * @param {?} options
+         * @return {?}
+         */
+
+      }, {
+        key: "_visitSubInstructions",
+        value: function _visitSubInstructions(instructions, context, options) {
+          /** @type {?} */
+          var startTime = context.currentTimeline.currentTime;
+          /** @type {?} */
+
+          var furthestTime = startTime; // this is a special-case for when a user wants to skip a sub
+          // animation from being fired entirely.
+
+          /** @type {?} */
+
+          var duration = options.duration != null ? resolveTimingValue(options.duration) : null;
+          /** @type {?} */
+
+          var delay = options.delay != null ? resolveTimingValue(options.delay) : null;
+
+          if (duration !== 0) {
+            instructions.forEach(
+            /**
+            * @param {?} instruction
+            * @return {?}
+            */
+            function (instruction) {
+              /** @type {?} */
+              var instructionTimings = context.appendInstructionToTimeline(instruction, duration, delay);
+              furthestTime = Math.max(furthestTime, instructionTimings.duration + instructionTimings.delay);
+            });
+          }
+
+          return furthestTime;
+        }
+        /**
+         * @param {?} ast
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitReference",
+        value: function visitReference(ast, context) {
+          context.updateOptions(ast.options, true);
+          visitDslNode(this, ast.animation, context);
+          context.previousNode = ast;
+        }
+        /**
+         * @param {?} ast
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitSequence",
+        value: function visitSequence(ast, context) {
+          var _this8 = this;
+
+          /** @type {?} */
+          var subContextCount = context.subContextCount;
+          /** @type {?} */
+
+          var ctx = context;
+          /** @type {?} */
+
+          var options = ast.options;
+
+          if (options && (options.params || options.delay)) {
+            ctx = context.createSubContext(options);
+            ctx.transformIntoNewTimeline();
+
+            if (options.delay != null) {
+              if (ctx.previousNode.type == 6
+              /* Style */
+              ) {
+                  ctx.currentTimeline.snapshotCurrentStyles();
+                  ctx.previousNode = DEFAULT_NOOP_PREVIOUS_NODE;
+                }
+              /** @type {?} */
+
+
+              var delay = resolveTimingValue(options.delay);
+              ctx.delayNextStep(delay);
+            }
+          }
+
+          if (ast.steps.length) {
+            ast.steps.forEach(
+            /**
+            * @param {?} s
+            * @return {?}
+            */
+            function (s) {
+              return visitDslNode(_this8, s, ctx);
+            }); // this is here just incase the inner steps only contain or end with a style() call
+
+            ctx.currentTimeline.applyStylesToKeyframe(); // this means that some animation function within the sequence
+            // ended up creating a sub timeline (which means the current
+            // timeline cannot overlap with the contents of the sequence)
+
+            if (ctx.subContextCount > subContextCount) {
+              ctx.transformIntoNewTimeline();
+            }
+          }
+
+          context.previousNode = ast;
+        }
+        /**
+         * @param {?} ast
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitGroup",
+        value: function visitGroup(ast, context) {
+          var _this9 = this;
+
+          /** @type {?} */
+          var innerTimelines = [];
+          /** @type {?} */
+
+          var furthestTime = context.currentTimeline.currentTime;
+          /** @type {?} */
+
+          var delay = ast.options && ast.options.delay ? resolveTimingValue(ast.options.delay) : 0;
+          ast.steps.forEach(
+          /**
+          * @param {?} s
+          * @return {?}
+          */
+          function (s) {
+            /** @type {?} */
+            var innerContext = context.createSubContext(ast.options);
+
+            if (delay) {
+              innerContext.delayNextStep(delay);
+            }
+
+            visitDslNode(_this9, s, innerContext);
+            furthestTime = Math.max(furthestTime, innerContext.currentTimeline.currentTime);
+            innerTimelines.push(innerContext.currentTimeline);
+          }); // this operation is run after the AST loop because otherwise
+          // if the parent timeline's collected styles were updated then
+          // it would pass in invalid data into the new-to-be forked items
+
+          innerTimelines.forEach(
+          /**
+          * @param {?} timeline
+          * @return {?}
+          */
+          function (timeline) {
+            return context.currentTimeline.mergeTimelineCollectedStyles(timeline);
+          });
+          context.transformIntoNewTimeline(furthestTime);
+          context.previousNode = ast;
+        }
+        /**
+         * @private
+         * @param {?} ast
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "_visitTiming",
+        value: function _visitTiming(ast, context) {
+          if (
+          /** @type {?} */
+          ast.dynamic) {
+            /** @type {?} */
+            var strValue =
+            /** @type {?} */
+            ast.strValue;
+            /** @type {?} */
+
+            var timingValue = context.params ? interpolateParams(strValue, context.params, context.errors) : strValue;
+            return resolveTiming(timingValue, context.errors);
+          } else {
+            return {
+              duration: ast.duration,
+              delay: ast.delay,
+              easing: ast.easing
+            };
+          }
+        }
+        /**
+         * @param {?} ast
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitAnimate",
+        value: function visitAnimate(ast, context) {
+          /** @type {?} */
+          var timings = context.currentAnimateTimings = this._visitTiming(ast.timings, context);
+          /** @type {?} */
+
+
+          var timeline = context.currentTimeline;
+
+          if (timings.delay) {
+            context.incrementTime(timings.delay);
+            timeline.snapshotCurrentStyles();
+          }
+          /** @type {?} */
+
+
+          var style = ast.style;
+
+          if (style.type == 5
+          /* Keyframes */
+          ) {
+              this.visitKeyframes(style, context);
+            } else {
+            context.incrementTime(timings.duration);
+            this.visitStyle(
+            /** @type {?} */
+            style, context);
+            timeline.applyStylesToKeyframe();
+          }
+
+          context.currentAnimateTimings = null;
+          context.previousNode = ast;
+        }
+        /**
+         * @param {?} ast
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitStyle",
+        value: function visitStyle(ast, context) {
+          /** @type {?} */
+          var timeline = context.currentTimeline;
+          /** @type {?} */
+
+          var timings =
+          /** @type {?} */
+          context.currentAnimateTimings; // this is a special case for when a style() call
+          // directly follows  an animate() call (but not inside of an animate() call)
+
+          if (!timings && timeline.getCurrentStyleProperties().length) {
+            timeline.forwardFrame();
+          }
+          /** @type {?} */
+
+
+          var easing = timings && timings.easing || ast.easing;
+
+          if (ast.isEmptyStep) {
+            timeline.applyEmptyStep(easing);
+          } else {
+            timeline.setStyles(ast.styles, easing, context.errors, context.options);
+          }
+
+          context.previousNode = ast;
+        }
+        /**
+         * @param {?} ast
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitKeyframes",
+        value: function visitKeyframes(ast, context) {
+          /** @type {?} */
+          var currentAnimateTimings =
+          /** @type {?} */
+          context.currentAnimateTimings;
+          /** @type {?} */
+
+          var startTime =
+          /** @type {?} */
+          context.currentTimeline.duration;
+          /** @type {?} */
+
+          var duration = currentAnimateTimings.duration;
+          /** @type {?} */
+
+          var innerContext = context.createSubContext();
+          /** @type {?} */
+
+          var innerTimeline = innerContext.currentTimeline;
+          innerTimeline.easing = currentAnimateTimings.easing;
+          ast.styles.forEach(
+          /**
+          * @param {?} step
+          * @return {?}
+          */
+          function (step) {
+            /** @type {?} */
+            var offset = step.offset || 0;
+            innerTimeline.forwardTime(offset * duration);
+            innerTimeline.setStyles(step.styles, step.easing, context.errors, context.options);
+            innerTimeline.applyStylesToKeyframe();
+          }); // this will ensure that the parent timeline gets all the styles from
+          // the child even if the new timeline below is not used
+
+          context.currentTimeline.mergeTimelineCollectedStyles(innerTimeline); // we do this because the window between this timeline and the sub timeline
+          // should ensure that the styles within are exactly the same as they were before
+
+          context.transformIntoNewTimeline(startTime + duration);
+          context.previousNode = ast;
+        }
+        /**
+         * @param {?} ast
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitQuery",
+        value: function visitQuery(ast, context) {
+          var _this10 = this;
+
+          // in the event that the first step before this is a style step we need
+          // to ensure the styles are applied before the children are animated
+
+          /** @type {?} */
+          var startTime = context.currentTimeline.currentTime;
+          /** @type {?} */
+
+          var options =
+          /** @type {?} */
+          ast.options || {};
+          /** @type {?} */
+
+          var delay = options.delay ? resolveTimingValue(options.delay) : 0;
+
+          if (delay && (context.previousNode.type === 6
+          /* Style */
+          || startTime == 0 && context.currentTimeline.getCurrentStyleProperties().length)) {
+            context.currentTimeline.snapshotCurrentStyles();
+            context.previousNode = DEFAULT_NOOP_PREVIOUS_NODE;
+          }
+          /** @type {?} */
+
+
+          var furthestTime = startTime;
+          /** @type {?} */
+
+          var elms = context.invokeQuery(ast.selector, ast.originalSelector, ast.limit, ast.includeSelf, options.optional ? true : false, context.errors);
+          context.currentQueryTotal = elms.length;
+          /** @type {?} */
+
+          var sameElementTimeline = null;
+          elms.forEach(
+          /**
+          * @param {?} element
+          * @param {?} i
+          * @return {?}
+          */
+          function (element, i) {
+            context.currentQueryIndex = i;
+            /** @type {?} */
+
+            var innerContext = context.createSubContext(ast.options, element);
+
+            if (delay) {
+              innerContext.delayNextStep(delay);
+            }
+
+            if (element === context.element) {
+              sameElementTimeline = innerContext.currentTimeline;
+            }
+
+            visitDslNode(_this10, ast.animation, innerContext); // this is here just incase the inner steps only contain or end
+            // with a style() call (which is here to signal that this is a preparatory
+            // call to style an element before it is animated again)
+
+            innerContext.currentTimeline.applyStylesToKeyframe();
+            /** @type {?} */
+
+            var endTime = innerContext.currentTimeline.currentTime;
+            furthestTime = Math.max(furthestTime, endTime);
+          });
+          context.currentQueryIndex = 0;
+          context.currentQueryTotal = 0;
+          context.transformIntoNewTimeline(furthestTime);
+
+          if (sameElementTimeline) {
+            context.currentTimeline.mergeTimelineCollectedStyles(sameElementTimeline);
+            context.currentTimeline.snapshotCurrentStyles();
+          }
+
+          context.previousNode = ast;
+        }
+        /**
+         * @param {?} ast
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "visitStagger",
+        value: function visitStagger(ast, context) {
+          /** @type {?} */
+          var parentContext =
+          /** @type {?} */
+          context.parentContext;
+          /** @type {?} */
+
+          var tl = context.currentTimeline;
+          /** @type {?} */
+
+          var timings = ast.timings;
+          /** @type {?} */
+
+          var duration = Math.abs(timings.duration);
+          /** @type {?} */
+
+          var maxTime = duration * (context.currentQueryTotal - 1);
+          /** @type {?} */
+
+          var delay = duration * context.currentQueryIndex;
+          /** @type {?} */
+
+          var staggerTransformer = timings.duration < 0 ? 'reverse' : timings.easing;
+
+          switch (staggerTransformer) {
+            case 'reverse':
+              delay = maxTime - delay;
+              break;
+
+            case 'full':
+              delay = parentContext.currentStaggerTime;
+              break;
+          }
+          /** @type {?} */
+
+
+          var timeline = context.currentTimeline;
+
+          if (delay) {
+            timeline.delayNextStep(delay);
+          }
+          /** @type {?} */
+
+
+          var startingTime = timeline.currentTime;
+          visitDslNode(this, ast.animation, context);
+          context.previousNode = ast; // time = duration + delay
+          // the reason why this computation is so complex is because
+          // the inner timeline may either have a delay value or a stretched
+          // keyframe depending on if a subtimeline is not used or is used.
+
+          parentContext.currentStaggerTime = tl.currentTime - startingTime + (tl.startTime - parentContext.currentTimeline.startTime);
+        }
+      }]);
+
+      return AnimationTimelineBuilderVisitor;
+    }();
+    /** @type {?} */
+
+
+    var DEFAULT_NOOP_PREVIOUS_NODE =
+    /** @type {?} */
+    {};
+
+    var AnimationTimelineContext =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} _driver
+       * @param {?} element
+       * @param {?} subInstructions
+       * @param {?} _enterClassName
+       * @param {?} _leaveClassName
+       * @param {?} errors
+       * @param {?} timelines
+       * @param {?=} initialTimeline
+       */
+      function AnimationTimelineContext(_driver, element, subInstructions, _enterClassName, _leaveClassName, errors, timelines, initialTimeline) {
+        _classCallCheck(this, AnimationTimelineContext);
+
+        this._driver = _driver;
+        this.element = element;
+        this.subInstructions = subInstructions;
+        this._enterClassName = _enterClassName;
+        this._leaveClassName = _leaveClassName;
+        this.errors = errors;
+        this.timelines = timelines;
+        this.parentContext = null;
+        this.currentAnimateTimings = null;
+        this.previousNode = DEFAULT_NOOP_PREVIOUS_NODE;
+        this.subContextCount = 0;
+        this.options = {};
+        this.currentQueryIndex = 0;
+        this.currentQueryTotal = 0;
+        this.currentStaggerTime = 0;
+        this.currentTimeline = initialTimeline || new TimelineBuilder(this._driver, element, 0);
+        timelines.push(this.currentTimeline);
+      }
+      /**
+       * @return {?}
+       */
+
+
+      _createClass2(AnimationTimelineContext, [{
+        key: "updateOptions",
+
+        /**
+         * @param {?} options
+         * @param {?=} skipIfExists
+         * @return {?}
+         */
+        value: function updateOptions(options, skipIfExists) {
+          var _this11 = this;
+
+          if (!options) return;
+          /** @type {?} */
+
+          var newOptions =
+          /** @type {?} */
+          options;
+          /** @type {?} */
+
+          var optionsToUpdate = this.options; // NOTE: this will get patched up when other animation methods support duration overrides
+
+          if (newOptions.duration != null) {
+            /** @type {?} */
+            optionsToUpdate.duration = resolveTimingValue(newOptions.duration);
+          }
+
+          if (newOptions.delay != null) {
+            optionsToUpdate.delay = resolveTimingValue(newOptions.delay);
+          }
+          /** @type {?} */
+
+
+          var newParams = newOptions.params;
+
+          if (newParams) {
+            /** @type {?} */
+            var paramsToUpdate =
+            /** @type {?} */
+            optionsToUpdate.params;
+
+            if (!paramsToUpdate) {
+              paramsToUpdate = this.options.params = {};
+            }
+
+            Object.keys(newParams).forEach(
+            /**
+            * @param {?} name
+            * @return {?}
+            */
+            function (name) {
+              if (!skipIfExists || !paramsToUpdate.hasOwnProperty(name)) {
+                paramsToUpdate[name] = interpolateParams(newParams[name], paramsToUpdate, _this11.errors);
+              }
+            });
+          }
+        }
+        /**
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "_copyOptions",
+        value: function _copyOptions() {
+          /** @type {?} */
+          var options = {};
+
+          if (this.options) {
+            /** @type {?} */
+            var oldParams = this.options.params;
+
+            if (oldParams) {
+              /** @type {?} */
+              var params = options['params'] = {};
+              Object.keys(oldParams).forEach(
+              /**
+              * @param {?} name
+              * @return {?}
+              */
+              function (name) {
+                params[name] = oldParams[name];
+              });
+            }
+          }
+
+          return options;
+        }
+        /**
+         * @param {?=} options
+         * @param {?=} element
+         * @param {?=} newTime
+         * @return {?}
+         */
+
+      }, {
+        key: "createSubContext",
+        value: function createSubContext() {
+          var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+          var element = arguments.length > 1 ? arguments[1] : undefined;
+          var newTime = arguments.length > 2 ? arguments[2] : undefined;
+
+          /** @type {?} */
+          var target = element || this.element;
+          /** @type {?} */
+
+          var context = new AnimationTimelineContext(this._driver, target, this.subInstructions, this._enterClassName, this._leaveClassName, this.errors, this.timelines, this.currentTimeline.fork(target, newTime || 0));
+          context.previousNode = this.previousNode;
+          context.currentAnimateTimings = this.currentAnimateTimings;
+          context.options = this._copyOptions();
+          context.updateOptions(options);
+          context.currentQueryIndex = this.currentQueryIndex;
+          context.currentQueryTotal = this.currentQueryTotal;
+          context.parentContext = this;
+          this.subContextCount++;
+          return context;
+        }
+        /**
+         * @param {?=} newTime
+         * @return {?}
+         */
+
+      }, {
+        key: "transformIntoNewTimeline",
+        value: function transformIntoNewTimeline(newTime) {
+          this.previousNode = DEFAULT_NOOP_PREVIOUS_NODE;
+          this.currentTimeline = this.currentTimeline.fork(this.element, newTime);
+          this.timelines.push(this.currentTimeline);
+          return this.currentTimeline;
+        }
+        /**
+         * @param {?} instruction
+         * @param {?} duration
+         * @param {?} delay
+         * @return {?}
+         */
+
+      }, {
+        key: "appendInstructionToTimeline",
+        value: function appendInstructionToTimeline(instruction, duration, delay) {
+          /** @type {?} */
+          var updatedTimings = {
+            duration: duration != null ? duration : instruction.duration,
+            delay: this.currentTimeline.currentTime + (delay != null ? delay : 0) + instruction.delay,
+            easing: ''
+          };
+          /** @type {?} */
+
+          var builder = new SubTimelineBuilder(this._driver, instruction.element, instruction.keyframes, instruction.preStyleProps, instruction.postStyleProps, updatedTimings, instruction.stretchStartingKeyframe);
+          this.timelines.push(builder);
+          return updatedTimings;
+        }
+        /**
+         * @param {?} time
+         * @return {?}
+         */
+
+      }, {
+        key: "incrementTime",
+        value: function incrementTime(time) {
+          this.currentTimeline.forwardTime(this.currentTimeline.duration + time);
+        }
+        /**
+         * @param {?} delay
+         * @return {?}
+         */
+
+      }, {
+        key: "delayNextStep",
+        value: function delayNextStep(delay) {
+          // negative delays are not yet supported
+          if (delay > 0) {
+            this.currentTimeline.delayNextStep(delay);
+          }
+        }
+        /**
+         * @param {?} selector
+         * @param {?} originalSelector
+         * @param {?} limit
+         * @param {?} includeSelf
+         * @param {?} optional
+         * @param {?} errors
+         * @return {?}
+         */
+
+      }, {
+        key: "invokeQuery",
+        value: function invokeQuery(selector, originalSelector, limit, includeSelf, optional, errors) {
+          /** @type {?} */
+          var results = [];
+
+          if (includeSelf) {
+            results.push(this.element);
+          }
+
+          if (selector.length > 0) {
+            // if :self is only used then the selector is empty
+            selector = selector.replace(ENTER_TOKEN_REGEX, '.' + this._enterClassName);
+            selector = selector.replace(LEAVE_TOKEN_REGEX, '.' + this._leaveClassName);
+            /** @type {?} */
+
+            var multi = limit != 1;
+            /** @type {?} */
+
+            var elements = this._driver.query(this.element, selector, multi);
+
+            if (limit !== 0) {
+              elements = limit < 0 ? elements.slice(elements.length + limit, elements.length) : elements.slice(0, limit);
+            }
+
+            results.push.apply(results, _toConsumableArray(elements));
+          }
+
+          if (!optional && results.length == 0) {
+            errors.push("`query(\"".concat(originalSelector, "\")` returned zero elements. (Use `query(\"").concat(originalSelector, "\", { optional: true })` if you wish to allow this.)"));
+          }
+
+          return results;
+        }
+      }, {
+        key: "params",
+        get: function get() {
+          return this.options.params;
+        }
+      }]);
+
+      return AnimationTimelineContext;
+    }();
+
+    if (false) {}
+
+    var TimelineBuilder =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} _driver
+       * @param {?} element
+       * @param {?} startTime
+       * @param {?=} _elementTimelineStylesLookup
+       */
+      function TimelineBuilder(_driver, element, startTime, _elementTimelineStylesLookup) {
+        _classCallCheck(this, TimelineBuilder);
+
+        this._driver = _driver;
+        this.element = element;
+        this.startTime = startTime;
+        this._elementTimelineStylesLookup = _elementTimelineStylesLookup;
+        this.duration = 0;
+        this._previousKeyframe = {};
+        this._currentKeyframe = {};
+        this._keyframes = new Map();
+        this._styleSummary = {};
+        this._pendingStyles = {};
+        this._backFill = {};
+        this._currentEmptyStepKeyframe = null;
+
+        if (!this._elementTimelineStylesLookup) {
+          this._elementTimelineStylesLookup = new Map();
+        }
+
+        this._localTimelineStyles = Object.create(this._backFill, {});
+        this._globalTimelineStyles =
+        /** @type {?} */
+        this._elementTimelineStylesLookup.get(element);
+
+        if (!this._globalTimelineStyles) {
+          this._globalTimelineStyles = this._localTimelineStyles;
+
+          this._elementTimelineStylesLookup.set(element, this._localTimelineStyles);
+        }
+
+        this._loadKeyframe();
+      }
+      /**
+       * @return {?}
+       */
+
+
+      _createClass2(TimelineBuilder, [{
+        key: "containsAnimation",
+        value: function containsAnimation() {
+          switch (this._keyframes.size) {
+            case 0:
+              return false;
+
+            case 1:
+              return this.getCurrentStyleProperties().length > 0;
+
+            default:
+              return true;
+          }
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "getCurrentStyleProperties",
+        value: function getCurrentStyleProperties() {
+          return Object.keys(this._currentKeyframe);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "delayNextStep",
+
+        /**
+         * @param {?} delay
+         * @return {?}
+         */
+        value: function delayNextStep(delay) {
+          // in the event that a style() step is placed right before a stagger()
+          // and that style() step is the very first style() value in the animation
+          // then we need to make a copy of the keyframe [0, copy, 1] so that the delay
+          // properly applies the style() values to work with the stagger...
+
+          /** @type {?} */
+          var hasPreStyleStep = this._keyframes.size == 1 && Object.keys(this._pendingStyles).length;
+
+          if (this.duration || hasPreStyleStep) {
+            this.forwardTime(this.currentTime + delay);
+
+            if (hasPreStyleStep) {
+              this.snapshotCurrentStyles();
+            }
+          } else {
+            this.startTime += delay;
+          }
+        }
+        /**
+         * @param {?} element
+         * @param {?=} currentTime
+         * @return {?}
+         */
+
+      }, {
+        key: "fork",
+        value: function fork(element, currentTime) {
+          this.applyStylesToKeyframe();
+          return new TimelineBuilder(this._driver, element, currentTime || this.currentTime, this._elementTimelineStylesLookup);
+        }
+        /**
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "_loadKeyframe",
+        value: function _loadKeyframe() {
+          if (this._currentKeyframe) {
+            this._previousKeyframe = this._currentKeyframe;
+          }
+
+          this._currentKeyframe =
+          /** @type {?} */
+          this._keyframes.get(this.duration);
+
+          if (!this._currentKeyframe) {
+            this._currentKeyframe = Object.create(this._backFill, {});
+
+            this._keyframes.set(this.duration, this._currentKeyframe);
+          }
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "forwardFrame",
+        value: function forwardFrame() {
+          this.duration += ONE_FRAME_IN_MILLISECONDS;
+
+          this._loadKeyframe();
+        }
+        /**
+         * @param {?} time
+         * @return {?}
+         */
+
+      }, {
+        key: "forwardTime",
+        value: function forwardTime(time) {
+          this.applyStylesToKeyframe();
+          this.duration = time;
+
+          this._loadKeyframe();
+        }
+        /**
+         * @private
+         * @param {?} prop
+         * @param {?} value
+         * @return {?}
+         */
+
+      }, {
+        key: "_updateStyle",
+        value: function _updateStyle(prop, value) {
+          this._localTimelineStyles[prop] = value;
+          this._globalTimelineStyles[prop] = value;
+          this._styleSummary[prop] = {
+            time: this.currentTime,
+            value: value
+          };
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "allowOnlyTimelineStyles",
+        value: function allowOnlyTimelineStyles() {
+          return this._currentEmptyStepKeyframe !== this._currentKeyframe;
+        }
+        /**
+         * @param {?} easing
+         * @return {?}
+         */
+
+      }, {
+        key: "applyEmptyStep",
+        value: function applyEmptyStep(easing) {
+          var _this12 = this;
+
+          if (easing) {
+            this._previousKeyframe['easing'] = easing;
+          } // special case for animate(duration):
+          // all missing styles are filled with a `*` value then
+          // if any destination styles are filled in later on the same
+          // keyframe then they will override the overridden styles
+          // We use `_globalTimelineStyles` here because there may be
+          // styles in previous keyframes that are not present in this timeline
+
+
+          Object.keys(this._globalTimelineStyles).forEach(
+          /**
+          * @param {?} prop
+          * @return {?}
+          */
+          function (prop) {
+            _this12._backFill[prop] = _this12._globalTimelineStyles[prop] || _angular_animations__WEBPACK_IMPORTED_MODULE_0__["AUTO_STYLE"];
+            _this12._currentKeyframe[prop] = _angular_animations__WEBPACK_IMPORTED_MODULE_0__["AUTO_STYLE"];
+          });
+          this._currentEmptyStepKeyframe = this._currentKeyframe;
+        }
+        /**
+         * @param {?} input
+         * @param {?} easing
+         * @param {?} errors
+         * @param {?=} options
+         * @return {?}
+         */
+
+      }, {
+        key: "setStyles",
+        value: function setStyles(input, easing, errors, options) {
+          var _this13 = this;
+
+          if (easing) {
+            this._previousKeyframe['easing'] = easing;
+          }
+          /** @type {?} */
+
+
+          var params = options && options.params || {};
+          /** @type {?} */
+
+          var styles = flattenStyles(input, this._globalTimelineStyles);
+          Object.keys(styles).forEach(
+          /**
+          * @param {?} prop
+          * @return {?}
+          */
+          function (prop) {
+            /** @type {?} */
+            var val = interpolateParams(styles[prop], params, errors);
+            _this13._pendingStyles[prop] = val;
+
+            if (!_this13._localTimelineStyles.hasOwnProperty(prop)) {
+              _this13._backFill[prop] = _this13._globalTimelineStyles.hasOwnProperty(prop) ? _this13._globalTimelineStyles[prop] : _angular_animations__WEBPACK_IMPORTED_MODULE_0__["AUTO_STYLE"];
+            }
+
+            _this13._updateStyle(prop, val);
+          });
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "applyStylesToKeyframe",
+        value: function applyStylesToKeyframe() {
+          var _this14 = this;
+
+          /** @type {?} */
+          var styles = this._pendingStyles;
+          /** @type {?} */
+
+          var props = Object.keys(styles);
+          if (props.length == 0) return;
+          this._pendingStyles = {};
+          props.forEach(
+          /**
+          * @param {?} prop
+          * @return {?}
+          */
+          function (prop) {
+            /** @type {?} */
+            var val = styles[prop];
+            _this14._currentKeyframe[prop] = val;
+          });
+          Object.keys(this._localTimelineStyles).forEach(
+          /**
+          * @param {?} prop
+          * @return {?}
+          */
+          function (prop) {
+            if (!_this14._currentKeyframe.hasOwnProperty(prop)) {
+              _this14._currentKeyframe[prop] = _this14._localTimelineStyles[prop];
+            }
+          });
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "snapshotCurrentStyles",
+        value: function snapshotCurrentStyles() {
+          var _this15 = this;
+
+          Object.keys(this._localTimelineStyles).forEach(
+          /**
+          * @param {?} prop
+          * @return {?}
+          */
+          function (prop) {
+            /** @type {?} */
+            var val = _this15._localTimelineStyles[prop];
+            _this15._pendingStyles[prop] = val;
+
+            _this15._updateStyle(prop, val);
+          });
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "getFinalKeyframe",
+        value: function getFinalKeyframe() {
+          return this._keyframes.get(this.duration);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "mergeTimelineCollectedStyles",
+
+        /**
+         * @param {?} timeline
+         * @return {?}
+         */
+        value: function mergeTimelineCollectedStyles(timeline) {
+          var _this16 = this;
+
+          Object.keys(timeline._styleSummary).forEach(
+          /**
+          * @param {?} prop
+          * @return {?}
+          */
+          function (prop) {
+            /** @type {?} */
+            var details0 = _this16._styleSummary[prop];
+            /** @type {?} */
+
+            var details1 = timeline._styleSummary[prop];
+
+            if (!details0 || details1.time > details0.time) {
+              _this16._updateStyle(prop, details1.value);
+            }
+          });
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "buildKeyframes",
+        value: function buildKeyframes() {
+          var _this17 = this;
+
+          this.applyStylesToKeyframe();
+          /** @type {?} */
+
+          var preStyleProps = new Set();
+          /** @type {?} */
+
+          var postStyleProps = new Set();
+          /** @type {?} */
+
+          var isEmpty = this._keyframes.size === 1 && this.duration === 0;
+          /** @type {?} */
+
+          var finalKeyframes = [];
+
+          this._keyframes.forEach(
+          /**
+          * @param {?} keyframe
+          * @param {?} time
+          * @return {?}
+          */
+          function (keyframe, time) {
+            /** @type {?} */
+            var finalKeyframe = copyStyles(keyframe, true);
+            Object.keys(finalKeyframe).forEach(
+            /**
+            * @param {?} prop
+            * @return {?}
+            */
+            function (prop) {
+              /** @type {?} */
+              var value = finalKeyframe[prop];
+
+              if (value == _angular_animations__WEBPACK_IMPORTED_MODULE_0__["ɵPRE_STYLE"]) {
+                preStyleProps.add(prop);
+              } else if (value == _angular_animations__WEBPACK_IMPORTED_MODULE_0__["AUTO_STYLE"]) {
+                postStyleProps.add(prop);
+              }
+            });
+
+            if (!isEmpty) {
+              finalKeyframe['offset'] = time / _this17.duration;
+            }
+
+            finalKeyframes.push(finalKeyframe);
+          });
+          /** @type {?} */
+
+
+          var preProps = preStyleProps.size ? iteratorToArray(preStyleProps.values()) : [];
+          /** @type {?} */
+
+          var postProps = postStyleProps.size ? iteratorToArray(postStyleProps.values()) : []; // special case for a 0-second animation (which is designed just to place styles onscreen)
+
+          if (isEmpty) {
+            /** @type {?} */
+            var kf0 = finalKeyframes[0];
+            /** @type {?} */
+
+            var kf1 = copyObj(kf0);
+            kf0['offset'] = 0;
+            kf1['offset'] = 1;
+            finalKeyframes = [kf0, kf1];
+          }
+
+          return createTimelineInstruction(this.element, finalKeyframes, preProps, postProps, this.duration, this.startTime, this.easing, false);
+        }
+      }, {
+        key: "currentTime",
+        get: function get() {
+          return this.startTime + this.duration;
+        }
+      }, {
+        key: "properties",
+        get: function get() {
+          /** @type {?} */
+          var properties = [];
+
+          for (var prop in this._currentKeyframe) {
+            properties.push(prop);
+          }
+
+          return properties;
+        }
+      }]);
+
+      return TimelineBuilder;
+    }();
+
+    if (false) {}
+
+    var SubTimelineBuilder =
+    /*#__PURE__*/
+    function (_TimelineBuilder) {
+      _inherits(SubTimelineBuilder, _TimelineBuilder);
+
+      /**
+       * @param {?} driver
+       * @param {?} element
+       * @param {?} keyframes
+       * @param {?} preStyleProps
+       * @param {?} postStyleProps
+       * @param {?} timings
+       * @param {?=} _stretchStartingKeyframe
+       */
+      function SubTimelineBuilder(driver, element, keyframes, preStyleProps, postStyleProps, timings) {
+        var _this18;
+
+        var _stretchStartingKeyframe = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : false;
+
+        _classCallCheck(this, SubTimelineBuilder);
+
+        _this18 = _possibleConstructorReturn(this, _getPrototypeOf(SubTimelineBuilder).call(this, driver, element, timings.delay));
+        _this18.element = element;
+        _this18.keyframes = keyframes;
+        _this18.preStyleProps = preStyleProps;
+        _this18.postStyleProps = postStyleProps;
+        _this18._stretchStartingKeyframe = _stretchStartingKeyframe;
+        _this18.timings = {
+          duration: timings.duration,
+          delay: timings.delay,
+          easing: timings.easing
+        };
+        return _this18;
+      }
+      /**
+       * @return {?}
+       */
+
+
+      _createClass2(SubTimelineBuilder, [{
+        key: "containsAnimation",
+        value: function containsAnimation() {
+          return this.keyframes.length > 1;
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "buildKeyframes",
+        value: function buildKeyframes() {
+          /** @type {?} */
+          var keyframes = this.keyframes;
+          var _this$timings = this.timings,
+              delay = _this$timings.delay,
+              duration = _this$timings.duration,
+              easing = _this$timings.easing;
+
+          if (this._stretchStartingKeyframe && delay) {
+            /** @type {?} */
+            var newKeyframes = [];
+            /** @type {?} */
+
+            var totalTime = duration + delay;
+            /** @type {?} */
+
+            var startingGap = delay / totalTime; // the original starting keyframe now starts once the delay is done
+
+            /** @type {?} */
+
+            var newFirstKeyframe = copyStyles(keyframes[0], false);
+            newFirstKeyframe['offset'] = 0;
+            newKeyframes.push(newFirstKeyframe);
+            /** @type {?} */
+
+            var oldFirstKeyframe = copyStyles(keyframes[0], false);
+            oldFirstKeyframe['offset'] = roundOffset(startingGap);
+            newKeyframes.push(oldFirstKeyframe);
+            /*
+                    When the keyframe is stretched then it means that the delay before the animation
+                    starts is gone. Instead the first keyframe is placed at the start of the animation
+                    and it is then copied to where it starts when the original delay is over. This basically
+                    means nothing animates during that delay, but the styles are still renderered. For this
+                    to work the original offset values that exist in the original keyframes must be "warped"
+                    so that they can take the new keyframe + delay into account.
+            
+                    delay=1000, duration=1000, keyframes = 0 .5 1
+            
+                    turns into
+            
+                    delay=0, duration=2000, keyframes = 0 .33 .66 1
+                   */
+            // offsets between 1 ... n -1 are all warped by the keyframe stretch
+
+            /** @type {?} */
+
+            var limit = keyframes.length - 1;
+
+            for (var i = 1; i <= limit; i++) {
+              /** @type {?} */
+              var kf = copyStyles(keyframes[i], false);
+              /** @type {?} */
+
+              var oldOffset =
+              /** @type {?} */
+              kf['offset'];
+              /** @type {?} */
+
+              var timeAtKeyframe = delay + oldOffset * duration;
+              kf['offset'] = roundOffset(timeAtKeyframe / totalTime);
+              newKeyframes.push(kf);
+            } // the new starting keyframe should be added at the start
+
+
+            duration = totalTime;
+            delay = 0;
+            easing = '';
+            keyframes = newKeyframes;
+          }
+
+          return createTimelineInstruction(this.element, keyframes, this.preStyleProps, this.postStyleProps, duration, delay, easing, true);
+        }
+      }]);
+
+      return SubTimelineBuilder;
+    }(TimelineBuilder);
+
+    if (false) {}
+    /**
+     * @param {?} offset
+     * @param {?=} decimalPoints
+     * @return {?}
+     */
+
+
+    function roundOffset(offset) {
+      var decimalPoints = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3;
+
+      /** @type {?} */
+      var mult = Math.pow(10, decimalPoints - 1);
+      return Math.round(offset * mult) / mult;
+    }
+    /**
+     * @param {?} input
+     * @param {?} allStyles
+     * @return {?}
+     */
+
+
+    function flattenStyles(input, allStyles) {
+      /** @type {?} */
+      var styles = {};
+      /** @type {?} */
+
+      var allProperties;
+      input.forEach(
+      /**
+      * @param {?} token
+      * @return {?}
+      */
+      function (token) {
+        if (token === '*') {
+          allProperties = allProperties || Object.keys(allStyles);
+          allProperties.forEach(
+          /**
+          * @param {?} prop
+          * @return {?}
+          */
+          function (prop) {
+            styles[prop] = _angular_animations__WEBPACK_IMPORTED_MODULE_0__["AUTO_STYLE"];
+          });
+        } else {
+          copyStyles(
+          /** @type {?} */
+          token, false, styles);
+        }
+      });
+      return styles;
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/dsl/animation.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+
+    var Animation =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} _driver
+       * @param {?} input
+       */
+      function Animation(_driver, input) {
+        _classCallCheck(this, Animation);
+
+        this._driver = _driver;
+        /** @type {?} */
+
+        var errors = [];
+        /** @type {?} */
+
+        var ast = buildAnimationAst(_driver, input, errors);
+
+        if (errors.length) {
+          /** @type {?} */
+          var errorMessage = "animation validation failed:\n".concat(errors.join("\n"));
+          throw new Error(errorMessage);
+        }
+
+        this._animationAst = ast;
+      }
+      /**
+       * @param {?} element
+       * @param {?} startingStyles
+       * @param {?} destinationStyles
+       * @param {?} options
+       * @param {?=} subInstructions
+       * @return {?}
+       */
+
+
+      _createClass2(Animation, [{
+        key: "buildTimelines",
+        value: function buildTimelines(element, startingStyles, destinationStyles, options, subInstructions) {
+          /** @type {?} */
+          var start = Array.isArray(startingStyles) ? normalizeStyles(startingStyles) :
+          /** @type {?} */
+          startingStyles;
+          /** @type {?} */
+
+          var dest = Array.isArray(destinationStyles) ? normalizeStyles(destinationStyles) :
+          /** @type {?} */
+          destinationStyles;
+          /** @type {?} */
+
+          var errors = [];
+          subInstructions = subInstructions || new ElementInstructionMap();
+          /** @type {?} */
+
+          var result = buildAnimationTimelines(this._driver, element, this._animationAst, ENTER_CLASSNAME, LEAVE_CLASSNAME, start, dest, options, subInstructions, errors);
+
+          if (errors.length) {
+            /** @type {?} */
+            var errorMessage = "animation building failed:\n".concat(errors.join("\n"));
+            throw new Error(errorMessage);
+          }
+
+          return result;
+        }
+      }]);
+
+      return Animation;
+    }();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/dsl/style_normalization/animation_style_normalizer.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @license
+     * Copyright Google Inc. All Rights Reserved.
+     *
+     * Use of this source code is governed by an MIT-style license that can be
+     * found in the LICENSE file at https://angular.io/license
+     */
+
+    /**
+     * \@publicApi
+     * @abstract
+     */
+
+
+    var AnimationStyleNormalizer = function AnimationStyleNormalizer() {
+      _classCallCheck(this, AnimationStyleNormalizer);
+    };
+
+    if (false) {}
+    /**
+     * \@publicApi
+     */
+
+
+    var NoopAnimationStyleNormalizer =
+    /*#__PURE__*/
+    function () {
+      function NoopAnimationStyleNormalizer() {
+        _classCallCheck(this, NoopAnimationStyleNormalizer);
+      }
+
+      _createClass2(NoopAnimationStyleNormalizer, [{
+        key: "normalizePropertyName",
+
+        /**
+         * @param {?} propertyName
+         * @param {?} errors
+         * @return {?}
+         */
+        value: function normalizePropertyName(propertyName, errors) {
+          return propertyName;
+        }
+        /**
+         * @param {?} userProvidedProperty
+         * @param {?} normalizedProperty
+         * @param {?} value
+         * @param {?} errors
+         * @return {?}
+         */
+
+      }, {
+        key: "normalizeStyleValue",
+        value: function normalizeStyleValue(userProvidedProperty, normalizedProperty, value, errors) {
+          return (
+            /** @type {?} */
+            value
+          );
+        }
+      }]);
+
+      return NoopAnimationStyleNormalizer;
+    }();
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/dsl/style_normalization/web_animations_style_normalizer.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+
+    var WebAnimationsStyleNormalizer =
+    /*#__PURE__*/
+    function (_AnimationStyleNormal) {
+      _inherits(WebAnimationsStyleNormalizer, _AnimationStyleNormal);
+
+      function WebAnimationsStyleNormalizer() {
+        _classCallCheck(this, WebAnimationsStyleNormalizer);
+
+        return _possibleConstructorReturn(this, _getPrototypeOf(WebAnimationsStyleNormalizer).apply(this, arguments));
+      }
+
+      _createClass2(WebAnimationsStyleNormalizer, [{
+        key: "normalizePropertyName",
+
+        /**
+         * @param {?} propertyName
+         * @param {?} errors
+         * @return {?}
+         */
+        value: function normalizePropertyName(propertyName, errors) {
+          return dashCaseToCamelCase(propertyName);
+        }
+        /**
+         * @param {?} userProvidedProperty
+         * @param {?} normalizedProperty
+         * @param {?} value
+         * @param {?} errors
+         * @return {?}
+         */
+
+      }, {
+        key: "normalizeStyleValue",
+        value: function normalizeStyleValue(userProvidedProperty, normalizedProperty, value, errors) {
+          /** @type {?} */
+          var unit = '';
+          /** @type {?} */
+
+          var strVal = value.toString().trim();
+
+          if (DIMENSIONAL_PROP_MAP[normalizedProperty] && value !== 0 && value !== '0') {
+            if (typeof value === 'number') {
+              unit = 'px';
+            } else {
+              /** @type {?} */
+              var valAndSuffixMatch = value.match(/^[+-]?[\d\.]+([a-z]*)$/);
+
+              if (valAndSuffixMatch && valAndSuffixMatch[1].length == 0) {
+                errors.push("Please provide a CSS unit value for ".concat(userProvidedProperty, ":").concat(value));
+              }
+            }
+          }
+
+          return strVal + unit;
+        }
+      }]);
+
+      return WebAnimationsStyleNormalizer;
+    }(AnimationStyleNormalizer);
+
+    var ɵ0$1 =
+    /**
+    * @return {?}
+    */
+    function ɵ0$1() {
+      return makeBooleanMap('width,height,minWidth,minHeight,maxWidth,maxHeight,left,top,bottom,right,fontSize,outlineWidth,outlineOffset,paddingTop,paddingLeft,paddingBottom,paddingRight,marginTop,marginLeft,marginBottom,marginRight,borderRadius,borderWidth,borderTopWidth,borderLeftWidth,borderRightWidth,borderBottomWidth,textIndent,perspective'.split(','));
+    };
+    /** @type {?} */
+
+
+    var DIMENSIONAL_PROP_MAP = ɵ0$1();
+    /**
+     * @param {?} keys
+     * @return {?}
+     */
+
+    function makeBooleanMap(keys) {
+      /** @type {?} */
+      var map = {};
+      keys.forEach(
+      /**
+      * @param {?} key
+      * @return {?}
+      */
+      function (key) {
+        return map[key] = true;
+      });
+      return map;
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/dsl/animation_transition_instruction.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @record
+     */
+
+
+    function AnimationTransitionInstruction() {}
+
+    if (false) {}
+    /**
+     * @param {?} element
+     * @param {?} triggerName
+     * @param {?} fromState
+     * @param {?} toState
+     * @param {?} isRemovalTransition
+     * @param {?} fromStyles
+     * @param {?} toStyles
+     * @param {?} timelines
+     * @param {?} queriedElements
+     * @param {?} preStyleProps
+     * @param {?} postStyleProps
+     * @param {?} totalTime
+     * @param {?=} errors
+     * @return {?}
+     */
+
+
+    function createTransitionInstruction(element, triggerName, fromState, toState, isRemovalTransition, fromStyles, toStyles, timelines, queriedElements, preStyleProps, postStyleProps, totalTime, errors) {
+      return {
+        type: 0
+        /* TransitionAnimation */
+        ,
+        element: element,
+        triggerName: triggerName,
+        isRemovalTransition: isRemovalTransition,
+        fromState: fromState,
+        fromStyles: fromStyles,
+        toState: toState,
+        toStyles: toStyles,
+        timelines: timelines,
+        queriedElements: queriedElements,
+        preStyleProps: preStyleProps,
+        postStyleProps: postStyleProps,
+        totalTime: totalTime,
+        errors: errors
+      };
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/dsl/animation_transition_factory.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var EMPTY_OBJECT = {};
+
+    var AnimationTransitionFactory =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} _triggerName
+       * @param {?} ast
+       * @param {?} _stateStyles
+       */
+      function AnimationTransitionFactory(_triggerName, ast, _stateStyles) {
+        _classCallCheck(this, AnimationTransitionFactory);
+
+        this._triggerName = _triggerName;
+        this.ast = ast;
+        this._stateStyles = _stateStyles;
+      }
+      /**
+       * @param {?} currentState
+       * @param {?} nextState
+       * @param {?} element
+       * @param {?} params
+       * @return {?}
+       */
+
+
+      _createClass2(AnimationTransitionFactory, [{
+        key: "match",
+        value: function match(currentState, nextState, element, params) {
+          return oneOrMoreTransitionsMatch(this.ast.matchers, currentState, nextState, element, params);
+        }
+        /**
+         * @param {?} stateName
+         * @param {?} params
+         * @param {?} errors
+         * @return {?}
+         */
+
+      }, {
+        key: "buildStyles",
+        value: function buildStyles(stateName, params, errors) {
+          /** @type {?} */
+          var backupStateStyler = this._stateStyles['*'];
+          /** @type {?} */
+
+          var stateStyler = this._stateStyles[stateName];
+          /** @type {?} */
+
+          var backupStyles = backupStateStyler ? backupStateStyler.buildStyles(params, errors) : {};
+          return stateStyler ? stateStyler.buildStyles(params, errors) : backupStyles;
+        }
+        /**
+         * @param {?} driver
+         * @param {?} element
+         * @param {?} currentState
+         * @param {?} nextState
+         * @param {?} enterClassName
+         * @param {?} leaveClassName
+         * @param {?=} currentOptions
+         * @param {?=} nextOptions
+         * @param {?=} subInstructions
+         * @param {?=} skipAstBuild
+         * @return {?}
+         */
+
+      }, {
+        key: "build",
+        value: function build(driver, element, currentState, nextState, enterClassName, leaveClassName, currentOptions, nextOptions, subInstructions, skipAstBuild) {
+          /** @type {?} */
+          var errors = [];
+          /** @type {?} */
+
+          var transitionAnimationParams = this.ast.options && this.ast.options.params || EMPTY_OBJECT;
+          /** @type {?} */
+
+          var currentAnimationParams = currentOptions && currentOptions.params || EMPTY_OBJECT;
+          /** @type {?} */
+
+          var currentStateStyles = this.buildStyles(currentState, currentAnimationParams, errors);
+          /** @type {?} */
+
+          var nextAnimationParams = nextOptions && nextOptions.params || EMPTY_OBJECT;
+          /** @type {?} */
+
+          var nextStateStyles = this.buildStyles(nextState, nextAnimationParams, errors);
+          /** @type {?} */
+
+          var queriedElements = new Set();
+          /** @type {?} */
+
+          var preStyleMap = new Map();
+          /** @type {?} */
+
+          var postStyleMap = new Map();
+          /** @type {?} */
+
+          var isRemoval = nextState === 'void';
+          /** @type {?} */
+
+          var animationOptions = {
+            params: Object.assign(Object.assign({}, transitionAnimationParams), nextAnimationParams)
+          };
+          /** @type {?} */
+
+          var timelines = skipAstBuild ? [] : buildAnimationTimelines(driver, element, this.ast.animation, enterClassName, leaveClassName, currentStateStyles, nextStateStyles, animationOptions, subInstructions, errors);
+          /** @type {?} */
+
+          var totalTime = 0;
+          timelines.forEach(
+          /**
+          * @param {?} tl
+          * @return {?}
+          */
+          function (tl) {
+            totalTime = Math.max(tl.duration + tl.delay, totalTime);
+          });
+
+          if (errors.length) {
+            return createTransitionInstruction(element, this._triggerName, currentState, nextState, isRemoval, currentStateStyles, nextStateStyles, [], [], preStyleMap, postStyleMap, totalTime, errors);
+          }
+
+          timelines.forEach(
+          /**
+          * @param {?} tl
+          * @return {?}
+          */
+          function (tl) {
+            /** @type {?} */
+            var elm = tl.element;
+            /** @type {?} */
+
+            var preProps = getOrSetAsInMap(preStyleMap, elm, {});
+            tl.preStyleProps.forEach(
+            /**
+            * @param {?} prop
+            * @return {?}
+            */
+            function (prop) {
+              return preProps[prop] = true;
+            });
+            /** @type {?} */
+
+            var postProps = getOrSetAsInMap(postStyleMap, elm, {});
+            tl.postStyleProps.forEach(
+            /**
+            * @param {?} prop
+            * @return {?}
+            */
+            function (prop) {
+              return postProps[prop] = true;
+            });
+
+            if (elm !== element) {
+              queriedElements.add(elm);
+            }
+          });
+          /** @type {?} */
+
+          var queriedElementsList = iteratorToArray(queriedElements.values());
+          return createTransitionInstruction(element, this._triggerName, currentState, nextState, isRemoval, currentStateStyles, nextStateStyles, timelines, queriedElementsList, preStyleMap, postStyleMap, totalTime);
+        }
+      }]);
+
+      return AnimationTransitionFactory;
+    }();
+
+    if (false) {}
+    /**
+     * @param {?} matchFns
+     * @param {?} currentState
+     * @param {?} nextState
+     * @param {?} element
+     * @param {?} params
+     * @return {?}
+     */
+
+
+    function oneOrMoreTransitionsMatch(matchFns, currentState, nextState, element, params) {
+      return matchFns.some(
+      /**
+      * @param {?} fn
+      * @return {?}
+      */
+      function (fn) {
+        return fn(currentState, nextState, element, params);
+      });
+    }
+
+    var AnimationStateStyles =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} styles
+       * @param {?} defaultParams
+       */
+      function AnimationStateStyles(styles, defaultParams) {
+        _classCallCheck(this, AnimationStateStyles);
+
+        this.styles = styles;
+        this.defaultParams = defaultParams;
+      }
+      /**
+       * @param {?} params
+       * @param {?} errors
+       * @return {?}
+       */
+
+
+      _createClass2(AnimationStateStyles, [{
+        key: "buildStyles",
+        value: function buildStyles(params, errors) {
+          /** @type {?} */
+          var finalStyles = {};
+          /** @type {?} */
+
+          var combinedParams = copyObj(this.defaultParams);
+          Object.keys(params).forEach(
+          /**
+          * @param {?} key
+          * @return {?}
+          */
+          function (key) {
+            /** @type {?} */
+            var value = params[key];
+
+            if (value != null) {
+              combinedParams[key] = value;
+            }
+          });
+          this.styles.styles.forEach(
+          /**
+          * @param {?} value
+          * @return {?}
+          */
+          function (value) {
+            if (typeof value !== 'string') {
+              /** @type {?} */
+              var styleObj =
+              /** @type {?} */
+              value;
+              Object.keys(styleObj).forEach(
+              /**
+              * @param {?} prop
+              * @return {?}
+              */
+              function (prop) {
+                /** @type {?} */
+                var val = styleObj[prop];
+
+                if (val.length > 1) {
+                  val = interpolateParams(val, combinedParams, errors);
+                }
+
+                finalStyles[prop] = val;
+              });
+            }
+          });
+          return finalStyles;
+        }
+      }]);
+
+      return AnimationStateStyles;
+    }();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/dsl/animation_trigger.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * \@publicApi
+     * @param {?} name
+     * @param {?} ast
+     * @return {?}
+     */
+
+
+    function buildTrigger(name, ast) {
+      return new AnimationTrigger(name, ast);
+    }
+    /**
+     * \@publicApi
+     */
+
+
+    var AnimationTrigger =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} name
+       * @param {?} ast
+       */
+      function AnimationTrigger(name, ast) {
+        var _this19 = this;
+
+        _classCallCheck(this, AnimationTrigger);
+
+        this.name = name;
+        this.ast = ast;
+        this.transitionFactories = [];
+        this.states = {};
+        ast.states.forEach(
+        /**
+        * @param {?} ast
+        * @return {?}
+        */
+        function (ast) {
+          /** @type {?} */
+          var defaultParams = ast.options && ast.options.params || {};
+          _this19.states[ast.name] = new AnimationStateStyles(ast.style, defaultParams);
+        });
+        balanceProperties(this.states, 'true', '1');
+        balanceProperties(this.states, 'false', '0');
+        ast.transitions.forEach(
+        /**
+        * @param {?} ast
+        * @return {?}
+        */
+        function (ast) {
+          _this19.transitionFactories.push(new AnimationTransitionFactory(name, ast, _this19.states));
+        });
+        this.fallbackTransition = createFallbackTransition(name, this.states);
+      }
+      /**
+       * @return {?}
+       */
+
+
+      _createClass2(AnimationTrigger, [{
+        key: "matchTransition",
+
+        /**
+         * @param {?} currentState
+         * @param {?} nextState
+         * @param {?} element
+         * @param {?} params
+         * @return {?}
+         */
+        value: function matchTransition(currentState, nextState, element, params) {
+          /** @type {?} */
+          var entry = this.transitionFactories.find(
+          /**
+          * @param {?} f
+          * @return {?}
+          */
+          function (f) {
+            return f.match(currentState, nextState, element, params);
+          });
+          return entry || null;
+        }
+        /**
+         * @param {?} currentState
+         * @param {?} params
+         * @param {?} errors
+         * @return {?}
+         */
+
+      }, {
+        key: "matchStyles",
+        value: function matchStyles(currentState, params, errors) {
+          return this.fallbackTransition.buildStyles(currentState, params, errors);
+        }
+      }, {
+        key: "containsQueries",
+        get: function get() {
+          return this.ast.queryCount > 0;
+        }
+      }]);
+
+      return AnimationTrigger;
+    }();
+
+    if (false) {}
+    /**
+     * @param {?} triggerName
+     * @param {?} states
+     * @return {?}
+     */
+
+
+    function createFallbackTransition(triggerName, states) {
+      /** @type {?} */
+      var matchers = [
+      /**
+      * @param {?} fromState
+      * @param {?} toState
+      * @return {?}
+      */
+      function (fromState, toState) {
+        return true;
+      }];
+      /** @type {?} */
+
+      var animation = {
+        type: 2
+        /* Sequence */
+        ,
+        steps: [],
+        options: null
+      };
+      /** @type {?} */
+
+      var transition = {
+        type: 1
+        /* Transition */
+        ,
+        animation: animation,
+        matchers: matchers,
+        options: null,
+        queryCount: 0,
+        depCount: 0
+      };
+      return new AnimationTransitionFactory(triggerName, transition, states);
+    }
+    /**
+     * @param {?} obj
+     * @param {?} key1
+     * @param {?} key2
+     * @return {?}
+     */
+
+
+    function balanceProperties(obj, key1, key2) {
+      if (obj.hasOwnProperty(key1)) {
+        if (!obj.hasOwnProperty(key2)) {
+          obj[key2] = obj[key1];
+        }
+      } else if (obj.hasOwnProperty(key2)) {
+        obj[key1] = obj[key2];
+      }
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/render/timeline_animation_engine.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var EMPTY_INSTRUCTION_MAP = new ElementInstructionMap();
+
+    var TimelineAnimationEngine =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} bodyNode
+       * @param {?} _driver
+       * @param {?} _normalizer
+       */
+      function TimelineAnimationEngine(bodyNode, _driver, _normalizer) {
+        _classCallCheck(this, TimelineAnimationEngine);
+
+        this.bodyNode = bodyNode;
+        this._driver = _driver;
+        this._normalizer = _normalizer;
+        this._animations = {};
+        this._playersById = {};
+        this.players = [];
+      }
+      /**
+       * @param {?} id
+       * @param {?} metadata
+       * @return {?}
+       */
+
+
+      _createClass2(TimelineAnimationEngine, [{
+        key: "register",
+        value: function register(id, metadata) {
+          /** @type {?} */
+          var errors = [];
+          /** @type {?} */
+
+          var ast = buildAnimationAst(this._driver, metadata, errors);
+
+          if (errors.length) {
+            throw new Error("Unable to build the animation due to the following errors: ".concat(errors.join("\n")));
+          } else {
+            this._animations[id] = ast;
+          }
+        }
+        /**
+         * @private
+         * @param {?} i
+         * @param {?} preStyles
+         * @param {?=} postStyles
+         * @return {?}
+         */
+
+      }, {
+        key: "_buildPlayer",
+        value: function _buildPlayer(i, preStyles, postStyles) {
+          /** @type {?} */
+          var element = i.element;
+          /** @type {?} */
+
+          var keyframes = normalizeKeyframes(this._driver, this._normalizer, element, i.keyframes, preStyles, postStyles);
+          return this._driver.animate(element, keyframes, i.duration, i.delay, i.easing, [], true);
+        }
+        /**
+         * @param {?} id
+         * @param {?} element
+         * @param {?=} options
+         * @return {?}
+         */
+
+      }, {
+        key: "create",
+        value: function create(id, element) {
+          var _this20 = this;
+
+          var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+          /** @type {?} */
+          var errors = [];
+          /** @type {?} */
+
+          var ast = this._animations[id];
+          /** @type {?} */
+
+          var instructions;
+          /** @type {?} */
+
+          var autoStylesMap = new Map();
+
+          if (ast) {
+            instructions = buildAnimationTimelines(this._driver, element, ast, ENTER_CLASSNAME, LEAVE_CLASSNAME, {}, {}, options, EMPTY_INSTRUCTION_MAP, errors);
+            instructions.forEach(
+            /**
+            * @param {?} inst
+            * @return {?}
+            */
+            function (inst) {
+              /** @type {?} */
+              var styles = getOrSetAsInMap(autoStylesMap, inst.element, {});
+              inst.postStyleProps.forEach(
+              /**
+              * @param {?} prop
+              * @return {?}
+              */
+              function (prop) {
+                return styles[prop] = null;
+              });
+            });
+          } else {
+            errors.push('The requested animation doesn\'t exist or has already been destroyed');
+            instructions = [];
+          }
+
+          if (errors.length) {
+            throw new Error("Unable to create the animation due to the following errors: ".concat(errors.join("\n")));
+          }
+
+          autoStylesMap.forEach(
+          /**
+          * @param {?} styles
+          * @param {?} element
+          * @return {?}
+          */
+          function (styles, element) {
+            Object.keys(styles).forEach(
+            /**
+            * @param {?} prop
+            * @return {?}
+            */
+            function (prop) {
+              styles[prop] = _this20._driver.computeStyle(element, prop, _angular_animations__WEBPACK_IMPORTED_MODULE_0__["AUTO_STYLE"]);
+            });
+          });
+          /** @type {?} */
+
+          var players = instructions.map(
+          /**
+          * @param {?} i
+          * @return {?}
+          */
+          function (i) {
+            /** @type {?} */
+            var styles = autoStylesMap.get(i.element);
+            return _this20._buildPlayer(i, {}, styles);
+          });
+          /** @type {?} */
+
+          var player = optimizeGroupPlayer(players);
+          this._playersById[id] = player;
+          player.onDestroy(
+          /**
+          * @return {?}
+          */
+          function () {
+            return _this20.destroy(id);
+          });
+          this.players.push(player);
+          return player;
+        }
+        /**
+         * @param {?} id
+         * @return {?}
+         */
+
+      }, {
+        key: "destroy",
+        value: function destroy(id) {
+          /** @type {?} */
+          var player = this._getPlayer(id);
+
+          player.destroy();
+          delete this._playersById[id];
+          /** @type {?} */
+
+          var index = this.players.indexOf(player);
+
+          if (index >= 0) {
+            this.players.splice(index, 1);
+          }
+        }
+        /**
+         * @private
+         * @param {?} id
+         * @return {?}
+         */
+
+      }, {
+        key: "_getPlayer",
+        value: function _getPlayer(id) {
+          /** @type {?} */
+          var player = this._playersById[id];
+
+          if (!player) {
+            throw new Error("Unable to find the timeline player referenced by ".concat(id));
+          }
+
+          return player;
+        }
+        /**
+         * @param {?} id
+         * @param {?} element
+         * @param {?} eventName
+         * @param {?} callback
+         * @return {?}
+         */
+
+      }, {
+        key: "listen",
+        value: function listen(id, element, eventName, callback) {
+          // triggerName, fromState, toState are all ignored for timeline animations
+
+          /** @type {?} */
+          var baseEvent = makeAnimationEvent(element, '', '', '');
+          listenOnPlayer(this._getPlayer(id), eventName, baseEvent, callback);
+          return (
+            /**
+            * @return {?}
+            */
+            function () {}
+          );
+        }
+        /**
+         * @param {?} id
+         * @param {?} element
+         * @param {?} command
+         * @param {?} args
+         * @return {?}
+         */
+
+      }, {
+        key: "command",
+        value: function command(id, element, _command, args) {
+          if (_command == 'register') {
+            this.register(id,
+            /** @type {?} */
+            args[0]);
+            return;
+          }
+
+          if (_command == 'create') {
+            /** @type {?} */
+            var options =
+            /** @type {?} */
+            args[0] || {};
+            this.create(id, element, options);
+            return;
+          }
+          /** @type {?} */
+
+
+          var player = this._getPlayer(id);
+
+          switch (_command) {
+            case 'play':
+              player.play();
+              break;
+
+            case 'pause':
+              player.pause();
+              break;
+
+            case 'reset':
+              player.reset();
+              break;
+
+            case 'restart':
+              player.restart();
+              break;
+
+            case 'finish':
+              player.finish();
+              break;
+
+            case 'init':
+              player.init();
+              break;
+
+            case 'setPosition':
+              player.setPosition(parseFloat(
+              /** @type {?} */
+              args[0]));
+              break;
+
+            case 'destroy':
+              this.destroy(id);
+              break;
+          }
+        }
+      }]);
+
+      return TimelineAnimationEngine;
+    }();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/render/transition_animation_engine.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var QUEUED_CLASSNAME = 'ng-animate-queued';
+    /** @type {?} */
+
+    var QUEUED_SELECTOR = '.ng-animate-queued';
+    /** @type {?} */
+
+    var DISABLED_CLASSNAME = 'ng-animate-disabled';
+    /** @type {?} */
+
+    var DISABLED_SELECTOR = '.ng-animate-disabled';
+    /** @type {?} */
+
+    var STAR_CLASSNAME = 'ng-star-inserted';
+    /** @type {?} */
+
+    var STAR_SELECTOR = '.ng-star-inserted';
+    /** @type {?} */
+
+    var EMPTY_PLAYER_ARRAY = [];
+    /** @type {?} */
+
+    var NULL_REMOVAL_STATE = {
+      namespaceId: '',
+      setForRemoval: false,
+      setForMove: false,
+      hasAnimation: false,
+      removedBeforeQueried: false
+    };
+    /** @type {?} */
+
+    var NULL_REMOVED_QUERIED_STATE = {
+      namespaceId: '',
+      setForMove: false,
+      setForRemoval: false,
+      hasAnimation: false,
+      removedBeforeQueried: true
+    };
+    /**
+     * @record
+     */
+
+    function TriggerListener() {}
+
+    if (false) {}
+    /**
+     * @record
+     */
+
+
+    function QueueInstruction() {}
+
+    if (false) {}
+    /** @type {?} */
+
+
+    var REMOVAL_FLAG = '__ng_removed';
+    /**
+     * @record
+     */
+
+    function ElementAnimationState() {}
+
+    if (false) {}
+
+    var StateValue =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} input
+       * @param {?=} namespaceId
+       */
+      function StateValue(input) {
+        var namespaceId = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+
+        _classCallCheck(this, StateValue);
+
+        this.namespaceId = namespaceId;
+        /** @type {?} */
+
+        var isObj = input && input.hasOwnProperty('value');
+        /** @type {?} */
+
+        var value = isObj ? input['value'] : input;
+        this.value = normalizeTriggerValue(value);
+
+        if (isObj) {
+          /** @type {?} */
+          var options = copyObj(
+          /** @type {?} */
+          input);
+          delete options['value'];
+          this.options =
+          /** @type {?} */
+          options;
+        } else {
+          this.options = {};
+        }
+
+        if (!this.options.params) {
+          this.options.params = {};
+        }
+      }
+      /**
+       * @return {?}
+       */
+
+
+      _createClass2(StateValue, [{
+        key: "absorbOptions",
+
+        /**
+         * @param {?} options
+         * @return {?}
+         */
+        value: function absorbOptions(options) {
+          /** @type {?} */
+          var newParams = options.params;
+
+          if (newParams) {
+            /** @type {?} */
+            var oldParams =
+            /** @type {?} */
+            this.options.params;
+            Object.keys(newParams).forEach(
+            /**
+            * @param {?} prop
+            * @return {?}
+            */
+            function (prop) {
+              if (oldParams[prop] == null) {
+                oldParams[prop] = newParams[prop];
+              }
+            });
+          }
+        }
+      }, {
+        key: "params",
+        get: function get() {
+          return (
+            /** @type {?} */
+            this.options.params
+          );
+        }
+      }]);
+
+      return StateValue;
+    }();
+
+    if (false) {}
+    /** @type {?} */
+
+
+    var VOID_VALUE = 'void';
+    /** @type {?} */
+
+    var DEFAULT_STATE_VALUE = new StateValue(VOID_VALUE);
+
+    var AnimationTransitionNamespace =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} id
+       * @param {?} hostElement
+       * @param {?} _engine
+       */
+      function AnimationTransitionNamespace(id, hostElement, _engine) {
+        _classCallCheck(this, AnimationTransitionNamespace);
+
+        this.id = id;
+        this.hostElement = hostElement;
+        this._engine = _engine;
+        this.players = [];
+        this._triggers = {};
+        this._queue = [];
+        this._elementListeners = new Map();
+        this._hostClassName = 'ng-tns-' + id;
+        addClass(hostElement, this._hostClassName);
+      }
+      /**
+       * @param {?} element
+       * @param {?} name
+       * @param {?} phase
+       * @param {?} callback
+       * @return {?}
+       */
+
+
+      _createClass2(AnimationTransitionNamespace, [{
+        key: "listen",
+        value: function listen(element, name, phase, callback) {
+          var _this21 = this;
+
+          if (!this._triggers.hasOwnProperty(name)) {
+            throw new Error("Unable to listen on the animation trigger event \"".concat(phase, "\" because the animation trigger \"").concat(name, "\" doesn't exist!"));
+          }
+
+          if (phase == null || phase.length == 0) {
+            throw new Error("Unable to listen on the animation trigger \"".concat(name, "\" because the provided event is undefined!"));
+          }
+
+          if (!isTriggerEventValid(phase)) {
+            throw new Error("The provided animation trigger event \"".concat(phase, "\" for the animation trigger \"").concat(name, "\" is not supported!"));
+          }
+          /** @type {?} */
+
+
+          var listeners = getOrSetAsInMap(this._elementListeners, element, []);
+          /** @type {?} */
+
+          var data = {
+            name: name,
+            phase: phase,
+            callback: callback
+          };
+          listeners.push(data);
+          /** @type {?} */
+
+          var triggersWithStates = getOrSetAsInMap(this._engine.statesByElement, element, {});
+
+          if (!triggersWithStates.hasOwnProperty(name)) {
+            addClass(element, NG_TRIGGER_CLASSNAME);
+            addClass(element, NG_TRIGGER_CLASSNAME + '-' + name);
+            triggersWithStates[name] = DEFAULT_STATE_VALUE;
+          }
+
+          return (
+            /**
+            * @return {?}
+            */
+            function () {
+              // the event listener is removed AFTER the flush has occurred such
+              // that leave animations callbacks can fire (otherwise if the node
+              // is removed in between then the listeners would be deregistered)
+              _this21._engine.afterFlush(
+              /**
+              * @return {?}
+              */
+              function () {
+                /** @type {?} */
+                var index = listeners.indexOf(data);
+
+                if (index >= 0) {
+                  listeners.splice(index, 1);
+                }
+
+                if (!_this21._triggers[name]) {
+                  delete triggersWithStates[name];
+                }
+              });
+            }
+          );
+        }
+        /**
+         * @param {?} name
+         * @param {?} ast
+         * @return {?}
+         */
+
+      }, {
+        key: "register",
+        value: function register(name, ast) {
+          if (this._triggers[name]) {
+            // throw
+            return false;
+          } else {
+            this._triggers[name] = ast;
+            return true;
+          }
+        }
+        /**
+         * @private
+         * @param {?} name
+         * @return {?}
+         */
+
+      }, {
+        key: "_getTrigger",
+        value: function _getTrigger(name) {
+          /** @type {?} */
+          var trigger = this._triggers[name];
+
+          if (!trigger) {
+            throw new Error("The provided animation trigger \"".concat(name, "\" has not been registered!"));
+          }
+
+          return trigger;
+        }
+        /**
+         * @param {?} element
+         * @param {?} triggerName
+         * @param {?} value
+         * @param {?=} defaultToFallback
+         * @return {?}
+         */
+
+      }, {
+        key: "trigger",
+        value: function trigger(element, triggerName, value) {
+          var _this22 = this;
+
+          var defaultToFallback = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : true;
+
+          /** @type {?} */
+          var trigger = this._getTrigger(triggerName);
+          /** @type {?} */
+
+
+          var player = new TransitionAnimationPlayer(this.id, triggerName, element);
+          /** @type {?} */
+
+          var triggersWithStates = this._engine.statesByElement.get(element);
+
+          if (!triggersWithStates) {
+            addClass(element, NG_TRIGGER_CLASSNAME);
+            addClass(element, NG_TRIGGER_CLASSNAME + '-' + triggerName);
+
+            this._engine.statesByElement.set(element, triggersWithStates = {});
+          }
+          /** @type {?} */
+
+
+          var fromState = triggersWithStates[triggerName];
+          /** @type {?} */
+
+          var toState = new StateValue(value, this.id);
+          /** @type {?} */
+
+          var isObj = value && value.hasOwnProperty('value');
+
+          if (!isObj && fromState) {
+            toState.absorbOptions(fromState.options);
+          }
+
+          triggersWithStates[triggerName] = toState;
+
+          if (!fromState) {
+            fromState = DEFAULT_STATE_VALUE;
+          }
+          /** @type {?} */
+
+
+          var isRemoval = toState.value === VOID_VALUE; // normally this isn't reached by here, however, if an object expression
+          // is passed in then it may be a new object each time. Comparing the value
+          // is important since that will stay the same despite there being a new object.
+          // The removal arc here is special cased because the same element is triggered
+          // twice in the event that it contains animations on the outer/inner portions
+          // of the host container
+
+          if (!isRemoval && fromState.value === toState.value) {
+            // this means that despite the value not changing, some inner params
+            // have changed which means that the animation final styles need to be applied
+            if (!objEquals(fromState.params, toState.params)) {
+              /** @type {?} */
+              var errors = [];
+              /** @type {?} */
+
+              var fromStyles = trigger.matchStyles(fromState.value, fromState.params, errors);
+              /** @type {?} */
+
+              var toStyles = trigger.matchStyles(toState.value, toState.params, errors);
+
+              if (errors.length) {
+                this._engine.reportError(errors);
+              } else {
+                this._engine.afterFlush(
+                /**
+                * @return {?}
+                */
+                function () {
+                  eraseStyles(element, fromStyles);
+                  setStyles(element, toStyles);
+                });
+              }
+            }
+
+            return;
+          }
+          /** @type {?} */
+
+
+          var playersOnElement = getOrSetAsInMap(this._engine.playersByElement, element, []);
+          playersOnElement.forEach(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            // only remove the player if it is queued on the EXACT same trigger/namespace
+            // we only also deal with queued players here because if the animation has
+            // started then we want to keep the player alive until the flush happens
+            // (which is where the previousPlayers are passed into the new palyer)
+            if (player.namespaceId == _this22.id && player.triggerName == triggerName && player.queued) {
+              player.destroy();
+            }
+          });
+          /** @type {?} */
+
+          var transition = trigger.matchTransition(fromState.value, toState.value, element, toState.params);
+          /** @type {?} */
+
+          var isFallbackTransition = false;
+
+          if (!transition) {
+            if (!defaultToFallback) return;
+            transition = trigger.fallbackTransition;
+            isFallbackTransition = true;
+          }
+
+          this._engine.totalQueuedPlayers++;
+
+          this._queue.push({
+            element: element,
+            triggerName: triggerName,
+            transition: transition,
+            fromState: fromState,
+            toState: toState,
+            player: player,
+            isFallbackTransition: isFallbackTransition
+          });
+
+          if (!isFallbackTransition) {
+            addClass(element, QUEUED_CLASSNAME);
+            player.onStart(
+            /**
+            * @return {?}
+            */
+            function () {
+              removeClass(element, QUEUED_CLASSNAME);
+            });
+          }
+
+          player.onDone(
+          /**
+          * @return {?}
+          */
+          function () {
+            /** @type {?} */
+            var index = _this22.players.indexOf(player);
+
+            if (index >= 0) {
+              _this22.players.splice(index, 1);
+            }
+            /** @type {?} */
+
+
+            var players = _this22._engine.playersByElement.get(element);
+
+            if (players) {
+              /** @type {?} */
+              var _index = players.indexOf(player);
+
+              if (_index >= 0) {
+                players.splice(_index, 1);
+              }
+            }
+          });
+          this.players.push(player);
+          playersOnElement.push(player);
+          return player;
+        }
+        /**
+         * @param {?} name
+         * @return {?}
+         */
+
+      }, {
+        key: "deregister",
+        value: function deregister(name) {
+          var _this23 = this;
+
+          delete this._triggers[name];
+
+          this._engine.statesByElement.forEach(
+          /**
+          * @param {?} stateMap
+          * @param {?} element
+          * @return {?}
+          */
+          function (stateMap, element) {
+            delete stateMap[name];
+          });
+
+          this._elementListeners.forEach(
+          /**
+          * @param {?} listeners
+          * @param {?} element
+          * @return {?}
+          */
+          function (listeners, element) {
+            _this23._elementListeners.set(element, listeners.filter(
+            /**
+            * @param {?} entry
+            * @return {?}
+            */
+            function (entry) {
+              return entry.name != name;
+            }));
+          });
+        }
+        /**
+         * @param {?} element
+         * @return {?}
+         */
+
+      }, {
+        key: "clearElementCache",
+        value: function clearElementCache(element) {
+          this._engine.statesByElement.delete(element);
+
+          this._elementListeners.delete(element);
+          /** @type {?} */
+
+
+          var elementPlayers = this._engine.playersByElement.get(element);
+
+          if (elementPlayers) {
+            elementPlayers.forEach(
+            /**
+            * @param {?} player
+            * @return {?}
+            */
+            function (player) {
+              return player.destroy();
+            });
+
+            this._engine.playersByElement.delete(element);
+          }
+        }
+        /**
+         * @private
+         * @param {?} rootElement
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "_signalRemovalForInnerTriggers",
+        value: function _signalRemovalForInnerTriggers(rootElement, context) {
+          var _this24 = this;
+
+          /** @type {?} */
+          var elements = this._engine.driver.query(rootElement, NG_TRIGGER_SELECTOR, true); // emulate a leave animation for all inner nodes within this node.
+          // If there are no animations found for any of the nodes then clear the cache
+          // for the element.
+
+
+          elements.forEach(
+          /**
+          * @param {?} elm
+          * @return {?}
+          */
+          function (elm) {
+            // this means that an inner remove() operation has already kicked off
+            // the animation on this element...
+            if (elm[REMOVAL_FLAG]) return;
+            /** @type {?} */
+
+            var namespaces = _this24._engine.fetchNamespacesByElement(elm);
+
+            if (namespaces.size) {
+              namespaces.forEach(
+              /**
+              * @param {?} ns
+              * @return {?}
+              */
+              function (ns) {
+                return ns.triggerLeaveAnimation(elm, context, false, true);
+              });
+            } else {
+              _this24.clearElementCache(elm);
+            }
+          }); // If the child elements were removed along with the parent, their animations might not
+          // have completed. Clear all the elements from the cache so we don't end up with a memory leak.
+
+          this._engine.afterFlushAnimationsDone(
+          /**
+          * @return {?}
+          */
+          function () {
+            return elements.forEach(
+            /**
+            * @param {?} elm
+            * @return {?}
+            */
+            function (elm) {
+              return _this24.clearElementCache(elm);
+            });
+          });
+        }
+        /**
+         * @param {?} element
+         * @param {?} context
+         * @param {?=} destroyAfterComplete
+         * @param {?=} defaultToFallback
+         * @return {?}
+         */
+
+      }, {
+        key: "triggerLeaveAnimation",
+        value: function triggerLeaveAnimation(element, context, destroyAfterComplete, defaultToFallback) {
+          var _this25 = this;
+
+          /** @type {?} */
+          var triggerStates = this._engine.statesByElement.get(element);
+
+          if (triggerStates) {
+            /** @type {?} */
+            var players = [];
+            Object.keys(triggerStates).forEach(
+            /**
+            * @param {?} triggerName
+            * @return {?}
+            */
+            function (triggerName) {
+              // this check is here in the event that an element is removed
+              // twice (both on the host level and the component level)
+              if (_this25._triggers[triggerName]) {
+                /** @type {?} */
+                var player = _this25.trigger(element, triggerName, VOID_VALUE, defaultToFallback);
+
+                if (player) {
+                  players.push(player);
+                }
+              }
+            });
+
+            if (players.length) {
+              this._engine.markElementAsRemoved(this.id, element, true, context);
+
+              if (destroyAfterComplete) {
+                optimizeGroupPlayer(players).onDone(
+                /**
+                * @return {?}
+                */
+                function () {
+                  return _this25._engine.processLeaveNode(element);
+                });
+              }
+
+              return true;
+            }
+          }
+
+          return false;
+        }
+        /**
+         * @param {?} element
+         * @return {?}
+         */
+
+      }, {
+        key: "prepareLeaveAnimationListeners",
+        value: function prepareLeaveAnimationListeners(element) {
+          var _this26 = this;
+
+          /** @type {?} */
+          var listeners = this._elementListeners.get(element);
+
+          if (listeners) {
+            /** @type {?} */
+            var visitedTriggers = new Set();
+            listeners.forEach(
+            /**
+            * @param {?} listener
+            * @return {?}
+            */
+            function (listener) {
+              /** @type {?} */
+              var triggerName = listener.name;
+              if (visitedTriggers.has(triggerName)) return;
+              visitedTriggers.add(triggerName);
+              /** @type {?} */
+
+              var trigger = _this26._triggers[triggerName];
+              /** @type {?} */
+
+              var transition = trigger.fallbackTransition;
+              /** @type {?} */
+
+              var elementStates =
+              /** @type {?} */
+              _this26._engine.statesByElement.get(element);
+              /** @type {?} */
+
+
+              var fromState = elementStates[triggerName] || DEFAULT_STATE_VALUE;
+              /** @type {?} */
+
+              var toState = new StateValue(VOID_VALUE);
+              /** @type {?} */
+
+              var player = new TransitionAnimationPlayer(_this26.id, triggerName, element);
+              _this26._engine.totalQueuedPlayers++;
+
+              _this26._queue.push({
+                element: element,
+                triggerName: triggerName,
+                transition: transition,
+                fromState: fromState,
+                toState: toState,
+                player: player,
+                isFallbackTransition: true
+              });
+            });
+          }
+        }
+        /**
+         * @param {?} element
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "removeNode",
+        value: function removeNode(element, context) {
+          var _this27 = this;
+
+          /** @type {?} */
+          var engine = this._engine;
+
+          if (element.childElementCount) {
+            this._signalRemovalForInnerTriggers(element, context);
+          } // this means that a * => VOID animation was detected and kicked off
+
+
+          if (this.triggerLeaveAnimation(element, context, true)) return; // find the player that is animating and make sure that the
+          // removal is delayed until that player has completed
+
+          /** @type {?} */
+
+          var containsPotentialParentTransition = false;
+
+          if (engine.totalAnimations) {
+            /** @type {?} */
+            var currentPlayers = engine.players.length ? engine.playersByQueriedElement.get(element) : []; // when this `if statement` does not continue forward it means that
+            // a previous animation query has selected the current element and
+            // is animating it. In this situation want to continue forwards and
+            // allow the element to be queued up for animation later.
+
+            if (currentPlayers && currentPlayers.length) {
+              containsPotentialParentTransition = true;
+            } else {
+              /** @type {?} */
+              var parent = element;
+
+              while (parent = parent.parentNode) {
+                /** @type {?} */
+                var triggers = engine.statesByElement.get(parent);
+
+                if (triggers) {
+                  containsPotentialParentTransition = true;
+                  break;
+                }
+              }
+            }
+          } // at this stage we know that the element will either get removed
+          // during flush or will be picked up by a parent query. Either way
+          // we need to fire the listeners for this element when it DOES get
+          // removed (once the query parent animation is done or after flush)
+
+
+          this.prepareLeaveAnimationListeners(element); // whether or not a parent has an animation we need to delay the deferral of the leave
+          // operation until we have more information (which we do after flush() has been called)
+
+          if (containsPotentialParentTransition) {
+            engine.markElementAsRemoved(this.id, element, false, context);
+          } else {
+            /** @type {?} */
+            var removalFlag = element[REMOVAL_FLAG];
+
+            if (!removalFlag || removalFlag === NULL_REMOVAL_STATE) {
+              // we do this after the flush has occurred such
+              // that the callbacks can be fired
+              engine.afterFlush(
+              /**
+              * @return {?}
+              */
+              function () {
+                return _this27.clearElementCache(element);
+              });
+              engine.destroyInnerAnimations(element);
+
+              engine._onRemovalComplete(element, context);
+            }
+          }
+        }
+        /**
+         * @param {?} element
+         * @param {?} parent
+         * @return {?}
+         */
+
+      }, {
+        key: "insertNode",
+        value: function insertNode(element, parent) {
+          addClass(element, this._hostClassName);
+        }
+        /**
+         * @param {?} microtaskId
+         * @return {?}
+         */
+
+      }, {
+        key: "drainQueuedTransitions",
+        value: function drainQueuedTransitions(microtaskId) {
+          var _this28 = this;
+
+          /** @type {?} */
+          var instructions = [];
+
+          this._queue.forEach(
+          /**
+          * @param {?} entry
+          * @return {?}
+          */
+          function (entry) {
+            /** @type {?} */
+            var player = entry.player;
+            if (player.destroyed) return;
+            /** @type {?} */
+
+            var element = entry.element;
+            /** @type {?} */
+
+            var listeners = _this28._elementListeners.get(element);
+
+            if (listeners) {
+              listeners.forEach(
+              /**
+              * @param {?} listener
+              * @return {?}
+              */
+              function (listener) {
+                if (listener.name == entry.triggerName) {
+                  /** @type {?} */
+                  var baseEvent = makeAnimationEvent(element, entry.triggerName, entry.fromState.value, entry.toState.value);
+
+                  /** @type {?} */
+                  baseEvent['_data'] = microtaskId;
+                  listenOnPlayer(entry.player, listener.phase, baseEvent, listener.callback);
+                }
+              });
+            }
+
+            if (player.markedForDestroy) {
+              _this28._engine.afterFlush(
+              /**
+              * @return {?}
+              */
+              function () {
+                // now we can destroy the element properly since the event listeners have
+                // been bound to the player
+                player.destroy();
+              });
+            } else {
+              instructions.push(entry);
+            }
+          });
+
+          this._queue = [];
+          return instructions.sort(
+          /**
+          * @param {?} a
+          * @param {?} b
+          * @return {?}
+          */
+          function (a, b) {
+            // if depCount == 0 them move to front
+            // otherwise if a contains b then move back
+
+            /** @type {?} */
+            var d0 = a.transition.ast.depCount;
+            /** @type {?} */
+
+            var d1 = b.transition.ast.depCount;
+
+            if (d0 == 0 || d1 == 0) {
+              return d0 - d1;
+            }
+
+            return _this28._engine.driver.containsElement(a.element, b.element) ? 1 : -1;
+          });
+        }
+        /**
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "destroy",
+        value: function destroy(context) {
+          this.players.forEach(
+          /**
+          * @param {?} p
+          * @return {?}
+          */
+          function (p) {
+            return p.destroy();
+          });
+
+          this._signalRemovalForInnerTriggers(this.hostElement, context);
+        }
+        /**
+         * @param {?} element
+         * @return {?}
+         */
+
+      }, {
+        key: "elementContainsData",
+        value: function elementContainsData(element) {
+          /** @type {?} */
+          var containsData = false;
+          if (this._elementListeners.has(element)) containsData = true;
+          containsData = (this._queue.find(
+          /**
+          * @param {?} entry
+          * @return {?}
+          */
+          function (entry) {
+            return entry.element === element;
+          }) ? true : false) || containsData;
+          return containsData;
+        }
+      }]);
+
+      return AnimationTransitionNamespace;
+    }();
+
+    if (false) {}
+    /**
+     * @record
+     */
+
+
+    function QueuedTransition() {}
+
+    if (false) {}
+
+    var TransitionAnimationEngine =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} bodyNode
+       * @param {?} driver
+       * @param {?} _normalizer
+       */
+      function TransitionAnimationEngine(bodyNode, driver, _normalizer) {
+        _classCallCheck(this, TransitionAnimationEngine);
+
+        this.bodyNode = bodyNode;
+        this.driver = driver;
+        this._normalizer = _normalizer;
+        this.players = [];
+        this.newHostElements = new Map();
+        this.playersByElement = new Map();
+        this.playersByQueriedElement = new Map();
+        this.statesByElement = new Map();
+        this.disabledNodes = new Set();
+        this.totalAnimations = 0;
+        this.totalQueuedPlayers = 0;
+        this._namespaceLookup = {};
+        this._namespaceList = [];
+        this._flushFns = [];
+        this._whenQuietFns = [];
+        this.namespacesByHostElement = new Map();
+        this.collectedEnterElements = [];
+        this.collectedLeaveElements = []; // this method is designed to be overridden by the code that uses this engine
+
+        this.onRemovalComplete =
+        /**
+        * @param {?} element
+        * @param {?} context
+        * @return {?}
+        */
+        function (element, context) {};
+      }
+      /**
+       * \@internal
+       * @param {?} element
+       * @param {?} context
+       * @return {?}
+       */
+
+
+      _createClass2(TransitionAnimationEngine, [{
+        key: "_onRemovalComplete",
+        value: function _onRemovalComplete(element, context) {
+          this.onRemovalComplete(element, context);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "createNamespace",
+
+        /**
+         * @param {?} namespaceId
+         * @param {?} hostElement
+         * @return {?}
+         */
+        value: function createNamespace(namespaceId, hostElement) {
+          /** @type {?} */
+          var ns = new AnimationTransitionNamespace(namespaceId, hostElement, this);
+
+          if (hostElement.parentNode) {
+            this._balanceNamespaceList(ns, hostElement);
+          } else {
+            // defer this later until flush during when the host element has
+            // been inserted so that we know exactly where to place it in
+            // the namespace list
+            this.newHostElements.set(hostElement, ns); // given that this host element is apart of the animation code, it
+            // may or may not be inserted by a parent node that is an of an
+            // animation renderer type. If this happens then we can still have
+            // access to this item when we query for :enter nodes. If the parent
+            // is a renderer then the set data-structure will normalize the entry
+
+            this.collectEnterElement(hostElement);
+          }
+
+          return this._namespaceLookup[namespaceId] = ns;
+        }
+        /**
+         * @private
+         * @param {?} ns
+         * @param {?} hostElement
+         * @return {?}
+         */
+
+      }, {
+        key: "_balanceNamespaceList",
+        value: function _balanceNamespaceList(ns, hostElement) {
+          /** @type {?} */
+          var limit = this._namespaceList.length - 1;
+
+          if (limit >= 0) {
+            /** @type {?} */
+            var found = false;
+
+            for (var i = limit; i >= 0; i--) {
+              /** @type {?} */
+              var nextNamespace = this._namespaceList[i];
+
+              if (this.driver.containsElement(nextNamespace.hostElement, hostElement)) {
+                this._namespaceList.splice(i + 1, 0, ns);
+
+                found = true;
+                break;
+              }
+            }
+
+            if (!found) {
+              this._namespaceList.splice(0, 0, ns);
+            }
+          } else {
+            this._namespaceList.push(ns);
+          }
+
+          this.namespacesByHostElement.set(hostElement, ns);
+          return ns;
+        }
+        /**
+         * @param {?} namespaceId
+         * @param {?} hostElement
+         * @return {?}
+         */
+
+      }, {
+        key: "register",
+        value: function register(namespaceId, hostElement) {
+          /** @type {?} */
+          var ns = this._namespaceLookup[namespaceId];
+
+          if (!ns) {
+            ns = this.createNamespace(namespaceId, hostElement);
+          }
+
+          return ns;
+        }
+        /**
+         * @param {?} namespaceId
+         * @param {?} name
+         * @param {?} trigger
+         * @return {?}
+         */
+
+      }, {
+        key: "registerTrigger",
+        value: function registerTrigger(namespaceId, name, trigger) {
+          /** @type {?} */
+          var ns = this._namespaceLookup[namespaceId];
+
+          if (ns && ns.register(name, trigger)) {
+            this.totalAnimations++;
+          }
+        }
+        /**
+         * @param {?} namespaceId
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "destroy",
+        value: function destroy(namespaceId, context) {
+          var _this29 = this;
+
+          if (!namespaceId) return;
+          /** @type {?} */
+
+          var ns = this._fetchNamespace(namespaceId);
+
+          this.afterFlush(
+          /**
+          * @return {?}
+          */
+          function () {
+            _this29.namespacesByHostElement.delete(ns.hostElement);
+
+            delete _this29._namespaceLookup[namespaceId];
+            /** @type {?} */
+
+            var index = _this29._namespaceList.indexOf(ns);
+
+            if (index >= 0) {
+              _this29._namespaceList.splice(index, 1);
+            }
+          });
+          this.afterFlushAnimationsDone(
+          /**
+          * @return {?}
+          */
+          function () {
+            return ns.destroy(context);
+          });
+        }
+        /**
+         * @private
+         * @param {?} id
+         * @return {?}
+         */
+
+      }, {
+        key: "_fetchNamespace",
+        value: function _fetchNamespace(id) {
+          return this._namespaceLookup[id];
+        }
+        /**
+         * @param {?} element
+         * @return {?}
+         */
+
+      }, {
+        key: "fetchNamespacesByElement",
+        value: function fetchNamespacesByElement(element) {
+          // normally there should only be one namespace per element, however
+          // if @triggers are placed on both the component element and then
+          // its host element (within the component code) then there will be
+          // two namespaces returned. We use a set here to simply the dedupe
+          // of namespaces incase there are multiple triggers both the elm and host
+
+          /** @type {?} */
+          var namespaces = new Set();
+          /** @type {?} */
+
+          var elementStates = this.statesByElement.get(element);
+
+          if (elementStates) {
+            /** @type {?} */
+            var keys = Object.keys(elementStates);
+
+            for (var i = 0; i < keys.length; i++) {
+              /** @type {?} */
+              var nsId = elementStates[keys[i]].namespaceId;
+
+              if (nsId) {
+                /** @type {?} */
+                var ns = this._fetchNamespace(nsId);
+
+                if (ns) {
+                  namespaces.add(ns);
+                }
+              }
+            }
+          }
+
+          return namespaces;
+        }
+        /**
+         * @param {?} namespaceId
+         * @param {?} element
+         * @param {?} name
+         * @param {?} value
+         * @return {?}
+         */
+
+      }, {
+        key: "trigger",
+        value: function trigger(namespaceId, element, name, value) {
+          if (isElementNode(element)) {
+            /** @type {?} */
+            var ns = this._fetchNamespace(namespaceId);
+
+            if (ns) {
+              ns.trigger(element, name, value);
+              return true;
+            }
+          }
+
+          return false;
+        }
+        /**
+         * @param {?} namespaceId
+         * @param {?} element
+         * @param {?} parent
+         * @param {?} insertBefore
+         * @return {?}
+         */
+
+      }, {
+        key: "insertNode",
+        value: function insertNode(namespaceId, element, parent, insertBefore) {
+          if (!isElementNode(element)) return; // special case for when an element is removed and reinserted (move operation)
+          // when this occurs we do not want to use the element for deletion later
+
+          /** @type {?} */
+
+          var details =
+          /** @type {?} */
+          element[REMOVAL_FLAG];
+
+          if (details && details.setForRemoval) {
+            details.setForRemoval = false;
+            details.setForMove = true;
+            /** @type {?} */
+
+            var index = this.collectedLeaveElements.indexOf(element);
+
+            if (index >= 0) {
+              this.collectedLeaveElements.splice(index, 1);
+            }
+          } // in the event that the namespaceId is blank then the caller
+          // code does not contain any animation code in it, but it is
+          // just being called so that the node is marked as being inserted
+
+
+          if (namespaceId) {
+            /** @type {?} */
+            var ns = this._fetchNamespace(namespaceId); // This if-statement is a workaround for router issue #21947.
+            // The router sometimes hits a race condition where while a route
+            // is being instantiated a new navigation arrives, triggering leave
+            // animation of DOM that has not been fully initialized, until this
+            // is resolved, we need to handle the scenario when DOM is not in a
+            // consistent state during the animation.
+
+
+            if (ns) {
+              ns.insertNode(element, parent);
+            }
+          } // only *directives and host elements are inserted before
+
+
+          if (insertBefore) {
+            this.collectEnterElement(element);
+          }
+        }
+        /**
+         * @param {?} element
+         * @return {?}
+         */
+
+      }, {
+        key: "collectEnterElement",
+        value: function collectEnterElement(element) {
+          this.collectedEnterElements.push(element);
+        }
+        /**
+         * @param {?} element
+         * @param {?} value
+         * @return {?}
+         */
+
+      }, {
+        key: "markElementAsDisabled",
+        value: function markElementAsDisabled(element, value) {
+          if (value) {
+            if (!this.disabledNodes.has(element)) {
+              this.disabledNodes.add(element);
+              addClass(element, DISABLED_CLASSNAME);
+            }
+          } else if (this.disabledNodes.has(element)) {
+            this.disabledNodes.delete(element);
+            removeClass(element, DISABLED_CLASSNAME);
+          }
+        }
+        /**
+         * @param {?} namespaceId
+         * @param {?} element
+         * @param {?} isHostElement
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "removeNode",
+        value: function removeNode(namespaceId, element, isHostElement, context) {
+          if (isElementNode(element)) {
+            /** @type {?} */
+            var ns = namespaceId ? this._fetchNamespace(namespaceId) : null;
+
+            if (ns) {
+              ns.removeNode(element, context);
+            } else {
+              this.markElementAsRemoved(namespaceId, element, false, context);
+            }
+
+            if (isHostElement) {
+              /** @type {?} */
+              var hostNS = this.namespacesByHostElement.get(element);
+
+              if (hostNS && hostNS.id !== namespaceId) {
+                hostNS.removeNode(element, context);
+              }
+            }
+          } else {
+            this._onRemovalComplete(element, context);
+          }
+        }
+        /**
+         * @param {?} namespaceId
+         * @param {?} element
+         * @param {?=} hasAnimation
+         * @param {?=} context
+         * @return {?}
+         */
+
+      }, {
+        key: "markElementAsRemoved",
+        value: function markElementAsRemoved(namespaceId, element, hasAnimation, context) {
+          this.collectedLeaveElements.push(element);
+          element[REMOVAL_FLAG] = {
+            namespaceId: namespaceId,
+            setForRemoval: context,
+            hasAnimation: hasAnimation,
+            removedBeforeQueried: false
+          };
+        }
+        /**
+         * @param {?} namespaceId
+         * @param {?} element
+         * @param {?} name
+         * @param {?} phase
+         * @param {?} callback
+         * @return {?}
+         */
+
+      }, {
+        key: "listen",
+        value: function listen(namespaceId, element, name, phase, callback) {
+          if (isElementNode(element)) {
+            return this._fetchNamespace(namespaceId).listen(element, name, phase, callback);
+          }
+
+          return (
+            /**
+            * @return {?}
+            */
+            function () {}
+          );
+        }
+        /**
+         * @private
+         * @param {?} entry
+         * @param {?} subTimelines
+         * @param {?} enterClassName
+         * @param {?} leaveClassName
+         * @param {?=} skipBuildAst
+         * @return {?}
+         */
+
+      }, {
+        key: "_buildInstruction",
+        value: function _buildInstruction(entry, subTimelines, enterClassName, leaveClassName, skipBuildAst) {
+          return entry.transition.build(this.driver, entry.element, entry.fromState.value, entry.toState.value, enterClassName, leaveClassName, entry.fromState.options, entry.toState.options, subTimelines, skipBuildAst);
+        }
+        /**
+         * @param {?} containerElement
+         * @return {?}
+         */
+
+      }, {
+        key: "destroyInnerAnimations",
+        value: function destroyInnerAnimations(containerElement) {
+          var _this30 = this;
+
+          /** @type {?} */
+          var elements = this.driver.query(containerElement, NG_TRIGGER_SELECTOR, true);
+          elements.forEach(
+          /**
+          * @param {?} element
+          * @return {?}
+          */
+          function (element) {
+            return _this30.destroyActiveAnimationsForElement(element);
+          });
+          if (this.playersByQueriedElement.size == 0) return;
+          elements = this.driver.query(containerElement, NG_ANIMATING_SELECTOR, true);
+          elements.forEach(
+          /**
+          * @param {?} element
+          * @return {?}
+          */
+          function (element) {
+            return _this30.finishActiveQueriedAnimationOnElement(element);
+          });
+        }
+        /**
+         * @param {?} element
+         * @return {?}
+         */
+
+      }, {
+        key: "destroyActiveAnimationsForElement",
+        value: function destroyActiveAnimationsForElement(element) {
+          /** @type {?} */
+          var players = this.playersByElement.get(element);
+
+          if (players) {
+            players.forEach(
+            /**
+            * @param {?} player
+            * @return {?}
+            */
+            function (player) {
+              // special case for when an element is set for destruction, but hasn't started.
+              // in this situation we want to delay the destruction until the flush occurs
+              // so that any event listeners attached to the player are triggered.
+              if (player.queued) {
+                player.markedForDestroy = true;
+              } else {
+                player.destroy();
+              }
+            });
+          }
+        }
+        /**
+         * @param {?} element
+         * @return {?}
+         */
+
+      }, {
+        key: "finishActiveQueriedAnimationOnElement",
+        value: function finishActiveQueriedAnimationOnElement(element) {
+          /** @type {?} */
+          var players = this.playersByQueriedElement.get(element);
+
+          if (players) {
+            players.forEach(
+            /**
+            * @param {?} player
+            * @return {?}
+            */
+            function (player) {
+              return player.finish();
+            });
+          }
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "whenRenderingDone",
+        value: function whenRenderingDone() {
+          var _this31 = this;
+
+          return new Promise(
+          /**
+          * @param {?} resolve
+          * @return {?}
+          */
+          function (resolve) {
+            if (_this31.players.length) {
+              return optimizeGroupPlayer(_this31.players).onDone(
+              /**
+              * @return {?}
+              */
+              function () {
+                return resolve();
+              });
+            } else {
+              resolve();
+            }
+          });
+        }
+        /**
+         * @param {?} element
+         * @return {?}
+         */
+
+      }, {
+        key: "processLeaveNode",
+        value: function processLeaveNode(element) {
+          var _this32 = this;
+
+          /** @type {?} */
+          var details =
+          /** @type {?} */
+          element[REMOVAL_FLAG];
+
+          if (details && details.setForRemoval) {
+            // this will prevent it from removing it twice
+            element[REMOVAL_FLAG] = NULL_REMOVAL_STATE;
+
+            if (details.namespaceId) {
+              this.destroyInnerAnimations(element);
+              /** @type {?} */
+
+              var ns = this._fetchNamespace(details.namespaceId);
+
+              if (ns) {
+                ns.clearElementCache(element);
+              }
+            }
+
+            this._onRemovalComplete(element, details.setForRemoval);
+          }
+
+          if (this.driver.matchesElement(element, DISABLED_SELECTOR)) {
+            this.markElementAsDisabled(element, false);
+          }
+
+          this.driver.query(element, DISABLED_SELECTOR, true).forEach(
+          /**
+          * @param {?} node
+          * @return {?}
+          */
+          function (node) {
+            _this32.markElementAsDisabled(node, false);
+          });
+        }
+        /**
+         * @param {?=} microtaskId
+         * @return {?}
+         */
+
+      }, {
+        key: "flush",
+        value: function flush() {
+          var _this33 = this;
+
+          var microtaskId = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : -1;
+
+          /** @type {?} */
+          var players = [];
+
+          if (this.newHostElements.size) {
+            this.newHostElements.forEach(
+            /**
+            * @param {?} ns
+            * @param {?} element
+            * @return {?}
+            */
+            function (ns, element) {
+              return _this33._balanceNamespaceList(ns, element);
+            });
+            this.newHostElements.clear();
+          }
+
+          if (this.totalAnimations && this.collectedEnterElements.length) {
+            for (var i = 0; i < this.collectedEnterElements.length; i++) {
+              /** @type {?} */
+              var elm = this.collectedEnterElements[i];
+              addClass(elm, STAR_CLASSNAME);
+            }
+          }
+
+          if (this._namespaceList.length && (this.totalQueuedPlayers || this.collectedLeaveElements.length)) {
+            /** @type {?} */
+            var cleanupFns = [];
+
+            try {
+              players = this._flushAnimations(cleanupFns, microtaskId);
+            } finally {
+              for (var _i2 = 0; _i2 < cleanupFns.length; _i2++) {
+                cleanupFns[_i2]();
+              }
+            }
+          } else {
+            for (var _i3 = 0; _i3 < this.collectedLeaveElements.length; _i3++) {
+              /** @type {?} */
+              var element = this.collectedLeaveElements[_i3];
+              this.processLeaveNode(element);
+            }
+          }
+
+          this.totalQueuedPlayers = 0;
+          this.collectedEnterElements.length = 0;
+          this.collectedLeaveElements.length = 0;
+
+          this._flushFns.forEach(
+          /**
+          * @param {?} fn
+          * @return {?}
+          */
+          function (fn) {
+            return fn();
+          });
+
+          this._flushFns = [];
+
+          if (this._whenQuietFns.length) {
+            // we move these over to a variable so that
+            // if any new callbacks are registered in another
+            // flush they do not populate the existing set
+
+            /** @type {?} */
+            var quietFns = this._whenQuietFns;
+            this._whenQuietFns = [];
+
+            if (players.length) {
+              optimizeGroupPlayer(players).onDone(
+              /**
+              * @return {?}
+              */
+              function () {
+                quietFns.forEach(
+                /**
+                * @param {?} fn
+                * @return {?}
+                */
+                function (fn) {
+                  return fn();
+                });
+              });
+            } else {
+              quietFns.forEach(
+              /**
+              * @param {?} fn
+              * @return {?}
+              */
+              function (fn) {
+                return fn();
+              });
+            }
+          }
+        }
+        /**
+         * @param {?} errors
+         * @return {?}
+         */
+
+      }, {
+        key: "reportError",
+        value: function reportError(errors) {
+          throw new Error("Unable to process animations due to the following failed trigger transitions\n ".concat(errors.join('\n')));
+        }
+        /**
+         * @private
+         * @param {?} cleanupFns
+         * @param {?} microtaskId
+         * @return {?}
+         */
+
+      }, {
+        key: "_flushAnimations",
+        value: function _flushAnimations(cleanupFns, microtaskId) {
+          var _this34 = this;
+
+          /** @type {?} */
+          var subTimelines = new ElementInstructionMap();
+          /** @type {?} */
+
+          var skippedPlayers = [];
+          /** @type {?} */
+
+          var skippedPlayersMap = new Map();
+          /** @type {?} */
+
+          var queuedInstructions = [];
+          /** @type {?} */
+
+          var queriedElements = new Map();
+          /** @type {?} */
+
+          var allPreStyleElements = new Map();
+          /** @type {?} */
+
+          var allPostStyleElements = new Map();
+          /** @type {?} */
+
+          var disabledElementsSet = new Set();
+          this.disabledNodes.forEach(
+          /**
+          * @param {?} node
+          * @return {?}
+          */
+          function (node) {
+            disabledElementsSet.add(node);
+            /** @type {?} */
+
+            var nodesThatAreDisabled = _this34.driver.query(node, QUEUED_SELECTOR, true);
+
+            for (var _i4 = 0; _i4 < nodesThatAreDisabled.length; _i4++) {
+              disabledElementsSet.add(nodesThatAreDisabled[_i4]);
+            }
+          });
+          /** @type {?} */
+
+          var bodyNode = this.bodyNode;
+          /** @type {?} */
+
+          var allTriggerElements = Array.from(this.statesByElement.keys());
+          /** @type {?} */
+
+          var enterNodeMap = buildRootMap(allTriggerElements, this.collectedEnterElements); // this must occur before the instructions are built below such that
+          // the :enter queries match the elements (since the timeline queries
+          // are fired during instruction building).
+
+          /** @type {?} */
+
+          var enterNodeMapIds = new Map();
+          /** @type {?} */
+
+          var i = 0;
+          enterNodeMap.forEach(
+          /**
+          * @param {?} nodes
+          * @param {?} root
+          * @return {?}
+          */
+          function (nodes, root) {
+            /** @type {?} */
+            var className = ENTER_CLASSNAME + i++;
+            enterNodeMapIds.set(root, className);
+            nodes.forEach(
+            /**
+            * @param {?} node
+            * @return {?}
+            */
+            function (node) {
+              return addClass(node, className);
+            });
+          });
+          /** @type {?} */
+
+          var allLeaveNodes = [];
+          /** @type {?} */
+
+          var mergedLeaveNodes = new Set();
+          /** @type {?} */
+
+          var leaveNodesWithoutAnimations = new Set();
+
+          for (var _i5 = 0; _i5 < this.collectedLeaveElements.length; _i5++) {
+            /** @type {?} */
+            var element = this.collectedLeaveElements[_i5];
+            /** @type {?} */
+
+            var details =
+            /** @type {?} */
+            element[REMOVAL_FLAG];
+
+            if (details && details.setForRemoval) {
+              allLeaveNodes.push(element);
+              mergedLeaveNodes.add(element);
+
+              if (details.hasAnimation) {
+                this.driver.query(element, STAR_SELECTOR, true).forEach(
+                /**
+                * @param {?} elm
+                * @return {?}
+                */
+                function (elm) {
+                  return mergedLeaveNodes.add(elm);
+                });
+              } else {
+                leaveNodesWithoutAnimations.add(element);
+              }
+            }
+          }
+          /** @type {?} */
+
+
+          var leaveNodeMapIds = new Map();
+          /** @type {?} */
+
+          var leaveNodeMap = buildRootMap(allTriggerElements, Array.from(mergedLeaveNodes));
+          leaveNodeMap.forEach(
+          /**
+          * @param {?} nodes
+          * @param {?} root
+          * @return {?}
+          */
+          function (nodes, root) {
+            /** @type {?} */
+            var className = LEAVE_CLASSNAME + i++;
+            leaveNodeMapIds.set(root, className);
+            nodes.forEach(
+            /**
+            * @param {?} node
+            * @return {?}
+            */
+            function (node) {
+              return addClass(node, className);
+            });
+          });
+          cleanupFns.push(
+          /**
+          * @return {?}
+          */
+          function () {
+            enterNodeMap.forEach(
+            /**
+            * @param {?} nodes
+            * @param {?} root
+            * @return {?}
+            */
+            function (nodes, root) {
+              /** @type {?} */
+              var className =
+              /** @type {?} */
+              enterNodeMapIds.get(root);
+              nodes.forEach(
+              /**
+              * @param {?} node
+              * @return {?}
+              */
+              function (node) {
+                return removeClass(node, className);
+              });
+            });
+            leaveNodeMap.forEach(
+            /**
+            * @param {?} nodes
+            * @param {?} root
+            * @return {?}
+            */
+            function (nodes, root) {
+              /** @type {?} */
+              var className =
+              /** @type {?} */
+              leaveNodeMapIds.get(root);
+              nodes.forEach(
+              /**
+              * @param {?} node
+              * @return {?}
+              */
+              function (node) {
+                return removeClass(node, className);
+              });
+            });
+            allLeaveNodes.forEach(
+            /**
+            * @param {?} element
+            * @return {?}
+            */
+            function (element) {
+              _this34.processLeaveNode(element);
+            });
+          });
+          /** @type {?} */
+
+          var allPlayers = [];
+          /** @type {?} */
+
+          var erroneousTransitions = [];
+
+          for (var _i6 = this._namespaceList.length - 1; _i6 >= 0; _i6--) {
+            /** @type {?} */
+            var ns = this._namespaceList[_i6];
+            ns.drainQueuedTransitions(microtaskId).forEach(
+            /**
+            * @param {?} entry
+            * @return {?}
+            */
+            function (entry) {
+              /** @type {?} */
+              var player = entry.player;
+              /** @type {?} */
+
+              var element = entry.element;
+              allPlayers.push(player);
+
+              if (_this34.collectedEnterElements.length) {
+                /** @type {?} */
+                var _details =
+                /** @type {?} */
+                element[REMOVAL_FLAG]; // move animations are currently not supported...
+
+                if (_details && _details.setForMove) {
+                  player.destroy();
+                  return;
+                }
+              }
+              /** @type {?} */
+
+
+              var nodeIsOrphaned = !bodyNode || !_this34.driver.containsElement(bodyNode, element);
+              /** @type {?} */
+
+              var leaveClassName =
+              /** @type {?} */
+              leaveNodeMapIds.get(element);
+              /** @type {?} */
+
+              var enterClassName =
+              /** @type {?} */
+              enterNodeMapIds.get(element);
+              /** @type {?} */
+
+              var instruction =
+              /** @type {?} */
+              _this34._buildInstruction(entry, subTimelines, enterClassName, leaveClassName, nodeIsOrphaned);
+
+              if (instruction.errors && instruction.errors.length) {
+                erroneousTransitions.push(instruction);
+                return;
+              } // even though the element may not be apart of the DOM, it may
+              // still be added at a later point (due to the mechanics of content
+              // projection and/or dynamic component insertion) therefore it's
+              // important we still style the element.
+
+
+              if (nodeIsOrphaned) {
+                player.onStart(
+                /**
+                * @return {?}
+                */
+                function () {
+                  return eraseStyles(element, instruction.fromStyles);
+                });
+                player.onDestroy(
+                /**
+                * @return {?}
+                */
+                function () {
+                  return setStyles(element, instruction.toStyles);
+                });
+                skippedPlayers.push(player);
+                return;
+              } // if a unmatched transition is queued to go then it SHOULD NOT render
+              // an animation and cancel the previously running animations.
+
+
+              if (entry.isFallbackTransition) {
+                player.onStart(
+                /**
+                * @return {?}
+                */
+                function () {
+                  return eraseStyles(element, instruction.fromStyles);
+                });
+                player.onDestroy(
+                /**
+                * @return {?}
+                */
+                function () {
+                  return setStyles(element, instruction.toStyles);
+                });
+                skippedPlayers.push(player);
+                return;
+              } // this means that if a parent animation uses this animation as a sub trigger
+              // then it will instruct the timeline builder to not add a player delay, but
+              // instead stretch the first keyframe gap up until the animation starts. The
+              // reason this is important is to prevent extra initialization styles from being
+              // required by the user in the animation.
+
+
+              instruction.timelines.forEach(
+              /**
+              * @param {?} tl
+              * @return {?}
+              */
+              function (tl) {
+                return tl.stretchStartingKeyframe = true;
+              });
+              subTimelines.append(element, instruction.timelines);
+              /** @type {?} */
+
+              var tuple = {
+                instruction: instruction,
+                player: player,
+                element: element
+              };
+              queuedInstructions.push(tuple);
+              instruction.queriedElements.forEach(
+              /**
+              * @param {?} element
+              * @return {?}
+              */
+              function (element) {
+                return getOrSetAsInMap(queriedElements, element, []).push(player);
+              });
+              instruction.preStyleProps.forEach(
+              /**
+              * @param {?} stringMap
+              * @param {?} element
+              * @return {?}
+              */
+              function (stringMap, element) {
+                /** @type {?} */
+                var props = Object.keys(stringMap);
+
+                if (props.length) {
+                  /** @type {?} */
+                  var setVal =
+                  /** @type {?} */
+                  allPreStyleElements.get(element);
+
+                  if (!setVal) {
+                    allPreStyleElements.set(element, setVal = new Set());
+                  }
+
+                  props.forEach(
+                  /**
+                  * @param {?} prop
+                  * @return {?}
+                  */
+                  function (prop) {
+                    return setVal.add(prop);
+                  });
+                }
+              });
+              instruction.postStyleProps.forEach(
+              /**
+              * @param {?} stringMap
+              * @param {?} element
+              * @return {?}
+              */
+              function (stringMap, element) {
+                /** @type {?} */
+                var props = Object.keys(stringMap);
+                /** @type {?} */
+
+                var setVal =
+                /** @type {?} */
+                allPostStyleElements.get(element);
+
+                if (!setVal) {
+                  allPostStyleElements.set(element, setVal = new Set());
+                }
+
+                props.forEach(
+                /**
+                * @param {?} prop
+                * @return {?}
+                */
+                function (prop) {
+                  return setVal.add(prop);
+                });
+              });
+            });
+          }
+
+          if (erroneousTransitions.length) {
+            /** @type {?} */
+            var errors = [];
+            erroneousTransitions.forEach(
+            /**
+            * @param {?} instruction
+            * @return {?}
+            */
+            function (instruction) {
+              errors.push("@".concat(instruction.triggerName, " has failed due to:\n"));
+
+              /** @type {?} */
+              instruction.errors.forEach(
+              /**
+              * @param {?} error
+              * @return {?}
+              */
+              function (error) {
+                return errors.push("- ".concat(error, "\n"));
+              });
+            });
+            allPlayers.forEach(
+            /**
+            * @param {?} player
+            * @return {?}
+            */
+            function (player) {
+              return player.destroy();
+            });
+            this.reportError(errors);
+          }
+          /** @type {?} */
+
+
+          var allPreviousPlayersMap = new Map(); // this map works to tell which element in the DOM tree is contained by
+          // which animation. Further down below this map will get populated once
+          // the players are built and in doing so it can efficiently figure out
+          // if a sub player is skipped due to a parent player having priority.
+
+          /** @type {?} */
+
+          var animationElementMap = new Map();
+          queuedInstructions.forEach(
+          /**
+          * @param {?} entry
+          * @return {?}
+          */
+          function (entry) {
+            /** @type {?} */
+            var element = entry.element;
+
+            if (subTimelines.has(element)) {
+              animationElementMap.set(element, element);
+
+              _this34._beforeAnimationBuild(entry.player.namespaceId, entry.instruction, allPreviousPlayersMap);
+            }
+          });
+          skippedPlayers.forEach(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            /** @type {?} */
+            var element = player.element;
+            /** @type {?} */
+
+            var previousPlayers = _this34._getPreviousPlayers(element, false, player.namespaceId, player.triggerName, null);
+
+            previousPlayers.forEach(
+            /**
+            * @param {?} prevPlayer
+            * @return {?}
+            */
+            function (prevPlayer) {
+              getOrSetAsInMap(allPreviousPlayersMap, element, []).push(prevPlayer);
+              prevPlayer.destroy();
+            });
+          }); // this is a special case for nodes that will be removed (either by)
+          // having their own leave animations or by being queried in a container
+          // that will be removed once a parent animation is complete. The idea
+          // here is that * styles must be identical to ! styles because of
+          // backwards compatibility (* is also filled in by default in many places).
+          // Otherwise * styles will return an empty value or auto since the element
+          // that is being getComputedStyle'd will not be visible (since * = destination)
+
+          /** @type {?} */
+
+          var replaceNodes = allLeaveNodes.filter(
+          /**
+          * @param {?} node
+          * @return {?}
+          */
+          function (node) {
+            return replacePostStylesAsPre(node, allPreStyleElements, allPostStyleElements);
+          }); // POST STAGE: fill the * styles
+
+          /** @type {?} */
+
+          var postStylesMap = new Map();
+          /** @type {?} */
+
+          var allLeaveQueriedNodes = cloakAndComputeStyles(postStylesMap, this.driver, leaveNodesWithoutAnimations, allPostStyleElements, _angular_animations__WEBPACK_IMPORTED_MODULE_0__["AUTO_STYLE"]);
+          allLeaveQueriedNodes.forEach(
+          /**
+          * @param {?} node
+          * @return {?}
+          */
+          function (node) {
+            if (replacePostStylesAsPre(node, allPreStyleElements, allPostStyleElements)) {
+              replaceNodes.push(node);
+            }
+          }); // PRE STAGE: fill the ! styles
+
+          /** @type {?} */
+
+          var preStylesMap = new Map();
+          enterNodeMap.forEach(
+          /**
+          * @param {?} nodes
+          * @param {?} root
+          * @return {?}
+          */
+          function (nodes, root) {
+            cloakAndComputeStyles(preStylesMap, _this34.driver, new Set(nodes), allPreStyleElements, _angular_animations__WEBPACK_IMPORTED_MODULE_0__["ɵPRE_STYLE"]);
+          });
+          replaceNodes.forEach(
+          /**
+          * @param {?} node
+          * @return {?}
+          */
+          function (node) {
+            /** @type {?} */
+            var post = postStylesMap.get(node);
+            /** @type {?} */
+
+            var pre = preStylesMap.get(node);
+            postStylesMap.set(node,
+            /** @type {?} */
+            Object.assign(Object.assign({}, post), pre));
+          });
+          /** @type {?} */
+
+          var rootPlayers = [];
+          /** @type {?} */
+
+          var subPlayers = [];
+          /** @type {?} */
+
+          var NO_PARENT_ANIMATION_ELEMENT_DETECTED = {};
+          queuedInstructions.forEach(
+          /**
+          * @param {?} entry
+          * @return {?}
+          */
+          function (entry) {
+            var element = entry.element,
+                player = entry.player,
+                instruction = entry.instruction; // this means that it was never consumed by a parent animation which
+            // means that it is independent and therefore should be set for animation
+
+            if (subTimelines.has(element)) {
+              if (disabledElementsSet.has(element)) {
+                player.onDestroy(
+                /**
+                * @return {?}
+                */
+                function () {
+                  return setStyles(element, instruction.toStyles);
+                });
+                player.disabled = true;
+                player.overrideTotalTime(instruction.totalTime);
+                skippedPlayers.push(player);
+                return;
+              } // this will flow up the DOM and query the map to figure out
+              // if a parent animation has priority over it. In the situation
+              // that a parent is detected then it will cancel the loop. If
+              // nothing is detected, or it takes a few hops to find a parent,
+              // then it will fill in the missing nodes and signal them as having
+              // a detected parent (or a NO_PARENT value via a special constant).
+
+              /** @type {?} */
+
+
+              var parentWithAnimation = NO_PARENT_ANIMATION_ELEMENT_DETECTED;
+
+              if (animationElementMap.size > 1) {
+                /** @type {?} */
+                var elm = element;
+                /** @type {?} */
+
+                var parentsToAdd = [];
+
+                while (elm = elm.parentNode) {
+                  /** @type {?} */
+                  var detectedParent = animationElementMap.get(elm);
+
+                  if (detectedParent) {
+                    parentWithAnimation = detectedParent;
+                    break;
+                  }
+
+                  parentsToAdd.push(elm);
+                }
+
+                parentsToAdd.forEach(
+                /**
+                * @param {?} parent
+                * @return {?}
+                */
+                function (parent) {
+                  return animationElementMap.set(parent, parentWithAnimation);
+                });
+              }
+              /** @type {?} */
+
+
+              var innerPlayer = _this34._buildAnimation(player.namespaceId, instruction, allPreviousPlayersMap, skippedPlayersMap, preStylesMap, postStylesMap);
+
+              player.setRealPlayer(innerPlayer);
+
+              if (parentWithAnimation === NO_PARENT_ANIMATION_ELEMENT_DETECTED) {
+                rootPlayers.push(player);
+              } else {
+                /** @type {?} */
+                var parentPlayers = _this34.playersByElement.get(parentWithAnimation);
+
+                if (parentPlayers && parentPlayers.length) {
+                  player.parentPlayer = optimizeGroupPlayer(parentPlayers);
+                }
+
+                skippedPlayers.push(player);
+              }
+            } else {
+              eraseStyles(element, instruction.fromStyles);
+              player.onDestroy(
+              /**
+              * @return {?}
+              */
+              function () {
+                return setStyles(element, instruction.toStyles);
+              }); // there still might be a ancestor player animating this
+              // element therefore we will still add it as a sub player
+              // even if its animation may be disabled
+
+              subPlayers.push(player);
+
+              if (disabledElementsSet.has(element)) {
+                skippedPlayers.push(player);
+              }
+            }
+          }); // find all of the sub players' corresponding inner animation player
+
+          subPlayers.forEach(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            // even if any players are not found for a sub animation then it
+            // will still complete itself after the next tick since it's Noop
+
+            /** @type {?} */
+            var playersForElement = skippedPlayersMap.get(player.element);
+
+            if (playersForElement && playersForElement.length) {
+              /** @type {?} */
+              var innerPlayer = optimizeGroupPlayer(playersForElement);
+              player.setRealPlayer(innerPlayer);
+            }
+          }); // the reason why we don't actually play the animation is
+          // because all that a skipped player is designed to do is to
+          // fire the start/done transition callback events
+
+          skippedPlayers.forEach(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            if (player.parentPlayer) {
+              player.syncPlayerEvents(player.parentPlayer);
+            } else {
+              player.destroy();
+            }
+          }); // run through all of the queued removals and see if they
+          // were picked up by a query. If not then perform the removal
+          // operation right away unless a parent animation is ongoing.
+
+          for (var _i7 = 0; _i7 < allLeaveNodes.length; _i7++) {
+            /** @type {?} */
+            var _element2 = allLeaveNodes[_i7];
+            /** @type {?} */
+
+            var _details2 =
+            /** @type {?} */
+            _element2[REMOVAL_FLAG];
+            removeClass(_element2, LEAVE_CLASSNAME); // this means the element has a removal animation that is being
+            // taken care of and therefore the inner elements will hang around
+            // until that animation is over (or the parent queried animation)
+
+            if (_details2 && _details2.hasAnimation) continue;
+            /** @type {?} */
+
+            var players = []; // if this element is queried or if it contains queried children
+            // then we want for the element not to be removed from the page
+            // until the queried animations have finished
+
+            if (queriedElements.size) {
+              /** @type {?} */
+              var queriedPlayerResults = queriedElements.get(_element2);
+
+              if (queriedPlayerResults && queriedPlayerResults.length) {
+                players.push.apply(players, _toConsumableArray(queriedPlayerResults));
+              }
+              /** @type {?} */
+
+
+              var queriedInnerElements = this.driver.query(_element2, NG_ANIMATING_SELECTOR, true);
+
+              for (var j = 0; j < queriedInnerElements.length; j++) {
+                /** @type {?} */
+                var queriedPlayers = queriedElements.get(queriedInnerElements[j]);
+
+                if (queriedPlayers && queriedPlayers.length) {
+                  players.push.apply(players, _toConsumableArray(queriedPlayers));
+                }
+              }
+            }
+            /** @type {?} */
+
+
+            var activePlayers = players.filter(
+            /**
+            * @param {?} p
+            * @return {?}
+            */
+            function (p) {
+              return !p.destroyed;
+            });
+
+            if (activePlayers.length) {
+              removeNodesAfterAnimationDone(this, _element2, activePlayers);
+            } else {
+              this.processLeaveNode(_element2);
+            }
+          } // this is required so the cleanup method doesn't remove them
+
+
+          allLeaveNodes.length = 0;
+          rootPlayers.forEach(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            _this34.players.push(player);
+
+            player.onDone(
+            /**
+            * @return {?}
+            */
+            function () {
+              player.destroy();
+              /** @type {?} */
+
+              var index = _this34.players.indexOf(player);
+
+              _this34.players.splice(index, 1);
+            });
+            player.play();
+          });
+          return rootPlayers;
+        }
+        /**
+         * @param {?} namespaceId
+         * @param {?} element
+         * @return {?}
+         */
+
+      }, {
+        key: "elementContainsData",
+        value: function elementContainsData(namespaceId, element) {
+          /** @type {?} */
+          var containsData = false;
+          /** @type {?} */
+
+          var details =
+          /** @type {?} */
+          element[REMOVAL_FLAG];
+          if (details && details.setForRemoval) containsData = true;
+          if (this.playersByElement.has(element)) containsData = true;
+          if (this.playersByQueriedElement.has(element)) containsData = true;
+          if (this.statesByElement.has(element)) containsData = true;
+          return this._fetchNamespace(namespaceId).elementContainsData(element) || containsData;
+        }
+        /**
+         * @param {?} callback
+         * @return {?}
+         */
+
+      }, {
+        key: "afterFlush",
+        value: function afterFlush(callback) {
+          this._flushFns.push(callback);
+        }
+        /**
+         * @param {?} callback
+         * @return {?}
+         */
+
+      }, {
+        key: "afterFlushAnimationsDone",
+        value: function afterFlushAnimationsDone(callback) {
+          this._whenQuietFns.push(callback);
+        }
+        /**
+         * @private
+         * @param {?} element
+         * @param {?} isQueriedElement
+         * @param {?=} namespaceId
+         * @param {?=} triggerName
+         * @param {?=} toStateValue
+         * @return {?}
+         */
+
+      }, {
+        key: "_getPreviousPlayers",
+        value: function _getPreviousPlayers(element, isQueriedElement, namespaceId, triggerName, toStateValue) {
+          /** @type {?} */
+          var players = [];
+
+          if (isQueriedElement) {
+            /** @type {?} */
+            var queriedElementPlayers = this.playersByQueriedElement.get(element);
+
+            if (queriedElementPlayers) {
+              players = queriedElementPlayers;
+            }
+          } else {
+            /** @type {?} */
+            var elementPlayers = this.playersByElement.get(element);
+
+            if (elementPlayers) {
+              /** @type {?} */
+              var isRemovalAnimation = !toStateValue || toStateValue == VOID_VALUE;
+              elementPlayers.forEach(
+              /**
+              * @param {?} player
+              * @return {?}
+              */
+              function (player) {
+                if (player.queued) return;
+                if (!isRemovalAnimation && player.triggerName != triggerName) return;
+                players.push(player);
+              });
+            }
+          }
+
+          if (namespaceId || triggerName) {
+            players = players.filter(
+            /**
+            * @param {?} player
+            * @return {?}
+            */
+            function (player) {
+              if (namespaceId && namespaceId != player.namespaceId) return false;
+              if (triggerName && triggerName != player.triggerName) return false;
+              return true;
+            });
+          }
+
+          return players;
+        }
+        /**
+         * @private
+         * @param {?} namespaceId
+         * @param {?} instruction
+         * @param {?} allPreviousPlayersMap
+         * @return {?}
+         */
+
+      }, {
+        key: "_beforeAnimationBuild",
+        value: function _beforeAnimationBuild(namespaceId, instruction, allPreviousPlayersMap) {
+          var _this35 = this;
+
+          /** @type {?} */
+          var triggerName = instruction.triggerName;
+          /** @type {?} */
+
+          var rootElement = instruction.element; // when a removal animation occurs, ALL previous players are collected
+          // and destroyed (even if they are outside of the current namespace)
+
+          /** @type {?} */
+
+          var targetNameSpaceId = instruction.isRemovalTransition ? undefined : namespaceId;
+          /** @type {?} */
+
+          var targetTriggerName = instruction.isRemovalTransition ? undefined : triggerName;
+          var _iteratorNormalCompletion = true;
+          var _didIteratorError = false;
+          var _iteratorError = undefined;
+
+          try {
+            var _loop2 = function _loop2() {
+              var timelineInstruction = _step.value;
+
+              /** @type {?} */
+              var element = timelineInstruction.element;
+              /** @type {?} */
+
+              var isQueriedElement = element !== rootElement;
+              /** @type {?} */
+
+              var players = getOrSetAsInMap(allPreviousPlayersMap, element, []);
+              /** @type {?} */
+
+              var previousPlayers = _this35._getPreviousPlayers(element, isQueriedElement, targetNameSpaceId, targetTriggerName, instruction.toState);
+
+              previousPlayers.forEach(
+              /**
+              * @param {?} player
+              * @return {?}
+              */
+              function (player) {
+                /** @type {?} */
+                var realPlayer =
+                /** @type {?} */
+
+                /** @type {?} */
+                player.getRealPlayer();
+
+                if (realPlayer.beforeDestroy) {
+                  realPlayer.beforeDestroy();
+                }
+
+                player.destroy();
+                players.push(player);
+              });
+            };
+
+            for (var _iterator = instruction.timelines[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+              _loop2();
+            } // this needs to be done so that the PRE/POST styles can be
+            // computed properly without interfering with the previous animation
+
+          } catch (err) {
+            _didIteratorError = true;
+            _iteratorError = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion && _iterator.return != null) {
+                _iterator.return();
+              }
+            } finally {
+              if (_didIteratorError) {
+                throw _iteratorError;
+              }
+            }
+          }
+
+          eraseStyles(rootElement, instruction.fromStyles);
+        }
+        /**
+         * @private
+         * @param {?} namespaceId
+         * @param {?} instruction
+         * @param {?} allPreviousPlayersMap
+         * @param {?} skippedPlayersMap
+         * @param {?} preStylesMap
+         * @param {?} postStylesMap
+         * @return {?}
+         */
+
+      }, {
+        key: "_buildAnimation",
+        value: function _buildAnimation(namespaceId, instruction, allPreviousPlayersMap, skippedPlayersMap, preStylesMap, postStylesMap) {
+          var _this36 = this;
+
+          /** @type {?} */
+          var triggerName = instruction.triggerName;
+          /** @type {?} */
+
+          var rootElement = instruction.element; // we first run this so that the previous animation player
+          // data can be passed into the successive animation players
+
+          /** @type {?} */
+
+          var allQueriedPlayers = [];
+          /** @type {?} */
+
+          var allConsumedElements = new Set();
+          /** @type {?} */
+
+          var allSubElements = new Set();
+          /** @type {?} */
+
+          var allNewPlayers = instruction.timelines.map(
+          /**
+          * @param {?} timelineInstruction
+          * @return {?}
+          */
+          function (timelineInstruction) {
+            /** @type {?} */
+            var element = timelineInstruction.element;
+            allConsumedElements.add(element); // FIXME (matsko): make sure to-be-removed animations are removed properly
+
+            /** @type {?} */
+
+            var details = element[REMOVAL_FLAG];
+            if (details && details.removedBeforeQueried) return new _angular_animations__WEBPACK_IMPORTED_MODULE_0__["NoopAnimationPlayer"](timelineInstruction.duration, timelineInstruction.delay);
+            /** @type {?} */
+
+            var isQueriedElement = element !== rootElement;
+            /** @type {?} */
+
+            var previousPlayers = flattenGroupPlayers((allPreviousPlayersMap.get(element) || EMPTY_PLAYER_ARRAY).map(
+            /**
+            * @param {?} p
+            * @return {?}
+            */
+            function (p) {
+              return p.getRealPlayer();
+            })).filter(
+            /**
+            * @param {?} p
+            * @return {?}
+            */
+            function (p) {
+              // the `element` is not apart of the AnimationPlayer definition, but
+              // Mock/WebAnimations
+              // use the element within their implementation. This will be added in Angular5 to
+              // AnimationPlayer
+
+              /** @type {?} */
+              var pp =
+              /** @type {?} */
+              p;
+              return pp.element ? pp.element === element : false;
+            });
+            /** @type {?} */
+
+            var preStyles = preStylesMap.get(element);
+            /** @type {?} */
+
+            var postStyles = postStylesMap.get(element);
+            /** @type {?} */
+
+            var keyframes = normalizeKeyframes(_this36.driver, _this36._normalizer, element, timelineInstruction.keyframes, preStyles, postStyles);
+            /** @type {?} */
+
+            var player = _this36._buildPlayer(timelineInstruction, keyframes, previousPlayers); // this means that this particular player belongs to a sub trigger. It is
+            // important that we match this player up with the corresponding (@trigger.listener)
+
+
+            if (timelineInstruction.subTimeline && skippedPlayersMap) {
+              allSubElements.add(element);
+            }
+
+            if (isQueriedElement) {
+              /** @type {?} */
+              var wrappedPlayer = new TransitionAnimationPlayer(namespaceId, triggerName, element);
+              wrappedPlayer.setRealPlayer(player);
+              allQueriedPlayers.push(wrappedPlayer);
+            }
+
+            return player;
+          });
+          allQueriedPlayers.forEach(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            getOrSetAsInMap(_this36.playersByQueriedElement, player.element, []).push(player);
+            player.onDone(
+            /**
+            * @return {?}
+            */
+            function () {
+              return deleteOrUnsetInMap(_this36.playersByQueriedElement, player.element, player);
+            });
+          });
+          allConsumedElements.forEach(
+          /**
+          * @param {?} element
+          * @return {?}
+          */
+          function (element) {
+            return addClass(element, NG_ANIMATING_CLASSNAME);
+          });
+          /** @type {?} */
+
+          var player = optimizeGroupPlayer(allNewPlayers);
+          player.onDestroy(
+          /**
+          * @return {?}
+          */
+          function () {
+            allConsumedElements.forEach(
+            /**
+            * @param {?} element
+            * @return {?}
+            */
+            function (element) {
+              return removeClass(element, NG_ANIMATING_CLASSNAME);
+            });
+            setStyles(rootElement, instruction.toStyles);
+          }); // this basically makes all of the callbacks for sub element animations
+          // be dependent on the upper players for when they finish
+
+          allSubElements.forEach(
+          /**
+          * @param {?} element
+          * @return {?}
+          */
+          function (element) {
+            getOrSetAsInMap(skippedPlayersMap, element, []).push(player);
+          });
+          return player;
+        }
+        /**
+         * @private
+         * @param {?} instruction
+         * @param {?} keyframes
+         * @param {?} previousPlayers
+         * @return {?}
+         */
+
+      }, {
+        key: "_buildPlayer",
+        value: function _buildPlayer(instruction, keyframes, previousPlayers) {
+          if (keyframes.length > 0) {
+            return this.driver.animate(instruction.element, keyframes, instruction.duration, instruction.delay, instruction.easing, previousPlayers);
+          } // special case for when an empty transition|definition is provided
+          // ... there is no point in rendering an empty animation
+
+
+          return new _angular_animations__WEBPACK_IMPORTED_MODULE_0__["NoopAnimationPlayer"](instruction.duration, instruction.delay);
+        }
+      }, {
+        key: "queuedPlayers",
+        get: function get() {
+          /** @type {?} */
+          var players = [];
+
+          this._namespaceList.forEach(
+          /**
+          * @param {?} ns
+          * @return {?}
+          */
+          function (ns) {
+            ns.players.forEach(
+            /**
+            * @param {?} player
+            * @return {?}
+            */
+            function (player) {
+              if (player.queued) {
+                players.push(player);
+              }
+            });
+          });
+
+          return players;
+        }
+      }]);
+
+      return TransitionAnimationEngine;
+    }();
+
+    if (false) {}
+
+    var TransitionAnimationPlayer =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} namespaceId
+       * @param {?} triggerName
+       * @param {?} element
+       */
+      function TransitionAnimationPlayer(namespaceId, triggerName, element) {
+        _classCallCheck(this, TransitionAnimationPlayer);
+
+        this.namespaceId = namespaceId;
+        this.triggerName = triggerName;
+        this.element = element;
+        this._player = new _angular_animations__WEBPACK_IMPORTED_MODULE_0__["NoopAnimationPlayer"]();
+        this._containsRealPlayer = false;
+        this._queuedCallbacks = {};
+        this.destroyed = false;
+        this.markedForDestroy = false;
+        this.disabled = false;
+        this.queued = true;
+        this.totalTime = 0;
+      }
+      /**
+       * @param {?} player
+       * @return {?}
+       */
+
+
+      _createClass2(TransitionAnimationPlayer, [{
+        key: "setRealPlayer",
+        value: function setRealPlayer(player) {
+          var _this37 = this;
+
+          if (this._containsRealPlayer) return;
+          this._player = player;
+          Object.keys(this._queuedCallbacks).forEach(
+          /**
+          * @param {?} phase
+          * @return {?}
+          */
+          function (phase) {
+            _this37._queuedCallbacks[phase].forEach(
+            /**
+            * @param {?} callback
+            * @return {?}
+            */
+            function (callback) {
+              return listenOnPlayer(player, phase, undefined, callback);
+            });
+          });
+          this._queuedCallbacks = {};
+          this._containsRealPlayer = true;
+          this.overrideTotalTime(player.totalTime);
+
+          /** @type {?} */
+          this.queued = false;
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "getRealPlayer",
+        value: function getRealPlayer() {
+          return this._player;
+        }
+        /**
+         * @param {?} totalTime
+         * @return {?}
+         */
+
+      }, {
+        key: "overrideTotalTime",
+        value: function overrideTotalTime(totalTime) {
+          /** @type {?} */
+          this.totalTime = totalTime;
+        }
+        /**
+         * @param {?} player
+         * @return {?}
+         */
+
+      }, {
+        key: "syncPlayerEvents",
+        value: function syncPlayerEvents(player) {
+          var _this38 = this;
+
+          /** @type {?} */
+          var p =
+          /** @type {?} */
+          this._player;
+
+          if (p.triggerCallback) {
+            player.onStart(
+            /**
+            * @return {?}
+            */
+            function () {
+              return (
+                /** @type {?} */
+                p.triggerCallback('start')
+              );
+            });
+          }
+
+          player.onDone(
+          /**
+          * @return {?}
+          */
+          function () {
+            return _this38.finish();
+          });
+          player.onDestroy(
+          /**
+          * @return {?}
+          */
+          function () {
+            return _this38.destroy();
+          });
+        }
+        /**
+         * @private
+         * @param {?} name
+         * @param {?} callback
+         * @return {?}
+         */
+
+      }, {
+        key: "_queueEvent",
+        value: function _queueEvent(name, callback) {
+          getOrSetAsInMap(this._queuedCallbacks, name, []).push(callback);
+        }
+        /**
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "onDone",
+        value: function onDone(fn) {
+          if (this.queued) {
+            this._queueEvent('done', fn);
+          }
+
+          this._player.onDone(fn);
+        }
+        /**
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "onStart",
+        value: function onStart(fn) {
+          if (this.queued) {
+            this._queueEvent('start', fn);
+          }
+
+          this._player.onStart(fn);
+        }
+        /**
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "onDestroy",
+        value: function onDestroy(fn) {
+          if (this.queued) {
+            this._queueEvent('destroy', fn);
+          }
+
+          this._player.onDestroy(fn);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "init",
+        value: function init() {
+          this._player.init();
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "hasStarted",
+        value: function hasStarted() {
+          return this.queued ? false : this._player.hasStarted();
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "play",
+        value: function play() {
+          !this.queued && this._player.play();
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "pause",
+        value: function pause() {
+          !this.queued && this._player.pause();
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "restart",
+        value: function restart() {
+          !this.queued && this._player.restart();
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "finish",
+        value: function finish() {
+          this._player.finish();
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "destroy",
+        value: function destroy() {
+          /** @type {?} */
+          this.destroyed = true;
+
+          this._player.destroy();
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "reset",
+        value: function reset() {
+          !this.queued && this._player.reset();
+        }
+        /**
+         * @param {?} p
+         * @return {?}
+         */
+
+      }, {
+        key: "setPosition",
+        value: function setPosition(p) {
+          if (!this.queued) {
+            this._player.setPosition(p);
+          }
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "getPosition",
+        value: function getPosition() {
+          return this.queued ? 0 : this._player.getPosition();
+        }
+        /**
+         * \@internal
+         * @param {?} phaseName
+         * @return {?}
+         */
+
+      }, {
+        key: "triggerCallback",
+        value: function triggerCallback(phaseName) {
+          /** @type {?} */
+          var p =
+          /** @type {?} */
+          this._player;
+
+          if (p.triggerCallback) {
+            p.triggerCallback(phaseName);
+          }
+        }
+      }]);
+
+      return TransitionAnimationPlayer;
+    }();
+
+    if (false) {}
+    /**
+     * @param {?} map
+     * @param {?} key
+     * @param {?} value
+     * @return {?}
+     */
+
+
+    function deleteOrUnsetInMap(map, key, value) {
+      /** @type {?} */
+      var currentValues;
+
+      if (map instanceof Map) {
+        currentValues = map.get(key);
+
+        if (currentValues) {
+          if (currentValues.length) {
+            /** @type {?} */
+            var index = currentValues.indexOf(value);
+            currentValues.splice(index, 1);
+          }
+
+          if (currentValues.length == 0) {
+            map.delete(key);
+          }
+        }
+      } else {
+        currentValues = map[key];
+
+        if (currentValues) {
+          if (currentValues.length) {
+            /** @type {?} */
+            var _index2 = currentValues.indexOf(value);
+
+            currentValues.splice(_index2, 1);
+          }
+
+          if (currentValues.length == 0) {
+            delete map[key];
+          }
+        }
+      }
+
+      return currentValues;
+    }
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+
+
+    function normalizeTriggerValue(value) {
+      // we use `!= null` here because it's the most simple
+      // way to test against a "falsy" value without mixing
+      // in empty strings or a zero value. DO NOT OPTIMIZE.
+      return value != null ? value : null;
+    }
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+
+
+    function isElementNode(node) {
+      return node && node['nodeType'] === 1;
+    }
+    /**
+     * @param {?} eventName
+     * @return {?}
+     */
+
+
+    function isTriggerEventValid(eventName) {
+      return eventName == 'start' || eventName == 'done';
+    }
+    /**
+     * @param {?} element
+     * @param {?=} value
+     * @return {?}
+     */
+
+
+    function cloakElement(element, value) {
+      /** @type {?} */
+      var oldValue = element.style.display;
+      element.style.display = value != null ? value : 'none';
+      return oldValue;
+    }
+    /**
+     * @param {?} valuesMap
+     * @param {?} driver
+     * @param {?} elements
+     * @param {?} elementPropsMap
+     * @param {?} defaultStyle
+     * @return {?}
+     */
+
+
+    function cloakAndComputeStyles(valuesMap, driver, elements, elementPropsMap, defaultStyle) {
+      /** @type {?} */
+      var cloakVals = [];
+      elements.forEach(
+      /**
+      * @param {?} element
+      * @return {?}
+      */
+      function (element) {
+        return cloakVals.push(cloakElement(element));
+      });
+      /** @type {?} */
+
+      var failedElements = [];
+      elementPropsMap.forEach(
+      /**
+      * @param {?} props
+      * @param {?} element
+      * @return {?}
+      */
+      function (props, element) {
+        /** @type {?} */
+        var styles = {};
+        props.forEach(
+        /**
+        * @param {?} prop
+        * @return {?}
+        */
+        function (prop) {
+          /** @type {?} */
+          var value = styles[prop] = driver.computeStyle(element, prop, defaultStyle); // there is no easy way to detect this because a sub element could be removed
+          // by a parent animation element being detached.
+
+          if (!value || value.length == 0) {
+            element[REMOVAL_FLAG] = NULL_REMOVED_QUERIED_STATE;
+            failedElements.push(element);
+          }
+        });
+        valuesMap.set(element, styles);
+      }); // we use a index variable here since Set.forEach(a, i) does not return
+      // an index value for the closure (but instead just the value)
+
+      /** @type {?} */
+
+      var i = 0;
+      elements.forEach(
+      /**
+      * @param {?} element
+      * @return {?}
+      */
+      function (element) {
+        return cloakElement(element, cloakVals[i++]);
+      });
+      return failedElements;
+    }
+    /*
+    Since the Angular renderer code will return a collection of inserted
+    nodes in all areas of a DOM tree, it's up to this algorithm to figure
+    out which nodes are roots for each animation @trigger.
+    
+    By placing each inserted node into a Set and traversing upwards, it
+    is possible to find the @trigger elements and well any direct *star
+    insertion nodes, if a @trigger root is found then the enter element
+    is placed into the Map[@trigger] spot.
+     */
+
+    /**
+     * @param {?} roots
+     * @param {?} nodes
+     * @return {?}
+     */
+
+
+    function buildRootMap(roots, nodes) {
+      /** @type {?} */
+      var rootMap = new Map();
+      roots.forEach(
+      /**
+      * @param {?} root
+      * @return {?}
+      */
+      function (root) {
+        return rootMap.set(root, []);
+      });
+      if (nodes.length == 0) return rootMap;
+      /** @type {?} */
+
+      var NULL_NODE = 1;
+      /** @type {?} */
+
+      var nodeSet = new Set(nodes);
+      /** @type {?} */
+
+      var localRootMap = new Map();
+      /**
+       * @param {?} node
+       * @return {?}
+       */
+
+      function getRoot(node) {
+        if (!node) return NULL_NODE;
+        /** @type {?} */
+
+        var root = localRootMap.get(node);
+        if (root) return root;
+        /** @type {?} */
+
+        var parent = node.parentNode;
+
+        if (rootMap.has(parent)) {
+          // ngIf inside @trigger
+          root = parent;
+        } else if (nodeSet.has(parent)) {
+          // ngIf inside ngIf
+          root = NULL_NODE;
+        } else {
+          // recurse upwards
+          root = getRoot(parent);
+        }
+
+        localRootMap.set(node, root);
+        return root;
+      }
+
+      nodes.forEach(
+      /**
+      * @param {?} node
+      * @return {?}
+      */
+      function (node) {
+        /** @type {?} */
+        var root = getRoot(node);
+
+        if (root !== NULL_NODE) {
+          /** @type {?} */
+          rootMap.get(root).push(node);
+        }
+      });
+      return rootMap;
+    }
+    /** @type {?} */
+
+
+    var CLASSES_CACHE_KEY = '$$classes';
+    /**
+     * @param {?} element
+     * @param {?} className
+     * @return {?}
+     */
+
+    function containsClass(element, className) {
+      if (element.classList) {
+        return element.classList.contains(className);
+      } else {
+        /** @type {?} */
+        var classes = element[CLASSES_CACHE_KEY];
+        return classes && classes[className];
+      }
+    }
+    /**
+     * @param {?} element
+     * @param {?} className
+     * @return {?}
+     */
+
+
+    function addClass(element, className) {
+      if (element.classList) {
+        element.classList.add(className);
+      } else {
+        /** @type {?} */
+        var classes = element[CLASSES_CACHE_KEY];
+
+        if (!classes) {
+          classes = element[CLASSES_CACHE_KEY] = {};
+        }
+
+        classes[className] = true;
+      }
+    }
+    /**
+     * @param {?} element
+     * @param {?} className
+     * @return {?}
+     */
+
+
+    function removeClass(element, className) {
+      if (element.classList) {
+        element.classList.remove(className);
+      } else {
+        /** @type {?} */
+        var classes = element[CLASSES_CACHE_KEY];
+
+        if (classes) {
+          delete classes[className];
+        }
+      }
+    }
+    /**
+     * @param {?} engine
+     * @param {?} element
+     * @param {?} players
+     * @return {?}
+     */
+
+
+    function removeNodesAfterAnimationDone(engine, element, players) {
+      optimizeGroupPlayer(players).onDone(
+      /**
+      * @return {?}
+      */
+      function () {
+        return engine.processLeaveNode(element);
+      });
+    }
+    /**
+     * @param {?} players
+     * @return {?}
+     */
+
+
+    function flattenGroupPlayers(players) {
+      /** @type {?} */
+      var finalPlayers = [];
+
+      _flattenGroupPlayersRecur(players, finalPlayers);
+
+      return finalPlayers;
+    }
+    /**
+     * @param {?} players
+     * @param {?} finalPlayers
+     * @return {?}
+     */
+
+
+    function _flattenGroupPlayersRecur(players, finalPlayers) {
+      for (var i = 0; i < players.length; i++) {
+        /** @type {?} */
+        var player = players[i];
+
+        if (player instanceof _angular_animations__WEBPACK_IMPORTED_MODULE_0__["ɵAnimationGroupPlayer"]) {
+          _flattenGroupPlayersRecur(player.players, finalPlayers);
+        } else {
+          finalPlayers.push(player);
+        }
+      }
+    }
+    /**
+     * @param {?} a
+     * @param {?} b
+     * @return {?}
+     */
+
+
+    function objEquals(a, b) {
+      /** @type {?} */
+      var k1 = Object.keys(a);
+      /** @type {?} */
+
+      var k2 = Object.keys(b);
+      if (k1.length != k2.length) return false;
+
+      for (var i = 0; i < k1.length; i++) {
+        /** @type {?} */
+        var prop = k1[i];
+        if (!b.hasOwnProperty(prop) || a[prop] !== b[prop]) return false;
+      }
+
+      return true;
+    }
+    /**
+     * @param {?} element
+     * @param {?} allPreStyleElements
+     * @param {?} allPostStyleElements
+     * @return {?}
+     */
+
+
+    function replacePostStylesAsPre(element, allPreStyleElements, allPostStyleElements) {
+      /** @type {?} */
+      var postEntry = allPostStyleElements.get(element);
+      if (!postEntry) return false;
+      /** @type {?} */
+
+      var preEntry = allPreStyleElements.get(element);
+
+      if (preEntry) {
+        postEntry.forEach(
+        /**
+        * @param {?} data
+        * @return {?}
+        */
+        function (data) {
+          return (
+            /** @type {?} */
+            preEntry.add(data)
+          );
+        });
+      } else {
+        allPreStyleElements.set(element, postEntry);
+      }
+
+      allPostStyleElements.delete(element);
+      return true;
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/render/animation_engine_next.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+
+    var AnimationEngine =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} bodyNode
+       * @param {?} _driver
+       * @param {?} normalizer
+       */
+      function AnimationEngine(bodyNode, _driver, normalizer) {
+        var _this39 = this;
+
+        _classCallCheck(this, AnimationEngine);
+
+        this.bodyNode = bodyNode;
+        this._driver = _driver;
+        this._triggerCache = {}; // this method is designed to be overridden by the code that uses this engine
+
+        this.onRemovalComplete =
+        /**
+        * @param {?} element
+        * @param {?} context
+        * @return {?}
+        */
+        function (element, context) {};
+
+        this._transitionEngine = new TransitionAnimationEngine(bodyNode, _driver, normalizer);
+        this._timelineEngine = new TimelineAnimationEngine(bodyNode, _driver, normalizer);
+
+        this._transitionEngine.onRemovalComplete =
+        /**
+        * @param {?} element
+        * @param {?} context
+        * @return {?}
+        */
+        function (element, context) {
+          return _this39.onRemovalComplete(element, context);
+        };
+      }
+      /**
+       * @param {?} componentId
+       * @param {?} namespaceId
+       * @param {?} hostElement
+       * @param {?} name
+       * @param {?} metadata
+       * @return {?}
+       */
+
+
+      _createClass2(AnimationEngine, [{
+        key: "registerTrigger",
+        value: function registerTrigger(componentId, namespaceId, hostElement, name, metadata) {
+          /** @type {?} */
+          var cacheKey = componentId + '-' + name;
+          /** @type {?} */
+
+          var trigger = this._triggerCache[cacheKey];
+
+          if (!trigger) {
+            /** @type {?} */
+            var errors = [];
+            /** @type {?} */
+
+            var ast =
+            /** @type {?} */
+            buildAnimationAst(this._driver,
+            /** @type {?} */
+            metadata, errors);
+
+            if (errors.length) {
+              throw new Error("The animation trigger \"".concat(name, "\" has failed to build due to the following errors:\n - ").concat(errors.join("\n - ")));
+            }
+
+            trigger = buildTrigger(name, ast);
+            this._triggerCache[cacheKey] = trigger;
+          }
+
+          this._transitionEngine.registerTrigger(namespaceId, name, trigger);
+        }
+        /**
+         * @param {?} namespaceId
+         * @param {?} hostElement
+         * @return {?}
+         */
+
+      }, {
+        key: "register",
+        value: function register(namespaceId, hostElement) {
+          this._transitionEngine.register(namespaceId, hostElement);
+        }
+        /**
+         * @param {?} namespaceId
+         * @param {?} context
+         * @return {?}
+         */
+
+      }, {
+        key: "destroy",
+        value: function destroy(namespaceId, context) {
+          this._transitionEngine.destroy(namespaceId, context);
+        }
+        /**
+         * @param {?} namespaceId
+         * @param {?} element
+         * @param {?} parent
+         * @param {?} insertBefore
+         * @return {?}
+         */
+
+      }, {
+        key: "onInsert",
+        value: function onInsert(namespaceId, element, parent, insertBefore) {
+          this._transitionEngine.insertNode(namespaceId, element, parent, insertBefore);
+        }
+        /**
+         * @param {?} namespaceId
+         * @param {?} element
+         * @param {?} context
+         * @param {?=} isHostElement
+         * @return {?}
+         */
+
+      }, {
+        key: "onRemove",
+        value: function onRemove(namespaceId, element, context, isHostElement) {
+          this._transitionEngine.removeNode(namespaceId, element, isHostElement || false, context);
+        }
+        /**
+         * @param {?} element
+         * @param {?} disable
+         * @return {?}
+         */
+
+      }, {
+        key: "disableAnimations",
+        value: function disableAnimations(element, disable) {
+          this._transitionEngine.markElementAsDisabled(element, disable);
+        }
+        /**
+         * @param {?} namespaceId
+         * @param {?} element
+         * @param {?} property
+         * @param {?} value
+         * @return {?}
+         */
+
+      }, {
+        key: "process",
+        value: function process(namespaceId, element, property, value) {
+          if (property.charAt(0) == '@') {
+            var _parseTimelineCommand = parseTimelineCommand(property),
+                _parseTimelineCommand2 = _slicedToArray(_parseTimelineCommand, 2),
+                id = _parseTimelineCommand2[0],
+                action = _parseTimelineCommand2[1];
+            /** @type {?} */
+
+
+            var args =
+            /** @type {?} */
+            value;
+
+            this._timelineEngine.command(id, element, action, args);
+          } else {
+            this._transitionEngine.trigger(namespaceId, element, property, value);
+          }
+        }
+        /**
+         * @param {?} namespaceId
+         * @param {?} element
+         * @param {?} eventName
+         * @param {?} eventPhase
+         * @param {?} callback
+         * @return {?}
+         */
+
+      }, {
+        key: "listen",
+        value: function listen(namespaceId, element, eventName, eventPhase, callback) {
+          // @@listen
+          if (eventName.charAt(0) == '@') {
+            var _parseTimelineCommand3 = parseTimelineCommand(eventName),
+                _parseTimelineCommand4 = _slicedToArray(_parseTimelineCommand3, 2),
+                id = _parseTimelineCommand4[0],
+                action = _parseTimelineCommand4[1];
+
+            return this._timelineEngine.listen(id, element, action, callback);
+          }
+
+          return this._transitionEngine.listen(namespaceId, element, eventName, eventPhase, callback);
+        }
+        /**
+         * @param {?=} microtaskId
+         * @return {?}
+         */
+
+      }, {
+        key: "flush",
+        value: function flush() {
+          var microtaskId = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : -1;
+
+          this._transitionEngine.flush(microtaskId);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "whenRenderingDone",
+
+        /**
+         * @return {?}
+         */
+        value: function whenRenderingDone() {
+          return this._transitionEngine.whenRenderingDone();
+        }
+      }, {
+        key: "players",
+        get: function get() {
+          return (
+            /** @type {?} */
+            this._transitionEngine.players.concat(
+            /** @type {?} */
+            this._timelineEngine.players)
+          );
+        }
+      }]);
+
+      return AnimationEngine;
+    }();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/render/special_cased_styles.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * Returns an instance of `SpecialCasedStyles` if and when any special (non animateable) styles are
+     * detected.
+     *
+     * In CSS there exist properties that cannot be animated within a keyframe animation
+     * (whether it be via CSS keyframes or web-animations) and the animation implementation
+     * will ignore them. This function is designed to detect those special cased styles and
+     * return a container that will be executed at the start and end of the animation.
+     *
+     * @param {?} element
+     * @param {?} styles
+     * @return {?} an instance of `SpecialCasedStyles` if any special styles are detected otherwise `null`
+     */
+
+
+    function packageNonAnimatableStyles(element, styles) {
+      /** @type {?} */
+      var startStyles = null;
+      /** @type {?} */
+
+      var endStyles = null;
+
+      if (Array.isArray(styles) && styles.length) {
+        startStyles = filterNonAnimatableStyles(styles[0]);
+
+        if (styles.length > 1) {
+          endStyles = filterNonAnimatableStyles(styles[styles.length - 1]);
+        }
+      } else if (styles) {
+        startStyles = filterNonAnimatableStyles(styles);
+      }
+
+      return startStyles || endStyles ? new SpecialCasedStyles(element, startStyles, endStyles) : null;
+    }
+    /**
+     * Designed to be executed during a keyframe-based animation to apply any special-cased styles.
+     *
+     * When started (when the `start()` method is run) then the provided `startStyles`
+     * will be applied. When finished (when the `finish()` method is called) the
+     * `endStyles` will be applied as well any any starting styles. Finally when
+     * `destroy()` is called then all styles will be removed.
+     */
+
+
+    var SpecialCasedStyles =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} _element
+       * @param {?} _startStyles
+       * @param {?} _endStyles
+       */
+      function SpecialCasedStyles(_element, _startStyles, _endStyles) {
+        _classCallCheck(this, SpecialCasedStyles);
+
+        this._element = _element;
+        this._startStyles = _startStyles;
+        this._endStyles = _endStyles;
+        this._state = 0
+        /* Pending */
+        ;
+        /** @type {?} */
+
+        var initialStyles = SpecialCasedStyles.initialStylesByElement.get(_element);
+
+        if (!initialStyles) {
+          SpecialCasedStyles.initialStylesByElement.set(_element, initialStyles = {});
+        }
+
+        this._initialStyles = initialStyles;
+      }
+      /**
+       * @return {?}
+       */
+
+
+      _createClass2(SpecialCasedStyles, [{
+        key: "start",
+        value: function start() {
+          if (this._state < 1
+          /* Started */
+          ) {
+              if (this._startStyles) {
+                setStyles(this._element, this._startStyles, this._initialStyles);
+              }
+
+              this._state = 1
+              /* Started */
+              ;
+            }
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "finish",
+        value: function finish() {
+          this.start();
+
+          if (this._state < 2
+          /* Finished */
+          ) {
+              setStyles(this._element, this._initialStyles);
+
+              if (this._endStyles) {
+                setStyles(this._element, this._endStyles);
+                this._endStyles = null;
+              }
+
+              this._state = 1
+              /* Started */
+              ;
+            }
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "destroy",
+        value: function destroy() {
+          this.finish();
+
+          if (this._state < 3
+          /* Destroyed */
+          ) {
+              SpecialCasedStyles.initialStylesByElement.delete(this._element);
+
+              if (this._startStyles) {
+                eraseStyles(this._element, this._startStyles);
+                this._endStyles = null;
+              }
+
+              if (this._endStyles) {
+                eraseStyles(this._element, this._endStyles);
+                this._endStyles = null;
+              }
+
+              setStyles(this._element, this._initialStyles);
+              this._state = 3
+              /* Destroyed */
+              ;
+            }
+        }
+      }]);
+
+      return SpecialCasedStyles;
+    }();
+
+    SpecialCasedStyles.initialStylesByElement = new WeakMap();
+
+    if (false) {}
+    /** @enum {number} */
+
+
+    var SpecialCasedStylesState = {
+      Pending: 0,
+      Started: 1,
+      Finished: 2,
+      Destroyed: 3
+    };
+    /**
+     * @param {?} styles
+     * @return {?}
+     */
+
+    function filterNonAnimatableStyles(styles) {
+      /** @type {?} */
+      var result = null;
+      /** @type {?} */
+
+      var props = Object.keys(styles);
+
+      for (var i = 0; i < props.length; i++) {
+        /** @type {?} */
+        var prop = props[i];
+
+        if (isNonAnimatableStyle(prop)) {
+          result = result || {};
+          result[prop] = styles[prop];
+        }
+      }
+
+      return result;
+    }
+    /**
+     * @param {?} prop
+     * @return {?}
+     */
+
+
+    function isNonAnimatableStyle(prop) {
+      return prop === 'display' || prop === 'position';
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/render/css_keyframes/element_animation_style_handler.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @license
+     * Copyright Google Inc. All Rights Reserved.
+     *
+     * Use of this source code is governed by an MIT-style license that can be
+     * found in the LICENSE file at https://angular.io/license
+     * @type {?}
+     */
+
+
+    var ELAPSED_TIME_MAX_DECIMAL_PLACES = 3;
+    /** @type {?} */
+
+    var ANIMATION_PROP = 'animation';
+    /** @type {?} */
+
+    var ANIMATIONEND_EVENT = 'animationend';
+    /** @type {?} */
+
+    var ONE_SECOND$1 = 1000;
+
+    var ElementAnimationStyleHandler =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} _element
+       * @param {?} _name
+       * @param {?} _duration
+       * @param {?} _delay
+       * @param {?} _easing
+       * @param {?} _fillMode
+       * @param {?} _onDoneFn
+       */
+      function ElementAnimationStyleHandler(_element, _name, _duration, _delay, _easing, _fillMode, _onDoneFn) {
+        var _this40 = this;
+
+        _classCallCheck(this, ElementAnimationStyleHandler);
+
+        this._element = _element;
+        this._name = _name;
+        this._duration = _duration;
+        this._delay = _delay;
+        this._easing = _easing;
+        this._fillMode = _fillMode;
+        this._onDoneFn = _onDoneFn;
+        this._finished = false;
+        this._destroyed = false;
+        this._startTime = 0;
+        this._position = 0;
+
+        this._eventFn =
+        /**
+        * @param {?} e
+        * @return {?}
+        */
+        function (e) {
+          return _this40._handleCallback(e);
+        };
+      }
+      /**
+       * @return {?}
+       */
+
+
+      _createClass2(ElementAnimationStyleHandler, [{
+        key: "apply",
+        value: function apply() {
+          applyKeyframeAnimation(this._element, "".concat(this._duration, "ms ").concat(this._easing, " ").concat(this._delay, "ms 1 normal ").concat(this._fillMode, " ").concat(this._name));
+          addRemoveAnimationEvent(this._element, this._eventFn, false);
+          this._startTime = Date.now();
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "pause",
+        value: function pause() {
+          playPauseAnimation(this._element, this._name, 'paused');
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "resume",
+        value: function resume() {
+          playPauseAnimation(this._element, this._name, 'running');
+        }
+        /**
+         * @param {?} position
+         * @return {?}
+         */
+
+      }, {
+        key: "setPosition",
+        value: function setPosition(position) {
+          /** @type {?} */
+          var index = findIndexForAnimation(this._element, this._name);
+          this._position = position * this._duration;
+          setAnimationStyle(this._element, 'Delay', "-".concat(this._position, "ms"), index);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "getPosition",
+        value: function getPosition() {
+          return this._position;
+        }
+        /**
+         * @private
+         * @param {?} event
+         * @return {?}
+         */
+
+      }, {
+        key: "_handleCallback",
+        value: function _handleCallback(event) {
+          /** @type {?} */
+          var timestamp = event._ngTestManualTimestamp || Date.now();
+          /** @type {?} */
+
+          var elapsedTime = parseFloat(event.elapsedTime.toFixed(ELAPSED_TIME_MAX_DECIMAL_PLACES)) * ONE_SECOND$1;
+
+          if (event.animationName == this._name && Math.max(timestamp - this._startTime, 0) >= this._delay && elapsedTime >= this._duration) {
+            this.finish();
+          }
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "finish",
+        value: function finish() {
+          if (this._finished) return;
+          this._finished = true;
+
+          this._onDoneFn();
+
+          addRemoveAnimationEvent(this._element, this._eventFn, true);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "destroy",
+        value: function destroy() {
+          if (this._destroyed) return;
+          this._destroyed = true;
+          this.finish();
+          removeKeyframeAnimation(this._element, this._name);
+        }
+      }]);
+
+      return ElementAnimationStyleHandler;
+    }();
+
+    if (false) {}
+    /**
+     * @param {?} element
+     * @param {?} name
+     * @param {?} status
+     * @return {?}
+     */
+
+
+    function playPauseAnimation(element, name, status) {
+      /** @type {?} */
+      var index = findIndexForAnimation(element, name);
+      setAnimationStyle(element, 'PlayState', status, index);
+    }
+    /**
+     * @param {?} element
+     * @param {?} value
+     * @return {?}
+     */
+
+
+    function applyKeyframeAnimation(element, value) {
+      /** @type {?} */
+      var anim = getAnimationStyle(element, '').trim();
+      /** @type {?} */
+
+      var index = 0;
+
+      if (anim.length) {
+        index = countChars(anim, ',') + 1;
+        value = "".concat(anim, ", ").concat(value);
+      }
+
+      setAnimationStyle(element, '', value);
+      return index;
+    }
+    /**
+     * @param {?} element
+     * @param {?} name
+     * @return {?}
+     */
+
+
+    function removeKeyframeAnimation(element, name) {
+      /** @type {?} */
+      var anim = getAnimationStyle(element, '');
+      /** @type {?} */
+
+      var tokens = anim.split(',');
+      /** @type {?} */
+
+      var index = findMatchingTokenIndex(tokens, name);
+
+      if (index >= 0) {
+        tokens.splice(index, 1);
+        /** @type {?} */
+
+        var newValue = tokens.join(',');
+        setAnimationStyle(element, '', newValue);
+      }
+    }
+    /**
+     * @param {?} element
+     * @param {?} value
+     * @return {?}
+     */
+
+
+    function findIndexForAnimation(element, value) {
+      /** @type {?} */
+      var anim = getAnimationStyle(element, '');
+
+      if (anim.indexOf(',') > 0) {
+        /** @type {?} */
+        var tokens = anim.split(',');
+        return findMatchingTokenIndex(tokens, value);
+      }
+
+      return findMatchingTokenIndex([anim], value);
+    }
+    /**
+     * @param {?} tokens
+     * @param {?} searchToken
+     * @return {?}
+     */
+
+
+    function findMatchingTokenIndex(tokens, searchToken) {
+      for (var i = 0; i < tokens.length; i++) {
+        if (tokens[i].indexOf(searchToken) >= 0) {
+          return i;
+        }
+      }
+
+      return -1;
+    }
+    /**
+     * @param {?} element
+     * @param {?} fn
+     * @param {?} doRemove
+     * @return {?}
+     */
+
+
+    function addRemoveAnimationEvent(element, fn, doRemove) {
+      doRemove ? element.removeEventListener(ANIMATIONEND_EVENT, fn) : element.addEventListener(ANIMATIONEND_EVENT, fn);
+    }
+    /**
+     * @param {?} element
+     * @param {?} name
+     * @param {?} value
+     * @param {?=} index
+     * @return {?}
+     */
+
+
+    function setAnimationStyle(element, name, value, index) {
+      /** @type {?} */
+      var prop = ANIMATION_PROP + name;
+
+      if (index != null) {
+        /** @type {?} */
+        var oldValue = element.style[prop];
+
+        if (oldValue.length) {
+          /** @type {?} */
+          var tokens = oldValue.split(',');
+          tokens[index] = value;
+          value = tokens.join(',');
+        }
+      }
+
+      element.style[prop] = value;
+    }
+    /**
+     * @param {?} element
+     * @param {?} name
+     * @return {?}
+     */
+
+
+    function getAnimationStyle(element, name) {
+      return element.style[ANIMATION_PROP + name];
+    }
+    /**
+     * @param {?} value
+     * @param {?} char
+     * @return {?}
+     */
+
+
+    function countChars(value, char) {
+      /** @type {?} */
+      var count = 0;
+
+      for (var i = 0; i < value.length; i++) {
+        /** @type {?} */
+        var c = value.charAt(i);
+        if (c === char) count++;
+      }
+
+      return count;
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/render/css_keyframes/css_keyframes_player.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var DEFAULT_FILL_MODE = 'forwards';
+    /** @type {?} */
+
+    var DEFAULT_EASING = 'linear';
+    /** @enum {number} */
+
+    var AnimatorControlState = {
+      INITIALIZED: 1,
+      STARTED: 2,
+      FINISHED: 3,
+      DESTROYED: 4
+    };
+
+    var CssKeyframesPlayer =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} element
+       * @param {?} keyframes
+       * @param {?} animationName
+       * @param {?} _duration
+       * @param {?} _delay
+       * @param {?} easing
+       * @param {?} _finalStyles
+       * @param {?=} _specialStyles
+       */
+      function CssKeyframesPlayer(element, keyframes, animationName, _duration, _delay, easing, _finalStyles, _specialStyles) {
+        _classCallCheck(this, CssKeyframesPlayer);
+
+        this.element = element;
+        this.keyframes = keyframes;
+        this.animationName = animationName;
+        this._duration = _duration;
+        this._delay = _delay;
+        this._finalStyles = _finalStyles;
+        this._specialStyles = _specialStyles;
+        this._onDoneFns = [];
+        this._onStartFns = [];
+        this._onDestroyFns = [];
+        this._started = false;
+        this.currentSnapshot = {};
+        this._state = 0;
+        this.easing = easing || DEFAULT_EASING;
+        this.totalTime = _duration + _delay;
+
+        this._buildStyler();
+      }
+      /**
+       * @param {?} fn
+       * @return {?}
+       */
+
+
+      _createClass2(CssKeyframesPlayer, [{
+        key: "onStart",
+        value: function onStart(fn) {
+          this._onStartFns.push(fn);
+        }
+        /**
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "onDone",
+        value: function onDone(fn) {
+          this._onDoneFns.push(fn);
+        }
+        /**
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "onDestroy",
+        value: function onDestroy(fn) {
+          this._onDestroyFns.push(fn);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "destroy",
+        value: function destroy() {
+          this.init();
+          if (this._state >= 4
+          /* DESTROYED */
+          ) return;
+          this._state = 4
+          /* DESTROYED */
+          ;
+
+          this._styler.destroy();
+
+          this._flushStartFns();
+
+          this._flushDoneFns();
+
+          if (this._specialStyles) {
+            this._specialStyles.destroy();
+          }
+
+          this._onDestroyFns.forEach(
+          /**
+          * @param {?} fn
+          * @return {?}
+          */
+          function (fn) {
+            return fn();
+          });
+
+          this._onDestroyFns = [];
+        }
+        /**
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "_flushDoneFns",
+        value: function _flushDoneFns() {
+          this._onDoneFns.forEach(
+          /**
+          * @param {?} fn
+          * @return {?}
+          */
+          function (fn) {
+            return fn();
+          });
+
+          this._onDoneFns = [];
+        }
+        /**
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "_flushStartFns",
+        value: function _flushStartFns() {
+          this._onStartFns.forEach(
+          /**
+          * @param {?} fn
+          * @return {?}
+          */
+          function (fn) {
+            return fn();
+          });
+
+          this._onStartFns = [];
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "finish",
+        value: function finish() {
+          this.init();
+          if (this._state >= 3
+          /* FINISHED */
+          ) return;
+          this._state = 3
+          /* FINISHED */
+          ;
+
+          this._styler.finish();
+
+          this._flushStartFns();
+
+          if (this._specialStyles) {
+            this._specialStyles.finish();
+          }
+
+          this._flushDoneFns();
+        }
+        /**
+         * @param {?} value
+         * @return {?}
+         */
+
+      }, {
+        key: "setPosition",
+        value: function setPosition(value) {
+          this._styler.setPosition(value);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "getPosition",
+        value: function getPosition() {
+          return this._styler.getPosition();
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "hasStarted",
+        value: function hasStarted() {
+          return this._state >= 2
+          /* STARTED */
+          ;
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "init",
+        value: function init() {
+          if (this._state >= 1
+          /* INITIALIZED */
+          ) return;
+          this._state = 1
+          /* INITIALIZED */
+          ;
+          /** @type {?} */
+
+          var elm = this.element;
+
+          this._styler.apply();
+
+          if (this._delay) {
+            this._styler.pause();
+          }
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "play",
+        value: function play() {
+          this.init();
+
+          if (!this.hasStarted()) {
+            this._flushStartFns();
+
+            this._state = 2
+            /* STARTED */
+            ;
+
+            if (this._specialStyles) {
+              this._specialStyles.start();
+            }
+          }
+
+          this._styler.resume();
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "pause",
+        value: function pause() {
+          this.init();
+
+          this._styler.pause();
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "restart",
+        value: function restart() {
+          this.reset();
+          this.play();
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "reset",
+        value: function reset() {
+          this._styler.destroy();
+
+          this._buildStyler();
+
+          this._styler.apply();
+        }
+        /**
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "_buildStyler",
+        value: function _buildStyler() {
+          var _this41 = this;
+
+          this._styler = new ElementAnimationStyleHandler(this.element, this.animationName, this._duration, this._delay, this.easing, DEFAULT_FILL_MODE,
+          /**
+          * @return {?}
+          */
+          function () {
+            return _this41.finish();
+          });
+        }
+        /**
+         * \@internal
+         * @param {?} phaseName
+         * @return {?}
+         */
+
+      }, {
+        key: "triggerCallback",
+        value: function triggerCallback(phaseName) {
+          /** @type {?} */
+          var methods = phaseName == 'start' ? this._onStartFns : this._onDoneFns;
+          methods.forEach(
+          /**
+          * @param {?} fn
+          * @return {?}
+          */
+          function (fn) {
+            return fn();
+          });
+          methods.length = 0;
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "beforeDestroy",
+        value: function beforeDestroy() {
+          var _this42 = this;
+
+          this.init();
+          /** @type {?} */
+
+          var styles = {};
+
+          if (this.hasStarted()) {
+            /** @type {?} */
+            var finished = this._state >= 3
+            /* FINISHED */
+            ;
+            Object.keys(this._finalStyles).forEach(
+            /**
+            * @param {?} prop
+            * @return {?}
+            */
+            function (prop) {
+              if (prop != 'offset') {
+                styles[prop] = finished ? _this42._finalStyles[prop] : computeStyle(_this42.element, prop);
+              }
+            });
+          }
+
+          this.currentSnapshot = styles;
+        }
+      }]);
+
+      return CssKeyframesPlayer;
+    }();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/render/css_keyframes/direct_style_player.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+
+    var DirectStylePlayer =
+    /*#__PURE__*/
+    function (_angular_animations__) {
+      _inherits(DirectStylePlayer, _angular_animations__);
+
+      /**
+       * @param {?} element
+       * @param {?} styles
+       */
+      function DirectStylePlayer(element, styles) {
+        var _this43;
+
+        _classCallCheck(this, DirectStylePlayer);
+
+        _this43 = _possibleConstructorReturn(this, _getPrototypeOf(DirectStylePlayer).call(this));
+        _this43.element = element;
+        _this43._startingStyles = {};
+        _this43.__initialized = false;
+        _this43._styles = hypenatePropsObject(styles);
+        return _this43;
+      }
+      /**
+       * @return {?}
+       */
+
+
+      _createClass2(DirectStylePlayer, [{
+        key: "init",
+        value: function init() {
+          var _this44 = this;
+
+          if (this.__initialized || !this._startingStyles) return;
+          this.__initialized = true;
+          Object.keys(this._styles).forEach(
+          /**
+          * @param {?} prop
+          * @return {?}
+          */
+          function (prop) {
+            /** @type {?} */
+            _this44._startingStyles[prop] = _this44.element.style[prop];
+          });
+
+          _get(_getPrototypeOf(DirectStylePlayer.prototype), "init", this).call(this);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "play",
+        value: function play() {
+          var _this45 = this;
+
+          if (!this._startingStyles) return;
+          this.init();
+          Object.keys(this._styles).forEach(
+          /**
+          * @param {?} prop
+          * @return {?}
+          */
+          function (prop) {
+            return _this45.element.style.setProperty(prop, _this45._styles[prop]);
+          });
+
+          _get(_getPrototypeOf(DirectStylePlayer.prototype), "play", this).call(this);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "destroy",
+        value: function destroy() {
+          var _this46 = this;
+
+          if (!this._startingStyles) return;
+          Object.keys(this._startingStyles).forEach(
+          /**
+          * @param {?} prop
+          * @return {?}
+          */
+          function (prop) {
+            /** @type {?} */
+            var value =
+            /** @type {?} */
+            _this46._startingStyles[prop];
+
+            if (value) {
+              _this46.element.style.setProperty(prop, value);
+            } else {
+              _this46.element.style.removeProperty(prop);
+            }
+          });
+          this._startingStyles = null;
+
+          _get(_getPrototypeOf(DirectStylePlayer.prototype), "destroy", this).call(this);
+        }
+      }]);
+
+      return DirectStylePlayer;
+    }(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["NoopAnimationPlayer"]);
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/render/css_keyframes/css_keyframes_driver.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var KEYFRAMES_NAME_PREFIX = 'gen_css_kf_';
+    /** @type {?} */
+
+    var TAB_SPACE = ' ';
+
+    var CssKeyframesDriver =
+    /*#__PURE__*/
+    function () {
+      function CssKeyframesDriver() {
+        _classCallCheck(this, CssKeyframesDriver);
+
+        this._count = 0;
+        this._head = document.querySelector('head');
+        this._warningIssued = false;
+      }
+      /**
+       * @param {?} prop
+       * @return {?}
+       */
+
+
+      _createClass2(CssKeyframesDriver, [{
+        key: "validateStyleProperty",
+        value: function validateStyleProperty(prop) {
+          return _validateStyleProperty(prop);
+        }
+        /**
+         * @param {?} element
+         * @param {?} selector
+         * @return {?}
+         */
+
+      }, {
+        key: "matchesElement",
+        value: function matchesElement(element, selector) {
+          return _matchesElement(element, selector);
+        }
+        /**
+         * @param {?} elm1
+         * @param {?} elm2
+         * @return {?}
+         */
+
+      }, {
+        key: "containsElement",
+        value: function containsElement(elm1, elm2) {
+          return _containsElement(elm1, elm2);
+        }
+        /**
+         * @param {?} element
+         * @param {?} selector
+         * @param {?} multi
+         * @return {?}
+         */
+
+      }, {
+        key: "query",
+        value: function query(element, selector, multi) {
+          return invokeQuery(element, selector, multi);
+        }
+        /**
+         * @param {?} element
+         * @param {?} prop
+         * @param {?=} defaultValue
+         * @return {?}
+         */
+
+      }, {
+        key: "computeStyle",
+        value: function computeStyle(element, prop, defaultValue) {
+          return (
+            /** @type {?} */
+
+            /** @type {?} */
+            window.getComputedStyle(element)[prop]
+          );
+        }
+        /**
+         * @param {?} element
+         * @param {?} name
+         * @param {?} keyframes
+         * @return {?}
+         */
+
+      }, {
+        key: "buildKeyframeElement",
+        value: function buildKeyframeElement(element, name, keyframes) {
+          keyframes = keyframes.map(
+          /**
+          * @param {?} kf
+          * @return {?}
+          */
+          function (kf) {
+            return hypenatePropsObject(kf);
+          });
+          /** @type {?} */
+
+          var keyframeStr = "@keyframes ".concat(name, " {\n");
+          /** @type {?} */
+
+          var tab = '';
+          keyframes.forEach(
+          /**
+          * @param {?} kf
+          * @return {?}
+          */
+          function (kf) {
+            tab = TAB_SPACE;
+            /** @type {?} */
+
+            var offset = parseFloat(kf['offset']);
+            keyframeStr += "".concat(tab).concat(offset * 100, "% {\n");
+            tab += TAB_SPACE;
+            Object.keys(kf).forEach(
+            /**
+            * @param {?} prop
+            * @return {?}
+            */
+            function (prop) {
+              /** @type {?} */
+              var value = kf[prop];
+
+              switch (prop) {
+                case 'offset':
+                  return;
+
+                case 'easing':
+                  if (value) {
+                    keyframeStr += "".concat(tab, "animation-timing-function: ").concat(value, ";\n");
+                  }
+
+                  return;
+
+                default:
+                  keyframeStr += "".concat(tab).concat(prop, ": ").concat(value, ";\n");
+                  return;
+              }
+            });
+            keyframeStr += "".concat(tab, "}\n");
+          });
+          keyframeStr += "}\n";
+          /** @type {?} */
+
+          var kfElm = document.createElement('style');
+          kfElm.innerHTML = keyframeStr;
+          return kfElm;
+        }
+        /**
+         * @param {?} element
+         * @param {?} keyframes
+         * @param {?} duration
+         * @param {?} delay
+         * @param {?} easing
+         * @param {?=} previousPlayers
+         * @param {?=} scrubberAccessRequested
+         * @return {?}
+         */
+
+      }, {
+        key: "animate",
+        value: function animate(element, keyframes, duration, delay, easing) {
+          var previousPlayers = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : [];
+          var scrubberAccessRequested = arguments.length > 6 ? arguments[6] : undefined;
+
+          if (scrubberAccessRequested) {
+            this._notifyFaultyScrubber();
+          }
+          /** @type {?} */
+
+
+          var previousCssKeyframePlayers =
+          /** @type {?} */
+          previousPlayers.filter(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            return player instanceof CssKeyframesPlayer;
+          });
+          /** @type {?} */
+
+          var previousStyles = {};
+
+          if (allowPreviousPlayerStylesMerge(duration, delay)) {
+            previousCssKeyframePlayers.forEach(
+            /**
+            * @param {?} player
+            * @return {?}
+            */
+            function (player) {
+              /** @type {?} */
+              var styles = player.currentSnapshot;
+              Object.keys(styles).forEach(
+              /**
+              * @param {?} prop
+              * @return {?}
+              */
+              function (prop) {
+                return previousStyles[prop] = styles[prop];
+              });
+            });
+          }
+
+          keyframes = balancePreviousStylesIntoKeyframes(element, keyframes, previousStyles);
+          /** @type {?} */
+
+          var finalStyles = flattenKeyframesIntoStyles(keyframes); // if there is no animation then there is no point in applying
+          // styles and waiting for an event to get fired. This causes lag.
+          // It's better to just directly apply the styles to the element
+          // via the direct styling animation player.
+
+          if (duration == 0) {
+            return new DirectStylePlayer(element, finalStyles);
+          }
+          /** @type {?} */
+
+
+          var animationName = "".concat(KEYFRAMES_NAME_PREFIX).concat(this._count++);
+          /** @type {?} */
+
+          var kfElm = this.buildKeyframeElement(element, animationName, keyframes);
+
+          /** @type {?} */
+          document.querySelector('head').appendChild(kfElm);
+          /** @type {?} */
+
+          var specialStyles = packageNonAnimatableStyles(element, keyframes);
+          /** @type {?} */
+
+          var player = new CssKeyframesPlayer(element, keyframes, animationName, duration, delay, easing, finalStyles, specialStyles);
+          player.onDestroy(
+          /**
+          * @return {?}
+          */
+          function () {
+            return removeElement(kfElm);
+          });
+          return player;
+        }
+        /**
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "_notifyFaultyScrubber",
+        value: function _notifyFaultyScrubber() {
+          if (!this._warningIssued) {
+            console.warn('@angular/animations: please load the web-animations.js polyfill to allow programmatic access...\n', '  visit http://bit.ly/IWukam to learn more about using the web-animation-js polyfill.');
+            this._warningIssued = true;
+          }
+        }
+      }]);
+
+      return CssKeyframesDriver;
+    }();
+
+    if (false) {}
+    /**
+     * @param {?} keyframes
+     * @return {?}
+     */
+
+
+    function flattenKeyframesIntoStyles(keyframes) {
+      /** @type {?} */
+      var flatKeyframes = {};
+
+      if (keyframes) {
+        /** @type {?} */
+        var kfs = Array.isArray(keyframes) ? keyframes : [keyframes];
+        kfs.forEach(
+        /**
+        * @param {?} kf
+        * @return {?}
+        */
+        function (kf) {
+          Object.keys(kf).forEach(
+          /**
+          * @param {?} prop
+          * @return {?}
+          */
+          function (prop) {
+            if (prop == 'offset' || prop == 'easing') return;
+            flatKeyframes[prop] = kf[prop];
+          });
+        });
+      }
+
+      return flatKeyframes;
+    }
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+
+
+    function removeElement(node) {
+      node.parentNode.removeChild(node);
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/render/web_animations/web_animations_player.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+
+    var WebAnimationsPlayer =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} element
+       * @param {?} keyframes
+       * @param {?} options
+       * @param {?=} _specialStyles
+       */
+      function WebAnimationsPlayer(element, keyframes, options, _specialStyles) {
+        _classCallCheck(this, WebAnimationsPlayer);
+
+        this.element = element;
+        this.keyframes = keyframes;
+        this.options = options;
+        this._specialStyles = _specialStyles;
+        this._onDoneFns = [];
+        this._onStartFns = [];
+        this._onDestroyFns = [];
+        this._initialized = false;
+        this._finished = false;
+        this._started = false;
+        this._destroyed = false;
+        this.time = 0;
+        this.parentPlayer = null;
+        this.currentSnapshot = {};
+        this._duration =
+        /** @type {?} */
+        options['duration'];
+        this._delay =
+        /** @type {?} */
+        options['delay'] || 0;
+        this.time = this._duration + this._delay;
+      }
+      /**
+       * @private
+       * @return {?}
+       */
+
+
+      _createClass2(WebAnimationsPlayer, [{
+        key: "_onFinish",
+        value: function _onFinish() {
+          if (!this._finished) {
+            this._finished = true;
+
+            this._onDoneFns.forEach(
+            /**
+            * @param {?} fn
+            * @return {?}
+            */
+            function (fn) {
+              return fn();
+            });
+
+            this._onDoneFns = [];
+          }
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "init",
+        value: function init() {
+          this._buildPlayer();
+
+          this._preparePlayerBeforeStart();
+        }
+        /**
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "_buildPlayer",
+        value: function _buildPlayer() {
+          var _this47 = this;
+
+          if (this._initialized) return;
+          this._initialized = true;
+          /** @type {?} */
+
+          var keyframes = this.keyframes;
+
+          /** @type {?} */
+          this.domPlayer = this._triggerWebAnimation(this.element, keyframes, this.options);
+          this._finalKeyframe = keyframes.length ? keyframes[keyframes.length - 1] : {};
+          this.domPlayer.addEventListener('finish',
+          /**
+          * @return {?}
+          */
+          function () {
+            return _this47._onFinish();
+          });
+        }
+        /**
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "_preparePlayerBeforeStart",
+        value: function _preparePlayerBeforeStart() {
+          // this is required so that the player doesn't start to animate right away
+          if (this._delay) {
+            this._resetDomPlayerState();
+          } else {
+            this.domPlayer.pause();
+          }
+        }
+        /**
+         * \@internal
+         * @param {?} element
+         * @param {?} keyframes
+         * @param {?} options
+         * @return {?}
+         */
+
+      }, {
+        key: "_triggerWebAnimation",
+        value: function _triggerWebAnimation(element, keyframes, options) {
+          // jscompiler doesn't seem to know animate is a native property because it's not fully
+          // supported yet across common browsers (we polyfill it for Edge/Safari) [CL #143630929]
+          return (
+            /** @type {?} */
+            element['animate'](keyframes, options)
+          );
+        }
+        /**
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "onStart",
+        value: function onStart(fn) {
+          this._onStartFns.push(fn);
+        }
+        /**
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "onDone",
+        value: function onDone(fn) {
+          this._onDoneFns.push(fn);
+        }
+        /**
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "onDestroy",
+        value: function onDestroy(fn) {
+          this._onDestroyFns.push(fn);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "play",
+        value: function play() {
+          this._buildPlayer();
+
+          if (!this.hasStarted()) {
+            this._onStartFns.forEach(
+            /**
+            * @param {?} fn
+            * @return {?}
+            */
+            function (fn) {
+              return fn();
+            });
+
+            this._onStartFns = [];
+            this._started = true;
+
+            if (this._specialStyles) {
+              this._specialStyles.start();
+            }
+          }
+
+          this.domPlayer.play();
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "pause",
+        value: function pause() {
+          this.init();
+          this.domPlayer.pause();
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "finish",
+        value: function finish() {
+          this.init();
+
+          if (this._specialStyles) {
+            this._specialStyles.finish();
+          }
+
+          this._onFinish();
+
+          this.domPlayer.finish();
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "reset",
+        value: function reset() {
+          this._resetDomPlayerState();
+
+          this._destroyed = false;
+          this._finished = false;
+          this._started = false;
+        }
+        /**
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "_resetDomPlayerState",
+        value: function _resetDomPlayerState() {
+          if (this.domPlayer) {
+            this.domPlayer.cancel();
+          }
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "restart",
+        value: function restart() {
+          this.reset();
+          this.play();
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "hasStarted",
+        value: function hasStarted() {
+          return this._started;
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "destroy",
+        value: function destroy() {
+          if (!this._destroyed) {
+            this._destroyed = true;
+
+            this._resetDomPlayerState();
+
+            this._onFinish();
+
+            if (this._specialStyles) {
+              this._specialStyles.destroy();
+            }
+
+            this._onDestroyFns.forEach(
+            /**
+            * @param {?} fn
+            * @return {?}
+            */
+            function (fn) {
+              return fn();
+            });
+
+            this._onDestroyFns = [];
+          }
+        }
+        /**
+         * @param {?} p
+         * @return {?}
+         */
+
+      }, {
+        key: "setPosition",
+        value: function setPosition(p) {
+          this.domPlayer.currentTime = p * this.time;
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "getPosition",
+        value: function getPosition() {
+          return this.domPlayer.currentTime / this.time;
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "beforeDestroy",
+
+        /**
+         * @return {?}
+         */
+        value: function beforeDestroy() {
+          var _this48 = this;
+
+          /** @type {?} */
+          var styles = {};
+
+          if (this.hasStarted()) {
+            Object.keys(this._finalKeyframe).forEach(
+            /**
+            * @param {?} prop
+            * @return {?}
+            */
+            function (prop) {
+              if (prop != 'offset') {
+                styles[prop] = _this48._finished ? _this48._finalKeyframe[prop] : computeStyle(_this48.element, prop);
+              }
+            });
+          }
+
+          this.currentSnapshot = styles;
+        }
+        /**
+         * \@internal
+         * @param {?} phaseName
+         * @return {?}
+         */
+
+      }, {
+        key: "triggerCallback",
+        value: function triggerCallback(phaseName) {
+          /** @type {?} */
+          var methods = phaseName == 'start' ? this._onStartFns : this._onDoneFns;
+          methods.forEach(
+          /**
+          * @param {?} fn
+          * @return {?}
+          */
+          function (fn) {
+            return fn();
+          });
+          methods.length = 0;
+        }
+      }, {
+        key: "totalTime",
+        get: function get() {
+          return this._delay + this._duration;
+        }
+      }]);
+
+      return WebAnimationsPlayer;
+    }();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/render/web_animations/web_animations_driver.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+
+    var WebAnimationsDriver =
+    /*#__PURE__*/
+    function () {
+      function WebAnimationsDriver() {
+        _classCallCheck(this, WebAnimationsDriver);
+
+        this._isNativeImpl = /\{\s*\[native\s+code\]\s*\}/.test(getElementAnimateFn().toString());
+        this._cssKeyframesDriver = new CssKeyframesDriver();
+      }
+      /**
+       * @param {?} prop
+       * @return {?}
+       */
+
+
+      _createClass2(WebAnimationsDriver, [{
+        key: "validateStyleProperty",
+        value: function validateStyleProperty(prop) {
+          return _validateStyleProperty(prop);
+        }
+        /**
+         * @param {?} element
+         * @param {?} selector
+         * @return {?}
+         */
+
+      }, {
+        key: "matchesElement",
+        value: function matchesElement(element, selector) {
+          return _matchesElement(element, selector);
+        }
+        /**
+         * @param {?} elm1
+         * @param {?} elm2
+         * @return {?}
+         */
+
+      }, {
+        key: "containsElement",
+        value: function containsElement(elm1, elm2) {
+          return _containsElement(elm1, elm2);
+        }
+        /**
+         * @param {?} element
+         * @param {?} selector
+         * @param {?} multi
+         * @return {?}
+         */
+
+      }, {
+        key: "query",
+        value: function query(element, selector, multi) {
+          return invokeQuery(element, selector, multi);
+        }
+        /**
+         * @param {?} element
+         * @param {?} prop
+         * @param {?=} defaultValue
+         * @return {?}
+         */
+
+      }, {
+        key: "computeStyle",
+        value: function computeStyle(element, prop, defaultValue) {
+          return (
+            /** @type {?} */
+
+            /** @type {?} */
+            window.getComputedStyle(element)[prop]
+          );
+        }
+        /**
+         * @param {?} supported
+         * @return {?}
+         */
+
+      }, {
+        key: "overrideWebAnimationsSupport",
+        value: function overrideWebAnimationsSupport(supported) {
+          this._isNativeImpl = supported;
+        }
+        /**
+         * @param {?} element
+         * @param {?} keyframes
+         * @param {?} duration
+         * @param {?} delay
+         * @param {?} easing
+         * @param {?=} previousPlayers
+         * @param {?=} scrubberAccessRequested
+         * @return {?}
+         */
+
+      }, {
+        key: "animate",
+        value: function animate(element, keyframes, duration, delay, easing) {
+          var previousPlayers = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : [];
+          var scrubberAccessRequested = arguments.length > 6 ? arguments[6] : undefined;
+
+          /** @type {?} */
+          var useKeyframes = !scrubberAccessRequested && !this._isNativeImpl;
+
+          if (useKeyframes) {
+            return this._cssKeyframesDriver.animate(element, keyframes, duration, delay, easing, previousPlayers);
+          }
+          /** @type {?} */
+
+
+          var fill = delay == 0 ? 'both' : 'forwards';
+          /** @type {?} */
+
+          var playerOptions = {
+            duration: duration,
+            delay: delay,
+            fill: fill
+          }; // we check for this to avoid having a null|undefined value be present
+          // for the easing (which results in an error for certain browsers #9752)
+
+          if (easing) {
+            playerOptions['easing'] = easing;
+          }
+          /** @type {?} */
+
+
+          var previousStyles = {};
+          /** @type {?} */
+
+          var previousWebAnimationPlayers =
+          /** @type {?} */
+          previousPlayers.filter(
+          /**
+          * @param {?} player
+          * @return {?}
+          */
+          function (player) {
+            return player instanceof WebAnimationsPlayer;
+          });
+
+          if (allowPreviousPlayerStylesMerge(duration, delay)) {
+            previousWebAnimationPlayers.forEach(
+            /**
+            * @param {?} player
+            * @return {?}
+            */
+            function (player) {
+              /** @type {?} */
+              var styles = player.currentSnapshot;
+              Object.keys(styles).forEach(
+              /**
+              * @param {?} prop
+              * @return {?}
+              */
+              function (prop) {
+                return previousStyles[prop] = styles[prop];
+              });
+            });
+          }
+
+          keyframes = keyframes.map(
+          /**
+          * @param {?} styles
+          * @return {?}
+          */
+          function (styles) {
+            return copyStyles(styles, false);
+          });
+          keyframes = balancePreviousStylesIntoKeyframes(element, keyframes, previousStyles);
+          /** @type {?} */
+
+          var specialStyles = packageNonAnimatableStyles(element, keyframes);
+          return new WebAnimationsPlayer(element, keyframes, playerOptions, specialStyles);
+        }
+      }]);
+
+      return WebAnimationsDriver;
+    }();
+
+    if (false) {}
+    /**
+     * @return {?}
+     */
+
+
+    function supportsWebAnimations() {
+      return typeof getElementAnimateFn() === 'function';
+    }
+    /**
+     * @return {?}
+     */
+
+
+    function getElementAnimateFn() {
+      return isBrowser() &&
+      /** @type {?} */
+      Element.prototype['animate'] || {};
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/private_export.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/src/browser.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/public_api.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/animations/browser/index.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * Generated bundle index. Do not edit.
+     */
+    //# sourceMappingURL=browser.js.map
+
+    /***/
+
+  },
+
   /***/
   "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js":
   /*!**********************************************************************!*\
@@ -806,16 +14229,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _doc
        */
       function BrowserPlatformLocation(_doc) {
-        var _this;
+        var _this49;
 
         _classCallCheck(this, BrowserPlatformLocation);
 
-        _this = _possibleConstructorReturn(this, _getPrototypeOf(BrowserPlatformLocation).call(this));
-        _this._doc = _doc;
+        _this49 = _possibleConstructorReturn(this, _getPrototypeOf(BrowserPlatformLocation).call(this));
+        _this49._doc = _doc;
 
-        _this._init();
+        _this49._init();
 
-        return _this;
+        return _this49;
       } // This is moved to its own method so that `MockPlatformLocationStrategy` can overwrite it
 
       /**
@@ -1289,23 +14712,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} href
        */
       function PathLocationStrategy(_platformLocation, href) {
-        var _this2;
+        var _this50;
 
         _classCallCheck(this, PathLocationStrategy);
 
-        _this2 = _possibleConstructorReturn(this, _getPrototypeOf(PathLocationStrategy).call(this));
-        _this2._platformLocation = _platformLocation;
+        _this50 = _possibleConstructorReturn(this, _getPrototypeOf(PathLocationStrategy).call(this));
+        _this50._platformLocation = _platformLocation;
 
         if (href == null) {
-          href = _this2._platformLocation.getBaseHrefFromDOM();
+          href = _this50._platformLocation.getBaseHrefFromDOM();
         }
 
         if (href == null) {
           throw new Error("No base href set. Please provide a value for the APP_BASE_HREF token or add a base element to the document.");
         }
 
-        _this2._baseHref = href;
-        return _this2;
+        _this50._baseHref = href;
+        return _this50;
       }
       /**
        * @param {?} fn
@@ -1492,19 +14915,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} _baseHref
        */
       function HashLocationStrategy(_platformLocation, _baseHref) {
-        var _this3;
+        var _this51;
 
         _classCallCheck(this, HashLocationStrategy);
 
-        _this3 = _possibleConstructorReturn(this, _getPrototypeOf(HashLocationStrategy).call(this));
-        _this3._platformLocation = _platformLocation;
-        _this3._baseHref = '';
+        _this51 = _possibleConstructorReturn(this, _getPrototypeOf(HashLocationStrategy).call(this));
+        _this51._platformLocation = _platformLocation;
+        _this51._baseHref = '';
 
         if (_baseHref != null) {
-          _this3._baseHref = _baseHref;
+          _this51._baseHref = _baseHref;
         }
 
-        return _this3;
+        return _this51;
       }
       /**
        * @param {?} fn
@@ -1718,7 +15141,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} platformLocation
        */
       function Location(platformStrategy, platformLocation) {
-        var _this4 = this;
+        var _this52 = this;
 
         _classCallCheck(this, Location);
 
@@ -1745,8 +15168,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (ev) {
-          _this4._subject.emit({
-            'url': _this4.path(true),
+          _this52._subject.emit({
+            'url': _this52.path(true),
             'pop': true,
             'state': ev.state,
             'type': ev.type
@@ -1902,7 +15325,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onUrlChange",
         value: function onUrlChange(fn) {
-          var _this5 = this;
+          var _this53 = this;
 
           this._urlChangeListeners.push(fn);
 
@@ -1912,7 +15335,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (v) {
-            _this5._notifyUrlChangeListeners(v.url, v.state);
+            _this53._notifyUrlChangeListeners(v.url, v.state);
           });
         }
         /**
@@ -4747,13 +18170,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} locale
        */
       function NgLocaleLocalization(locale) {
-        var _this6;
+        var _this54;
 
         _classCallCheck(this, NgLocaleLocalization);
 
-        _this6 = _possibleConstructorReturn(this, _getPrototypeOf(NgLocaleLocalization).call(this));
-        _this6.locale = locale;
-        return _this6;
+        _this54 = _possibleConstructorReturn(this, _getPrototypeOf(NgLocaleLocalization).call(this));
+        _this54.locale = locale;
+        return _this54;
       }
       /**
        * @param {?} value
@@ -4876,13 +18299,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function parseCookieValue(cookieStr, name) {
       name = encodeURIComponent(name);
-      var _iteratorNormalCompletion = true;
-      var _didIteratorError = false;
-      var _iteratorError = undefined;
+      var _iteratorNormalCompletion2 = true;
+      var _didIteratorError2 = false;
+      var _iteratorError2 = undefined;
 
       try {
-        for (var _iterator = cookieStr.split(';')[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-          var cookie = _step.value;
+        for (var _iterator2 = cookieStr.split(';')[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+          var cookie = _step2.value;
 
           /** @type {?} */
           var eqIndex = cookie.indexOf('=');
@@ -4897,16 +18320,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         }
       } catch (err) {
-        _didIteratorError = true;
-        _iteratorError = err;
+        _didIteratorError2 = true;
+        _iteratorError2 = err;
       } finally {
         try {
-          if (!_iteratorNormalCompletion && _iterator.return != null) {
-            _iterator.return();
+          if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
+            _iterator2.return();
           }
         } finally {
-          if (_didIteratorError) {
-            throw _iteratorError;
+          if (_didIteratorError2) {
+            throw _iteratorError2;
           }
         }
       }
@@ -5012,7 +18435,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_applyKeyValueChanges",
         value: function _applyKeyValueChanges(changes) {
-          var _this7 = this;
+          var _this55 = this;
 
           changes.forEachAddedItem(
           /**
@@ -5020,7 +18443,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this7._toggleClass(record.key, record.currentValue);
+            return _this55._toggleClass(record.key, record.currentValue);
           });
           changes.forEachChangedItem(
           /**
@@ -5028,7 +18451,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this7._toggleClass(record.key, record.currentValue);
+            return _this55._toggleClass(record.key, record.currentValue);
           });
           changes.forEachRemovedItem(
           /**
@@ -5037,7 +18460,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (record) {
             if (record.previousValue) {
-              _this7._toggleClass(record.key, false);
+              _this55._toggleClass(record.key, false);
             }
           });
         }
@@ -5050,7 +18473,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_applyIterableChanges",
         value: function _applyIterableChanges(changes) {
-          var _this8 = this;
+          var _this56 = this;
 
           changes.forEachAddedItem(
           /**
@@ -5059,7 +18482,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (record) {
             if (typeof record.item === 'string') {
-              _this8._toggleClass(record.item, true);
+              _this56._toggleClass(record.item, true);
             } else {
               throw new Error("NgClass can only toggle CSS classes expressed as strings, got ".concat(Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵstringify"])(record.item)));
             }
@@ -5070,7 +18493,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this8._toggleClass(record.item, false);
+            return _this56._toggleClass(record.item, false);
           });
         }
         /**
@@ -5088,7 +18511,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_applyClasses",
         value: function _applyClasses(rawClassVal) {
-          var _this9 = this;
+          var _this57 = this;
 
           if (rawClassVal) {
             if (Array.isArray(rawClassVal) || rawClassVal instanceof Set) {
@@ -5099,7 +18522,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (klass) {
-                return _this9._toggleClass(klass, true);
+                return _this57._toggleClass(klass, true);
               });
             } else {
               Object.keys(rawClassVal).forEach(
@@ -5108,7 +18531,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (klass) {
-                return _this9._toggleClass(klass, !!rawClassVal[klass]);
+                return _this57._toggleClass(klass, !!rawClassVal[klass]);
               });
             }
           }
@@ -5124,7 +18547,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_removeClasses",
         value: function _removeClasses(rawClassVal) {
-          var _this10 = this;
+          var _this58 = this;
 
           if (rawClassVal) {
             if (Array.isArray(rawClassVal) || rawClassVal instanceof Set) {
@@ -5135,7 +18558,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (klass) {
-                return _this10._toggleClass(klass, false);
+                return _this58._toggleClass(klass, false);
               });
             } else {
               Object.keys(rawClassVal).forEach(
@@ -5144,7 +18567,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (klass) {
-                return _this10._toggleClass(klass, false);
+                return _this58._toggleClass(klass, false);
               });
             }
           }
@@ -5159,7 +18582,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_toggleClass",
         value: function _toggleClass(klass, enabled) {
-          var _this11 = this;
+          var _this59 = this;
 
           klass = klass.trim();
 
@@ -5171,9 +18594,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             */
             function (klass) {
               if (enabled) {
-                _this11._renderer.addClass(_this11._ngEl.nativeElement, klass);
+                _this59._renderer.addClass(_this59._ngEl.nativeElement, klass);
               } else {
-                _this11._renderer.removeClass(_this11._ngEl.nativeElement, klass);
+                _this59._renderer.removeClass(_this59._ngEl.nativeElement, klass);
               }
             });
           }
@@ -5717,7 +19140,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_applyChanges",
         value: function _applyChanges(changes) {
-          var _this12 = this;
+          var _this60 = this;
 
           /** @type {?} */
           var insertTuples = [];
@@ -5735,25 +19158,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               // there is an iterable value for "_ngForOf".
 
               /** @type {?} */
-              var view = _this12._viewContainer.createEmbeddedView(_this12._template, new NgForOfContext(
+              var view = _this60._viewContainer.createEmbeddedView(_this60._template, new NgForOfContext(
               /** @type {?} */
               null,
               /** @type {?} */
-              _this12._ngForOf, -1, -1), currentIndex === null ? undefined : currentIndex);
+              _this60._ngForOf, -1, -1), currentIndex === null ? undefined : currentIndex);
               /** @type {?} */
 
 
               var tuple = new RecordViewTuple(item, view);
               insertTuples.push(tuple);
             } else if (currentIndex == null) {
-              _this12._viewContainer.remove(adjustedPreviousIndex === null ? undefined : adjustedPreviousIndex);
+              _this60._viewContainer.remove(adjustedPreviousIndex === null ? undefined : adjustedPreviousIndex);
             } else if (adjustedPreviousIndex !== null) {
               /** @type {?} */
               var _view2 =
               /** @type {?} */
-              _this12._viewContainer.get(adjustedPreviousIndex);
+              _this60._viewContainer.get(adjustedPreviousIndex);
 
-              _this12._viewContainer.move(_view2, currentIndex);
+              _this60._viewContainer.move(_view2, currentIndex);
               /** @type {?} */
 
 
@@ -5769,13 +19192,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this._perViewChange(insertTuples[i].view, insertTuples[i].record);
           }
 
-          for (var _i2 = 0, ilen = this._viewContainer.length; _i2 < ilen; _i2++) {
+          for (var _i8 = 0, ilen = this._viewContainer.length; _i8 < ilen; _i8++) {
             /** @type {?} */
             var viewRef =
             /** @type {?} */
-            this._viewContainer.get(_i2);
+            this._viewContainer.get(_i8);
 
-            viewRef.context.index = _i2;
+            viewRef.context.index = _i8;
             viewRef.context.count = ilen;
             viewRef.context.ngForOf =
             /** @type {?} */
@@ -5791,7 +19214,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             /** @type {?} */
             var viewRef =
             /** @type {?} */
-            _this12._viewContainer.get(record.currentIndex);
+            _this60._viewContainer.get(record.currentIndex);
 
             viewRef.context.$implicit = record.item;
           });
@@ -7192,7 +20615,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_applyChanges",
         value: function _applyChanges(changes) {
-          var _this13 = this;
+          var _this61 = this;
 
           changes.forEachRemovedItem(
           /**
@@ -7200,7 +20623,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this13._setStyle(record.key, null);
+            return _this61._setStyle(record.key, null);
           });
           changes.forEachAddedItem(
           /**
@@ -7208,7 +20631,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this13._setStyle(record.key, record.currentValue);
+            return _this61._setStyle(record.key, record.currentValue);
           });
           changes.forEachChangedItem(
           /**
@@ -7216,7 +20639,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this13._setStyle(record.key, record.currentValue);
+            return _this61._setStyle(record.key, record.currentValue);
           });
         }
       }, {
@@ -7406,29 +20829,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var currCtxKeys = Object.keys(ctxChange.currentValue || {});
 
           if (prevCtxKeys.length === currCtxKeys.length) {
-            var _iteratorNormalCompletion2 = true;
-            var _didIteratorError2 = false;
-            var _iteratorError2 = undefined;
+            var _iteratorNormalCompletion3 = true;
+            var _didIteratorError3 = false;
+            var _iteratorError3 = undefined;
 
             try {
-              for (var _iterator2 = currCtxKeys[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-                var propName = _step2.value;
+              for (var _iterator3 = currCtxKeys[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+                var propName = _step3.value;
 
                 if (prevCtxKeys.indexOf(propName) === -1) {
                   return true;
                 }
               }
             } catch (err) {
-              _didIteratorError2 = true;
-              _iteratorError2 = err;
+              _didIteratorError3 = true;
+              _iteratorError3 = err;
             } finally {
               try {
-                if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
-                  _iterator2.return();
+                if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
+                  _iterator3.return();
                 }
               } finally {
-                if (_didIteratorError2) {
-                  throw _iteratorError2;
+                if (_didIteratorError3) {
+                  throw _iteratorError3;
                 }
               }
             }
@@ -7447,8 +20870,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_updateExistingContext",
         value: function _updateExistingContext(ctx) {
-          for (var _i3 = 0, _Object$keys = Object.keys(ctx); _i3 < _Object$keys.length; _i3++) {
-            var propName = _Object$keys[_i3];
+          for (var _i9 = 0, _Object$keys = Object.keys(ctx); _i9 < _Object$keys.length; _i9++) {
+            var propName = _Object$keys[_i9];
 
             /** @type {?} */
 
@@ -7765,7 +21188,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_subscribe",
         value: function _subscribe(obj) {
-          var _this14 = this;
+          var _this62 = this;
 
           this._obj = obj;
           this._strategy = this._selectStrategy(obj);
@@ -7775,7 +21198,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (value) {
-            return _this14._updateLatestValue(obj, value);
+            return _this62._updateLatestValue(obj, value);
           });
         }
         /**
@@ -8640,7 +22063,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(KeyValuePipe, [{
         key: "transform",
         value: function transform(input) {
-          var _this15 = this;
+          var _this63 = this;
 
           var compareFn = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultComparator;
 
@@ -8667,7 +22090,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (r) {
-              _this15.keyValues.push(makeKeyValuePair(r.key,
+              _this63.keyValues.push(makeKeyValuePair(r.key,
               /** @type {?} */
               r.currentValue));
             });
@@ -12420,8 +25843,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var metaCtor = makeMetadataCtor(props);
 
       function DecoratorFactory() {
-        for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-          args[_key] = arguments[_key];
+        for (var _len2 = arguments.length, args = new Array(_len2), _key3 = 0; _key3 < _len2; _key3++) {
+          args[_key3] = arguments[_key3];
         }
 
         if (this instanceof DecoratorFactory) {
@@ -12469,8 +25892,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var metaCtor = makeMetadataCtor(props);
 
       function ParamDecoratorFactory() {
-        for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-          args[_key2] = arguments[_key2];
+        for (var _len3 = arguments.length, args = new Array(_len3), _key4 = 0; _key4 < _len3; _key4++) {
+          args[_key4] = arguments[_key4];
         }
 
         if (this instanceof ParamDecoratorFactory) {
@@ -12513,8 +25936,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var metaCtor = makeMetadataCtor(props);
 
       function PropDecoratorFactory() {
-        for (var _len3 = arguments.length, args = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
-          args[_key3] = arguments[_key3];
+        for (var _len4 = arguments.length, args = new Array(_len4), _key5 = 0; _key5 < _len4; _key5++) {
+          args[_key5] = arguments[_key5];
         }
 
         if (this instanceof PropDecoratorFactory) {
@@ -16831,8 +30254,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       assertDefined(tNode, 'should be called with a TNode');
       /** @type {?} */
 
-      for (var _len4 = arguments.length, types = new Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
-        types[_key4 - 1] = arguments[_key4];
+      for (var _len5 = arguments.length, types = new Array(_len5 > 1 ? _len5 - 1 : 0), _key6 = 1; _key6 < _len5; _key6++) {
+        types[_key6 - 1] = arguments[_key6];
       }
 
       var found = types.some(
@@ -18570,8 +31993,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     function defaultErrorLogger(console) {
-      for (var _len5 = arguments.length, values = new Array(_len5 > 1 ? _len5 - 1 : 0), _key5 = 1; _key5 < _len5; _key5++) {
-        values[_key5 - 1] = arguments[_key5];
+      for (var _len6 = arguments.length, values = new Array(_len6 > 1 ? _len6 - 1 : 0), _key7 = 1; _key7 < _len6; _key7++) {
+        values[_key7 - 1] = arguments[_key7];
       }
 
       /** @type {?} */
@@ -19512,26 +32935,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function tagSet(tags) {
       /** @type {?} */
       var res = {};
-      var _iteratorNormalCompletion3 = true;
-      var _didIteratorError3 = false;
-      var _iteratorError3 = undefined;
+      var _iteratorNormalCompletion4 = true;
+      var _didIteratorError4 = false;
+      var _iteratorError4 = undefined;
 
       try {
-        for (var _iterator3 = tags.split(',')[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-          var t = _step3.value;
+        for (var _iterator4 = tags.split(',')[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+          var t = _step4.value;
           res[t] = true;
         }
       } catch (err) {
-        _didIteratorError3 = true;
-        _iteratorError3 = err;
+        _didIteratorError4 = true;
+        _iteratorError4 = err;
       } finally {
         try {
-          if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
-            _iterator3.return();
+          if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
+            _iterator4.return();
           }
         } finally {
-          if (_didIteratorError3) {
-            throw _iteratorError3;
+          if (_didIteratorError4) {
+            throw _iteratorError4;
           }
         }
       }
@@ -19548,12 +32971,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /** @type {?} */
       var res = {};
 
-      for (var _len6 = arguments.length, sets = new Array(_len6), _key6 = 0; _key6 < _len6; _key6++) {
-        sets[_key6] = arguments[_key6];
+      for (var _len7 = arguments.length, sets = new Array(_len7), _key8 = 0; _key8 < _len7; _key8++) {
+        sets[_key8] = arguments[_key8];
       }
 
-      for (var _i4 = 0, _sets = sets; _i4 < _sets.length; _i4++) {
-        var s = _sets[_i4];
+      for (var _i10 = 0, _sets = sets; _i10 < _sets.length; _i10++) {
+        var s = _sets[_i10];
 
         for (var v in s) {
           if (s.hasOwnProperty(v)) res[v] = true;
@@ -20480,8 +33903,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function camelCaseToDashCase(input) {
       return input.replace(CAMEL_CASE_REGEXP, function () {
-        for (var _len7 = arguments.length, m = new Array(_len7), _key7 = 0; _key7 < _len7; _key7++) {
-          m[_key7] = arguments[_key7];
+        for (var _len8 = arguments.length, m = new Array(_len8), _key9 = 0; _key9 < _len8; _key9++) {
+          m[_key9] = arguments[_key9];
         }
 
         return '-' + m[1].toLowerCase();
@@ -26532,9 +39955,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var preOrderCheckHooksFound = false;
 
-          for (var _i5 = 0; _i5 < directiveDefs.length; _i5++) {
+          for (var _i11 = 0; _i11 < directiveDefs.length; _i11++) {
             /** @type {?} */
-            var _def2 = directiveDefs[_i5]; // Merge the attrs in the order of matches. This assumes that the first directive is the
+            var _def2 = directiveDefs[_i11]; // Merge the attrs in the order of matches. This assumes that the first directive is the
             // component itself, so that the component has the least priority.
 
             tNode.mergedAttrs = mergeHostAttrs(tNode.mergedAttrs, _def2.hostAttrs);
@@ -27680,8 +41103,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var bindingMetadata = propertyName;
 
-          for (var _len8 = arguments.length, interpolationParts = new Array(_len8 > 4 ? _len8 - 4 : 0), _key8 = 4; _key8 < _len8; _key8++) {
-            interpolationParts[_key8 - 4] = arguments[_key8];
+          for (var _len9 = arguments.length, interpolationParts = new Array(_len9 > 4 ? _len9 - 4 : 0), _key10 = 4; _key10 < _len9; _key10++) {
+            interpolationParts[_key10 - 4] = arguments[_key10];
           }
 
           if (interpolationParts.length > 0) {
@@ -29742,13 +43165,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _view
        */
       function RootViewRef(_view) {
-        var _this16;
+        var _this64;
 
         _classCallCheck(this, RootViewRef);
 
-        _this16 = _possibleConstructorReturn(this, _getPrototypeOf(RootViewRef).call(this, _view));
-        _this16._view = _view;
-        return _this16;
+        _this64 = _possibleConstructorReturn(this, _getPrototypeOf(RootViewRef).call(this, _view));
+        _this64._view = _view;
+        return _this64;
       }
       /**
        * @return {?}
@@ -29970,15 +43393,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
            * @param {?} elementRef
            */
           function TemplateRef(_declarationView, _declarationTContainer, elementRef) {
-            var _this17;
+            var _this65;
 
             _classCallCheck(this, TemplateRef);
 
-            _this17 = _possibleConstructorReturn(this, _getPrototypeOf(TemplateRef).call(this));
-            _this17._declarationView = _declarationView;
-            _this17._declarationTContainer = _declarationTContainer;
-            _this17.elementRef = elementRef;
-            return _this17;
+            _this65 = _possibleConstructorReturn(this, _getPrototypeOf(TemplateRef).call(this));
+            _this65._declarationView = _declarationView;
+            _this65._declarationTContainer = _declarationTContainer;
+            _this65.elementRef = elementRef;
+            return _this65;
           }
           /**
            * @param {?} context
@@ -30081,15 +43504,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
            * @param {?} _hostView
            */
           function ViewContainerRef(_lContainer, _hostTNode, _hostView) {
-            var _this18;
+            var _this66;
 
             _classCallCheck(this, ViewContainerRef);
 
-            _this18 = _possibleConstructorReturn(this, _getPrototypeOf(ViewContainerRef).call(this));
-            _this18._lContainer = _lContainer;
-            _this18._hostTNode = _hostTNode;
-            _this18._hostView = _hostView;
-            return _this18;
+            _this66 = _possibleConstructorReturn(this, _getPrototypeOf(ViewContainerRef).call(this));
+            _this66._lContainer = _lContainer;
+            _this66._hostTNode = _hostTNode;
+            _this66._hostView = _hostView;
+            return _this66;
           }
           /**
            * @return {?}
@@ -30718,8 +44141,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "factory",
         value: function factory(t) {
           return function () {
-            for (var _len9 = arguments.length, args = new Array(_len9), _key9 = 0; _key9 < _len9; _key9++) {
-              args[_key9] = arguments[_key9];
+            for (var _len10 = arguments.length, args = new Array(_len10), _key11 = 0; _key11 < _len10; _key11++) {
+              args[_key11] = arguments[_key11];
             }
 
             return _construct(t, args);
@@ -31648,7 +45071,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} source
        */
       function R3Injector(def, additionalProviders, parent) {
-        var _this19 = this;
+        var _this67 = this;
 
         var source = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
 
@@ -31685,7 +45108,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (provider) {
-          return _this19.processProvider(provider, def, additionalProviders);
+          return _this67.processProvider(provider, def, additionalProviders);
         });
         deepForEach([def],
         /**
@@ -31693,7 +45116,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (injectorDef) {
-          return _this19.processInjectorType(injectorDef, [], dedupStack);
+          return _this67.processInjectorType(injectorDef, [], dedupStack);
         }); // Make sure the INJECTOR token provides this injector.
 
         this.records.set(INJECTOR, makeRecord(undefined, this)); // Detect whether this injector has the APP_ROOT_SCOPE token and thus should provide
@@ -31835,7 +45258,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_resolveInjectorDefTypes",
         value: function _resolveInjectorDefTypes() {
-          var _this20 = this;
+          var _this68 = this;
 
           this.injectorDefTypes.forEach(
           /**
@@ -31843,7 +45266,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (defType) {
-            return _this20.get(defType);
+            return _this68.get(defType);
           });
         }
         /**
@@ -31901,7 +45324,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "processInjectorType",
         value: function processInjectorType(defOrWrappedDef, parents, dedupStack) {
-          var _this21 = this;
+          var _this69 = this;
 
           defOrWrappedDef = resolveForwardRef(defOrWrappedDef);
           if (!defOrWrappedDef) return false; // Either the defOrWrappedDef is an InjectorType (with injector def) or an
@@ -31974,7 +45397,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (imported) {
-                if (_this21.processInjectorType(imported, parents, dedupStack)) {
+                if (_this69.processInjectorType(imported, parents, dedupStack)) {
                   if (importTypesWithProviders === undefined) importTypesWithProviders = []; // If the processed import is an injector type with providers, we store it in the
                   // list of import types with providers, so that we can process those afterwards.
 
@@ -31990,7 +45413,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
             if (importTypesWithProviders !== undefined) {
-              var _loop = function _loop(i) {
+              var _loop3 = function _loop3(i) {
                 var _importTypesWithProvi = importTypesWithProviders[i],
                     ngModule = _importTypesWithProvi.ngModule,
                     providers = _importTypesWithProvi.providers;
@@ -32002,12 +45425,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 * @return {?}
                 */
                 function (provider) {
-                  return _this21.processProvider(provider, ngModule, providers || EMPTY_ARRAY$2);
+                  return _this69.processProvider(provider, ngModule, providers || EMPTY_ARRAY$2);
                 });
               };
 
               for (var i = 0; i < importTypesWithProviders.length; i++) {
-                _loop(i);
+                _loop3(i);
               }
             }
           } // Track the InjectorType and add a provider for it. It's important that this is done after the
@@ -32032,7 +45455,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (provider) {
-              return _this21.processProvider(provider, injectorType, defProviders);
+              return _this69.processProvider(provider, injectorType, defProviders);
             });
           }
 
@@ -34384,7 +47807,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_instantiate",
         value: function _instantiate(provider, ResolvedReflectiveFactory) {
-          var _this22 = this;
+          var _this70 = this;
 
           /** @type {?} */
           var factory = ResolvedReflectiveFactory.factory;
@@ -34399,7 +47822,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (dep) {
-              return _this22._getByReflectiveDependency(dep);
+              return _this70._getByReflectiveDependency(dep);
             });
           } catch (e) {
             if (e.addKey) {
@@ -35651,8 +49074,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var content = values[0];
 
-      for (var _i6 = 1; _i6 < values.length; _i6 += 2) {
-        content += renderStringify(values[_i6]) + values[_i6 + 1];
+      for (var _i12 = 1; _i12 < values.length; _i12 += 2) {
+        content += renderStringify(values[_i12]) + values[_i12 + 1];
       }
 
       return content;
@@ -43703,52 +57126,52 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /** @type {?} */
       definition; // Copy over any fields that apply to either directives or components.
 
-      var _iteratorNormalCompletion4 = true;
-      var _didIteratorError4 = false;
-      var _iteratorError4 = undefined;
+      var _iteratorNormalCompletion5 = true;
+      var _didIteratorError5 = false;
+      var _iteratorError5 = undefined;
 
       try {
-        for (var _iterator4 = COPY_DIRECTIVE_FIELDS[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-          var _field = _step4.value;
+        for (var _iterator5 = COPY_DIRECTIVE_FIELDS[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+          var _field = _step5.value;
           defAny[_field] = superDef[_field];
         }
       } catch (err) {
-        _didIteratorError4 = true;
-        _iteratorError4 = err;
+        _didIteratorError5 = true;
+        _iteratorError5 = err;
       } finally {
         try {
-          if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
-            _iterator4.return();
+          if (!_iteratorNormalCompletion5 && _iterator5.return != null) {
+            _iterator5.return();
           }
         } finally {
-          if (_didIteratorError4) {
-            throw _iteratorError4;
+          if (_didIteratorError5) {
+            throw _iteratorError5;
           }
         }
       }
 
       if (isComponentDef(superDef)) {
         // Copy over any component-specific fields.
-        var _iteratorNormalCompletion5 = true;
-        var _didIteratorError5 = false;
-        var _iteratorError5 = undefined;
+        var _iteratorNormalCompletion6 = true;
+        var _didIteratorError6 = false;
+        var _iteratorError6 = undefined;
 
         try {
-          for (var _iterator5 = COPY_COMPONENT_FIELDS[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-            var field = _step5.value;
+          for (var _iterator6 = COPY_COMPONENT_FIELDS[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+            var field = _step6.value;
             defAny[field] = superDef[field];
           }
         } catch (err) {
-          _didIteratorError5 = true;
-          _iteratorError5 = err;
+          _didIteratorError6 = true;
+          _iteratorError6 = err;
         } finally {
           try {
-            if (!_iteratorNormalCompletion5 && _iterator5.return != null) {
-              _iterator5.return();
+            if (!_iteratorNormalCompletion6 && _iterator6.return != null) {
+              _iterator6.return();
             }
           } finally {
-            if (_didIteratorError5) {
-              throw _iteratorError5;
+            if (_didIteratorError6) {
+              throw _iteratorError6;
             }
           }
         }
@@ -44582,19 +58005,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} ngModule
        */
       function ComponentFactoryBoundToModule(factory, ngModule) {
-        var _this23;
+        var _this71;
 
         _classCallCheck(this, ComponentFactoryBoundToModule);
 
-        _this23 = _possibleConstructorReturn(this, _getPrototypeOf(ComponentFactoryBoundToModule).call(this));
-        _this23.factory = factory;
-        _this23.ngModule = ngModule;
-        _this23.selector = factory.selector;
-        _this23.componentType = factory.componentType;
-        _this23.ngContentSelectors = factory.ngContentSelectors;
-        _this23.inputs = factory.inputs;
-        _this23.outputs = factory.outputs;
-        return _this23;
+        _this71 = _possibleConstructorReturn(this, _getPrototypeOf(ComponentFactoryBoundToModule).call(this));
+        _this71.factory = factory;
+        _this71.ngModule = ngModule;
+        _this71.selector = factory.selector;
+        _this71.componentType = factory.componentType;
+        _this71.ngContentSelectors = factory.ngContentSelectors;
+        _this71.inputs = factory.inputs;
+        _this71.outputs = factory.outputs;
+        return _this71;
       }
       /**
        * @param {?} injector
@@ -45155,7 +58578,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "check",
         value: function check(collection) {
-          var _this24 = this;
+          var _this72 = this;
 
           this._reset();
           /** @type {?} */
@@ -45179,17 +58602,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             /** @type {?} */
             this.length = collection.length;
 
-            for (var _index = 0; _index < this.length; _index++) {
-              item = collection[_index];
-              itemTrackBy = this._trackByFn(_index, item);
+            for (var _index3 = 0; _index3 < this.length; _index3++) {
+              item = collection[_index3];
+              itemTrackBy = this._trackByFn(_index3, item);
 
               if (record === null || !looseIdentical(record.trackById, itemTrackBy)) {
-                record = this._mismatch(record, item, itemTrackBy, _index);
+                record = this._mismatch(record, item, itemTrackBy, _index3);
                 mayBeDirty = true;
               } else {
                 if (mayBeDirty) {
                   // TODO(misko): can we limit this to duplicates only?
-                  record = this._verifyReinsertion(record, item, itemTrackBy, _index);
+                  record = this._verifyReinsertion(record, item, itemTrackBy, _index3);
                 }
 
                 if (!looseIdentical(record.item, item)) this._addIdentityChange(record, item);
@@ -45205,18 +58628,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (item) {
-              itemTrackBy = _this24._trackByFn(index, item);
+              itemTrackBy = _this72._trackByFn(index, item);
 
               if (record === null || !looseIdentical(record.trackById, itemTrackBy)) {
-                record = _this24._mismatch(record, item, itemTrackBy, index);
+                record = _this72._mismatch(record, item, itemTrackBy, index);
                 mayBeDirty = true;
               } else {
                 if (mayBeDirty) {
                   // TODO(misko): can we limit this to duplicates only?
-                  record = _this24._verifyReinsertion(record, item, itemTrackBy, index);
+                  record = _this72._verifyReinsertion(record, item, itemTrackBy, index);
                 }
 
-                if (!looseIdentical(record.item, item)) _this24._addIdentityChange(record, item);
+                if (!looseIdentical(record.item, item)) _this72._addIdentityChange(record, item);
               }
 
               record = record._next;
@@ -46215,7 +59638,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "check",
         value: function check(map) {
-          var _this25 = this;
+          var _this73 = this;
 
           this._reset();
           /** @type {?} */
@@ -46232,15 +59655,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (value, key) {
             if (insertBefore && insertBefore.key === key) {
-              _this25._maybeAddToChanges(insertBefore, value);
+              _this73._maybeAddToChanges(insertBefore, value);
 
-              _this25._appendAfter = insertBefore;
+              _this73._appendAfter = insertBefore;
               insertBefore = insertBefore._next;
             } else {
               /** @type {?} */
-              var record = _this25._getOrCreateRecordForKey(key, value);
+              var record = _this73._getOrCreateRecordForKey(key, value);
 
-              insertBefore = _this25._insertBeforeOrAppend(insertBefore, record);
+              insertBefore = _this73._insertBeforeOrAppend(insertBefore, record);
             }
           }); // Items remaining at the end of the list have been deleted
 
@@ -48424,8 +61847,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var projectedNodes = view.root.projectableNodes[ngContentIndex];
 
         if (projectedNodes) {
-          for (var _i7 = 0; _i7 < projectedNodes.length; _i7++) {
-            execRenderNodeAction(view, projectedNodes[_i7], action, parentNode, nextSibling, target);
+          for (var _i13 = 0; _i13 < projectedNodes.length; _i13++) {
+            execRenderNodeAction(view, projectedNodes[_i13], action, parentNode, nextSibling, target);
           }
         }
       }
@@ -49345,20 +62768,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} ngContentSelectors
        */
       function ComponentFactory_(selector, componentType, viewDefFactory, _inputs, _outputs, ngContentSelectors) {
-        var _this26;
+        var _this74;
 
         _classCallCheck(this, ComponentFactory_);
 
         // Attention: this ctor is called as top level function.
         // Putting any logic in here will destroy closure tree shaking!
-        _this26 = _possibleConstructorReturn(this, _getPrototypeOf(ComponentFactory_).call(this));
-        _this26.selector = selector;
-        _this26.componentType = componentType;
-        _this26._inputs = _inputs;
-        _this26._outputs = _outputs;
-        _this26.ngContentSelectors = ngContentSelectors;
-        _this26.viewDefFactory = viewDefFactory;
-        return _this26;
+        _this74 = _possibleConstructorReturn(this, _getPrototypeOf(ComponentFactory_).call(this));
+        _this74.selector = selector;
+        _this74.componentType = componentType;
+        _this74._inputs = _inputs;
+        _this74._outputs = _outputs;
+        _this74.ngContentSelectors = ngContentSelectors;
+        _this74.viewDefFactory = viewDefFactory;
+        return _this74;
       }
       /**
        * @return {?}
@@ -49465,19 +62888,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _component
        */
       function ComponentRef_(_view, _viewRef, _component) {
-        var _this27;
+        var _this75;
 
         _classCallCheck(this, ComponentRef_);
 
-        _this27 = _possibleConstructorReturn(this, _getPrototypeOf(ComponentRef_).call(this));
-        _this27._view = _view;
-        _this27._viewRef = _viewRef;
-        _this27._component = _component;
-        _this27._elDef = _this27._view.def.nodes[0];
-        _this27.hostView = _viewRef;
-        _this27.changeDetectorRef = _viewRef;
-        _this27.instance = _component;
-        return _this27;
+        _this75 = _possibleConstructorReturn(this, _getPrototypeOf(ComponentRef_).call(this));
+        _this75._view = _view;
+        _this75._viewRef = _viewRef;
+        _this75._component = _component;
+        _this75._elDef = _this75._view.def.nodes[0];
+        _this75.hostView = _viewRef;
+        _this75.changeDetectorRef = _viewRef;
+        _this75.instance = _component;
+        return _this75;
       }
       /**
        * @return {?}
@@ -50002,14 +63425,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _def
        */
       function TemplateRef_(_parentView, _def) {
-        var _this28;
+        var _this76;
 
         _classCallCheck(this, TemplateRef_);
 
-        _this28 = _possibleConstructorReturn(this, _getPrototypeOf(TemplateRef_).call(this));
-        _this28._parentView = _parentView;
-        _this28._def = _def;
-        return _this28;
+        _this76 = _possibleConstructorReturn(this, _getPrototypeOf(TemplateRef_).call(this));
+        _this76._parentView = _parentView;
+        _this76._def = _def;
+        return _this76;
       }
       /**
        * @param {?} context
@@ -51289,13 +64712,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} ngModule The NgModuleRef to which all resolved factories are bound.
        */
       function ComponentFactoryResolver$1(ngModule) {
-        var _this29;
+        var _this77;
 
         _classCallCheck(this, ComponentFactoryResolver$1);
 
-        _this29 = _possibleConstructorReturn(this, _getPrototypeOf(ComponentFactoryResolver$1).call(this));
-        _this29.ngModule = ngModule;
-        return _this29;
+        _this77 = _possibleConstructorReturn(this, _getPrototypeOf(ComponentFactoryResolver$1).call(this));
+        _this77.ngModule = ngModule;
+        return _this77;
       }
       /**
        * @template T
@@ -51423,18 +64846,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} ngModule The NgModuleRef to which the factory is bound.
        */
       function ComponentFactory$1(componentDef, ngModule) {
-        var _this30;
+        var _this78;
 
         _classCallCheck(this, ComponentFactory$1);
 
-        _this30 = _possibleConstructorReturn(this, _getPrototypeOf(ComponentFactory$1).call(this));
-        _this30.componentDef = componentDef;
-        _this30.ngModule = ngModule;
-        _this30.componentType = componentDef.type;
-        _this30.selector = stringifyCSSSelectorList(componentDef.selectors);
-        _this30.ngContentSelectors = componentDef.ngContentSelectors ? componentDef.ngContentSelectors : [];
-        _this30.isBoundToModule = !!ngModule;
-        return _this30;
+        _this78 = _possibleConstructorReturn(this, _getPrototypeOf(ComponentFactory$1).call(this));
+        _this78.componentDef = componentDef;
+        _this78.ngModule = ngModule;
+        _this78.componentType = componentDef.type;
+        _this78.selector = stringifyCSSSelectorList(componentDef.selectors);
+        _this78.ngContentSelectors = componentDef.ngContentSelectors ? componentDef.ngContentSelectors : [];
+        _this78.isBoundToModule = !!ngModule;
+        return _this78;
       }
       /**
        * @return {?}
@@ -51645,20 +65068,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _tNode
        */
       function ComponentRef$1(componentType, instance, location, _rootLView, _tNode) {
-        var _this31;
+        var _this79;
 
         _classCallCheck(this, ComponentRef$1);
 
-        _this31 = _possibleConstructorReturn(this, _getPrototypeOf(ComponentRef$1).call(this));
-        _this31.location = location;
-        _this31._rootLView = _rootLView;
-        _this31._tNode = _tNode;
-        _this31.destroyCbs = [];
-        _this31.instance = instance;
-        _this31.hostView = _this31.changeDetectorRef = new RootViewRef(_rootLView);
-        _this31.hostView._tViewNode = assignTViewNodeToLView(_rootLView[TVIEW], null, -1, _rootLView);
-        _this31.componentType = componentType;
-        return _this31;
+        _this79 = _possibleConstructorReturn(this, _getPrototypeOf(ComponentRef$1).call(this));
+        _this79.location = location;
+        _this79._rootLView = _rootLView;
+        _this79._tNode = _tNode;
+        _this79.destroyCbs = [];
+        _this79.instance = instance;
+        _this79.hostView = _this79.changeDetectorRef = new RootViewRef(_rootLView);
+        _this79.hostView._tViewNode = assignTViewNodeToLView(_rootLView[TVIEW], null, -1, _rootLView);
+        _this79.componentType = componentType;
+        return _this79;
       }
       /**
        * @return {?}
@@ -54043,12 +67466,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           nextNode;
         }
 
-        for (var _i8 = 0; _i8 < nestedIcusToCreate.length; _i8++) {
+        for (var _i14 = 0; _i14 < nestedIcusToCreate.length; _i14++) {
           /** @type {?} */
-          var _nestedIcu = nestedIcusToCreate[_i8][0];
+          var _nestedIcu = nestedIcusToCreate[_i14][0];
           /** @type {?} */
 
-          var nestedIcuNodeIndex = nestedIcusToCreate[_i8][1];
+          var nestedIcuNodeIndex = nestedIcusToCreate[_i14][1];
           icuStart(tIcus, _nestedIcu, nestedIcuNodeIndex, expandoStartIndex + icuCase.vars); // Since this is recursive, the last TIcu that was pushed is the one we want
 
           /** @type {?} */
@@ -54270,23 +67693,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _parent
        */
       function NgModuleRef$1(ngModuleType, _parent) {
-        var _this32;
+        var _this80;
 
         _classCallCheck(this, NgModuleRef$1);
 
-        _this32 = _possibleConstructorReturn(this, _getPrototypeOf(NgModuleRef$1).call(this));
-        _this32._parent = _parent; // tslint:disable-next-line:require-internal-with-underscore
+        _this80 = _possibleConstructorReturn(this, _getPrototypeOf(NgModuleRef$1).call(this));
+        _this80._parent = _parent; // tslint:disable-next-line:require-internal-with-underscore
 
-        _this32._bootstrapComponents = [];
-        _this32.injector = _assertThisInitialized(_this32);
-        _this32.destroyCbs = []; // When bootstrapping a module we have a dependency graph that looks like this:
+        _this80._bootstrapComponents = [];
+        _this80.injector = _assertThisInitialized(_this80);
+        _this80.destroyCbs = []; // When bootstrapping a module we have a dependency graph that looks like this:
         // ApplicationRef -> ComponentFactoryResolver -> NgModuleRef. The problem is that if the
         // module being resolved tries to inject the ComponentFactoryResolver, it'll create a
         // circular dependency which will result in a runtime error, because the injector doesn't
         // exist yet. We work around the issue by creating the ComponentFactoryResolver ourselves
         // and providing it, rather than letting the injector resolve it.
 
-        _this32.componentFactoryResolver = new ComponentFactoryResolver$1(_assertThisInitialized(_this32));
+        _this80.componentFactoryResolver = new ComponentFactoryResolver$1(_assertThisInitialized(_this80));
         /** @type {?} */
 
         var ngModuleDef = getNgModuleDef(ngModuleType);
@@ -54295,25 +67718,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         var ngLocaleIdDef = getNgLocaleIdDef(ngModuleType);
         ngLocaleIdDef && setLocaleId(ngLocaleIdDef);
-        _this32._bootstrapComponents = maybeUnwrapFn(
+        _this80._bootstrapComponents = maybeUnwrapFn(
         /** @type {?} */
         ngModuleDef.bootstrap);
-        _this32._r3Injector =
+        _this80._r3Injector =
         /** @type {?} */
         createInjectorWithoutInjectorInstances(ngModuleType, _parent, [{
           provide: NgModuleRef,
-          useValue: _assertThisInitialized(_this32)
+          useValue: _assertThisInitialized(_this80)
         }, {
           provide: ComponentFactoryResolver,
-          useValue: _this32.componentFactoryResolver
+          useValue: _this80.componentFactoryResolver
         }], stringify(ngModuleType)); // We need to resolve the injector types separately from the injector creation, because
         // the module might be trying to use this ref in its contructor for DI which will cause a
         // circular error that will eventually error out, because the injector isn't created yet.
 
-        _this32._r3Injector._resolveInjectorDefTypes();
+        _this80._r3Injector._resolveInjectorDefTypes();
 
-        _this32.instance = _this32.get(ngModuleType);
-        return _this32;
+        _this80.instance = _this80.get(ngModuleType);
+        return _this80;
       }
       /**
        * @param {?} token
@@ -54392,12 +67815,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} moduleType
        */
       function NgModuleFactory$1(moduleType) {
-        var _this33;
+        var _this81;
 
         _classCallCheck(this, NgModuleFactory$1);
 
-        _this33 = _possibleConstructorReturn(this, _getPrototypeOf(NgModuleFactory$1).call(this));
-        _this33.moduleType = moduleType;
+        _this81 = _possibleConstructorReturn(this, _getPrototypeOf(NgModuleFactory$1).call(this));
+        _this81.moduleType = moduleType;
         /** @type {?} */
 
         var ngModuleDef = getNgModuleDef(moduleType);
@@ -54431,7 +67854,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           moduleType);
         }
 
-        return _this33;
+        return _this81;
       }
       /**
        * @param {?} parentInjector
@@ -55219,15 +68642,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        *
        */
       function EventEmitter() {
-        var _this34;
+        var _this82;
 
         var isAsync = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
 
         _classCallCheck(this, EventEmitter);
 
-        _this34 = _possibleConstructorReturn(this, _getPrototypeOf(EventEmitter).call(this));
-        _this34.__isAsync = isAsync;
-        return _this34;
+        _this82 = _possibleConstructorReturn(this, _getPrototypeOf(EventEmitter).call(this));
+        _this82.__isAsync = isAsync;
+        return _this82;
       }
       /**
        * Emits an event containing a given value.
@@ -56571,9 +69994,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             lView[-tNodeIdx];
             ngDevMode && assertLContainer(declarationLContainer); // collect matches for views inserted in this container
 
-            for (var _i9 = CONTAINER_HEADER_OFFSET; _i9 < declarationLContainer.length; _i9++) {
+            for (var _i15 = CONTAINER_HEADER_OFFSET; _i15 < declarationLContainer.length; _i15++) {
               /** @type {?} */
-              var embeddedLView = declarationLContainer[_i9];
+              var embeddedLView = declarationLContainer[_i15];
 
               if (embeddedLView[DECLARATION_LCONTAINER] === embeddedLView[PARENT]) {
                 collectQueryResults(embeddedLView[TVIEW], embeddedLView, childQueryIndex, result);
@@ -56588,9 +70011,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               /** @type {?} */
               declarationLContainer[MOVED_VIEWS];
 
-              for (var _i10 = 0; _i10 < embeddedLViews.length; _i10++) {
+              for (var _i16 = 0; _i16 < embeddedLViews.length; _i16++) {
                 /** @type {?} */
-                var _embeddedLView = embeddedLViews[_i10];
+                var _embeddedLView = embeddedLViews[_i16];
                 collectQueryResults(_embeddedLView[TVIEW], _embeddedLView, childQueryIndex, result);
               }
             }
@@ -58240,7 +71663,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /** @type {?} */
       var queriesMeta = [];
 
-      var _loop2 = function _loop2(field) {
+      var _loop4 = function _loop4(field) {
         if (propMetadata.hasOwnProperty(field)) {
           /** @type {?} */
           var annotations = propMetadata[field];
@@ -58266,7 +71689,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       };
 
       for (var field in propMetadata) {
-        _loop2(field);
+        _loop4(field);
       }
 
       return queriesMeta;
@@ -58962,7 +72385,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} appInits
        */
       function ApplicationInitStatus(appInits) {
-        var _this35 = this;
+        var _this83 = this;
 
         _classCallCheck(this, ApplicationInitStatus);
 
@@ -58976,8 +72399,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (res, rej) {
-          _this35.resolve = res;
-          _this35.reject = rej;
+          _this83.resolve = res;
+          _this83.reject = rej;
         });
       }
       /**
@@ -58989,7 +72412,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(ApplicationInitStatus, [{
         key: "runInitializers",
         value: function runInitializers() {
-          var _this36 = this;
+          var _this84 = this;
 
           if (this.initialized) {
             return;
@@ -59006,9 +72429,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function complete() {
             /** @type {?} */
-            _this36.done = true;
+            _this84.done = true;
 
-            _this36.resolve();
+            _this84.resolve();
           };
 
           if (this.appInits) {
@@ -59034,7 +72457,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (e) {
-            _this36.reject(e);
+            _this84.reject(e);
           });
 
           if (asyncInitPromises.length === 0) {
@@ -60362,7 +73785,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _ngZone
        */
       function Testability(_ngZone) {
-        var _this37 = this;
+        var _this85 = this;
 
         _classCallCheck(this, Testability);
 
@@ -60387,7 +73810,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function () {
-          _this37.taskTrackingZone = typeof Zone == 'undefined' ? null : Zone.current.get('TaskTrackingZone');
+          _this85.taskTrackingZone = typeof Zone == 'undefined' ? null : Zone.current.get('TaskTrackingZone');
         });
       }
       /**
@@ -60399,7 +73822,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(Testability, [{
         key: "_watchAngularEvents",
         value: function _watchAngularEvents() {
-          var _this38 = this;
+          var _this86 = this;
 
           this._ngZone.onUnstable.subscribe({
             next:
@@ -60407,8 +73830,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function next() {
-              _this38._didWork = true;
-              _this38._isZoneStable = false;
+              _this86._didWork = true;
+              _this86._isZoneStable = false;
             }
           });
 
@@ -60417,7 +73840,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            _this38._ngZone.onStable.subscribe({
+            _this86._ngZone.onStable.subscribe({
               next:
               /**
               * @return {?}
@@ -60429,9 +73852,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 * @return {?}
                 */
                 function () {
-                  _this38._isZoneStable = true;
+                  _this86._isZoneStable = true;
 
-                  _this38._runCallbacksIfReady();
+                  _this86._runCallbacksIfReady();
                 });
               }
             });
@@ -60487,7 +73910,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_runCallbacksIfReady",
         value: function _runCallbacksIfReady() {
-          var _this39 = this;
+          var _this87 = this;
 
           if (this.isStable()) {
             // Schedules the call backs in a new frame so that it is always async.
@@ -60496,17 +73919,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              while (_this39._callbacks.length !== 0) {
+              while (_this87._callbacks.length !== 0) {
                 /** @type {?} */
                 var cb =
                 /** @type {?} */
-                _this39._callbacks.pop();
+                _this87._callbacks.pop();
 
                 clearTimeout(cb.timeoutId);
-                cb.doneCb(_this39._didWork);
+                cb.doneCb(_this87._didWork);
               }
 
-              _this39._didWork = false;
+              _this87._didWork = false;
             });
           } else {
             // Still not stable, send updates.
@@ -60572,7 +73995,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addCallback",
         value: function addCallback(cb, timeout, updateCb) {
-          var _this40 = this;
+          var _this88 = this;
 
           /** @type {?} */
           var timeoutId = -1;
@@ -60583,7 +74006,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              _this40._callbacks = _this40._callbacks.filter(
+              _this88._callbacks = _this88._callbacks.filter(
               /**
               * @param {?} cb
               * @return {?}
@@ -60591,7 +74014,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               function (cb) {
                 return cb.timeoutId !== timeoutId;
               });
-              cb(_this40._didWork, _this40.getPendingTasks());
+              cb(_this88._didWork, _this88.getPendingTasks());
             }, timeout);
           }
 
@@ -61252,7 +74675,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(PlatformRef, [{
         key: "bootstrapModuleFactory",
         value: function bootstrapModuleFactory(moduleFactory, options) {
-          var _this41 = this;
+          var _this89 = this;
 
           // Note: We need to create the NgZone _before_ we instantiate the module,
           // as instantiating the module creates some providers eagerly.
@@ -61283,7 +74706,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             /** @type {?} */
             var ngZoneInjector = Injector.create({
               providers: providers,
-              parent: _this41.injector,
+              parent: _this89.injector,
               name: moduleFactory.moduleType.name
             });
             /** @type {?} */
@@ -61304,7 +74727,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              return remove(_this41._modules, moduleRef);
+              return remove(_this89._modules, moduleRef);
             });
 
             /** @type {?} */
@@ -61350,7 +74773,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   setLocaleId(localeId || DEFAULT_LOCALE_ID);
                 }
 
-                _this41._moduleDoBootstrap(moduleRef);
+                _this89._moduleDoBootstrap(moduleRef);
 
                 return moduleRef;
               });
@@ -61381,7 +74804,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "bootstrapModule",
         value: function bootstrapModule(moduleType) {
-          var _this42 = this;
+          var _this90 = this;
 
           var compilerOptions = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
 
@@ -61393,7 +74816,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (moduleFactory) {
-            return _this42.bootstrapModuleFactory(moduleFactory, options);
+            return _this90.bootstrapModuleFactory(moduleFactory, options);
           });
         }
         /**
@@ -61718,7 +75141,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _initStatus
        */
       function ApplicationRef(_zone, _console, _injector, _exceptionHandler, _componentFactoryResolver, _initStatus) {
-        var _this43 = this;
+        var _this91 = this;
 
         _classCallCheck(this, ApplicationRef);
 
@@ -61756,12 +75179,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function next() {
-            _this43._zone.run(
+            _this91._zone.run(
             /**
             * @return {?}
             */
             function () {
-              _this43.tick();
+              _this91.tick();
             });
           }
         });
@@ -61774,14 +75197,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (observer) {
-          _this43._stable = _this43._zone.isStable && !_this43._zone.hasPendingMacrotasks && !_this43._zone.hasPendingMicrotasks;
+          _this91._stable = _this91._zone.isStable && !_this91._zone.hasPendingMacrotasks && !_this91._zone.hasPendingMicrotasks;
 
-          _this43._zone.runOutsideAngular(
+          _this91._zone.runOutsideAngular(
           /**
           * @return {?}
           */
           function () {
-            observer.next(_this43._stable);
+            observer.next(_this91._stable);
             observer.complete();
           });
         });
@@ -61799,12 +75222,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /** @type {?} */
           var stableSub;
 
-          _this43._zone.runOutsideAngular(
+          _this91._zone.runOutsideAngular(
           /**
           * @return {?}
           */
           function () {
-            stableSub = _this43._zone.onStable.subscribe(
+            stableSub = _this91._zone.onStable.subscribe(
             /**
             * @return {?}
             */
@@ -61817,8 +75240,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function () {
-                if (!_this43._stable && !_this43._zone.hasPendingMacrotasks && !_this43._zone.hasPendingMicrotasks) {
-                  _this43._stable = true;
+                if (!_this91._stable && !_this91._zone.hasPendingMacrotasks && !_this91._zone.hasPendingMicrotasks) {
+                  _this91._stable = true;
                   observer.next(true);
                 }
               });
@@ -61827,17 +75250,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /** @type {?} */
 
 
-          var unstableSub = _this43._zone.onUnstable.subscribe(
+          var unstableSub = _this91._zone.onUnstable.subscribe(
           /**
           * @return {?}
           */
           function () {
             NgZone.assertInAngularZone();
 
-            if (_this43._stable) {
-              _this43._stable = false;
+            if (_this91._stable) {
+              _this91._stable = false;
 
-              _this43._zone.runOutsideAngular(
+              _this91._zone.runOutsideAngular(
               /**
               * @return {?}
               */
@@ -61886,7 +75309,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(ApplicationRef, [{
         key: "bootstrap",
         value: function bootstrap(componentOrFactory, rootSelectorOrNode) {
-          var _this44 = this;
+          var _this92 = this;
 
           if (!this._initStatus.done) {
             throw new Error('Cannot bootstrap as there are still asynchronous initializers running. Bootstrap components in the `ngDoBootstrap` method of the root module.');
@@ -61920,7 +75343,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            _this44._unloadComponent(compRef);
+            _this92._unloadComponent(compRef);
           });
           /** @type {?} */
 
@@ -61953,7 +75376,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "tick",
         value: function tick() {
-          var _this45 = this;
+          var _this93 = this;
 
           if (this._runningTick) {
             throw new Error('ApplicationRef.tick is called recursively');
@@ -61961,52 +75384,52 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           try {
             this._runningTick = true;
-            var _iteratorNormalCompletion6 = true;
-            var _didIteratorError6 = false;
-            var _iteratorError6 = undefined;
+            var _iteratorNormalCompletion7 = true;
+            var _didIteratorError7 = false;
+            var _iteratorError7 = undefined;
 
             try {
-              for (var _iterator6 = this._views[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
-                var _view3 = _step6.value;
+              for (var _iterator7 = this._views[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+                var _view3 = _step7.value;
 
                 _view3.detectChanges();
               }
             } catch (err) {
-              _didIteratorError6 = true;
-              _iteratorError6 = err;
+              _didIteratorError7 = true;
+              _iteratorError7 = err;
             } finally {
               try {
-                if (!_iteratorNormalCompletion6 && _iterator6.return != null) {
-                  _iterator6.return();
+                if (!_iteratorNormalCompletion7 && _iterator7.return != null) {
+                  _iterator7.return();
                 }
               } finally {
-                if (_didIteratorError6) {
-                  throw _iteratorError6;
+                if (_didIteratorError7) {
+                  throw _iteratorError7;
                 }
               }
             }
 
             if (this._enforceNoNewChanges) {
-              var _iteratorNormalCompletion7 = true;
-              var _didIteratorError7 = false;
-              var _iteratorError7 = undefined;
+              var _iteratorNormalCompletion8 = true;
+              var _didIteratorError8 = false;
+              var _iteratorError8 = undefined;
 
               try {
-                for (var _iterator7 = this._views[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
-                  var view = _step7.value;
+                for (var _iterator8 = this._views[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+                  var view = _step8.value;
                   view.checkNoChanges();
                 }
               } catch (err) {
-                _didIteratorError7 = true;
-                _iteratorError7 = err;
+                _didIteratorError8 = true;
+                _iteratorError8 = err;
               } finally {
                 try {
-                  if (!_iteratorNormalCompletion7 && _iterator7.return != null) {
-                    _iterator7.return();
+                  if (!_iteratorNormalCompletion8 && _iterator8.return != null) {
+                    _iterator8.return();
                   }
                 } finally {
-                  if (_didIteratorError7) {
-                    throw _iteratorError7;
+                  if (_didIteratorError8) {
+                    throw _iteratorError8;
                   }
                 }
               }
@@ -62018,7 +75441,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              return _this45._exceptionHandler.handleError(e);
+              return _this93._exceptionHandler.handleError(e);
             });
           } finally {
             this._runningTick = false;
@@ -62371,7 +75794,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "loadAndCompile",
         value: function loadAndCompile(path) {
-          var _this46 = this;
+          var _this94 = this;
 
           var _path$split = path.split(_SEPARATOR),
               _path$split2 = _slicedToArray(_path$split, 2),
@@ -62402,7 +75825,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (type) {
-            return _this46._compiler.compileModuleAsync(type);
+            return _this94._compiler.compileModuleAsync(type);
           });
         }
         /**
@@ -62734,18 +76157,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _debugContext
        */
       function DebugElement__PRE_R3__(nativeNode, parent, _debugContext) {
-        var _this47;
+        var _this95;
 
         _classCallCheck(this, DebugElement__PRE_R3__);
 
-        _this47 = _possibleConstructorReturn(this, _getPrototypeOf(DebugElement__PRE_R3__).call(this, nativeNode, parent, _debugContext));
-        _this47.properties = {};
-        _this47.attributes = {};
-        _this47.classes = {};
-        _this47.styles = {};
-        _this47.childNodes = [];
-        _this47.nativeElement = nativeNode;
-        return _this47;
+        _this95 = _possibleConstructorReturn(this, _getPrototypeOf(DebugElement__PRE_R3__).call(this, nativeNode, parent, _debugContext));
+        _this95.properties = {};
+        _this95.attributes = {};
+        _this95.classes = {};
+        _this95.styles = {};
+        _this95.childNodes = [];
+        _this95.nativeElement = nativeNode;
+        return _this95;
       }
       /**
        * @param {?} child
@@ -62789,7 +76212,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "insertChildrenAfter",
         value: function insertChildrenAfter(child, newChildren) {
-          var _this48 = this;
+          var _this96 = this;
 
           /** @type {?} */
           var siblingIndex = this.childNodes.indexOf(child);
@@ -62811,7 +76234,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
 
               /** @type {?} */
-              child.parent = _this48;
+              child.parent = _this96;
             });
           }
         }
@@ -63368,9 +76791,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var eAttrs = element.attributes;
 
-          for (var _i11 = 0; _i11 < eAttrs.length; _i11++) {
+          for (var _i17 = 0; _i17 < eAttrs.length; _i17++) {
             /** @type {?} */
-            var attr = eAttrs[_i11];
+            var attr = eAttrs[_i17];
             /** @type {?} */
 
             var lowercaseName = attr.name.toLowerCase(); // Make sure that we don't assign the same attribute both in its
@@ -63666,27 +77089,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           tNode.projection];
 
           if (Array.isArray(head)) {
-            var _iteratorNormalCompletion8 = true;
-            var _didIteratorError8 = false;
-            var _iteratorError8 = undefined;
+            var _iteratorNormalCompletion9 = true;
+            var _didIteratorError9 = false;
+            var _iteratorError9 = undefined;
 
             try {
-              for (var _iterator8 = head[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
-                var _nativeNode2 = _step8.value;
+              for (var _iterator9 = head[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
+                var _nativeNode2 = _step9.value;
 
                 _addQueryMatchR3(_nativeNode2, predicate, matches, elementsOnly, rootNativeNode);
               }
             } catch (err) {
-              _didIteratorError8 = true;
-              _iteratorError8 = err;
+              _didIteratorError9 = true;
+              _iteratorError9 = err;
             } finally {
               try {
-                if (!_iteratorNormalCompletion8 && _iterator8.return != null) {
-                  _iterator8.return();
+                if (!_iteratorNormalCompletion9 && _iterator9.return != null) {
+                  _iterator9.return();
                 }
               } finally {
-                if (_didIteratorError8) {
-                  throw _iteratorError8;
+                if (_didIteratorError9) {
+                  throw _iteratorError9;
                 }
               }
             }
@@ -64351,7 +77774,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var _splitNamespace3 = splitNamespace(_namespaceAndName),
             _splitNamespace4 = _slicedToArray(_splitNamespace3, 2),
             _ns = _splitNamespace4[0],
-            _name = _splitNamespace4[1];
+            _name2 = _splitNamespace4[1];
         /** @type {?} */
 
 
@@ -64390,8 +77813,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         bindingDefs[i] = {
           flags: bindingFlags,
           ns: _ns,
-          name: _name,
-          nonMinifiedName: _name,
+          name: _name2,
+          nonMinifiedName: _name2,
           securityContext: securityContext,
           suffix: suffix
         };
@@ -64402,12 +77825,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var outputDefs = [];
 
-      for (var _i12 = 0; _i12 < outputs.length; _i12++) {
-        var _outputs$_i = _slicedToArray(outputs[_i12], 2),
+      for (var _i18 = 0; _i18 < outputs.length; _i18++) {
+        var _outputs$_i = _slicedToArray(outputs[_i18], 2),
             target = _outputs$_i[0],
             eventName = _outputs$_i[1];
 
-        outputDefs[_i12] = {
+        outputDefs[_i18] = {
           type: 0
           /* ElementOutput */
           ,
@@ -64951,20 +78374,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (view.def.nodeFlags & 134217728
       /* TypeViewQuery */
       ) {
-          for (var _i13 = 0; _i13 < view.def.nodes.length; _i13++) {
+          for (var _i19 = 0; _i19 < view.def.nodes.length; _i19++) {
             /** @type {?} */
-            var _nodeDef = view.def.nodes[_i13];
+            var _nodeDef = view.def.nodes[_i19];
 
             if (_nodeDef.flags & 134217728
             /* TypeViewQuery */
             && _nodeDef.flags & 536870912
             /* DynamicQuery */
             ) {
-              asQueryList(view, _i13).setDirty();
+              asQueryList(view, _i19).setDirty();
             } // only visit the root nodes
 
 
-            _i13 += _nodeDef.childCount;
+            _i19 += _nodeDef.childCount;
           }
         }
     }
@@ -65575,10 +78998,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           :
             value = {};
 
-            for (var _i14 = 0; _i14 < values.length; _i14++) {
+            for (var _i20 = 0; _i20 < values.length; _i20++) {
               value[
               /** @type {?} */
-              bindings[_i14].name] = values[_i14];
+              bindings[_i20].name] = values[_i20];
             }
 
             break;
@@ -65783,8 +79206,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** @type {?} */
         var value = '';
 
-        for (var _i15 = 0; _i15 < values.length; _i15++) {
-          value = value + _addInterpolationPart(values[_i15], bindings[_i15]);
+        for (var _i21 = 0; _i21 < values.length; _i21++) {
+          value = value + _addInterpolationPart(values[_i21], bindings[_i21]);
         }
 
         value =
@@ -66626,9 +80049,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var projectedViews = asElementData(view, i).template._projectedViews;
 
             if (projectedViews) {
-              for (var _i16 = 0; _i16 < projectedViews.length; _i16++) {
+              for (var _i22 = 0; _i22 < projectedViews.length; _i22++) {
                 /** @type {?} */
-                var projectedView = projectedViews[_i16];
+                var projectedView = projectedViews[_i22];
                 projectedView.state |= 32
                 /* CheckProjectedView */
                 ;
@@ -67528,9 +80951,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         var lastElementDef = null;
 
-        for (var _i17 = 0; _i17 < def.nodes.length; _i17++) {
+        for (var _i23 = 0; _i23 < def.nodes.length; _i23++) {
           /** @type {?} */
-          var nodeDef = def.nodes[_i17];
+          var nodeDef = def.nodes[_i23];
 
           if (nodeDef.flags & 1
           /* TypeElement */
@@ -67560,9 +80983,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
       function applyProviderOverridesToElement(viewDef, elIndex) {
-        for (var _i18 = elIndex + 1; _i18 < viewDef.nodes.length; _i18++) {
+        for (var _i24 = elIndex + 1; _i24 < viewDef.nodes.length; _i24++) {
           /** @type {?} */
-          var nodeDef = viewDef.nodes[_i18];
+          var nodeDef = viewDef.nodes[_i24];
 
           if (nodeDef.flags & 1
           /* TypeElement */
@@ -67907,8 +81330,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** @type {?} */
         var nodeDef = view.def.nodes[nodeIndex];
 
-        for (var _len10 = arguments.length, values = new Array(_len10 > 3 ? _len10 - 3 : 0), _key10 = 3; _key10 < _len10; _key10++) {
-          values[_key10 - 3] = arguments[_key10];
+        for (var _len11 = arguments.length, values = new Array(_len11 > 3 ? _len11 - 3 : 0), _key12 = 3; _key12 < _len11; _key12++) {
+          values[_key12 - 3] = arguments[_key12];
         }
 
         if (checkType === 0
@@ -67958,8 +81381,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** @type {?} */
         var nodeDef = view.def.nodes[nodeIndex];
 
-        for (var _len11 = arguments.length, values = new Array(_len11 > 3 ? _len11 - 3 : 0), _key11 = 3; _key11 < _len11; _key11++) {
-          values[_key11 - 3] = arguments[_key11];
+        for (var _len12 = arguments.length, values = new Array(_len12 > 3 ? _len12 - 3 : 0), _key13 = 3; _key13 < _len12; _key13++) {
+          values[_key13 - 3] = arguments[_key13];
         }
 
         if (checkType === 0
@@ -68172,8 +81595,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * @return {?}
          */
         value: function logError(console) {
-          for (var _len12 = arguments.length, values = new Array(_len12 > 1 ? _len12 - 1 : 0), _key12 = 1; _key12 < _len12; _key12++) {
-            values[_key12 - 1] = arguments[_key12];
+          for (var _len13 = arguments.length, values = new Array(_len13 > 1 ? _len13 - 1 : 0), _key14 = 1; _key14 < _len13; _key14++) {
+            values[_key14 - 1] = arguments[_key14];
           }
 
           /** @type {?} */
@@ -69022,17 +82445,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _ngModuleDefFactory
        */
       function NgModuleFactory_(moduleType, _bootstrapComponents, _ngModuleDefFactory) {
-        var _this49;
+        var _this97;
 
         _classCallCheck(this, NgModuleFactory_);
 
         // Attention: this ctor is called as top level function.
         // Putting any logic in here will destroy closure tree shaking!
-        _this49 = _possibleConstructorReturn(this, _getPrototypeOf(NgModuleFactory_).call(this));
-        _this49.moduleType = moduleType;
-        _this49._bootstrapComponents = _bootstrapComponents;
-        _this49._ngModuleDefFactory = _ngModuleDefFactory;
-        return _this49;
+        _this97 = _possibleConstructorReturn(this, _getPrototypeOf(NgModuleFactory_).call(this));
+        _this97.moduleType = moduleType;
+        _this97._bootstrapComponents = _bootstrapComponents;
+        _this97._ngModuleDefFactory = _ngModuleDefFactory;
+        return _this97;
       }
       /**
        * @param {?} parentInjector
@@ -69117,6 +82540,1440 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * Generated bundle index. Do not edit.
      */
     //# sourceMappingURL=core.js.map
+
+    /***/
+
+  },
+
+  /***/
+  "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js":
+  /*!************************************************************************************!*\
+    !*** ./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js ***!
+    \************************************************************************************/
+
+  /*! exports provided: ANIMATION_MODULE_TYPE, BrowserAnimationsModule, NoopAnimationsModule, ɵAnimationRenderer, ɵAnimationRendererFactory, ɵBrowserAnimationBuilder, ɵBrowserAnimationFactory, ɵInjectableAnimationEngine, ɵangular_packages_platform_browser_animations_animations_a, ɵangular_packages_platform_browser_animations_animations_b, ɵangular_packages_platform_browser_animations_animations_c, ɵangular_packages_platform_browser_animations_animations_d, ɵangular_packages_platform_browser_animations_animations_e, ɵangular_packages_platform_browser_animations_animations_f */
+
+  /***/
+  function node_modulesAngularPlatformBrowser__ivy_ngcc__Fesm2015AnimationsJs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ANIMATION_MODULE_TYPE", function () {
+      return ANIMATION_MODULE_TYPE;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "BrowserAnimationsModule", function () {
+      return BrowserAnimationsModule;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "NoopAnimationsModule", function () {
+      return NoopAnimationsModule;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵAnimationRenderer", function () {
+      return AnimationRenderer;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵAnimationRendererFactory", function () {
+      return AnimationRendererFactory;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵBrowserAnimationBuilder", function () {
+      return BrowserAnimationBuilder;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵBrowserAnimationFactory", function () {
+      return BrowserAnimationFactory;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵInjectableAnimationEngine", function () {
+      return InjectableAnimationEngine;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵangular_packages_platform_browser_animations_animations_a", function () {
+      return instantiateSupportedAnimationDriver;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵangular_packages_platform_browser_animations_animations_b", function () {
+      return instantiateDefaultStyleNormalizer;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵangular_packages_platform_browser_animations_animations_c", function () {
+      return instantiateRendererFactory;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵangular_packages_platform_browser_animations_animations_d", function () {
+      return BROWSER_ANIMATIONS_PROVIDERS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵangular_packages_platform_browser_animations_animations_e", function () {
+      return BROWSER_NOOP_ANIMATIONS_PROVIDERS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵangular_packages_platform_browser_animations_animations_f", function () {
+      return BaseAnimationRenderer;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/platform-browser */
+    "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
+    /* harmony import */
+
+
+    var _angular_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/animations */
+    "./node_modules/@angular/animations/__ivy_ngcc__/fesm2015/animations.js");
+    /* harmony import */
+
+
+    var _angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/animations/browser */
+    "./node_modules/@angular/animations/__ivy_ngcc__/fesm2015/browser.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+    /**
+     * @license Angular v9.0.5
+     * (c) 2010-2020 Google LLC. https://angular.io/
+     * License: MIT
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/platform-browser/animations/src/animation_builder.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+
+    var BrowserAnimationBuilder =
+    /*#__PURE__*/
+    function (_angular_animations__2) {
+      _inherits(BrowserAnimationBuilder, _angular_animations__2);
+
+      /**
+       * @param {?} rootRenderer
+       * @param {?} doc
+       */
+      function BrowserAnimationBuilder(rootRenderer, doc) {
+        var _this98;
+
+        _classCallCheck(this, BrowserAnimationBuilder);
+
+        _this98 = _possibleConstructorReturn(this, _getPrototypeOf(BrowserAnimationBuilder).call(this));
+        _this98._nextAnimationId = 0;
+        /** @type {?} */
+
+        var typeData =
+        /** @type {?} */
+        {
+          id: '0',
+          encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewEncapsulation"].None,
+          styles: [],
+          data: {
+            animation: []
+          }
+        };
+        _this98._renderer =
+        /** @type {?} */
+        rootRenderer.createRenderer(doc.body, typeData);
+        return _this98;
+      }
+      /**
+       * @param {?} animation
+       * @return {?}
+       */
+
+
+      _createClass2(BrowserAnimationBuilder, [{
+        key: "build",
+        value: function build(animation) {
+          /** @type {?} */
+          var id = this._nextAnimationId.toString();
+
+          this._nextAnimationId++;
+          /** @type {?} */
+
+          var entry = Array.isArray(animation) ? Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["sequence"])(animation) : animation;
+          issueAnimationCommand(this._renderer, null, id, 'register', [entry]);
+          return new BrowserAnimationFactory(id, this._renderer);
+        }
+      }]);
+
+      return BrowserAnimationBuilder;
+    }(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["AnimationBuilder"]);
+
+    BrowserAnimationBuilder.ɵfac = function BrowserAnimationBuilder_Factory(t) {
+      return new (t || BrowserAnimationBuilder)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["RendererFactory2"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common__WEBPACK_IMPORTED_MODULE_4__["DOCUMENT"]));
+    };
+
+    BrowserAnimationBuilder.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: BrowserAnimationBuilder,
+      factory: BrowserAnimationBuilder.ɵfac
+    });
+    /** @nocollapse */
+
+    BrowserAnimationBuilder.ctorParameters = function () {
+      return [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["RendererFactory2"]
+      }, {
+        type: undefined,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["DOCUMENT"]]
+        }]
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](BrowserAnimationBuilder, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["RendererFactory2"]
+        }, {
+          type: undefined,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["DOCUMENT"]]
+          }]
+        }];
+      }, null);
+    })();
+
+    if (false) {}
+
+    var BrowserAnimationFactory =
+    /*#__PURE__*/
+    function (_angular_animations__3) {
+      _inherits(BrowserAnimationFactory, _angular_animations__3);
+
+      /**
+       * @param {?} _id
+       * @param {?} _renderer
+       */
+      function BrowserAnimationFactory(_id, _renderer) {
+        var _this99;
+
+        _classCallCheck(this, BrowserAnimationFactory);
+
+        _this99 = _possibleConstructorReturn(this, _getPrototypeOf(BrowserAnimationFactory).call(this));
+        _this99._id = _id;
+        _this99._renderer = _renderer;
+        return _this99;
+      }
+      /**
+       * @param {?} element
+       * @param {?=} options
+       * @return {?}
+       */
+
+
+      _createClass2(BrowserAnimationFactory, [{
+        key: "create",
+        value: function create(element, options) {
+          return new RendererAnimationPlayer(this._id, element, options || {}, this._renderer);
+        }
+      }]);
+
+      return BrowserAnimationFactory;
+    }(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["AnimationFactory"]);
+
+    if (false) {}
+
+    var RendererAnimationPlayer =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} id
+       * @param {?} element
+       * @param {?} options
+       * @param {?} _renderer
+       */
+      function RendererAnimationPlayer(id, element, options, _renderer) {
+        _classCallCheck(this, RendererAnimationPlayer);
+
+        this.id = id;
+        this.element = element;
+        this._renderer = _renderer;
+        this.parentPlayer = null;
+        this._started = false;
+        this.totalTime = 0;
+
+        this._command('create', options);
+      }
+      /**
+       * @private
+       * @param {?} eventName
+       * @param {?} callback
+       * @return {?}
+       */
+
+
+      _createClass2(RendererAnimationPlayer, [{
+        key: "_listen",
+        value: function _listen(eventName, callback) {
+          return this._renderer.listen(this.element, "@@".concat(this.id, ":").concat(eventName), callback);
+        }
+        /**
+         * @private
+         * @param {?} command
+         * @param {...?} args
+         * @return {?}
+         */
+
+      }, {
+        key: "_command",
+        value: function _command(command) {
+          for (var _len14 = arguments.length, args = new Array(_len14 > 1 ? _len14 - 1 : 0), _key15 = 1; _key15 < _len14; _key15++) {
+            args[_key15 - 1] = arguments[_key15];
+          }
+
+          return issueAnimationCommand(this._renderer, this.element, this.id, command, args);
+        }
+        /**
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "onDone",
+        value: function onDone(fn) {
+          this._listen('done', fn);
+        }
+        /**
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "onStart",
+        value: function onStart(fn) {
+          this._listen('start', fn);
+        }
+        /**
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "onDestroy",
+        value: function onDestroy(fn) {
+          this._listen('destroy', fn);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "init",
+        value: function init() {
+          this._command('init');
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "hasStarted",
+        value: function hasStarted() {
+          return this._started;
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "play",
+        value: function play() {
+          this._command('play');
+
+          this._started = true;
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "pause",
+        value: function pause() {
+          this._command('pause');
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "restart",
+        value: function restart() {
+          this._command('restart');
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "finish",
+        value: function finish() {
+          this._command('finish');
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "destroy",
+        value: function destroy() {
+          this._command('destroy');
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "reset",
+        value: function reset() {
+          this._command('reset');
+        }
+        /**
+         * @param {?} p
+         * @return {?}
+         */
+
+      }, {
+        key: "setPosition",
+        value: function setPosition(p) {
+          this._command('setPosition', p);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "getPosition",
+        value: function getPosition() {
+          return 0;
+        }
+      }]);
+
+      return RendererAnimationPlayer;
+    }();
+
+    if (false) {}
+    /**
+     * @param {?} renderer
+     * @param {?} element
+     * @param {?} id
+     * @param {?} command
+     * @param {?} args
+     * @return {?}
+     */
+
+
+    function issueAnimationCommand(renderer, element, id, command, args) {
+      return renderer.setProperty(element, "@@".concat(id, ":").concat(command), args);
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/platform-browser/animations/src/animation_renderer.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var ANIMATION_PREFIX = '@';
+    /** @type {?} */
+
+    var DISABLE_ANIMATIONS_FLAG = '@.disabled';
+    /**
+     * @record
+     */
+
+    function RecursiveAnimationTriggerMetadata() {}
+
+    var AnimationRendererFactory =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} delegate
+       * @param {?} engine
+       * @param {?} _zone
+       */
+      function AnimationRendererFactory(delegate, engine, _zone) {
+        _classCallCheck(this, AnimationRendererFactory);
+
+        this.delegate = delegate;
+        this.engine = engine;
+        this._zone = _zone;
+        this._currentId = 0;
+        this._microtaskId = 1;
+        this._animationCallbacksBuffer = [];
+        this._rendererCache = new Map();
+        this._cdRecurDepth = 0;
+        this.promise = Promise.resolve(0);
+
+        engine.onRemovalComplete =
+        /**
+        * @param {?} element
+        * @param {?} delegate
+        * @return {?}
+        */
+        function (element, delegate) {
+          // Note: if an component element has a leave animation, and the component
+          // a host leave animation, the view engine will call `removeChild` for the parent
+          // component renderer as well as for the child component renderer.
+          // Therefore, we need to check if we already removed the element.
+          if (delegate && delegate.parentNode(element)) {
+            delegate.removeChild(element.parentNode, element);
+          }
+        };
+      }
+      /**
+       * @param {?} hostElement
+       * @param {?} type
+       * @return {?}
+       */
+
+
+      _createClass2(AnimationRendererFactory, [{
+        key: "createRenderer",
+        value: function createRenderer(hostElement, type) {
+          var _this100 = this;
+
+          /** @type {?} */
+          var EMPTY_NAMESPACE_ID = ''; // cache the delegates to find out which cached delegate can
+          // be used by which cached renderer
+
+          /** @type {?} */
+
+          var delegate = this.delegate.createRenderer(hostElement, type);
+
+          if (!hostElement || !type || !type.data || !type.data['animation']) {
+            /** @type {?} */
+            var renderer = this._rendererCache.get(delegate);
+
+            if (!renderer) {
+              renderer = new BaseAnimationRenderer(EMPTY_NAMESPACE_ID, delegate, this.engine); // only cache this result when the base renderer is used
+
+              this._rendererCache.set(delegate, renderer);
+            }
+
+            return renderer;
+          }
+          /** @type {?} */
+
+
+          var componentId = type.id;
+          /** @type {?} */
+
+          var namespaceId = type.id + '-' + this._currentId;
+          this._currentId++;
+          this.engine.register(namespaceId, hostElement);
+          /** @type {?} */
+
+          var registerTrigger =
+          /**
+          * @param {?} trigger
+          * @return {?}
+          */
+          function registerTrigger(trigger) {
+            if (Array.isArray(trigger)) {
+              trigger.forEach(registerTrigger);
+            } else {
+              _this100.engine.registerTrigger(componentId, namespaceId, hostElement, trigger.name, trigger);
+            }
+          };
+          /** @type {?} */
+
+
+          var animationTriggers =
+          /** @type {?} */
+          type.data['animation'];
+          animationTriggers.forEach(registerTrigger);
+          return new AnimationRenderer(this, namespaceId, delegate, this.engine);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "begin",
+        value: function begin() {
+          this._cdRecurDepth++;
+
+          if (this.delegate.begin) {
+            this.delegate.begin();
+          }
+        }
+        /**
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "_scheduleCountTask",
+        value: function _scheduleCountTask() {
+          var _this101 = this;
+
+          // always use promise to schedule microtask instead of use Zone
+          this.promise.then(
+          /**
+          * @return {?}
+          */
+          function () {
+            _this101._microtaskId++;
+          });
+        }
+        /**
+         * \@internal
+         * @param {?} count
+         * @param {?} fn
+         * @param {?} data
+         * @return {?}
+         */
+
+      }, {
+        key: "scheduleListenerCallback",
+        value: function scheduleListenerCallback(count, fn, data) {
+          var _this102 = this;
+
+          if (count >= 0 && count < this._microtaskId) {
+            this._zone.run(
+            /**
+            * @return {?}
+            */
+            function () {
+              return fn(data);
+            });
+
+            return;
+          }
+
+          if (this._animationCallbacksBuffer.length == 0) {
+            Promise.resolve(null).then(
+            /**
+            * @return {?}
+            */
+            function () {
+              _this102._zone.run(
+              /**
+              * @return {?}
+              */
+              function () {
+                _this102._animationCallbacksBuffer.forEach(
+                /**
+                * @param {?} tuple
+                * @return {?}
+                */
+                function (tuple) {
+                  var _tuple2 = _slicedToArray(tuple, 2),
+                      fn = _tuple2[0],
+                      data = _tuple2[1];
+
+                  fn(data);
+                });
+
+                _this102._animationCallbacksBuffer = [];
+              });
+            });
+          }
+
+          this._animationCallbacksBuffer.push([fn, data]);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "end",
+        value: function end() {
+          var _this103 = this;
+
+          this._cdRecurDepth--; // this is to prevent animations from running twice when an inner
+          // component does CD when a parent component instead has inserted it
+
+          if (this._cdRecurDepth == 0) {
+            this._zone.runOutsideAngular(
+            /**
+            * @return {?}
+            */
+            function () {
+              _this103._scheduleCountTask();
+
+              _this103.engine.flush(_this103._microtaskId);
+            });
+          }
+
+          if (this.delegate.end) {
+            this.delegate.end();
+          }
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "whenRenderingDone",
+        value: function whenRenderingDone() {
+          return this.engine.whenRenderingDone();
+        }
+      }]);
+
+      return AnimationRendererFactory;
+    }();
+
+    AnimationRendererFactory.ɵfac = function AnimationRendererFactory_Factory(t) {
+      return new (t || AnimationRendererFactory)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["RendererFactory2"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["ɵAnimationEngine"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]));
+    };
+
+    AnimationRendererFactory.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: AnimationRendererFactory,
+      factory: AnimationRendererFactory.ɵfac
+    });
+    /** @nocollapse */
+
+    AnimationRendererFactory.ctorParameters = function () {
+      return [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["RendererFactory2"]
+      }, {
+        type: _angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["ɵAnimationEngine"]
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AnimationRendererFactory, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["RendererFactory2"]
+        }, {
+          type: _angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["ɵAnimationEngine"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]
+        }];
+      }, null);
+    })();
+
+    if (false) {}
+
+    var BaseAnimationRenderer =
+    /*#__PURE__*/
+    function () {
+      /**
+       * @param {?} namespaceId
+       * @param {?} delegate
+       * @param {?} engine
+       */
+      function BaseAnimationRenderer(namespaceId, delegate, engine) {
+        _classCallCheck(this, BaseAnimationRenderer);
+
+        this.namespaceId = namespaceId;
+        this.delegate = delegate;
+        this.engine = engine;
+        this.destroyNode = this.delegate.destroyNode ?
+        /**
+        * @param {?} n
+        * @return {?}
+        */
+        function (n) {
+          return (
+            /** @type {?} */
+            delegate.destroyNode(n)
+          );
+        } : null;
+      }
+      /**
+       * @return {?}
+       */
+
+
+      _createClass2(BaseAnimationRenderer, [{
+        key: "destroy",
+
+        /**
+         * @return {?}
+         */
+        value: function destroy() {
+          this.engine.destroy(this.namespaceId, this.delegate);
+          this.delegate.destroy();
+        }
+        /**
+         * @param {?} name
+         * @param {?=} namespace
+         * @return {?}
+         */
+
+      }, {
+        key: "createElement",
+        value: function createElement(name, namespace) {
+          return this.delegate.createElement(name, namespace);
+        }
+        /**
+         * @param {?} value
+         * @return {?}
+         */
+
+      }, {
+        key: "createComment",
+        value: function createComment(value) {
+          return this.delegate.createComment(value);
+        }
+        /**
+         * @param {?} value
+         * @return {?}
+         */
+
+      }, {
+        key: "createText",
+        value: function createText(value) {
+          return this.delegate.createText(value);
+        }
+        /**
+         * @param {?} parent
+         * @param {?} newChild
+         * @return {?}
+         */
+
+      }, {
+        key: "appendChild",
+        value: function appendChild(parent, newChild) {
+          this.delegate.appendChild(parent, newChild);
+          this.engine.onInsert(this.namespaceId, newChild, parent, false);
+        }
+        /**
+         * @param {?} parent
+         * @param {?} newChild
+         * @param {?} refChild
+         * @return {?}
+         */
+
+      }, {
+        key: "insertBefore",
+        value: function insertBefore(parent, newChild, refChild) {
+          this.delegate.insertBefore(parent, newChild, refChild);
+          this.engine.onInsert(this.namespaceId, newChild, parent, true);
+        }
+        /**
+         * @param {?} parent
+         * @param {?} oldChild
+         * @param {?} isHostElement
+         * @return {?}
+         */
+
+      }, {
+        key: "removeChild",
+        value: function removeChild(parent, oldChild, isHostElement) {
+          this.engine.onRemove(this.namespaceId, oldChild, this.delegate, isHostElement);
+        }
+        /**
+         * @param {?} selectorOrNode
+         * @param {?=} preserveContent
+         * @return {?}
+         */
+
+      }, {
+        key: "selectRootElement",
+        value: function selectRootElement(selectorOrNode, preserveContent) {
+          return this.delegate.selectRootElement(selectorOrNode, preserveContent);
+        }
+        /**
+         * @param {?} node
+         * @return {?}
+         */
+
+      }, {
+        key: "parentNode",
+        value: function parentNode(node) {
+          return this.delegate.parentNode(node);
+        }
+        /**
+         * @param {?} node
+         * @return {?}
+         */
+
+      }, {
+        key: "nextSibling",
+        value: function nextSibling(node) {
+          return this.delegate.nextSibling(node);
+        }
+        /**
+         * @param {?} el
+         * @param {?} name
+         * @param {?} value
+         * @param {?=} namespace
+         * @return {?}
+         */
+
+      }, {
+        key: "setAttribute",
+        value: function setAttribute(el, name, value, namespace) {
+          this.delegate.setAttribute(el, name, value, namespace);
+        }
+        /**
+         * @param {?} el
+         * @param {?} name
+         * @param {?=} namespace
+         * @return {?}
+         */
+
+      }, {
+        key: "removeAttribute",
+        value: function removeAttribute(el, name, namespace) {
+          this.delegate.removeAttribute(el, name, namespace);
+        }
+        /**
+         * @param {?} el
+         * @param {?} name
+         * @return {?}
+         */
+
+      }, {
+        key: "addClass",
+        value: function addClass(el, name) {
+          this.delegate.addClass(el, name);
+        }
+        /**
+         * @param {?} el
+         * @param {?} name
+         * @return {?}
+         */
+
+      }, {
+        key: "removeClass",
+        value: function removeClass(el, name) {
+          this.delegate.removeClass(el, name);
+        }
+        /**
+         * @param {?} el
+         * @param {?} style
+         * @param {?} value
+         * @param {?=} flags
+         * @return {?}
+         */
+
+      }, {
+        key: "setStyle",
+        value: function setStyle(el, style, value, flags) {
+          this.delegate.setStyle(el, style, value, flags);
+        }
+        /**
+         * @param {?} el
+         * @param {?} style
+         * @param {?=} flags
+         * @return {?}
+         */
+
+      }, {
+        key: "removeStyle",
+        value: function removeStyle(el, style, flags) {
+          this.delegate.removeStyle(el, style, flags);
+        }
+        /**
+         * @param {?} el
+         * @param {?} name
+         * @param {?} value
+         * @return {?}
+         */
+
+      }, {
+        key: "setProperty",
+        value: function setProperty(el, name, value) {
+          if (name.charAt(0) == ANIMATION_PREFIX && name == DISABLE_ANIMATIONS_FLAG) {
+            this.disableAnimations(el, !!value);
+          } else {
+            this.delegate.setProperty(el, name, value);
+          }
+        }
+        /**
+         * @param {?} node
+         * @param {?} value
+         * @return {?}
+         */
+
+      }, {
+        key: "setValue",
+        value: function setValue(node, value) {
+          this.delegate.setValue(node, value);
+        }
+        /**
+         * @param {?} target
+         * @param {?} eventName
+         * @param {?} callback
+         * @return {?}
+         */
+
+      }, {
+        key: "listen",
+        value: function listen(target, eventName, callback) {
+          return this.delegate.listen(target, eventName, callback);
+        }
+        /**
+         * @protected
+         * @param {?} element
+         * @param {?} value
+         * @return {?}
+         */
+
+      }, {
+        key: "disableAnimations",
+        value: function disableAnimations(element, value) {
+          this.engine.disableAnimations(element, value);
+        }
+      }, {
+        key: "data",
+        get: function get() {
+          return this.delegate.data;
+        }
+      }]);
+
+      return BaseAnimationRenderer;
+    }();
+
+    if (false) {}
+
+    var AnimationRenderer =
+    /*#__PURE__*/
+    function (_BaseAnimationRendere) {
+      _inherits(AnimationRenderer, _BaseAnimationRendere);
+
+      /**
+       * @param {?} factory
+       * @param {?} namespaceId
+       * @param {?} delegate
+       * @param {?} engine
+       */
+      function AnimationRenderer(factory, namespaceId, delegate, engine) {
+        var _this104;
+
+        _classCallCheck(this, AnimationRenderer);
+
+        _this104 = _possibleConstructorReturn(this, _getPrototypeOf(AnimationRenderer).call(this, namespaceId, delegate, engine));
+        _this104.factory = factory;
+        _this104.namespaceId = namespaceId;
+        return _this104;
+      }
+      /**
+       * @param {?} el
+       * @param {?} name
+       * @param {?} value
+       * @return {?}
+       */
+
+
+      _createClass2(AnimationRenderer, [{
+        key: "setProperty",
+        value: function setProperty(el, name, value) {
+          if (name.charAt(0) == ANIMATION_PREFIX) {
+            if (name.charAt(1) == '.' && name == DISABLE_ANIMATIONS_FLAG) {
+              value = value === undefined ? true : !!value;
+              this.disableAnimations(el,
+              /** @type {?} */
+              value);
+            } else {
+              this.engine.process(this.namespaceId, el, name.substr(1), value);
+            }
+          } else {
+            this.delegate.setProperty(el, name, value);
+          }
+        }
+        /**
+         * @param {?} target
+         * @param {?} eventName
+         * @param {?} callback
+         * @return {?}
+         */
+
+      }, {
+        key: "listen",
+        value: function listen(target, eventName, callback) {
+          var _this105 = this;
+
+          if (eventName.charAt(0) == ANIMATION_PREFIX) {
+            /** @type {?} */
+            var element = resolveElementFromTarget(target);
+            /** @type {?} */
+
+            var name = eventName.substr(1);
+            /** @type {?} */
+
+            var phase = ''; // @listener.phase is for trigger animation callbacks
+            // @@listener is for animation builder callbacks
+
+            if (name.charAt(0) != ANIMATION_PREFIX) {
+              var _parseTriggerCallback = parseTriggerCallbackName(name);
+
+              var _parseTriggerCallback2 = _slicedToArray(_parseTriggerCallback, 2);
+
+              name = _parseTriggerCallback2[0];
+              phase = _parseTriggerCallback2[1];
+            }
+
+            return this.engine.listen(this.namespaceId, element, name, phase,
+            /**
+            * @param {?} event
+            * @return {?}
+            */
+            function (event) {
+              /** @type {?} */
+              var countId =
+              /** @type {?} */
+              event['_data'] || -1;
+
+              _this105.factory.scheduleListenerCallback(countId, callback, event);
+            });
+          }
+
+          return this.delegate.listen(target, eventName, callback);
+        }
+      }]);
+
+      return AnimationRenderer;
+    }(BaseAnimationRenderer);
+
+    if (false) {}
+    /**
+     * @param {?} target
+     * @return {?}
+     */
+
+
+    function resolveElementFromTarget(target) {
+      switch (target) {
+        case 'body':
+          return document.body;
+
+        case 'document':
+          return document;
+
+        case 'window':
+          return window;
+
+        default:
+          return target;
+      }
+    }
+    /**
+     * @param {?} triggerName
+     * @return {?}
+     */
+
+
+    function parseTriggerCallbackName(triggerName) {
+      /** @type {?} */
+      var dotIndex = triggerName.indexOf('.');
+      /** @type {?} */
+
+      var trigger = triggerName.substring(0, dotIndex);
+      /** @type {?} */
+
+      var phase = triggerName.substr(dotIndex + 1);
+      return [trigger, phase];
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/platform-browser/animations/src/providers.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+
+    var InjectableAnimationEngine =
+    /*#__PURE__*/
+    function (_angular_animations_b) {
+      _inherits(InjectableAnimationEngine, _angular_animations_b);
+
+      /**
+       * @param {?} doc
+       * @param {?} driver
+       * @param {?} normalizer
+       */
+      function InjectableAnimationEngine(doc, driver, normalizer) {
+        _classCallCheck(this, InjectableAnimationEngine);
+
+        return _possibleConstructorReturn(this, _getPrototypeOf(InjectableAnimationEngine).call(this, doc.body, driver, normalizer));
+      }
+
+      return InjectableAnimationEngine;
+    }(_angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["ɵAnimationEngine"]);
+
+    InjectableAnimationEngine.ɵfac = function InjectableAnimationEngine_Factory(t) {
+      return new (t || InjectableAnimationEngine)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common__WEBPACK_IMPORTED_MODULE_4__["DOCUMENT"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["AnimationDriver"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["ɵAnimationStyleNormalizer"]));
+    };
+
+    InjectableAnimationEngine.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: InjectableAnimationEngine,
+      factory: InjectableAnimationEngine.ɵfac
+    });
+    /** @nocollapse */
+
+    InjectableAnimationEngine.ctorParameters = function () {
+      return [{
+        type: undefined,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["DOCUMENT"]]
+        }]
+      }, {
+        type: _angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["AnimationDriver"]
+      }, {
+        type: _angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["ɵAnimationStyleNormalizer"]
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](InjectableAnimationEngine, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [{
+          type: undefined,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["DOCUMENT"]]
+          }]
+        }, {
+          type: _angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["AnimationDriver"]
+        }, {
+          type: _angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["ɵAnimationStyleNormalizer"]
+        }];
+      }, null);
+    })();
+    /**
+     * @return {?}
+     */
+
+
+    function instantiateSupportedAnimationDriver() {
+      return Object(_angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["ɵsupportsWebAnimations"])() ? new _angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["ɵWebAnimationsDriver"]() : new _angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["ɵCssKeyframesDriver"]();
+    }
+    /**
+     * @return {?}
+     */
+
+
+    function instantiateDefaultStyleNormalizer() {
+      return new _angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["ɵWebAnimationsStyleNormalizer"]();
+    }
+    /**
+     * @param {?} renderer
+     * @param {?} engine
+     * @param {?} zone
+     * @return {?}
+     */
+
+
+    function instantiateRendererFactory(renderer, engine, zone) {
+      return new AnimationRendererFactory(renderer, engine, zone);
+    }
+    /**
+     * \@publicApi
+     * @type {?}
+     */
+
+
+    var ANIMATION_MODULE_TYPE = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('AnimationModuleType');
+    /** @type {?} */
+
+    var SHARED_ANIMATION_PROVIDERS = [{
+      provide: _angular_animations__WEBPACK_IMPORTED_MODULE_2__["AnimationBuilder"],
+      useClass: BrowserAnimationBuilder
+    }, {
+      provide: _angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["ɵAnimationStyleNormalizer"],
+      useFactory: instantiateDefaultStyleNormalizer
+    }, {
+      provide: _angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["ɵAnimationEngine"],
+      useClass: InjectableAnimationEngine
+    }, {
+      provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__["RendererFactory2"],
+      useFactory: instantiateRendererFactory,
+      deps: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["ɵDomRendererFactory2"], _angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["ɵAnimationEngine"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]]
+    }];
+    /**
+     * Separate providers from the actual module so that we can do a local modification in Google3 to
+     * include them in the BrowserModule.
+     * @type {?}
+     */
+
+    var BROWSER_ANIMATIONS_PROVIDERS = [{
+      provide: _angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["AnimationDriver"],
+      useFactory: instantiateSupportedAnimationDriver
+    }, {
+      provide: ANIMATION_MODULE_TYPE,
+      useValue: 'BrowserAnimations'
+    }].concat(SHARED_ANIMATION_PROVIDERS);
+    /**
+     * Separate providers from the actual module so that we can do a local modification in Google3 to
+     * include them in the BrowserTestingModule.
+     * @type {?}
+     */
+
+    var BROWSER_NOOP_ANIMATIONS_PROVIDERS = [{
+      provide: _angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["AnimationDriver"],
+      useClass: _angular_animations_browser__WEBPACK_IMPORTED_MODULE_3__["ɵNoopAnimationDriver"]
+    }, {
+      provide: ANIMATION_MODULE_TYPE,
+      useValue: 'NoopAnimations'
+    }].concat(SHARED_ANIMATION_PROVIDERS);
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/platform-browser/animations/src/module.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * Exports `BrowserModule` with additional [dependency-injection providers](guide/glossary#provider)
+     * for use with animations. See [Animations](guide/animations).
+     * \@publicApi
+     */
+
+    var BrowserAnimationsModule = function BrowserAnimationsModule() {
+      _classCallCheck(this, BrowserAnimationsModule);
+    };
+
+    BrowserAnimationsModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+      type: BrowserAnimationsModule
+    });
+    BrowserAnimationsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+      factory: function BrowserAnimationsModule_Factory(t) {
+        return new (t || BrowserAnimationsModule)();
+      },
+      providers: BROWSER_ANIMATIONS_PROVIDERS,
+      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"]]
+    });
+
+    (function () {
+      (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](BrowserAnimationsModule, {
+        exports: function exports() {
+          return [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"]];
+        }
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](BrowserAnimationsModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+          exports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"]],
+          providers: BROWSER_ANIMATIONS_PROVIDERS
+        }]
+      }], null, null);
+    })();
+    /**
+     * A null player that must be imported to allow disabling of animations.
+     * \@publicApi
+     */
+
+
+    var NoopAnimationsModule = function NoopAnimationsModule() {
+      _classCallCheck(this, NoopAnimationsModule);
+    };
+
+    NoopAnimationsModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+      type: NoopAnimationsModule
+    });
+    NoopAnimationsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+      factory: function NoopAnimationsModule_Factory(t) {
+        return new (t || NoopAnimationsModule)();
+      },
+      providers: BROWSER_NOOP_ANIMATIONS_PROVIDERS,
+      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"]]
+    });
+
+    (function () {
+      (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](NoopAnimationsModule, {
+        exports: function exports() {
+          return [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"]];
+        }
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NoopAnimationsModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+          exports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"]],
+          providers: BROWSER_NOOP_ANIMATIONS_PROVIDERS
+        }]
+      }], null, null);
+    })();
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/platform-browser/animations/src/private_export.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/platform-browser/animations/src/animations.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/platform-browser/animations/public_api.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/platform-browser/animations/index.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * Generated bundle index. Do not edit.
+     */
+    //# sourceMappingURL=animations.js.map
 
     /***/
 
@@ -70138,8 +84995,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       * @return {?}
       */
       function () {
-        for (var _len13 = arguments.length, m = new Array(_len13), _key13 = 0; _key13 < _len13; _key13++) {
-          m[_key13] = arguments[_key13];
+        for (var _len15 = arguments.length, m = new Array(_len15), _key16 = 0; _key16 < _len15; _key16++) {
+          m[_key16] = arguments[_key16];
         }
 
         return '-' + m[1].toLowerCase();
@@ -70158,8 +85015,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       * @return {?}
       */
       function () {
-        for (var _len14 = arguments.length, m = new Array(_len14), _key14 = 0; _key14 < _len14; _key14++) {
-          m[_key14] = arguments[_key14];
+        for (var _len16 = arguments.length, m = new Array(_len16), _key17 = 0; _key17 < _len16; _key17++) {
+          m[_key17] = arguments[_key17];
         }
 
         return m[1].toUpperCase();
@@ -70317,7 +85174,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _zone
        */
       function EventManager(plugins, _zone) {
-        var _this50 = this;
+        var _this106 = this;
 
         _classCallCheck(this, EventManager);
 
@@ -70331,7 +85188,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {THIS}
         */
         function (p) {
-          return p.manager = _this50;
+          return p.manager = _this106;
         });
         this._plugins = plugins.slice().reverse();
       }
@@ -70530,7 +85387,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(SharedStylesHost, [{
         key: "addStyles",
         value: function addStyles(styles) {
-          var _this51 = this;
+          var _this107 = this;
 
           /** @type {?} */
           var additions = new Set();
@@ -70540,8 +85397,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (style) {
-            if (!_this51._stylesSet.has(style)) {
-              _this51._stylesSet.add(style);
+            if (!_this107._stylesSet.has(style)) {
+              _this107._stylesSet.add(style);
 
               additions.add(style);
             }
@@ -70599,18 +85456,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _doc
        */
       function DomSharedStylesHost(_doc) {
-        var _this52;
+        var _this108;
 
         _classCallCheck(this, DomSharedStylesHost);
 
-        _this52 = _possibleConstructorReturn(this, _getPrototypeOf(DomSharedStylesHost).call(this));
-        _this52._doc = _doc;
-        _this52._hostNodes = new Set();
-        _this52._styleNodes = new Set();
+        _this108 = _possibleConstructorReturn(this, _getPrototypeOf(DomSharedStylesHost).call(this));
+        _this108._doc = _doc;
+        _this108._hostNodes = new Set();
+        _this108._styleNodes = new Set();
 
-        _this52._hostNodes.add(_doc.head);
+        _this108._hostNodes.add(_doc.head);
 
-        return _this52;
+        return _this108;
       }
       /**
        * @private
@@ -70623,7 +85480,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(DomSharedStylesHost, [{
         key: "_addStylesToHost",
         value: function _addStylesToHost(styles, host) {
-          var _this53 = this;
+          var _this109 = this;
 
           styles.forEach(
           /**
@@ -70632,11 +85489,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (style) {
             /** @type {?} */
-            var styleEl = _this53._doc.createElement('style');
+            var styleEl = _this109._doc.createElement('style');
 
             styleEl.textContent = style;
 
-            _this53._styleNodes.add(host.appendChild(styleEl));
+            _this109._styleNodes.add(host.appendChild(styleEl));
           });
         }
         /**
@@ -70669,7 +85526,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onStylesAdded",
         value: function onStylesAdded(additions) {
-          var _this54 = this;
+          var _this110 = this;
 
           this._hostNodes.forEach(
           /**
@@ -70677,7 +85534,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (hostNode) {
-            return _this54._addStylesToHost(additions, hostNode);
+            return _this110._addStylesToHost(additions, hostNode);
           });
         }
         /**
@@ -71321,19 +86178,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} appId
        */
       function EmulatedEncapsulationDomRenderer2(eventManager, sharedStylesHost, component, appId) {
-        var _this55;
+        var _this111;
 
         _classCallCheck(this, EmulatedEncapsulationDomRenderer2);
 
-        _this55 = _possibleConstructorReturn(this, _getPrototypeOf(EmulatedEncapsulationDomRenderer2).call(this, eventManager));
-        _this55.component = component;
+        _this111 = _possibleConstructorReturn(this, _getPrototypeOf(EmulatedEncapsulationDomRenderer2).call(this, eventManager));
+        _this111.component = component;
         /** @type {?} */
 
         var styles = flattenStyles(appId + '-' + component.id, component.styles, []);
         sharedStylesHost.addStyles(styles);
-        _this55.contentAttr = shimContentAttribute(appId + '-' + component.id);
-        _this55.hostAttr = shimHostAttribute(appId + '-' + component.id);
-        return _this55;
+        _this111.contentAttr = shimContentAttribute(appId + '-' + component.id);
+        _this111.hostAttr = shimHostAttribute(appId + '-' + component.id);
+        return _this111;
       }
       /**
        * @param {?} element
@@ -71381,28 +86238,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} component
        */
       function ShadowDomRenderer(eventManager, sharedStylesHost, hostEl, component) {
-        var _this56;
+        var _this112;
 
         _classCallCheck(this, ShadowDomRenderer);
 
-        _this56 = _possibleConstructorReturn(this, _getPrototypeOf(ShadowDomRenderer).call(this, eventManager));
-        _this56.sharedStylesHost = sharedStylesHost;
-        _this56.hostEl = hostEl;
-        _this56.component = component;
+        _this112 = _possibleConstructorReturn(this, _getPrototypeOf(ShadowDomRenderer).call(this, eventManager));
+        _this112.sharedStylesHost = sharedStylesHost;
+        _this112.hostEl = hostEl;
+        _this112.component = component;
 
         if (component.encapsulation === _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].ShadowDom) {
-          _this56.shadowRoot =
+          _this112.shadowRoot =
           /** @type {?} */
           hostEl.attachShadow({
             mode: 'open'
           });
         } else {
-          _this56.shadowRoot =
+          _this112.shadowRoot =
           /** @type {?} */
           hostEl.createShadowRoot();
         }
 
-        _this56.sharedStylesHost.addHost(_this56.shadowRoot);
+        _this112.sharedStylesHost.addHost(_this112.shadowRoot);
         /** @type {?} */
 
 
@@ -71413,10 +86270,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var styleEl = document.createElement('style');
           styleEl.textContent = styles[i];
 
-          _this56.shadowRoot.appendChild(styleEl);
+          _this112.shadowRoot.appendChild(styleEl);
         }
 
-        return _this56;
+        return _this112;
       }
       /**
        * @private
@@ -71532,7 +86389,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addEventListener",
         value: function addEventListener(element, eventName, handler) {
-          var _this57 = this;
+          var _this113 = this;
 
           element.addEventListener(eventName,
           /** @type {?} */
@@ -71542,7 +86399,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              return _this57.removeEventListener(element, eventName,
+              return _this113.removeEventListener(element, eventName,
               /** @type {?} */
               handler);
             }
@@ -71785,15 +86642,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} loader
        */
       function HammerGesturesPlugin(doc, _config, console, loader) {
-        var _this58;
+        var _this114;
 
         _classCallCheck(this, HammerGesturesPlugin);
 
-        _this58 = _possibleConstructorReturn(this, _getPrototypeOf(HammerGesturesPlugin).call(this, doc));
-        _this58._config = _config;
-        _this58.console = console;
-        _this58.loader = loader;
-        return _this58;
+        _this114 = _possibleConstructorReturn(this, _getPrototypeOf(HammerGesturesPlugin).call(this, doc));
+        _this114._config = _config;
+        _this114.console = console;
+        _this114.loader = loader;
+        return _this114;
       }
       /**
        * @param {?} eventName
@@ -71827,7 +86684,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addEventListener",
         value: function addEventListener(element, eventName, handler) {
-          var _this59 = this;
+          var _this115 = this;
 
           /** @type {?} */
           var zone = this.manager.getZone();
@@ -71862,7 +86719,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               if (!
               /** @type {?} */
               window.Hammer) {
-                _this59.console.warn("The custom HAMMER_LOADER completed, but Hammer.JS is not present.");
+                _this115.console.warn("The custom HAMMER_LOADER completed, but Hammer.JS is not present.");
 
                 deregister =
                 /**
@@ -71876,14 +86733,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               if (!cancelRegistration) {
                 // Now that Hammer is loaded and the listener is being loaded for real,
                 // the deregistration function changes from canceling registration to removal.
-                deregister = _this59.addEventListener(element, eventName, handler);
+                deregister = _this115.addEventListener(element, eventName, handler);
               }
             }).catch(
             /**
             * @return {?}
             */
             function () {
-              _this59.console.warn("The \"".concat(eventName, "\" event cannot be bound because the custom ") + "Hammer.JS loader failed.");
+              _this115.console.warn("The \"".concat(eventName, "\" event cannot be bound because the custom ") + "Hammer.JS loader failed.");
 
               deregister =
               /**
@@ -71912,7 +86769,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             // Creating the manager bind events, must be done outside of angular
 
             /** @type {?} */
-            var mc = _this59._config.buildHammer(element);
+            var mc = _this115._config.buildHammer(element);
             /** @type {?} */
 
 
@@ -72621,13 +87478,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _doc
        */
       function DomSanitizerImpl(_doc) {
-        var _this60;
+        var _this116;
 
         _classCallCheck(this, DomSanitizerImpl);
 
-        _this60 = _possibleConstructorReturn(this, _getPrototypeOf(DomSanitizerImpl).call(this));
-        _this60._doc = _doc;
-        return _this60;
+        _this116 = _possibleConstructorReturn(this, _getPrototypeOf(DomSanitizerImpl).call(this));
+        _this116._doc = _doc;
+        return _this116;
       }
       /**
        * @param {?} ctx
@@ -73089,7 +87946,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addTags",
         value: function addTags(tags) {
-          var _this61 = this;
+          var _this117 = this;
 
           var forceCreation = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
           if (!tags) return [];
@@ -73101,7 +87958,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (result, tag) {
             if (tag) {
-              result.push(_this61._getOrCreateElement(tag, forceCreation));
+              result.push(_this117._getOrCreateElement(tag, forceCreation));
             }
 
             return result;
@@ -74771,15 +89628,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(AsyncSubject, _Subject__WEBPACK_IMP);
 
       function AsyncSubject() {
-        var _this62;
+        var _this118;
 
         _classCallCheck(this, AsyncSubject);
 
-        _this62 = _possibleConstructorReturn(this, _getPrototypeOf(AsyncSubject).apply(this, arguments));
-        _this62.value = null;
-        _this62.hasNext = false;
-        _this62.hasCompleted = false;
-        return _this62;
+        _this118 = _possibleConstructorReturn(this, _getPrototypeOf(AsyncSubject).apply(this, arguments));
+        _this118.value = null;
+        _this118.hasNext = false;
+        _this118.hasCompleted = false;
+        return _this118;
       }
 
       _createClass2(AsyncSubject, [{
@@ -74869,13 +89726,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(BehaviorSubject, _Subject__WEBPACK_IMP2);
 
       function BehaviorSubject(_value) {
-        var _this63;
+        var _this119;
 
         _classCallCheck(this, BehaviorSubject);
 
-        _this63 = _possibleConstructorReturn(this, _getPrototypeOf(BehaviorSubject).call(this));
-        _this63._value = _value;
-        return _this63;
+        _this119 = _possibleConstructorReturn(this, _getPrototypeOf(BehaviorSubject).call(this));
+        _this119._value = _value;
+        return _this119;
       }
 
       _createClass2(BehaviorSubject, [{
@@ -74951,16 +89808,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(InnerSubscriber, _Subscriber__WEBPACK_);
 
       function InnerSubscriber(parent, outerValue, outerIndex) {
-        var _this64;
+        var _this120;
 
         _classCallCheck(this, InnerSubscriber);
 
-        _this64 = _possibleConstructorReturn(this, _getPrototypeOf(InnerSubscriber).call(this));
-        _this64.parent = parent;
-        _this64.outerValue = outerValue;
-        _this64.outerIndex = outerIndex;
-        _this64.index = 0;
-        return _this64;
+        _this120 = _possibleConstructorReturn(this, _getPrototypeOf(InnerSubscriber).call(this));
+        _this120.parent = parent;
+        _this120.outerValue = outerValue;
+        _this120.outerIndex = outerIndex;
+        _this120.index = 0;
+        return _this120;
       }
 
       _createClass2(InnerSubscriber, [{
@@ -75256,12 +90113,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "forEach",
         value: function forEach(next, promiseCtor) {
-          var _this65 = this;
+          var _this121 = this;
 
           promiseCtor = getPromiseCtor(promiseCtor);
           return new promiseCtor(function (resolve, reject) {
             var subscription;
-            subscription = _this65.subscribe(function (value) {
+            subscription = _this121.subscribe(function (value) {
               try {
                 next(value);
               } catch (err) {
@@ -75288,8 +90145,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "pipe",
         value: function pipe() {
-          for (var _len15 = arguments.length, operations = new Array(_len15), _key15 = 0; _key15 < _len15; _key15++) {
-            operations[_key15] = arguments[_key15];
+          for (var _len17 = arguments.length, operations = new Array(_len17), _key18 = 0; _key18 < _len17; _key18++) {
+            operations[_key18] = arguments[_key18];
           }
 
           if (operations.length === 0) {
@@ -75301,13 +90158,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "toPromise",
         value: function toPromise(promiseCtor) {
-          var _this66 = this;
+          var _this122 = this;
 
           promiseCtor = getPromiseCtor(promiseCtor);
           return new promiseCtor(function (resolve, reject) {
             var value;
 
-            _this66.subscribe(function (x) {
+            _this122.subscribe(function (x) {
               return value = x;
             }, function (err) {
               return reject(err);
@@ -75512,7 +90369,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(ReplaySubject, _Subject__WEBPACK_IMP3);
 
       function ReplaySubject() {
-        var _this67;
+        var _this123;
 
         var bufferSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Number.POSITIVE_INFINITY;
         var windowTime = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Number.POSITIVE_INFINITY;
@@ -75520,21 +90377,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _classCallCheck(this, ReplaySubject);
 
-        _this67 = _possibleConstructorReturn(this, _getPrototypeOf(ReplaySubject).call(this));
-        _this67.scheduler = scheduler;
-        _this67._events = [];
-        _this67._infiniteTimeWindow = false;
-        _this67._bufferSize = bufferSize < 1 ? 1 : bufferSize;
-        _this67._windowTime = windowTime < 1 ? 1 : windowTime;
+        _this123 = _possibleConstructorReturn(this, _getPrototypeOf(ReplaySubject).call(this));
+        _this123.scheduler = scheduler;
+        _this123._events = [];
+        _this123._infiniteTimeWindow = false;
+        _this123._bufferSize = bufferSize < 1 ? 1 : bufferSize;
+        _this123._windowTime = windowTime < 1 ? 1 : windowTime;
 
         if (windowTime === Number.POSITIVE_INFINITY) {
-          _this67._infiniteTimeWindow = true;
-          _this67.next = _this67.nextInfiniteTimeWindow;
+          _this123._infiniteTimeWindow = true;
+          _this123.next = _this123.nextInfiniteTimeWindow;
         } else {
-          _this67.next = _this67.nextTimeWindow;
+          _this123.next = _this123.nextTimeWindow;
         }
 
-        return _this67;
+        return _this123;
       }
 
       _createClass2(ReplaySubject, [{
@@ -75588,8 +90445,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               subscriber.next(_events[i]);
             }
           } else {
-            for (var _i19 = 0; _i19 < len && !subscriber.closed; _i19++) {
-              subscriber.next(_events[_i19].value);
+            for (var _i25 = 0; _i25 < len && !subscriber.closed; _i25++) {
+              subscriber.next(_events[_i25].value);
             }
           }
 
@@ -75777,13 +90634,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SubjectSubscriber, _Subscriber__WEBPACK_3);
 
       function SubjectSubscriber(destination) {
-        var _this68;
+        var _this124;
 
         _classCallCheck(this, SubjectSubscriber);
 
-        _this68 = _possibleConstructorReturn(this, _getPrototypeOf(SubjectSubscriber).call(this, destination));
-        _this68.destination = destination;
-        return _this68;
+        _this124 = _possibleConstructorReturn(this, _getPrototypeOf(SubjectSubscriber).call(this, destination));
+        _this124.destination = destination;
+        return _this124;
       }
 
       return SubjectSubscriber;
@@ -75795,17 +90652,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(Subject, _Observable__WEBPACK_);
 
       function Subject() {
-        var _this69;
+        var _this125;
 
         _classCallCheck(this, Subject);
 
-        _this69 = _possibleConstructorReturn(this, _getPrototypeOf(Subject).call(this));
-        _this69.observers = [];
-        _this69.closed = false;
-        _this69.isStopped = false;
-        _this69.hasError = false;
-        _this69.thrownError = null;
-        return _this69;
+        _this125 = _possibleConstructorReturn(this, _getPrototypeOf(Subject).call(this));
+        _this125.observers = [];
+        _this125.closed = false;
+        _this125.isStopped = false;
+        _this125.hasError = false;
+        _this125.thrownError = null;
+        return _this125;
       }
 
       _createClass2(Subject, [{
@@ -75829,10 +90686,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (!this.isStopped) {
             var observers = this.observers;
-            var _len16 = observers.length;
+            var _len18 = observers.length;
             var copy = observers.slice();
 
-            for (var i = 0; i < _len16; i++) {
+            for (var i = 0; i < _len18; i++) {
               copy[i].next(value);
             }
           }
@@ -75929,14 +90786,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(AnonymousSubject, _Subject);
 
       function AnonymousSubject(destination, source) {
-        var _this70;
+        var _this126;
 
         _classCallCheck(this, AnonymousSubject);
 
-        _this70 = _possibleConstructorReturn(this, _getPrototypeOf(AnonymousSubject).call(this));
-        _this70.destination = destination;
-        _this70.source = source;
-        return _this70;
+        _this126 = _possibleConstructorReturn(this, _getPrototypeOf(AnonymousSubject).call(this));
+        _this126.destination = destination;
+        _this126.source = source;
+        return _this126;
       }
 
       _createClass2(AnonymousSubject, [{
@@ -76018,15 +90875,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SubjectSubscription, _Subscription__WEBPAC);
 
       function SubjectSubscription(subject, subscriber) {
-        var _this71;
+        var _this127;
 
         _classCallCheck(this, SubjectSubscription);
 
-        _this71 = _possibleConstructorReturn(this, _getPrototypeOf(SubjectSubscription).call(this));
-        _this71.subject = subject;
-        _this71.subscriber = subscriber;
-        _this71.closed = false;
-        return _this71;
+        _this127 = _possibleConstructorReturn(this, _getPrototypeOf(SubjectSubscription).call(this));
+        _this127.subject = subject;
+        _this127.subscriber = subscriber;
+        _this127.closed = false;
+        return _this127;
       }
 
       _createClass2(SubjectSubscription, [{
@@ -76128,47 +90985,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(Subscriber, _Subscription__WEBPAC2);
 
       function Subscriber(destinationOrNext, error, complete) {
-        var _this72;
+        var _this128;
 
         _classCallCheck(this, Subscriber);
 
-        _this72 = _possibleConstructorReturn(this, _getPrototypeOf(Subscriber).call(this));
-        _this72.syncErrorValue = null;
-        _this72.syncErrorThrown = false;
-        _this72.syncErrorThrowable = false;
-        _this72.isStopped = false;
+        _this128 = _possibleConstructorReturn(this, _getPrototypeOf(Subscriber).call(this));
+        _this128.syncErrorValue = null;
+        _this128.syncErrorThrown = false;
+        _this128.syncErrorThrowable = false;
+        _this128.isStopped = false;
 
         switch (arguments.length) {
           case 0:
-            _this72.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
+            _this128.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
             break;
 
           case 1:
             if (!destinationOrNext) {
-              _this72.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
+              _this128.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
               break;
             }
 
             if (typeof destinationOrNext === 'object') {
               if (destinationOrNext instanceof Subscriber) {
-                _this72.syncErrorThrowable = destinationOrNext.syncErrorThrowable;
-                _this72.destination = destinationOrNext;
-                destinationOrNext.add(_assertThisInitialized(_this72));
+                _this128.syncErrorThrowable = destinationOrNext.syncErrorThrowable;
+                _this128.destination = destinationOrNext;
+                destinationOrNext.add(_assertThisInitialized(_this128));
               } else {
-                _this72.syncErrorThrowable = true;
-                _this72.destination = new SafeSubscriber(_assertThisInitialized(_this72), destinationOrNext);
+                _this128.syncErrorThrowable = true;
+                _this128.destination = new SafeSubscriber(_assertThisInitialized(_this128), destinationOrNext);
               }
 
               break;
             }
 
           default:
-            _this72.syncErrorThrowable = true;
-            _this72.destination = new SafeSubscriber(_assertThisInitialized(_this72), destinationOrNext, error, complete);
+            _this128.syncErrorThrowable = true;
+            _this128.destination = new SafeSubscriber(_assertThisInitialized(_this128), destinationOrNext, error, complete);
             break;
         }
 
-        return _this72;
+        return _this128;
       }
 
       _createClass2(Subscriber, [{
@@ -76258,15 +91115,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SafeSubscriber, _Subscriber);
 
       function SafeSubscriber(_parentSubscriber, observerOrNext, error, complete) {
-        var _this73;
+        var _this129;
 
         _classCallCheck(this, SafeSubscriber);
 
-        _this73 = _possibleConstructorReturn(this, _getPrototypeOf(SafeSubscriber).call(this));
-        _this73._parentSubscriber = _parentSubscriber;
+        _this129 = _possibleConstructorReturn(this, _getPrototypeOf(SafeSubscriber).call(this));
+        _this129._parentSubscriber = _parentSubscriber;
         var next;
 
-        var context = _assertThisInitialized(_this73);
+        var context = _assertThisInitialized(_this129);
 
         if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_0__["isFunction"])(observerOrNext)) {
           next = observerOrNext;
@@ -76279,18 +91136,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             context = Object.create(observerOrNext);
 
             if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_0__["isFunction"])(context.unsubscribe)) {
-              _this73.add(context.unsubscribe.bind(context));
+              _this129.add(context.unsubscribe.bind(context));
             }
 
-            context.unsubscribe = _this73.unsubscribe.bind(_assertThisInitialized(_this73));
+            context.unsubscribe = _this129.unsubscribe.bind(_assertThisInitialized(_this129));
           }
         }
 
-        _this73._context = context;
-        _this73._next = next;
-        _this73._error = error;
-        _this73._complete = complete;
-        return _this73;
+        _this129._context = context;
+        _this129._next = next;
+        _this129._error = error;
+        _this129._complete = complete;
+        return _this129;
       }
 
       _createClass2(SafeSubscriber, [{
@@ -76346,14 +91203,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "complete",
         value: function complete() {
-          var _this74 = this;
+          var _this130 = this;
 
           if (!this.isStopped) {
             var _parentSubscriber = this._parentSubscriber;
 
             if (this._complete) {
               var wrappedComplete = function wrappedComplete() {
-                return _this74._complete.call(_this74._context);
+                return _this130._complete.call(_this130._context);
               };
 
               if (!_config__WEBPACK_IMPORTED_MODULE_4__["config"].useDeprecatedSynchronousErrorHandling || !_parentSubscriber.syncErrorThrowable) {
@@ -76518,12 +91375,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           if (Object(_util_isArray__WEBPACK_IMPORTED_MODULE_0__["isArray"])(_subscriptions)) {
-            var _index2 = -1;
+            var _index4 = -1;
 
-            var _len17 = _subscriptions.length;
+            var _len19 = _subscriptions.length;
 
-            while (++_index2 < _len17) {
-              var sub = _subscriptions[_index2];
+            while (++_index4 < _len19) {
+              var sub = _subscriptions[_index4];
 
               if (Object(_util_isObject__WEBPACK_IMPORTED_MODULE_1__["isObject"])(sub)) {
                 try {
@@ -76744,16 +91601,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(ConnectableObservable, _Observable__WEBPACK_2);
 
       function ConnectableObservable(source, subjectFactory) {
-        var _this75;
+        var _this131;
 
         _classCallCheck(this, ConnectableObservable);
 
-        _this75 = _possibleConstructorReturn(this, _getPrototypeOf(ConnectableObservable).call(this));
-        _this75.source = source;
-        _this75.subjectFactory = subjectFactory;
-        _this75._refCount = 0;
-        _this75._isComplete = false;
-        return _this75;
+        _this131 = _possibleConstructorReturn(this, _getPrototypeOf(ConnectableObservable).call(this));
+        _this131.source = source;
+        _this131.subjectFactory = subjectFactory;
+        _this131._refCount = 0;
+        _this131._isComplete = false;
+        return _this131;
       }
 
       _createClass2(ConnectableObservable, [{
@@ -76843,13 +91700,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(ConnectableSubscriber, _Subject__WEBPACK_IMP4);
 
       function ConnectableSubscriber(destination, connectable) {
-        var _this76;
+        var _this132;
 
         _classCallCheck(this, ConnectableSubscriber);
 
-        _this76 = _possibleConstructorReturn(this, _getPrototypeOf(ConnectableSubscriber).call(this, destination));
-        _this76.connectable = connectable;
-        return _this76;
+        _this132 = _possibleConstructorReturn(this, _getPrototypeOf(ConnectableSubscriber).call(this, destination));
+        _this132.connectable = connectable;
+        return _this132;
       }
 
       _createClass2(ConnectableSubscriber, [{
@@ -76924,13 +91781,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(RefCountSubscriber, _Subscriber__WEBPACK_4);
 
       function RefCountSubscriber(destination, connectable) {
-        var _this77;
+        var _this133;
 
         _classCallCheck(this, RefCountSubscriber);
 
-        _this77 = _possibleConstructorReturn(this, _getPrototypeOf(RefCountSubscriber).call(this, destination));
-        _this77.connectable = connectable;
-        return _this77;
+        _this133 = _possibleConstructorReturn(this, _getPrototypeOf(RefCountSubscriber).call(this, destination));
+        _this133.connectable = connectable;
+        return _this133;
       }
 
       _createClass2(RefCountSubscriber, [{
@@ -77019,27 +91876,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SubscribeOnObservable, _Observable__WEBPACK_3);
 
       function SubscribeOnObservable(source) {
-        var _this78;
+        var _this134;
 
         var delayTime = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
         var scheduler = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
 
         _classCallCheck(this, SubscribeOnObservable);
 
-        _this78 = _possibleConstructorReturn(this, _getPrototypeOf(SubscribeOnObservable).call(this));
-        _this78.source = source;
-        _this78.delayTime = delayTime;
-        _this78.scheduler = scheduler;
+        _this134 = _possibleConstructorReturn(this, _getPrototypeOf(SubscribeOnObservable).call(this));
+        _this134.source = source;
+        _this134.delayTime = delayTime;
+        _this134.scheduler = scheduler;
 
         if (!Object(_util_isNumeric__WEBPACK_IMPORTED_MODULE_2__["isNumeric"])(delayTime) || delayTime < 0) {
-          _this78.delayTime = 0;
+          _this134.delayTime = 0;
         }
 
         if (!scheduler || typeof scheduler.schedule !== 'function') {
-          _this78.scheduler = _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
+          _this134.scheduler = _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
         }
 
-        return _this78;
+        return _this134;
       }
 
       _createClass2(SubscribeOnObservable, [{
@@ -77146,8 +92003,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       return function () {
-        for (var _len18 = arguments.length, args = new Array(_len18), _key16 = 0; _key16 < _len18; _key16++) {
-          args[_key16] = arguments[_key16];
+        for (var _len20 = arguments.length, args = new Array(_len20), _key19 = 0; _key19 < _len20; _key19++) {
+          args[_key19] = arguments[_key19];
         }
 
         var context = this;
@@ -77164,8 +92021,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               subject = new _AsyncSubject__WEBPACK_IMPORTED_MODULE_1__["AsyncSubject"]();
 
               var handler = function handler() {
-                for (var _len19 = arguments.length, innerArgs = new Array(_len19), _key17 = 0; _key17 < _len19; _key17++) {
-                  innerArgs[_key17] = arguments[_key17];
+                for (var _len21 = arguments.length, innerArgs = new Array(_len21), _key20 = 0; _key20 < _len21; _key20++) {
+                  innerArgs[_key20] = arguments[_key20];
                 }
 
                 subject.next(innerArgs.length <= 1 ? innerArgs[0] : innerArgs);
@@ -77197,7 +92054,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function dispatch(state) {
-      var _this79 = this;
+      var _this135 = this;
 
       var self = this;
       var args = state.args,
@@ -77212,13 +92069,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         subject = params.subject = new _AsyncSubject__WEBPACK_IMPORTED_MODULE_1__["AsyncSubject"]();
 
         var handler = function handler() {
-          for (var _len20 = arguments.length, innerArgs = new Array(_len20), _key18 = 0; _key18 < _len20; _key18++) {
-            innerArgs[_key18] = arguments[_key18];
+          for (var _len22 = arguments.length, innerArgs = new Array(_len22), _key21 = 0; _key21 < _len22; _key21++) {
+            innerArgs[_key21] = arguments[_key21];
           }
 
           var value = innerArgs.length <= 1 ? innerArgs[0] : innerArgs;
 
-          _this79.add(scheduler.schedule(dispatchNext, 0, {
+          _this135.add(scheduler.schedule(dispatchNext, 0, {
             value: value,
             subject: subject
           }));
@@ -77321,8 +92178,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       return function () {
-        for (var _len21 = arguments.length, args = new Array(_len21), _key19 = 0; _key19 < _len21; _key19++) {
-          args[_key19] = arguments[_key19];
+        for (var _len23 = arguments.length, args = new Array(_len23), _key22 = 0; _key22 < _len23; _key22++) {
+          args[_key22] = arguments[_key22];
         }
 
         var params = {
@@ -77341,8 +92198,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               subject = params.subject = new _AsyncSubject__WEBPACK_IMPORTED_MODULE_1__["AsyncSubject"]();
 
               var handler = function handler() {
-                for (var _len22 = arguments.length, innerArgs = new Array(_len22), _key20 = 0; _key20 < _len22; _key20++) {
-                  innerArgs[_key20] = arguments[_key20];
+                for (var _len24 = arguments.length, innerArgs = new Array(_len24), _key23 = 0; _key23 < _len24; _key23++) {
+                  innerArgs[_key23] = arguments[_key23];
                 }
 
                 var err = innerArgs.shift();
@@ -77380,7 +92237,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function dispatch(state) {
-      var _this80 = this;
+      var _this136 = this;
 
       var params = state.params,
           subscriber = state.subscriber,
@@ -77394,21 +92251,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         subject = params.subject = new _AsyncSubject__WEBPACK_IMPORTED_MODULE_1__["AsyncSubject"]();
 
         var handler = function handler() {
-          for (var _len23 = arguments.length, innerArgs = new Array(_len23), _key21 = 0; _key21 < _len23; _key21++) {
-            innerArgs[_key21] = arguments[_key21];
+          for (var _len25 = arguments.length, innerArgs = new Array(_len25), _key24 = 0; _key24 < _len25; _key24++) {
+            innerArgs[_key24] = arguments[_key24];
           }
 
           var err = innerArgs.shift();
 
           if (err) {
-            _this80.add(scheduler.schedule(dispatchError, 0, {
+            _this136.add(scheduler.schedule(dispatchError, 0, {
               err: err,
               subject: subject
             }));
           } else {
             var value = innerArgs.length <= 1 ? innerArgs[0] : innerArgs;
 
-            _this80.add(scheduler.schedule(dispatchNext, 0, {
+            _this136.add(scheduler.schedule(dispatchNext, 0, {
               value: value,
               subject: subject
             }));
@@ -77510,8 +92367,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NONE = {};
 
     function combineLatest() {
-      for (var _len24 = arguments.length, observables = new Array(_len24), _key22 = 0; _key22 < _len24; _key22++) {
-        observables[_key22] = arguments[_key22];
+      for (var _len26 = arguments.length, observables = new Array(_len26), _key25 = 0; _key25 < _len26; _key25++) {
+        observables[_key25] = arguments[_key25];
       }
 
       var resultSelector = null;
@@ -77557,16 +92414,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(CombineLatestSubscriber, _OuterSubscriber__WEB);
 
       function CombineLatestSubscriber(destination, resultSelector) {
-        var _this81;
+        var _this137;
 
         _classCallCheck(this, CombineLatestSubscriber);
 
-        _this81 = _possibleConstructorReturn(this, _getPrototypeOf(CombineLatestSubscriber).call(this, destination));
-        _this81.resultSelector = resultSelector;
-        _this81.active = 0;
-        _this81.values = [];
-        _this81.observables = [];
-        return _this81;
+        _this137 = _possibleConstructorReturn(this, _getPrototypeOf(CombineLatestSubscriber).call(this, destination));
+        _this137.resultSelector = resultSelector;
+        _this137.active = 0;
+        _this137.values = [];
+        _this137.observables = [];
+        return _this137;
       }
 
       _createClass2(CombineLatestSubscriber, [{
@@ -77840,8 +92697,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/from.js");
 
     function forkJoin() {
-      for (var _len25 = arguments.length, sources = new Array(_len25), _key23 = 0; _key23 < _len25; _key23++) {
-        sources[_key23] = arguments[_key23];
+      for (var _len27 = arguments.length, sources = new Array(_len27), _key26 = 0; _key26 < _len27; _key26++) {
+        sources[_key26] = arguments[_key26];
       }
 
       if (sources.length === 1) {
@@ -77883,7 +92740,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var completed = 0;
         var emitted = 0;
 
-        var _loop3 = function _loop3(i) {
+        var _loop5 = function _loop5(i) {
           var source = Object(_from__WEBPACK_IMPORTED_MODULE_4__["from"])(sources[i]);
           var hasValue = false;
           subscriber.add(source.subscribe({
@@ -77915,7 +92772,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         };
 
         for (var i = 0; i < len; i++) {
-          _loop3(i);
+          _loop5(i);
         }
       });
     } //# sourceMappingURL=forkJoin.js.map
@@ -78126,7 +92983,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return _source2.removeListener(eventName, handler);
         };
       } else if (sourceObj && sourceObj.length) {
-        for (var i = 0, _len26 = sourceObj.length; i < _len26; i++) {
+        for (var i = 0, _len28 = sourceObj.length; i < _len28; i++) {
           setupSubscription(sourceObj[i], eventName, handler, subscriber, options);
         }
       } else {
@@ -78205,8 +93062,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       return new _Observable__WEBPACK_IMPORTED_MODULE_0__["Observable"](function (subscriber) {
         var handler = function handler() {
-          for (var _len27 = arguments.length, e = new Array(_len27), _key24 = 0; _key24 < _len27; _key24++) {
-            e[_key24] = arguments[_key24];
+          for (var _len29 = arguments.length, e = new Array(_len29), _key27 = 0; _key27 < _len29; _key27++) {
+            e[_key27] = arguments[_key27];
           }
 
           return subscriber.next(e.length === 1 ? e[0] : e);
@@ -78583,8 +93440,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var concurrent = Number.POSITIVE_INFINITY;
       var scheduler = null;
 
-      for (var _len28 = arguments.length, observables = new Array(_len28), _key25 = 0; _key25 < _len28; _key25++) {
-        observables[_key25] = arguments[_key25];
+      for (var _len30 = arguments.length, observables = new Array(_len30), _key28 = 0; _key28 < _len30; _key28++) {
+        observables[_key28] = arguments[_key28];
       }
 
       var last = observables[observables.length - 1];
@@ -78697,8 +93554,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/scheduled/scheduleArray.js");
 
     function of() {
-      for (var _len29 = arguments.length, args = new Array(_len29), _key26 = 0; _key26 < _len29; _key26++) {
-        args[_key26] = arguments[_key26];
+      for (var _len31 = arguments.length, args = new Array(_len31), _key29 = 0; _key29 < _len31; _key29++) {
+        args[_key29] = arguments[_key29];
       }
 
       var scheduler = args[args.length - 1];
@@ -78760,8 +93617,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/empty.js");
 
     function onErrorResumeNext() {
-      for (var _len30 = arguments.length, sources = new Array(_len30), _key27 = 0; _key27 < _len30; _key27++) {
-        sources[_key27] = arguments[_key27];
+      for (var _len32 = arguments.length, sources = new Array(_len32), _key30 = 0; _key30 < _len32; _key30++) {
+        sources[_key30] = arguments[_key30];
       }
 
       if (sources.length === 0) {
@@ -79000,8 +93857,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/util/subscribeToResult.js");
 
     function race() {
-      for (var _len31 = arguments.length, observables = new Array(_len31), _key28 = 0; _key28 < _len31; _key28++) {
-        observables[_key28] = arguments[_key28];
+      for (var _len33 = arguments.length, observables = new Array(_len33), _key31 = 0; _key31 < _len33; _key31++) {
+        observables[_key31] = arguments[_key31];
       }
 
       if (observables.length === 1) {
@@ -79038,15 +93895,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(RaceSubscriber, _OuterSubscriber__WEB2);
 
       function RaceSubscriber(destination) {
-        var _this82;
+        var _this138;
 
         _classCallCheck(this, RaceSubscriber);
 
-        _this82 = _possibleConstructorReturn(this, _getPrototypeOf(RaceSubscriber).call(this, destination));
-        _this82.hasFirst = false;
-        _this82.observables = [];
-        _this82.subscriptions = [];
-        return _this82;
+        _this138 = _possibleConstructorReturn(this, _getPrototypeOf(RaceSubscriber).call(this, destination));
+        _this138.hasFirst = false;
+        _this138.observables = [];
+        _this138.subscriptions = [];
+        return _this138;
       }
 
       _createClass2(RaceSubscriber, [{
@@ -79486,8 +94343,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/symbol/iterator.js");
 
     function zip() {
-      for (var _len32 = arguments.length, observables = new Array(_len32), _key29 = 0; _key29 < _len32; _key29++) {
-        observables[_key29] = arguments[_key29];
+      for (var _len34 = arguments.length, observables = new Array(_len34), _key32 = 0; _key32 < _len34; _key32++) {
+        observables[_key32] = arguments[_key32];
       }
 
       var resultSelector = observables[observables.length - 1];
@@ -79524,18 +94381,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(ZipSubscriber, _Subscriber__WEBPACK_5);
 
       function ZipSubscriber(destination, resultSelector) {
-        var _this83;
+        var _this139;
 
         var values = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Object.create(null);
 
         _classCallCheck(this, ZipSubscriber);
 
-        _this83 = _possibleConstructorReturn(this, _getPrototypeOf(ZipSubscriber).call(this, destination));
-        _this83.iterators = [];
-        _this83.active = 0;
-        _this83.resultSelector = typeof resultSelector === 'function' ? resultSelector : null;
-        _this83.values = values;
-        return _this83;
+        _this139 = _possibleConstructorReturn(this, _getPrototypeOf(ZipSubscriber).call(this, destination));
+        _this139.iterators = [];
+        _this139.active = 0;
+        _this139.resultSelector = typeof resultSelector === 'function' ? resultSelector : null;
+        _this139.values = values;
+        return _this139;
       }
 
       _createClass2(ZipSubscriber, [{
@@ -79603,12 +94460,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var shouldComplete = false;
           var args = [];
 
-          for (var _i20 = 0; _i20 < len; _i20++) {
-            var _iterator9 = iterators[_i20];
+          for (var _i26 = 0; _i26 < len; _i26++) {
+            var _iterator10 = iterators[_i26];
 
-            var result = _iterator9.next();
+            var result = _iterator10.next();
 
-            if (_iterator9.hasCompleted()) {
+            if (_iterator10.hasCompleted()) {
               shouldComplete = true;
             }
 
@@ -79733,17 +94590,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(ZipBufferIterator, _OuterSubscriber__WEB3);
 
       function ZipBufferIterator(destination, parent, observable) {
-        var _this84;
+        var _this140;
 
         _classCallCheck(this, ZipBufferIterator);
 
-        _this84 = _possibleConstructorReturn(this, _getPrototypeOf(ZipBufferIterator).call(this, destination));
-        _this84.parent = parent;
-        _this84.observable = observable;
-        _this84.stillUnsubscribed = true;
-        _this84.buffer = [];
-        _this84.isComplete = false;
-        return _this84;
+        _this140 = _possibleConstructorReturn(this, _getPrototypeOf(ZipBufferIterator).call(this, destination));
+        _this140.parent = parent;
+        _this140.observable = observable;
+        _this140.stillUnsubscribed = true;
+        _this140.buffer = [];
+        _this140.isComplete = false;
+        return _this140;
       }
 
       _createClass2(ZipBufferIterator, [{
@@ -79871,14 +94728,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(AuditSubscriber, _OuterSubscriber__WEB4);
 
       function AuditSubscriber(destination, durationSelector) {
-        var _this85;
+        var _this141;
 
         _classCallCheck(this, AuditSubscriber);
 
-        _this85 = _possibleConstructorReturn(this, _getPrototypeOf(AuditSubscriber).call(this, destination));
-        _this85.durationSelector = durationSelector;
-        _this85.hasValue = false;
-        return _this85;
+        _this141 = _possibleConstructorReturn(this, _getPrototypeOf(AuditSubscriber).call(this, destination));
+        _this141.durationSelector = durationSelector;
+        _this141.hasValue = false;
+        return _this141;
       }
 
       _createClass2(AuditSubscriber, [{
@@ -80056,16 +94913,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(BufferSubscriber, _OuterSubscriber__WEB5);
 
       function BufferSubscriber(destination, closingNotifier) {
-        var _this86;
+        var _this142;
 
         _classCallCheck(this, BufferSubscriber);
 
-        _this86 = _possibleConstructorReturn(this, _getPrototypeOf(BufferSubscriber).call(this, destination));
-        _this86.buffer = [];
+        _this142 = _possibleConstructorReturn(this, _getPrototypeOf(BufferSubscriber).call(this, destination));
+        _this142.buffer = [];
 
-        _this86.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this86), closingNotifier));
+        _this142.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this142), closingNotifier));
 
-        return _this86;
+        return _this142;
       }
 
       _createClass2(BufferSubscriber, [{
@@ -80154,14 +95011,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(BufferCountSubscriber, _Subscriber__WEBPACK_6);
 
       function BufferCountSubscriber(destination, bufferSize) {
-        var _this87;
+        var _this143;
 
         _classCallCheck(this, BufferCountSubscriber);
 
-        _this87 = _possibleConstructorReturn(this, _getPrototypeOf(BufferCountSubscriber).call(this, destination));
-        _this87.bufferSize = bufferSize;
-        _this87.buffer = [];
-        return _this87;
+        _this143 = _possibleConstructorReturn(this, _getPrototypeOf(BufferCountSubscriber).call(this, destination));
+        _this143.bufferSize = bufferSize;
+        _this143.buffer = [];
+        return _this143;
       }
 
       _createClass2(BufferCountSubscriber, [{
@@ -80197,16 +95054,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(BufferSkipCountSubscriber, _Subscriber__WEBPACK_7);
 
       function BufferSkipCountSubscriber(destination, bufferSize, startBufferEvery) {
-        var _this88;
+        var _this144;
 
         _classCallCheck(this, BufferSkipCountSubscriber);
 
-        _this88 = _possibleConstructorReturn(this, _getPrototypeOf(BufferSkipCountSubscriber).call(this, destination));
-        _this88.bufferSize = bufferSize;
-        _this88.startBufferEvery = startBufferEvery;
-        _this88.buffers = [];
-        _this88.count = 0;
-        return _this88;
+        _this144 = _possibleConstructorReturn(this, _getPrototypeOf(BufferSkipCountSubscriber).call(this, destination));
+        _this144.bufferSize = bufferSize;
+        _this144.startBufferEvery = startBufferEvery;
+        _this144.buffers = [];
+        _this144.count = 0;
+        return _this144;
       }
 
       _createClass2(BufferSkipCountSubscriber, [{
@@ -80355,47 +95212,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(BufferTimeSubscriber, _Subscriber__WEBPACK_8);
 
       function BufferTimeSubscriber(destination, bufferTimeSpan, bufferCreationInterval, maxBufferSize, scheduler) {
-        var _this89;
+        var _this145;
 
         _classCallCheck(this, BufferTimeSubscriber);
 
-        _this89 = _possibleConstructorReturn(this, _getPrototypeOf(BufferTimeSubscriber).call(this, destination));
-        _this89.bufferTimeSpan = bufferTimeSpan;
-        _this89.bufferCreationInterval = bufferCreationInterval;
-        _this89.maxBufferSize = maxBufferSize;
-        _this89.scheduler = scheduler;
-        _this89.contexts = [];
+        _this145 = _possibleConstructorReturn(this, _getPrototypeOf(BufferTimeSubscriber).call(this, destination));
+        _this145.bufferTimeSpan = bufferTimeSpan;
+        _this145.bufferCreationInterval = bufferCreationInterval;
+        _this145.maxBufferSize = maxBufferSize;
+        _this145.scheduler = scheduler;
+        _this145.contexts = [];
 
-        var context = _this89.openContext();
+        var context = _this145.openContext();
 
-        _this89.timespanOnly = bufferCreationInterval == null || bufferCreationInterval < 0;
+        _this145.timespanOnly = bufferCreationInterval == null || bufferCreationInterval < 0;
 
-        if (_this89.timespanOnly) {
+        if (_this145.timespanOnly) {
           var timeSpanOnlyState = {
-            subscriber: _assertThisInitialized(_this89),
+            subscriber: _assertThisInitialized(_this145),
             context: context,
             bufferTimeSpan: bufferTimeSpan
           };
 
-          _this89.add(context.closeAction = scheduler.schedule(dispatchBufferTimeSpanOnly, bufferTimeSpan, timeSpanOnlyState));
+          _this145.add(context.closeAction = scheduler.schedule(dispatchBufferTimeSpanOnly, bufferTimeSpan, timeSpanOnlyState));
         } else {
           var closeState = {
-            subscriber: _assertThisInitialized(_this89),
+            subscriber: _assertThisInitialized(_this145),
             context: context
           };
           var creationState = {
             bufferTimeSpan: bufferTimeSpan,
             bufferCreationInterval: bufferCreationInterval,
-            subscriber: _assertThisInitialized(_this89),
+            subscriber: _assertThisInitialized(_this145),
             scheduler: scheduler
           };
 
-          _this89.add(context.closeAction = scheduler.schedule(dispatchBufferClose, bufferTimeSpan, closeState));
+          _this145.add(context.closeAction = scheduler.schedule(dispatchBufferClose, bufferTimeSpan, closeState));
 
-          _this89.add(scheduler.schedule(dispatchBufferCreation, bufferCreationInterval, creationState));
+          _this145.add(scheduler.schedule(dispatchBufferCreation, bufferCreationInterval, creationState));
         }
 
-        return _this89;
+        return _this145;
       }
 
       _createClass2(BufferTimeSubscriber, [{
@@ -80597,18 +95454,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(BufferToggleSubscriber, _OuterSubscriber__WEB6);
 
       function BufferToggleSubscriber(destination, openings, closingSelector) {
-        var _this90;
+        var _this146;
 
         _classCallCheck(this, BufferToggleSubscriber);
 
-        _this90 = _possibleConstructorReturn(this, _getPrototypeOf(BufferToggleSubscriber).call(this, destination));
-        _this90.openings = openings;
-        _this90.closingSelector = closingSelector;
-        _this90.contexts = [];
+        _this146 = _possibleConstructorReturn(this, _getPrototypeOf(BufferToggleSubscriber).call(this, destination));
+        _this146.openings = openings;
+        _this146.closingSelector = closingSelector;
+        _this146.contexts = [];
 
-        _this90.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this90), openings));
+        _this146.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this146), openings));
 
-        return _this90;
+        return _this146;
       }
 
       _createClass2(BufferToggleSubscriber, [{
@@ -80791,17 +95648,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(BufferWhenSubscriber, _OuterSubscriber__WEB7);
 
       function BufferWhenSubscriber(destination, closingSelector) {
-        var _this91;
+        var _this147;
 
         _classCallCheck(this, BufferWhenSubscriber);
 
-        _this91 = _possibleConstructorReturn(this, _getPrototypeOf(BufferWhenSubscriber).call(this, destination));
-        _this91.closingSelector = closingSelector;
-        _this91.subscribing = false;
+        _this147 = _possibleConstructorReturn(this, _getPrototypeOf(BufferWhenSubscriber).call(this, destination));
+        _this147.closingSelector = closingSelector;
+        _this147.subscribing = false;
 
-        _this91.openBuffer();
+        _this147.openBuffer();
 
-        return _this91;
+        return _this147;
       }
 
       _createClass2(BufferWhenSubscriber, [{
@@ -80953,14 +95810,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(CatchSubscriber, _OuterSubscriber__WEB8);
 
       function CatchSubscriber(destination, selector, caught) {
-        var _this92;
+        var _this148;
 
         _classCallCheck(this, CatchSubscriber);
 
-        _this92 = _possibleConstructorReturn(this, _getPrototypeOf(CatchSubscriber).call(this, destination));
-        _this92.selector = selector;
-        _this92.caught = caught;
-        return _this92;
+        _this148 = _possibleConstructorReturn(this, _getPrototypeOf(CatchSubscriber).call(this, destination));
+        _this148.selector = selector;
+        _this148.caught = caught;
+        return _this148;
       }
 
       _createClass2(CatchSubscriber, [{
@@ -81074,8 +95931,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var none = {};
 
     function combineLatest() {
-      for (var _len33 = arguments.length, observables = new Array(_len33), _key30 = 0; _key30 < _len33; _key30++) {
-        observables[_key30] = arguments[_key30];
+      for (var _len35 = arguments.length, observables = new Array(_len35), _key33 = 0; _key33 < _len35; _key33++) {
+        observables[_key33] = arguments[_key33];
       }
 
       var project = null;
@@ -81124,8 +95981,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/concat.js");
 
     function concat() {
-      for (var _len34 = arguments.length, observables = new Array(_len34), _key31 = 0; _key31 < _len34; _key31++) {
-        observables[_key31] = arguments[_key31];
+      for (var _len36 = arguments.length, observables = new Array(_len36), _key34 = 0; _key34 < _len36; _key34++) {
+        observables[_key34] = arguments[_key34];
       }
 
       return function (source) {
@@ -81299,16 +96156,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(CountSubscriber, _Subscriber__WEBPACK_9);
 
       function CountSubscriber(destination, predicate, source) {
-        var _this93;
+        var _this149;
 
         _classCallCheck(this, CountSubscriber);
 
-        _this93 = _possibleConstructorReturn(this, _getPrototypeOf(CountSubscriber).call(this, destination));
-        _this93.predicate = predicate;
-        _this93.source = source;
-        _this93.count = 0;
-        _this93.index = 0;
-        return _this93;
+        _this149 = _possibleConstructorReturn(this, _getPrototypeOf(CountSubscriber).call(this, destination));
+        _this149.predicate = predicate;
+        _this149.source = source;
+        _this149.count = 0;
+        _this149.index = 0;
+        return _this149;
       }
 
       _createClass2(CountSubscriber, [{
@@ -81414,15 +96271,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(DebounceSubscriber, _OuterSubscriber__WEB9);
 
       function DebounceSubscriber(destination, durationSelector) {
-        var _this94;
+        var _this150;
 
         _classCallCheck(this, DebounceSubscriber);
 
-        _this94 = _possibleConstructorReturn(this, _getPrototypeOf(DebounceSubscriber).call(this, destination));
-        _this94.durationSelector = durationSelector;
-        _this94.hasValue = false;
-        _this94.durationSubscription = null;
-        return _this94;
+        _this150 = _possibleConstructorReturn(this, _getPrototypeOf(DebounceSubscriber).call(this, destination));
+        _this150.durationSelector = durationSelector;
+        _this150.hasValue = false;
+        _this150.durationSubscription = null;
+        return _this150;
       }
 
       _createClass2(DebounceSubscriber, [{
@@ -81565,17 +96422,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(DebounceTimeSubscriber, _Subscriber__WEBPACK_10);
 
       function DebounceTimeSubscriber(destination, dueTime, scheduler) {
-        var _this95;
+        var _this151;
 
         _classCallCheck(this, DebounceTimeSubscriber);
 
-        _this95 = _possibleConstructorReturn(this, _getPrototypeOf(DebounceTimeSubscriber).call(this, destination));
-        _this95.dueTime = dueTime;
-        _this95.scheduler = scheduler;
-        _this95.debouncedSubscription = null;
-        _this95.lastValue = null;
-        _this95.hasValue = false;
-        return _this95;
+        _this151 = _possibleConstructorReturn(this, _getPrototypeOf(DebounceTimeSubscriber).call(this, destination));
+        _this151.dueTime = dueTime;
+        _this151.scheduler = scheduler;
+        _this151.debouncedSubscription = null;
+        _this151.lastValue = null;
+        _this151.hasValue = false;
+        return _this151;
       }
 
       _createClass2(DebounceTimeSubscriber, [{
@@ -81686,14 +96543,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(DefaultIfEmptySubscriber, _Subscriber__WEBPACK_11);
 
       function DefaultIfEmptySubscriber(destination, defaultValue) {
-        var _this96;
+        var _this152;
 
         _classCallCheck(this, DefaultIfEmptySubscriber);
 
-        _this96 = _possibleConstructorReturn(this, _getPrototypeOf(DefaultIfEmptySubscriber).call(this, destination));
-        _this96.defaultValue = defaultValue;
-        _this96.isEmpty = true;
-        return _this96;
+        _this152 = _possibleConstructorReturn(this, _getPrototypeOf(DefaultIfEmptySubscriber).call(this, destination));
+        _this152.defaultValue = defaultValue;
+        _this152.isEmpty = true;
+        return _this152;
       }
 
       _createClass2(DefaultIfEmptySubscriber, [{
@@ -81799,17 +96656,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(DelaySubscriber, _Subscriber__WEBPACK_12);
 
       function DelaySubscriber(destination, delay, scheduler) {
-        var _this97;
+        var _this153;
 
         _classCallCheck(this, DelaySubscriber);
 
-        _this97 = _possibleConstructorReturn(this, _getPrototypeOf(DelaySubscriber).call(this, destination));
-        _this97.delay = delay;
-        _this97.scheduler = scheduler;
-        _this97.queue = [];
-        _this97.active = false;
-        _this97.errored = false;
-        return _this97;
+        _this153 = _possibleConstructorReturn(this, _getPrototypeOf(DelaySubscriber).call(this, destination));
+        _this153.delay = delay;
+        _this153.scheduler = scheduler;
+        _this153.queue = [];
+        _this153.active = false;
+        _this153.errored = false;
+        return _this153;
       }
 
       _createClass2(DelaySubscriber, [{
@@ -81870,9 +96727,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           if (queue.length > 0) {
-            var _delay = Math.max(0, queue[0].time - scheduler.now());
+            var _delay2 = Math.max(0, queue[0].time - scheduler.now());
 
-            this.schedule(state, _delay);
+            this.schedule(state, _delay2);
           } else {
             this.unsubscribe();
             source.active = false;
@@ -81975,16 +96832,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(DelayWhenSubscriber, _OuterSubscriber__WEB10);
 
       function DelayWhenSubscriber(destination, delayDurationSelector) {
-        var _this98;
+        var _this154;
 
         _classCallCheck(this, DelayWhenSubscriber);
 
-        _this98 = _possibleConstructorReturn(this, _getPrototypeOf(DelayWhenSubscriber).call(this, destination));
-        _this98.delayDurationSelector = delayDurationSelector;
-        _this98.completed = false;
-        _this98.delayNotifierSubscriptions = [];
-        _this98.index = 0;
-        return _this98;
+        _this154 = _possibleConstructorReturn(this, _getPrototypeOf(DelayWhenSubscriber).call(this, destination));
+        _this154.delayDurationSelector = delayDurationSelector;
+        _this154.completed = false;
+        _this154.delayNotifierSubscriptions = [];
+        _this154.index = 0;
+        return _this154;
       }
 
       _createClass2(DelayWhenSubscriber, [{
@@ -82073,14 +96930,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SubscriptionDelayObservable, _Observable__WEBPACK_4);
 
       function SubscriptionDelayObservable(source, subscriptionDelay) {
-        var _this99;
+        var _this155;
 
         _classCallCheck(this, SubscriptionDelayObservable);
 
-        _this99 = _possibleConstructorReturn(this, _getPrototypeOf(SubscriptionDelayObservable).call(this));
-        _this99.source = source;
-        _this99.subscriptionDelay = subscriptionDelay;
-        return _this99;
+        _this155 = _possibleConstructorReturn(this, _getPrototypeOf(SubscriptionDelayObservable).call(this));
+        _this155.source = source;
+        _this155.subscriptionDelay = subscriptionDelay;
+        return _this155;
       }
 
       _createClass2(SubscriptionDelayObservable, [{
@@ -82099,15 +96956,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SubscriptionDelaySubscriber, _Subscriber__WEBPACK_13);
 
       function SubscriptionDelaySubscriber(parent, source) {
-        var _this100;
+        var _this156;
 
         _classCallCheck(this, SubscriptionDelaySubscriber);
 
-        _this100 = _possibleConstructorReturn(this, _getPrototypeOf(SubscriptionDelaySubscriber).call(this));
-        _this100.parent = parent;
-        _this100.source = source;
-        _this100.sourceSubscribed = false;
-        return _this100;
+        _this156 = _possibleConstructorReturn(this, _getPrototypeOf(SubscriptionDelaySubscriber).call(this));
+        _this156.parent = parent;
+        _this156.source = source;
+        _this156.sourceSubscribed = false;
+        return _this156;
       }
 
       _createClass2(SubscriptionDelaySubscriber, [{
@@ -82289,19 +97146,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(DistinctSubscriber, _OuterSubscriber__WEB11);
 
       function DistinctSubscriber(destination, keySelector, flushes) {
-        var _this101;
+        var _this157;
 
         _classCallCheck(this, DistinctSubscriber);
 
-        _this101 = _possibleConstructorReturn(this, _getPrototypeOf(DistinctSubscriber).call(this, destination));
-        _this101.keySelector = keySelector;
-        _this101.values = new Set();
+        _this157 = _possibleConstructorReturn(this, _getPrototypeOf(DistinctSubscriber).call(this, destination));
+        _this157.keySelector = keySelector;
+        _this157.values = new Set();
 
         if (flushes) {
-          _this101.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this101), flushes));
+          _this157.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this157), flushes));
         }
 
-        return _this101;
+        return _this157;
       }
 
       _createClass2(DistinctSubscriber, [{
@@ -82415,19 +97272,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(DistinctUntilChangedSubscriber, _Subscriber__WEBPACK_15);
 
       function DistinctUntilChangedSubscriber(destination, compare, keySelector) {
-        var _this102;
+        var _this158;
 
         _classCallCheck(this, DistinctUntilChangedSubscriber);
 
-        _this102 = _possibleConstructorReturn(this, _getPrototypeOf(DistinctUntilChangedSubscriber).call(this, destination));
-        _this102.keySelector = keySelector;
-        _this102.hasKey = false;
+        _this158 = _possibleConstructorReturn(this, _getPrototypeOf(DistinctUntilChangedSubscriber).call(this, destination));
+        _this158.keySelector = keySelector;
+        _this158.hasKey = false;
 
         if (typeof compare === 'function') {
-          _this102.compare = compare;
+          _this158.compare = compare;
         }
 
-        return _this102;
+        return _this158;
       }
 
       _createClass2(DistinctUntilChangedSubscriber, [{
@@ -82612,8 +97469,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/of.js");
 
     function endWith() {
-      for (var _len35 = arguments.length, array = new Array(_len35), _key32 = 0; _key32 < _len35; _key32++) {
-        array[_key32] = arguments[_key32];
+      for (var _len37 = arguments.length, array = new Array(_len37), _key35 = 0; _key35 < _len37; _key35++) {
+        array[_key35] = arguments[_key35];
       }
 
       return function (source) {
@@ -82684,17 +97541,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(EverySubscriber, _Subscriber__WEBPACK_16);
 
       function EverySubscriber(destination, predicate, thisArg, source) {
-        var _this103;
+        var _this159;
 
         _classCallCheck(this, EverySubscriber);
 
-        _this103 = _possibleConstructorReturn(this, _getPrototypeOf(EverySubscriber).call(this, destination));
-        _this103.predicate = predicate;
-        _this103.thisArg = thisArg;
-        _this103.source = source;
-        _this103.index = 0;
-        _this103.thisArg = thisArg || _assertThisInitialized(_this103);
-        return _this103;
+        _this159 = _possibleConstructorReturn(this, _getPrototypeOf(EverySubscriber).call(this, destination));
+        _this159.predicate = predicate;
+        _this159.thisArg = thisArg;
+        _this159.source = source;
+        _this159.index = 0;
+        _this159.thisArg = thisArg || _assertThisInitialized(_this159);
+        return _this159;
       }
 
       _createClass2(EverySubscriber, [{
@@ -82794,14 +97651,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SwitchFirstSubscriber, _OuterSubscriber__WEB12);
 
       function SwitchFirstSubscriber(destination) {
-        var _this104;
+        var _this160;
 
         _classCallCheck(this, SwitchFirstSubscriber);
 
-        _this104 = _possibleConstructorReturn(this, _getPrototypeOf(SwitchFirstSubscriber).call(this, destination));
-        _this104.hasCompleted = false;
-        _this104.hasSubscription = false;
-        return _this104;
+        _this160 = _possibleConstructorReturn(this, _getPrototypeOf(SwitchFirstSubscriber).call(this, destination));
+        _this160.hasCompleted = false;
+        _this160.hasSubscription = false;
+        return _this160;
       }
 
       _createClass2(SwitchFirstSubscriber, [{
@@ -82931,16 +97788,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(ExhaustMapSubscriber, _OuterSubscriber__WEB13);
 
       function ExhaustMapSubscriber(destination, project) {
-        var _this105;
+        var _this161;
 
         _classCallCheck(this, ExhaustMapSubscriber);
 
-        _this105 = _possibleConstructorReturn(this, _getPrototypeOf(ExhaustMapSubscriber).call(this, destination));
-        _this105.project = project;
-        _this105.hasSubscription = false;
-        _this105.hasCompleted = false;
-        _this105.index = 0;
-        return _this105;
+        _this161 = _possibleConstructorReturn(this, _getPrototypeOf(ExhaustMapSubscriber).call(this, destination));
+        _this161.project = project;
+        _this161.hasSubscription = false;
+        _this161.hasCompleted = false;
+        _this161.index = 0;
+        return _this161;
       }
 
       _createClass2(ExhaustMapSubscriber, [{
@@ -83100,23 +97957,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(ExpandSubscriber, _OuterSubscriber__WEB14);
 
       function ExpandSubscriber(destination, project, concurrent, scheduler) {
-        var _this106;
+        var _this162;
 
         _classCallCheck(this, ExpandSubscriber);
 
-        _this106 = _possibleConstructorReturn(this, _getPrototypeOf(ExpandSubscriber).call(this, destination));
-        _this106.project = project;
-        _this106.concurrent = concurrent;
-        _this106.scheduler = scheduler;
-        _this106.index = 0;
-        _this106.active = 0;
-        _this106.hasCompleted = false;
+        _this162 = _possibleConstructorReturn(this, _getPrototypeOf(ExpandSubscriber).call(this, destination));
+        _this162.project = project;
+        _this162.concurrent = concurrent;
+        _this162.scheduler = scheduler;
+        _this162.index = 0;
+        _this162.active = 0;
+        _this162.hasCompleted = false;
 
         if (concurrent < Number.POSITIVE_INFINITY) {
-          _this106.buffer = [];
+          _this162.buffer = [];
         }
 
-        return _this106;
+        return _this162;
       }
 
       _createClass2(ExpandSubscriber, [{
@@ -83274,15 +98131,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(FilterSubscriber, _Subscriber__WEBPACK_17);
 
       function FilterSubscriber(destination, predicate, thisArg) {
-        var _this107;
+        var _this163;
 
         _classCallCheck(this, FilterSubscriber);
 
-        _this107 = _possibleConstructorReturn(this, _getPrototypeOf(FilterSubscriber).call(this, destination));
-        _this107.predicate = predicate;
-        _this107.thisArg = thisArg;
-        _this107.count = 0;
-        return _this107;
+        _this163 = _possibleConstructorReturn(this, _getPrototypeOf(FilterSubscriber).call(this, destination));
+        _this163.predicate = predicate;
+        _this163.thisArg = thisArg;
+        _this163.count = 0;
+        return _this163;
       }
 
       _createClass2(FilterSubscriber, [{
@@ -83373,15 +98230,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(FinallySubscriber, _Subscriber__WEBPACK_18);
 
       function FinallySubscriber(destination, callback) {
-        var _this108;
+        var _this164;
 
         _classCallCheck(this, FinallySubscriber);
 
-        _this108 = _possibleConstructorReturn(this, _getPrototypeOf(FinallySubscriber).call(this, destination));
+        _this164 = _possibleConstructorReturn(this, _getPrototypeOf(FinallySubscriber).call(this, destination));
 
-        _this108.add(new _Subscription__WEBPACK_IMPORTED_MODULE_1__["Subscription"](callback));
+        _this164.add(new _Subscription__WEBPACK_IMPORTED_MODULE_1__["Subscription"](callback));
 
-        return _this108;
+        return _this164;
       }
 
       return FinallySubscriber;
@@ -83467,17 +98324,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(FindValueSubscriber, _Subscriber__WEBPACK_19);
 
       function FindValueSubscriber(destination, predicate, source, yieldIndex, thisArg) {
-        var _this109;
+        var _this165;
 
         _classCallCheck(this, FindValueSubscriber);
 
-        _this109 = _possibleConstructorReturn(this, _getPrototypeOf(FindValueSubscriber).call(this, destination));
-        _this109.predicate = predicate;
-        _this109.source = source;
-        _this109.yieldIndex = yieldIndex;
-        _this109.thisArg = thisArg;
-        _this109.index = 0;
-        return _this109;
+        _this165 = _possibleConstructorReturn(this, _getPrototypeOf(FindValueSubscriber).call(this, destination));
+        _this165.predicate = predicate;
+        _this165.source = source;
+        _this165.yieldIndex = yieldIndex;
+        _this165.thisArg = thisArg;
+        _this165.index = 0;
+        return _this165;
       }
 
       _createClass2(FindValueSubscriber, [{
@@ -83710,19 +98567,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(GroupBySubscriber, _Subscriber__WEBPACK_20);
 
       function GroupBySubscriber(destination, keySelector, elementSelector, durationSelector, subjectSelector) {
-        var _this110;
+        var _this166;
 
         _classCallCheck(this, GroupBySubscriber);
 
-        _this110 = _possibleConstructorReturn(this, _getPrototypeOf(GroupBySubscriber).call(this, destination));
-        _this110.keySelector = keySelector;
-        _this110.elementSelector = elementSelector;
-        _this110.durationSelector = durationSelector;
-        _this110.subjectSelector = subjectSelector;
-        _this110.groups = null;
-        _this110.attemptedToUnsubscribe = false;
-        _this110.count = 0;
-        return _this110;
+        _this166 = _possibleConstructorReturn(this, _getPrototypeOf(GroupBySubscriber).call(this, destination));
+        _this166.keySelector = keySelector;
+        _this166.elementSelector = elementSelector;
+        _this166.durationSelector = durationSelector;
+        _this166.subjectSelector = subjectSelector;
+        _this166.groups = null;
+        _this166.attemptedToUnsubscribe = false;
+        _this166.count = 0;
+        return _this166;
       }
 
       _createClass2(GroupBySubscriber, [{
@@ -83840,15 +98697,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(GroupDurationSubscriber, _Subscriber__WEBPACK_21);
 
       function GroupDurationSubscriber(key, group, parent) {
-        var _this111;
+        var _this167;
 
         _classCallCheck(this, GroupDurationSubscriber);
 
-        _this111 = _possibleConstructorReturn(this, _getPrototypeOf(GroupDurationSubscriber).call(this, group));
-        _this111.key = key;
-        _this111.group = group;
-        _this111.parent = parent;
-        return _this111;
+        _this167 = _possibleConstructorReturn(this, _getPrototypeOf(GroupDurationSubscriber).call(this, group));
+        _this167.key = key;
+        _this167.group = group;
+        _this167.parent = parent;
+        return _this167;
       }
 
       _createClass2(GroupDurationSubscriber, [{
@@ -83878,15 +98735,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(GroupedObservable, _Observable__WEBPACK_5);
 
       function GroupedObservable(key, groupSubject, refCountSubscription) {
-        var _this112;
+        var _this168;
 
         _classCallCheck(this, GroupedObservable);
 
-        _this112 = _possibleConstructorReturn(this, _getPrototypeOf(GroupedObservable).call(this));
-        _this112.key = key;
-        _this112.groupSubject = groupSubject;
-        _this112.refCountSubscription = refCountSubscription;
-        return _this112;
+        _this168 = _possibleConstructorReturn(this, _getPrototypeOf(GroupedObservable).call(this));
+        _this168.key = key;
+        _this168.groupSubject = groupSubject;
+        _this168.refCountSubscription = refCountSubscription;
+        return _this168;
       }
 
       _createClass2(GroupedObservable, [{
@@ -83914,14 +98771,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(InnerRefCountSubscription, _Subscription__WEBPAC3);
 
       function InnerRefCountSubscription(parent) {
-        var _this113;
+        var _this169;
 
         _classCallCheck(this, InnerRefCountSubscription);
 
-        _this113 = _possibleConstructorReturn(this, _getPrototypeOf(InnerRefCountSubscription).call(this));
-        _this113.parent = parent;
+        _this169 = _possibleConstructorReturn(this, _getPrototypeOf(InnerRefCountSubscription).call(this));
+        _this169.parent = parent;
         parent.count++;
-        return _this113;
+        return _this169;
       }
 
       _createClass2(InnerRefCountSubscription, [{
@@ -84245,15 +99102,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(MapSubscriber, _Subscriber__WEBPACK_24);
 
       function MapSubscriber(destination, project, thisArg) {
-        var _this114;
+        var _this170;
 
         _classCallCheck(this, MapSubscriber);
 
-        _this114 = _possibleConstructorReturn(this, _getPrototypeOf(MapSubscriber).call(this, destination));
-        _this114.project = project;
-        _this114.count = 0;
-        _this114.thisArg = thisArg || _assertThisInitialized(_this114);
-        return _this114;
+        _this170 = _possibleConstructorReturn(this, _getPrototypeOf(MapSubscriber).call(this, destination));
+        _this170.project = project;
+        _this170.count = 0;
+        _this170.thisArg = thisArg || _assertThisInitialized(_this170);
+        return _this170;
       }
 
       _createClass2(MapSubscriber, [{
@@ -84336,13 +99193,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(MapToSubscriber, _Subscriber__WEBPACK_25);
 
       function MapToSubscriber(destination, value) {
-        var _this115;
+        var _this171;
 
         _classCallCheck(this, MapToSubscriber);
 
-        _this115 = _possibleConstructorReturn(this, _getPrototypeOf(MapToSubscriber).call(this, destination));
-        _this115.value = value;
-        return _this115;
+        _this171 = _possibleConstructorReturn(this, _getPrototypeOf(MapToSubscriber).call(this, destination));
+        _this171.value = value;
+        return _this171;
       }
 
       _createClass2(MapToSubscriber, [{
@@ -84519,8 +99376,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/merge.js");
 
     function merge() {
-      for (var _len36 = arguments.length, observables = new Array(_len36), _key33 = 0; _key33 < _len36; _key33++) {
-        observables[_key33] = arguments[_key33];
+      for (var _len38 = arguments.length, observables = new Array(_len38), _key36 = 0; _key36 < _len38; _key36++) {
+        observables[_key36] = arguments[_key36];
       }
 
       return function (source) {
@@ -84683,20 +99540,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(MergeMapSubscriber, _OuterSubscriber__WEB15);
 
       function MergeMapSubscriber(destination, project) {
-        var _this116;
+        var _this172;
 
         var concurrent = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Number.POSITIVE_INFINITY;
 
         _classCallCheck(this, MergeMapSubscriber);
 
-        _this116 = _possibleConstructorReturn(this, _getPrototypeOf(MergeMapSubscriber).call(this, destination));
-        _this116.project = project;
-        _this116.concurrent = concurrent;
-        _this116.hasCompleted = false;
-        _this116.buffer = [];
-        _this116.active = 0;
-        _this116.index = 0;
-        return _this116;
+        _this172 = _possibleConstructorReturn(this, _getPrototypeOf(MergeMapSubscriber).call(this, destination));
+        _this172.project = project;
+        _this172.concurrent = concurrent;
+        _this172.hasCompleted = false;
+        _this172.buffer = [];
+        _this172.active = 0;
+        _this172.index = 0;
+        return _this172;
       }
 
       _createClass2(MergeMapSubscriber, [{
@@ -84907,20 +99764,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(MergeScanSubscriber, _OuterSubscriber__WEB16);
 
       function MergeScanSubscriber(destination, accumulator, acc, concurrent) {
-        var _this117;
+        var _this173;
 
         _classCallCheck(this, MergeScanSubscriber);
 
-        _this117 = _possibleConstructorReturn(this, _getPrototypeOf(MergeScanSubscriber).call(this, destination));
-        _this117.accumulator = accumulator;
-        _this117.acc = acc;
-        _this117.concurrent = concurrent;
-        _this117.hasValue = false;
-        _this117.hasCompleted = false;
-        _this117.buffer = [];
-        _this117.active = 0;
-        _this117.index = 0;
-        return _this117;
+        _this173 = _possibleConstructorReturn(this, _getPrototypeOf(MergeScanSubscriber).call(this, destination));
+        _this173.accumulator = accumulator;
+        _this173.acc = acc;
+        _this173.concurrent = concurrent;
+        _this173.hasValue = false;
+        _this173.hasCompleted = false;
+        _this173.buffer = [];
+        _this173.active = 0;
+        _this173.index = 0;
+        return _this173;
       }
 
       _createClass2(MergeScanSubscriber, [{
@@ -85214,16 +100071,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(ObserveOnSubscriber, _Subscriber__WEBPACK_27);
 
       function ObserveOnSubscriber(destination, scheduler) {
-        var _this118;
+        var _this174;
 
         var delay = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
 
         _classCallCheck(this, ObserveOnSubscriber);
 
-        _this118 = _possibleConstructorReturn(this, _getPrototypeOf(ObserveOnSubscriber).call(this, destination));
-        _this118.scheduler = scheduler;
-        _this118.delay = delay;
-        return _this118;
+        _this174 = _possibleConstructorReturn(this, _getPrototypeOf(ObserveOnSubscriber).call(this, destination));
+        _this174.scheduler = scheduler;
+        _this174.delay = delay;
+        return _this174;
       }
 
       _createClass2(ObserveOnSubscriber, [{
@@ -85330,8 +100187,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/util/subscribeToResult.js");
 
     function onErrorResumeNext() {
-      for (var _len37 = arguments.length, nextSources = new Array(_len37), _key34 = 0; _key34 < _len37; _key34++) {
-        nextSources[_key34] = arguments[_key34];
+      for (var _len39 = arguments.length, nextSources = new Array(_len39), _key37 = 0; _key37 < _len39; _key37++) {
+        nextSources[_key37] = arguments[_key37];
       }
 
       if (nextSources.length === 1 && Object(_util_isArray__WEBPACK_IMPORTED_MODULE_1__["isArray"])(nextSources[0])) {
@@ -85344,8 +100201,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function onErrorResumeNextStatic() {
-      for (var _len38 = arguments.length, nextSources = new Array(_len38), _key35 = 0; _key35 < _len38; _key35++) {
-        nextSources[_key35] = arguments[_key35];
+      for (var _len40 = arguments.length, nextSources = new Array(_len40), _key38 = 0; _key38 < _len40; _key38++) {
+        nextSources[_key38] = arguments[_key38];
       }
 
       var source = null;
@@ -85383,14 +100240,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(OnErrorResumeNextSubscriber, _OuterSubscriber__WEB17);
 
       function OnErrorResumeNextSubscriber(destination, nextSources) {
-        var _this119;
+        var _this175;
 
         _classCallCheck(this, OnErrorResumeNextSubscriber);
 
-        _this119 = _possibleConstructorReturn(this, _getPrototypeOf(OnErrorResumeNextSubscriber).call(this, destination));
-        _this119.destination = destination;
-        _this119.nextSources = nextSources;
-        return _this119;
+        _this175 = _possibleConstructorReturn(this, _getPrototypeOf(OnErrorResumeNextSubscriber).call(this, destination));
+        _this175.destination = destination;
+        _this175.nextSources = nextSources;
+        return _this175;
       }
 
       _createClass2(OnErrorResumeNextSubscriber, [{
@@ -85497,13 +100354,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(PairwiseSubscriber, _Subscriber__WEBPACK_28);
 
       function PairwiseSubscriber(destination) {
-        var _this120;
+        var _this176;
 
         _classCallCheck(this, PairwiseSubscriber);
 
-        _this120 = _possibleConstructorReturn(this, _getPrototypeOf(PairwiseSubscriber).call(this, destination));
-        _this120.hasPrev = false;
-        return _this120;
+        _this176 = _possibleConstructorReturn(this, _getPrototypeOf(PairwiseSubscriber).call(this, destination));
+        _this176.hasPrev = false;
+        return _this176;
       }
 
       _createClass2(PairwiseSubscriber, [{
@@ -85601,8 +100458,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/operators/map.js");
 
     function pluck() {
-      for (var _len39 = arguments.length, properties = new Array(_len39), _key36 = 0; _key36 < _len39; _key36++) {
-        properties[_key36] = arguments[_key36];
+      for (var _len41 = arguments.length, properties = new Array(_len41), _key39 = 0; _key39 < _len41; _key39++) {
+        properties[_key39] = arguments[_key39];
       }
 
       var length = properties.length;
@@ -85849,8 +100706,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/race.js");
 
     function race() {
-      for (var _len40 = arguments.length, observables = new Array(_len40), _key37 = 0; _key37 < _len40; _key37++) {
-        observables[_key37] = arguments[_key37];
+      for (var _len42 = arguments.length, observables = new Array(_len42), _key40 = 0; _key40 < _len42; _key40++) {
+        observables[_key40] = arguments[_key40];
       }
 
       return function raceOperatorFunction(source) {
@@ -85994,13 +100851,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(RefCountSubscriber, _Subscriber__WEBPACK_29);
 
       function RefCountSubscriber(destination, connectable) {
-        var _this121;
+        var _this177;
 
         _classCallCheck(this, RefCountSubscriber);
 
-        _this121 = _possibleConstructorReturn(this, _getPrototypeOf(RefCountSubscriber).call(this, destination));
-        _this121.connectable = connectable;
-        return _this121;
+        _this177 = _possibleConstructorReturn(this, _getPrototypeOf(RefCountSubscriber).call(this, destination));
+        _this177.connectable = connectable;
+        return _this177;
       }
 
       _createClass2(RefCountSubscriber, [{
@@ -86116,14 +100973,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(RepeatSubscriber, _Subscriber__WEBPACK_30);
 
       function RepeatSubscriber(destination, count, source) {
-        var _this122;
+        var _this178;
 
         _classCallCheck(this, RepeatSubscriber);
 
-        _this122 = _possibleConstructorReturn(this, _getPrototypeOf(RepeatSubscriber).call(this, destination));
-        _this122.count = count;
-        _this122.source = source;
-        return _this122;
+        _this178 = _possibleConstructorReturn(this, _getPrototypeOf(RepeatSubscriber).call(this, destination));
+        _this178.count = count;
+        _this178.source = source;
+        return _this178;
       }
 
       _createClass2(RepeatSubscriber, [{
@@ -86220,15 +101077,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(RepeatWhenSubscriber, _OuterSubscriber__WEB18);
 
       function RepeatWhenSubscriber(destination, notifier, source) {
-        var _this123;
+        var _this179;
 
         _classCallCheck(this, RepeatWhenSubscriber);
 
-        _this123 = _possibleConstructorReturn(this, _getPrototypeOf(RepeatWhenSubscriber).call(this, destination));
-        _this123.notifier = notifier;
-        _this123.source = source;
-        _this123.sourceIsBeingSubscribedTo = true;
-        return _this123;
+        _this179 = _possibleConstructorReturn(this, _getPrototypeOf(RepeatWhenSubscriber).call(this, destination));
+        _this179.notifier = notifier;
+        _this179.source = source;
+        _this179.sourceIsBeingSubscribedTo = true;
+        return _this179;
       }
 
       _createClass2(RepeatWhenSubscriber, [{
@@ -86376,14 +101233,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(RetrySubscriber, _Subscriber__WEBPACK_31);
 
       function RetrySubscriber(destination, count, source) {
-        var _this124;
+        var _this180;
 
         _classCallCheck(this, RetrySubscriber);
 
-        _this124 = _possibleConstructorReturn(this, _getPrototypeOf(RetrySubscriber).call(this, destination));
-        _this124.count = count;
-        _this124.source = source;
-        return _this124;
+        _this180 = _possibleConstructorReturn(this, _getPrototypeOf(RetrySubscriber).call(this, destination));
+        _this180.count = count;
+        _this180.source = source;
+        return _this180;
       }
 
       _createClass2(RetrySubscriber, [{
@@ -86481,14 +101338,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(RetryWhenSubscriber, _OuterSubscriber__WEB19);
 
       function RetryWhenSubscriber(destination, notifier, source) {
-        var _this125;
+        var _this181;
 
         _classCallCheck(this, RetryWhenSubscriber);
 
-        _this125 = _possibleConstructorReturn(this, _getPrototypeOf(RetryWhenSubscriber).call(this, destination));
-        _this125.notifier = notifier;
-        _this125.source = source;
-        return _this125;
+        _this181 = _possibleConstructorReturn(this, _getPrototypeOf(RetryWhenSubscriber).call(this, destination));
+        _this181.notifier = notifier;
+        _this181.source = source;
+        return _this181;
       }
 
       _createClass2(RetryWhenSubscriber, [{
@@ -86627,13 +101484,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SampleSubscriber, _OuterSubscriber__WEB20);
 
       function SampleSubscriber() {
-        var _this126;
+        var _this182;
 
         _classCallCheck(this, SampleSubscriber);
 
-        _this126 = _possibleConstructorReturn(this, _getPrototypeOf(SampleSubscriber).apply(this, arguments));
-        _this126.hasValue = false;
-        return _this126;
+        _this182 = _possibleConstructorReturn(this, _getPrototypeOf(SampleSubscriber).apply(this, arguments));
+        _this182.hasValue = false;
+        return _this182;
       }
 
       _createClass2(SampleSubscriber, [{
@@ -86734,21 +101591,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SampleTimeSubscriber, _Subscriber__WEBPACK_32);
 
       function SampleTimeSubscriber(destination, period, scheduler) {
-        var _this127;
+        var _this183;
 
         _classCallCheck(this, SampleTimeSubscriber);
 
-        _this127 = _possibleConstructorReturn(this, _getPrototypeOf(SampleTimeSubscriber).call(this, destination));
-        _this127.period = period;
-        _this127.scheduler = scheduler;
-        _this127.hasValue = false;
+        _this183 = _possibleConstructorReturn(this, _getPrototypeOf(SampleTimeSubscriber).call(this, destination));
+        _this183.period = period;
+        _this183.scheduler = scheduler;
+        _this183.hasValue = false;
 
-        _this127.add(scheduler.schedule(dispatchNotification, period, {
-          subscriber: _assertThisInitialized(_this127),
+        _this183.add(scheduler.schedule(dispatchNotification, period, {
+          subscriber: _assertThisInitialized(_this183),
           period: period
         }));
 
-        return _this127;
+        return _this183;
       }
 
       _createClass2(SampleTimeSubscriber, [{
@@ -86848,16 +101705,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(ScanSubscriber, _Subscriber__WEBPACK_33);
 
       function ScanSubscriber(destination, accumulator, _seed, hasSeed) {
-        var _this128;
+        var _this184;
 
         _classCallCheck(this, ScanSubscriber);
 
-        _this128 = _possibleConstructorReturn(this, _getPrototypeOf(ScanSubscriber).call(this, destination));
-        _this128.accumulator = accumulator;
-        _this128._seed = _seed;
-        _this128.hasSeed = hasSeed;
-        _this128.index = 0;
-        return _this128;
+        _this184 = _possibleConstructorReturn(this, _getPrototypeOf(ScanSubscriber).call(this, destination));
+        _this184.accumulator = accumulator;
+        _this184._seed = _seed;
+        _this184.hasSeed = hasSeed;
+        _this184.index = 0;
+        return _this184;
       }
 
       _createClass2(ScanSubscriber, [{
@@ -86973,20 +101830,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SequenceEqualSubscriber, _Subscriber__WEBPACK_34);
 
       function SequenceEqualSubscriber(destination, compareTo, comparator) {
-        var _this129;
+        var _this185;
 
         _classCallCheck(this, SequenceEqualSubscriber);
 
-        _this129 = _possibleConstructorReturn(this, _getPrototypeOf(SequenceEqualSubscriber).call(this, destination));
-        _this129.compareTo = compareTo;
-        _this129.comparator = comparator;
-        _this129._a = [];
-        _this129._b = [];
-        _this129._oneComplete = false;
+        _this185 = _possibleConstructorReturn(this, _getPrototypeOf(SequenceEqualSubscriber).call(this, destination));
+        _this185.compareTo = compareTo;
+        _this185.comparator = comparator;
+        _this185._a = [];
+        _this185._b = [];
+        _this185._oneComplete = false;
 
-        _this129.destination.add(compareTo.subscribe(new SequenceEqualCompareToSubscriber(destination, _assertThisInitialized(_this129))));
+        _this185.destination.add(compareTo.subscribe(new SequenceEqualCompareToSubscriber(destination, _assertThisInitialized(_this185))));
 
-        return _this129;
+        return _this185;
       }
 
       _createClass2(SequenceEqualSubscriber, [{
@@ -87074,13 +101931,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SequenceEqualCompareToSubscriber, _Subscriber__WEBPACK_35);
 
       function SequenceEqualCompareToSubscriber(destination, parent) {
-        var _this130;
+        var _this186;
 
         _classCallCheck(this, SequenceEqualCompareToSubscriber);
 
-        _this130 = _possibleConstructorReturn(this, _getPrototypeOf(SequenceEqualCompareToSubscriber).call(this, destination));
-        _this130.parent = parent;
-        return _this130;
+        _this186 = _possibleConstructorReturn(this, _getPrototypeOf(SequenceEqualCompareToSubscriber).call(this, destination));
+        _this186.parent = parent;
+        return _this186;
       }
 
       _createClass2(SequenceEqualCompareToSubscriber, [{
@@ -87322,16 +102179,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SingleSubscriber, _Subscriber__WEBPACK_36);
 
       function SingleSubscriber(destination, predicate, source) {
-        var _this131;
+        var _this187;
 
         _classCallCheck(this, SingleSubscriber);
 
-        _this131 = _possibleConstructorReturn(this, _getPrototypeOf(SingleSubscriber).call(this, destination));
-        _this131.predicate = predicate;
-        _this131.source = source;
-        _this131.seenValue = false;
-        _this131.index = 0;
-        return _this131;
+        _this187 = _possibleConstructorReturn(this, _getPrototypeOf(SingleSubscriber).call(this, destination));
+        _this187.predicate = predicate;
+        _this187.source = source;
+        _this187.seenValue = false;
+        _this187.index = 0;
+        return _this187;
       }
 
       _createClass2(SingleSubscriber, [{
@@ -87444,14 +102301,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SkipSubscriber, _Subscriber__WEBPACK_37);
 
       function SkipSubscriber(destination, total) {
-        var _this132;
+        var _this188;
 
         _classCallCheck(this, SkipSubscriber);
 
-        _this132 = _possibleConstructorReturn(this, _getPrototypeOf(SkipSubscriber).call(this, destination));
-        _this132.total = total;
-        _this132.count = 0;
-        return _this132;
+        _this188 = _possibleConstructorReturn(this, _getPrototypeOf(SkipSubscriber).call(this, destination));
+        _this188.total = total;
+        _this188.count = 0;
+        return _this188;
       }
 
       _createClass2(SkipSubscriber, [{
@@ -87541,15 +102398,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SkipLastSubscriber, _Subscriber__WEBPACK_38);
 
       function SkipLastSubscriber(destination, _skipCount) {
-        var _this133;
+        var _this189;
 
         _classCallCheck(this, SkipLastSubscriber);
 
-        _this133 = _possibleConstructorReturn(this, _getPrototypeOf(SkipLastSubscriber).call(this, destination));
-        _this133._skipCount = _skipCount;
-        _this133._count = 0;
-        _this133._ring = new Array(_skipCount);
-        return _this133;
+        _this189 = _possibleConstructorReturn(this, _getPrototypeOf(SkipLastSubscriber).call(this, destination));
+        _this189._skipCount = _skipCount;
+        _this189._count = 0;
+        _this189._ring = new Array(_skipCount);
+        return _this189;
       }
 
       _createClass2(SkipLastSubscriber, [{
@@ -87646,26 +102503,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SkipUntilSubscriber, _OuterSubscriber__WEB21);
 
       function SkipUntilSubscriber(destination, notifier) {
-        var _this134;
+        var _this190;
 
         _classCallCheck(this, SkipUntilSubscriber);
 
-        _this134 = _possibleConstructorReturn(this, _getPrototypeOf(SkipUntilSubscriber).call(this, destination));
-        _this134.hasValue = false;
-        var innerSubscriber = new _InnerSubscriber__WEBPACK_IMPORTED_MODULE_1__["InnerSubscriber"](_assertThisInitialized(_this134), undefined, undefined);
+        _this190 = _possibleConstructorReturn(this, _getPrototypeOf(SkipUntilSubscriber).call(this, destination));
+        _this190.hasValue = false;
+        var innerSubscriber = new _InnerSubscriber__WEBPACK_IMPORTED_MODULE_1__["InnerSubscriber"](_assertThisInitialized(_this190), undefined, undefined);
 
-        _this134.add(innerSubscriber);
+        _this190.add(innerSubscriber);
 
-        _this134.innerSubscription = innerSubscriber;
-        var innerSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_2__["subscribeToResult"])(_assertThisInitialized(_this134), notifier, undefined, undefined, innerSubscriber);
+        _this190.innerSubscription = innerSubscriber;
+        var innerSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_2__["subscribeToResult"])(_assertThisInitialized(_this190), notifier, undefined, undefined, innerSubscriber);
 
         if (innerSubscription !== innerSubscriber) {
-          _this134.add(innerSubscription);
+          _this190.add(innerSubscription);
 
-          _this134.innerSubscription = innerSubscription;
+          _this190.innerSubscription = innerSubscription;
         }
 
-        return _this134;
+        return _this190;
       }
 
       _createClass2(SkipUntilSubscriber, [{
@@ -87753,15 +102610,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SkipWhileSubscriber, _Subscriber__WEBPACK_39);
 
       function SkipWhileSubscriber(destination, predicate) {
-        var _this135;
+        var _this191;
 
         _classCallCheck(this, SkipWhileSubscriber);
 
-        _this135 = _possibleConstructorReturn(this, _getPrototypeOf(SkipWhileSubscriber).call(this, destination));
-        _this135.predicate = predicate;
-        _this135.skipping = true;
-        _this135.index = 0;
-        return _this135;
+        _this191 = _possibleConstructorReturn(this, _getPrototypeOf(SkipWhileSubscriber).call(this, destination));
+        _this191.predicate = predicate;
+        _this191.skipping = true;
+        _this191.index = 0;
+        return _this191;
       }
 
       _createClass2(SkipWhileSubscriber, [{
@@ -87829,8 +102686,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/util/isScheduler.js");
 
     function startWith() {
-      for (var _len41 = arguments.length, array = new Array(_len41), _key38 = 0; _key38 < _len41; _key38++) {
-        array[_key38] = arguments[_key38];
+      for (var _len43 = arguments.length, array = new Array(_len43), _key41 = 0; _key41 < _len43; _key41++) {
+        array[_key41] = arguments[_key41];
       }
 
       var scheduler = array[array.length - 1];
@@ -88039,14 +102896,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(SwitchMapSubscriber, _OuterSubscriber__WEB22);
 
       function SwitchMapSubscriber(destination, project) {
-        var _this136;
+        var _this192;
 
         _classCallCheck(this, SwitchMapSubscriber);
 
-        _this136 = _possibleConstructorReturn(this, _getPrototypeOf(SwitchMapSubscriber).call(this, destination));
-        _this136.project = project;
-        _this136.index = 0;
-        return _this136;
+        _this192 = _possibleConstructorReturn(this, _getPrototypeOf(SwitchMapSubscriber).call(this, destination));
+        _this192.project = project;
+        _this192.index = 0;
+        return _this192;
       }
 
       _createClass2(SwitchMapSubscriber, [{
@@ -88238,14 +103095,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(TakeSubscriber, _Subscriber__WEBPACK_40);
 
       function TakeSubscriber(destination, total) {
-        var _this137;
+        var _this193;
 
         _classCallCheck(this, TakeSubscriber);
 
-        _this137 = _possibleConstructorReturn(this, _getPrototypeOf(TakeSubscriber).call(this, destination));
-        _this137.total = total;
-        _this137.count = 0;
-        return _this137;
+        _this193 = _possibleConstructorReturn(this, _getPrototypeOf(TakeSubscriber).call(this, destination));
+        _this193.total = total;
+        _this193.count = 0;
+        return _this193;
       }
 
       _createClass2(TakeSubscriber, [{
@@ -88349,15 +103206,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(TakeLastSubscriber, _Subscriber__WEBPACK_41);
 
       function TakeLastSubscriber(destination, total) {
-        var _this138;
+        var _this194;
 
         _classCallCheck(this, TakeLastSubscriber);
 
-        _this138 = _possibleConstructorReturn(this, _getPrototypeOf(TakeLastSubscriber).call(this, destination));
-        _this138.total = total;
-        _this138.ring = new Array();
-        _this138.count = 0;
-        return _this138;
+        _this194 = _possibleConstructorReturn(this, _getPrototypeOf(TakeLastSubscriber).call(this, destination));
+        _this194.total = total;
+        _this194.ring = new Array();
+        _this194.count = 0;
+        return _this194;
       }
 
       _createClass2(TakeLastSubscriber, [{
@@ -88472,13 +103329,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(TakeUntilSubscriber, _OuterSubscriber__WEB23);
 
       function TakeUntilSubscriber(destination) {
-        var _this139;
+        var _this195;
 
         _classCallCheck(this, TakeUntilSubscriber);
 
-        _this139 = _possibleConstructorReturn(this, _getPrototypeOf(TakeUntilSubscriber).call(this, destination));
-        _this139.seenValue = false;
-        return _this139;
+        _this195 = _possibleConstructorReturn(this, _getPrototypeOf(TakeUntilSubscriber).call(this, destination));
+        _this195.seenValue = false;
+        return _this195;
       }
 
       _createClass2(TakeUntilSubscriber, [{
@@ -88558,15 +103415,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(TakeWhileSubscriber, _Subscriber__WEBPACK_42);
 
       function TakeWhileSubscriber(destination, predicate, inclusive) {
-        var _this140;
+        var _this196;
 
         _classCallCheck(this, TakeWhileSubscriber);
 
-        _this140 = _possibleConstructorReturn(this, _getPrototypeOf(TakeWhileSubscriber).call(this, destination));
-        _this140.predicate = predicate;
-        _this140.inclusive = inclusive;
-        _this140.index = 0;
-        return _this140;
+        _this196 = _possibleConstructorReturn(this, _getPrototypeOf(TakeWhileSubscriber).call(this, destination));
+        _this196.predicate = predicate;
+        _this196.inclusive = inclusive;
+        _this196.index = 0;
+        return _this196;
       }
 
       _createClass2(TakeWhileSubscriber, [{
@@ -88679,28 +103536,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(TapSubscriber, _Subscriber__WEBPACK_43);
 
       function TapSubscriber(destination, observerOrNext, error, complete) {
-        var _this141;
+        var _this197;
 
         _classCallCheck(this, TapSubscriber);
 
-        _this141 = _possibleConstructorReturn(this, _getPrototypeOf(TapSubscriber).call(this, destination));
-        _this141._tapNext = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this141._tapError = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this141._tapComplete = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this141._tapError = error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this141._tapComplete = complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this197 = _possibleConstructorReturn(this, _getPrototypeOf(TapSubscriber).call(this, destination));
+        _this197._tapNext = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this197._tapError = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this197._tapComplete = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this197._tapError = error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this197._tapComplete = complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
 
         if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_2__["isFunction"])(observerOrNext)) {
-          _this141._context = _assertThisInitialized(_this141);
-          _this141._tapNext = observerOrNext;
+          _this197._context = _assertThisInitialized(_this197);
+          _this197._tapNext = observerOrNext;
         } else if (observerOrNext) {
-          _this141._context = observerOrNext;
-          _this141._tapNext = observerOrNext.next || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-          _this141._tapError = observerOrNext.error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-          _this141._tapComplete = observerOrNext.complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this197._context = observerOrNext;
+          _this197._tapNext = observerOrNext.next || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this197._tapError = observerOrNext.error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this197._tapComplete = observerOrNext.complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
         }
 
-        return _this141;
+        return _this197;
       }
 
       _createClass2(TapSubscriber, [{
@@ -88825,17 +103682,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(ThrottleSubscriber, _OuterSubscriber__WEB24);
 
       function ThrottleSubscriber(destination, durationSelector, _leading, _trailing) {
-        var _this142;
+        var _this198;
 
         _classCallCheck(this, ThrottleSubscriber);
 
-        _this142 = _possibleConstructorReturn(this, _getPrototypeOf(ThrottleSubscriber).call(this, destination));
-        _this142.destination = destination;
-        _this142.durationSelector = durationSelector;
-        _this142._leading = _leading;
-        _this142._trailing = _trailing;
-        _this142._hasValue = false;
-        return _this142;
+        _this198 = _possibleConstructorReturn(this, _getPrototypeOf(ThrottleSubscriber).call(this, destination));
+        _this198.destination = destination;
+        _this198.durationSelector = durationSelector;
+        _this198._leading = _leading;
+        _this198._trailing = _trailing;
+        _this198._hasValue = false;
+        return _this198;
       }
 
       _createClass2(ThrottleSubscriber, [{
@@ -88994,18 +103851,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(ThrottleTimeSubscriber, _Subscriber__WEBPACK_44);
 
       function ThrottleTimeSubscriber(destination, duration, scheduler, leading, trailing) {
-        var _this143;
+        var _this199;
 
         _classCallCheck(this, ThrottleTimeSubscriber);
 
-        _this143 = _possibleConstructorReturn(this, _getPrototypeOf(ThrottleTimeSubscriber).call(this, destination));
-        _this143.duration = duration;
-        _this143.scheduler = scheduler;
-        _this143.leading = leading;
-        _this143.trailing = trailing;
-        _this143._hasTrailingValue = false;
-        _this143._trailingValue = null;
-        return _this143;
+        _this199 = _possibleConstructorReturn(this, _getPrototypeOf(ThrottleTimeSubscriber).call(this, destination));
+        _this199.duration = duration;
+        _this199.scheduler = scheduler;
+        _this199.leading = leading;
+        _this199.trailing = trailing;
+        _this199._hasTrailingValue = false;
+        _this199._trailingValue = null;
+        return _this199;
       }
 
       _createClass2(ThrottleTimeSubscriber, [{
@@ -89134,14 +103991,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(ThrowIfEmptySubscriber, _Subscriber__WEBPACK_45);
 
       function ThrowIfEmptySubscriber(destination, errorFactory) {
-        var _this144;
+        var _this200;
 
         _classCallCheck(this, ThrowIfEmptySubscriber);
 
-        _this144 = _possibleConstructorReturn(this, _getPrototypeOf(ThrowIfEmptySubscriber).call(this, destination));
-        _this144.errorFactory = errorFactory;
-        _this144.hasValue = false;
-        return _this144;
+        _this200 = _possibleConstructorReturn(this, _getPrototypeOf(ThrowIfEmptySubscriber).call(this, destination));
+        _this200.errorFactory = errorFactory;
+        _this200.hasValue = false;
+        return _this200;
       }
 
       _createClass2(ThrowIfEmptySubscriber, [{
@@ -89400,20 +104257,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(TimeoutWithSubscriber, _OuterSubscriber__WEB25);
 
       function TimeoutWithSubscriber(destination, absoluteTimeout, waitFor, withObservable, scheduler) {
-        var _this145;
+        var _this201;
 
         _classCallCheck(this, TimeoutWithSubscriber);
 
-        _this145 = _possibleConstructorReturn(this, _getPrototypeOf(TimeoutWithSubscriber).call(this, destination));
-        _this145.absoluteTimeout = absoluteTimeout;
-        _this145.waitFor = waitFor;
-        _this145.withObservable = withObservable;
-        _this145.scheduler = scheduler;
-        _this145.action = null;
+        _this201 = _possibleConstructorReturn(this, _getPrototypeOf(TimeoutWithSubscriber).call(this, destination));
+        _this201.absoluteTimeout = absoluteTimeout;
+        _this201.waitFor = waitFor;
+        _this201.withObservable = withObservable;
+        _this201.scheduler = scheduler;
+        _this201.action = null;
 
-        _this145.scheduleTimeout();
+        _this201.scheduleTimeout();
 
-        return _this145;
+        return _this201;
       }
 
       _createClass2(TimeoutWithSubscriber, [{
@@ -89636,14 +104493,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(WindowSubscriber, _OuterSubscriber__WEB26);
 
       function WindowSubscriber(destination) {
-        var _this146;
+        var _this202;
 
         _classCallCheck(this, WindowSubscriber);
 
-        _this146 = _possibleConstructorReturn(this, _getPrototypeOf(WindowSubscriber).call(this, destination));
-        _this146.window = new _Subject__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
-        destination.next(_this146.window);
-        return _this146;
+        _this202 = _possibleConstructorReturn(this, _getPrototypeOf(WindowSubscriber).call(this, destination));
+        _this202.window = new _Subject__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
+        destination.next(_this202.window);
+        return _this202;
       }
 
       _createClass2(WindowSubscriber, [{
@@ -89770,18 +104627,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(WindowCountSubscriber, _Subscriber__WEBPACK_46);
 
       function WindowCountSubscriber(destination, windowSize, startWindowEvery) {
-        var _this147;
+        var _this203;
 
         _classCallCheck(this, WindowCountSubscriber);
 
-        _this147 = _possibleConstructorReturn(this, _getPrototypeOf(WindowCountSubscriber).call(this, destination));
-        _this147.destination = destination;
-        _this147.windowSize = windowSize;
-        _this147.startWindowEvery = startWindowEvery;
-        _this147.windows = [new _Subject__WEBPACK_IMPORTED_MODULE_1__["Subject"]()];
-        _this147.count = 0;
-        destination.next(_this147.windows[0]);
-        return _this147;
+        _this203 = _possibleConstructorReturn(this, _getPrototypeOf(WindowCountSubscriber).call(this, destination));
+        _this203.destination = destination;
+        _this203.windowSize = windowSize;
+        _this203.startWindowEvery = startWindowEvery;
+        _this203.windows = [new _Subject__WEBPACK_IMPORTED_MODULE_1__["Subject"]()];
+        _this203.count = 0;
+        destination.next(_this203.windows[0]);
+        return _this203;
       }
 
       _createClass2(WindowCountSubscriber, [{
@@ -89955,13 +104812,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(CountedSubject, _Subject__WEBPACK_IMP5);
 
       function CountedSubject() {
-        var _this148;
+        var _this204;
 
         _classCallCheck(this, CountedSubject);
 
-        _this148 = _possibleConstructorReturn(this, _getPrototypeOf(CountedSubject).apply(this, arguments));
-        _this148._numberOfNextedValues = 0;
-        return _this148;
+        _this204 = _possibleConstructorReturn(this, _getPrototypeOf(CountedSubject).apply(this, arguments));
+        _this204._numberOfNextedValues = 0;
+        return _this204;
       }
 
       _createClass2(CountedSubject, [{
@@ -89987,47 +104844,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(WindowTimeSubscriber, _Subscriber__WEBPACK_47);
 
       function WindowTimeSubscriber(destination, windowTimeSpan, windowCreationInterval, maxWindowSize, scheduler) {
-        var _this149;
+        var _this205;
 
         _classCallCheck(this, WindowTimeSubscriber);
 
-        _this149 = _possibleConstructorReturn(this, _getPrototypeOf(WindowTimeSubscriber).call(this, destination));
-        _this149.destination = destination;
-        _this149.windowTimeSpan = windowTimeSpan;
-        _this149.windowCreationInterval = windowCreationInterval;
-        _this149.maxWindowSize = maxWindowSize;
-        _this149.scheduler = scheduler;
-        _this149.windows = [];
+        _this205 = _possibleConstructorReturn(this, _getPrototypeOf(WindowTimeSubscriber).call(this, destination));
+        _this205.destination = destination;
+        _this205.windowTimeSpan = windowTimeSpan;
+        _this205.windowCreationInterval = windowCreationInterval;
+        _this205.maxWindowSize = maxWindowSize;
+        _this205.scheduler = scheduler;
+        _this205.windows = [];
 
-        var window = _this149.openWindow();
+        var window = _this205.openWindow();
 
         if (windowCreationInterval !== null && windowCreationInterval >= 0) {
           var closeState = {
-            subscriber: _assertThisInitialized(_this149),
+            subscriber: _assertThisInitialized(_this205),
             window: window,
             context: null
           };
           var creationState = {
             windowTimeSpan: windowTimeSpan,
             windowCreationInterval: windowCreationInterval,
-            subscriber: _assertThisInitialized(_this149),
+            subscriber: _assertThisInitialized(_this205),
             scheduler: scheduler
           };
 
-          _this149.add(scheduler.schedule(dispatchWindowClose, windowTimeSpan, closeState));
+          _this205.add(scheduler.schedule(dispatchWindowClose, windowTimeSpan, closeState));
 
-          _this149.add(scheduler.schedule(dispatchWindowCreation, windowCreationInterval, creationState));
+          _this205.add(scheduler.schedule(dispatchWindowCreation, windowCreationInterval, creationState));
         } else {
           var timeSpanOnlyState = {
-            subscriber: _assertThisInitialized(_this149),
+            subscriber: _assertThisInitialized(_this205),
             window: window,
             windowTimeSpan: windowTimeSpan
           };
 
-          _this149.add(scheduler.schedule(dispatchWindowTimeSpanOnly, windowTimeSpan, timeSpanOnlyState));
+          _this205.add(scheduler.schedule(dispatchWindowTimeSpanOnly, windowTimeSpan, timeSpanOnlyState));
         }
 
-        return _this149;
+        return _this205;
       }
 
       _createClass2(WindowTimeSubscriber, [{
@@ -90221,18 +105078,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(WindowToggleSubscriber, _OuterSubscriber__WEB27);
 
       function WindowToggleSubscriber(destination, openings, closingSelector) {
-        var _this150;
+        var _this206;
 
         _classCallCheck(this, WindowToggleSubscriber);
 
-        _this150 = _possibleConstructorReturn(this, _getPrototypeOf(WindowToggleSubscriber).call(this, destination));
-        _this150.openings = openings;
-        _this150.closingSelector = closingSelector;
-        _this150.contexts = [];
+        _this206 = _possibleConstructorReturn(this, _getPrototypeOf(WindowToggleSubscriber).call(this, destination));
+        _this206.openings = openings;
+        _this206.closingSelector = closingSelector;
+        _this206.contexts = [];
 
-        _this150.add(_this150.openSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_3__["subscribeToResult"])(_assertThisInitialized(_this150), openings, openings));
+        _this206.add(_this206.openSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_3__["subscribeToResult"])(_assertThisInitialized(_this206), openings, openings));
 
-        return _this150;
+        return _this206;
       }
 
       _createClass2(WindowToggleSubscriber, [{
@@ -90241,9 +105098,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var contexts = this.contexts;
 
           if (contexts) {
-            var _len42 = contexts.length;
+            var _len44 = contexts.length;
 
-            for (var i = 0; i < _len42; i++) {
+            for (var i = 0; i < _len44; i++) {
               contexts[i].window.next(value);
             }
           }
@@ -90255,10 +105112,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.contexts = null;
 
           if (contexts) {
-            var _len43 = contexts.length;
+            var _len45 = contexts.length;
             var index = -1;
 
-            while (++index < _len43) {
+            while (++index < _len45) {
               var context = contexts[index];
               context.window.error(err);
               context.subscription.unsubscribe();
@@ -90274,10 +105131,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.contexts = null;
 
           if (contexts) {
-            var _len44 = contexts.length;
+            var _len46 = contexts.length;
             var index = -1;
 
-            while (++index < _len44) {
+            while (++index < _len46) {
               var context = contexts[index];
               context.window.complete();
               context.subscription.unsubscribe();
@@ -90293,10 +105150,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.contexts = null;
 
           if (contexts) {
-            var _len45 = contexts.length;
+            var _len47 = contexts.length;
             var index = -1;
 
-            while (++index < _len45) {
+            while (++index < _len47) {
               var context = contexts[index];
               context.window.unsubscribe();
               context.subscription.unsubscribe();
@@ -90443,17 +105300,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(WindowSubscriber, _OuterSubscriber__WEB28);
 
       function WindowSubscriber(destination, closingSelector) {
-        var _this151;
+        var _this207;
 
         _classCallCheck(this, WindowSubscriber);
 
-        _this151 = _possibleConstructorReturn(this, _getPrototypeOf(WindowSubscriber).call(this, destination));
-        _this151.destination = destination;
-        _this151.closingSelector = closingSelector;
+        _this207 = _possibleConstructorReturn(this, _getPrototypeOf(WindowSubscriber).call(this, destination));
+        _this207.destination = destination;
+        _this207.closingSelector = closingSelector;
 
-        _this151.openWindow();
+        _this207.openWindow();
 
-        return _this151;
+        return _this207;
       }
 
       _createClass2(WindowSubscriber, [{
@@ -90570,8 +105427,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/util/subscribeToResult.js");
 
     function withLatestFrom() {
-      for (var _len46 = arguments.length, args = new Array(_len46), _key39 = 0; _key39 < _len46; _key39++) {
-        args[_key39] = arguments[_key39];
+      for (var _len48 = arguments.length, args = new Array(_len48), _key42 = 0; _key42 < _len48; _key42++) {
+        args[_key42] = arguments[_key42];
       }
 
       return function (source) {
@@ -90612,28 +105469,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(WithLatestFromSubscriber, _OuterSubscriber__WEB29);
 
       function WithLatestFromSubscriber(destination, observables, project) {
-        var _this152;
+        var _this208;
 
         _classCallCheck(this, WithLatestFromSubscriber);
 
-        _this152 = _possibleConstructorReturn(this, _getPrototypeOf(WithLatestFromSubscriber).call(this, destination));
-        _this152.observables = observables;
-        _this152.project = project;
-        _this152.toRespond = [];
+        _this208 = _possibleConstructorReturn(this, _getPrototypeOf(WithLatestFromSubscriber).call(this, destination));
+        _this208.observables = observables;
+        _this208.project = project;
+        _this208.toRespond = [];
         var len = observables.length;
-        _this152.values = new Array(len);
+        _this208.values = new Array(len);
 
         for (var i = 0; i < len; i++) {
-          _this152.toRespond.push(i);
+          _this208.toRespond.push(i);
         }
 
-        for (var _i21 = 0; _i21 < len; _i21++) {
-          var observable = observables[_i21];
+        for (var _i27 = 0; _i27 < len; _i27++) {
+          var observable = observables[_i27];
 
-          _this152.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this152), observable, observable, _i21));
+          _this208.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this208), observable, observable, _i27));
         }
 
-        return _this152;
+        return _this208;
       }
 
       _createClass2(WithLatestFromSubscriber, [{
@@ -90716,8 +105573,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/zip.js");
 
     function zip() {
-      for (var _len47 = arguments.length, observables = new Array(_len47), _key40 = 0; _key40 < _len47; _key40++) {
-        observables[_key40] = arguments[_key40];
+      for (var _len49 = arguments.length, observables = new Array(_len49), _key43 = 0; _key43 < _len49; _key43++) {
+        observables[_key43] = arguments[_key43];
       }
 
       return function zipOperatorFunction(source) {
@@ -91206,14 +106063,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(AnimationFrameAction, _AsyncAction__WEBPACK);
 
       function AnimationFrameAction(scheduler, work) {
-        var _this153;
+        var _this209;
 
         _classCallCheck(this, AnimationFrameAction);
 
-        _this153 = _possibleConstructorReturn(this, _getPrototypeOf(AnimationFrameAction).call(this, scheduler, work));
-        _this153.scheduler = scheduler;
-        _this153.work = work;
-        return _this153;
+        _this209 = _possibleConstructorReturn(this, _getPrototypeOf(AnimationFrameAction).call(this, scheduler, work));
+        _this209.scheduler = scheduler;
+        _this209.work = work;
+        return _this209;
       }
 
       _createClass2(AnimationFrameAction, [{
@@ -91366,14 +106223,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(AsapAction, _AsyncAction__WEBPACK2);
 
       function AsapAction(scheduler, work) {
-        var _this154;
+        var _this210;
 
         _classCallCheck(this, AsapAction);
 
-        _this154 = _possibleConstructorReturn(this, _getPrototypeOf(AsapAction).call(this, scheduler, work));
-        _this154.scheduler = scheduler;
-        _this154.work = work;
-        return _this154;
+        _this210 = _possibleConstructorReturn(this, _getPrototypeOf(AsapAction).call(this, scheduler, work));
+        _this210.scheduler = scheduler;
+        _this210.work = work;
+        return _this210;
       }
 
       _createClass2(AsapAction, [{
@@ -91519,15 +106376,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(AsyncAction, _Action__WEBPACK_IMPO);
 
       function AsyncAction(scheduler, work) {
-        var _this155;
+        var _this211;
 
         _classCallCheck(this, AsyncAction);
 
-        _this155 = _possibleConstructorReturn(this, _getPrototypeOf(AsyncAction).call(this, scheduler, work));
-        _this155.scheduler = scheduler;
-        _this155.work = work;
-        _this155.pending = false;
-        return _this155;
+        _this211 = _possibleConstructorReturn(this, _getPrototypeOf(AsyncAction).call(this, scheduler, work));
+        _this211.scheduler = scheduler;
+        _this211.work = work;
+        _this211.pending = false;
+        return _this211;
       }
 
       _createClass2(AsyncAction, [{
@@ -91668,23 +106525,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(AsyncScheduler, _Scheduler__WEBPACK_I);
 
       function AsyncScheduler(SchedulerAction) {
-        var _this156;
+        var _this212;
 
         var now = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _Scheduler__WEBPACK_IMPORTED_MODULE_0__["Scheduler"].now;
 
         _classCallCheck(this, AsyncScheduler);
 
-        _this156 = _possibleConstructorReturn(this, _getPrototypeOf(AsyncScheduler).call(this, SchedulerAction, function () {
-          if (AsyncScheduler.delegate && AsyncScheduler.delegate !== _assertThisInitialized(_this156)) {
+        _this212 = _possibleConstructorReturn(this, _getPrototypeOf(AsyncScheduler).call(this, SchedulerAction, function () {
+          if (AsyncScheduler.delegate && AsyncScheduler.delegate !== _assertThisInitialized(_this212)) {
             return AsyncScheduler.delegate.now();
           } else {
             return now();
           }
         }));
-        _this156.actions = [];
-        _this156.active = false;
-        _this156.scheduled = undefined;
-        return _this156;
+        _this212.actions = [];
+        _this212.active = false;
+        _this212.scheduled = undefined;
+        return _this212;
       }
 
       _createClass2(AsyncScheduler, [{
@@ -91769,14 +106626,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(QueueAction, _AsyncAction__WEBPACK3);
 
       function QueueAction(scheduler, work) {
-        var _this157;
+        var _this213;
 
         _classCallCheck(this, QueueAction);
 
-        _this157 = _possibleConstructorReturn(this, _getPrototypeOf(QueueAction).call(this, scheduler, work));
-        _this157.scheduler = scheduler;
-        _this157.work = work;
-        return _this157;
+        _this213 = _possibleConstructorReturn(this, _getPrototypeOf(QueueAction).call(this, scheduler, work));
+        _this213.scheduler = scheduler;
+        _this213.work = work;
+        return _this213;
       }
 
       _createClass2(QueueAction, [{
@@ -91906,20 +106763,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(VirtualTimeScheduler, _AsyncScheduler__WEBP4);
 
       function VirtualTimeScheduler() {
-        var _this158;
+        var _this214;
 
         var SchedulerAction = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : VirtualAction;
         var maxFrames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Number.POSITIVE_INFINITY;
 
         _classCallCheck(this, VirtualTimeScheduler);
 
-        _this158 = _possibleConstructorReturn(this, _getPrototypeOf(VirtualTimeScheduler).call(this, SchedulerAction, function () {
-          return _this158.frame;
+        _this214 = _possibleConstructorReturn(this, _getPrototypeOf(VirtualTimeScheduler).call(this, SchedulerAction, function () {
+          return _this214.frame;
         }));
-        _this158.maxFrames = maxFrames;
-        _this158.frame = 0;
-        _this158.index = -1;
-        return _this158;
+        _this214.maxFrames = maxFrames;
+        _this214.frame = 0;
+        _this214.index = -1;
+        return _this214;
       }
 
       _createClass2(VirtualTimeScheduler, [{
@@ -91959,19 +106816,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _inherits(VirtualAction, _AsyncAction__WEBPACK4);
 
       function VirtualAction(scheduler, work) {
-        var _this159;
+        var _this215;
 
         var index = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : scheduler.index += 1;
 
         _classCallCheck(this, VirtualAction);
 
-        _this159 = _possibleConstructorReturn(this, _getPrototypeOf(VirtualAction).call(this, scheduler, work));
-        _this159.scheduler = scheduler;
-        _this159.work = work;
-        _this159.index = index;
-        _this159.active = true;
-        _this159.index = scheduler.index = index;
-        return _this159;
+        _this215 = _possibleConstructorReturn(this, _getPrototypeOf(VirtualAction).call(this, scheduler, work));
+        _this215.scheduler = scheduler;
+        _this215.work = work;
+        _this215.index = index;
+        _this215.active = true;
+        _this215.index = scheduler.index = index;
+        return _this215;
       }
 
       _createClass2(VirtualAction, [{
@@ -93081,8 +107938,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/util/noop.js");
 
     function pipe() {
-      for (var _len48 = arguments.length, fns = new Array(_len48), _key41 = 0; _key41 < _len48; _key41++) {
-        fns[_key41] = arguments[_key41];
+      for (var _len50 = arguments.length, fns = new Array(_len50), _key44 = 0; _key44 < _len50; _key44++) {
+        fns[_key44] = arguments[_key44];
       }
 
       return pipeFromArray(fns);
@@ -93224,7 +108081,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var subscribeToArray = function subscribeToArray(array) {
       return function (subscriber) {
-        for (var i = 0, _len49 = array.length; i < _len49 && !subscriber.closed; i++) {
+        for (var i = 0, _len51 = array.length; i < _len51 && !subscriber.closed; i++) {
           subscriber.next(array[i]);
         }
 
