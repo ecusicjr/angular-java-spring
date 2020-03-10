@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   getQuestions() {
     this.api.getQuestions()
       .subscribe(data => {
-        console.log(data);
+        this.questions = data['content'];
       });
   }
 }
