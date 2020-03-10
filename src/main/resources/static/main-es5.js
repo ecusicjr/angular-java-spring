@@ -318,7 +318,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }
       },
       directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_2__["MatToolbar"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"]],
-      styles: [".question[_ngcontent-%COMP%] {\n    padding: 15px;\n}\n\n.question[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n    list-style: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0FBQ2pCOztBQUVBO0lBQ0ksZ0JBQWdCO0FBQ3BCIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucXVlc3Rpb24ge1xuICAgIHBhZGRpbmc6IDE1cHg7XG59XG5cbi5xdWVzdGlvbiBsaSB7XG4gICAgbGlzdC1zdHlsZTogbm9uZTtcbn0iXX0= */"]
+      styles: [".question[_ngcontent-%COMP%] {\n    padding: 15px;\n}\n\n.question[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n    list-style-type: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0FBQ2pCOztBQUVBO0lBQ0kscUJBQXFCO0FBQ3pCIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucXVlc3Rpb24ge1xuICAgIHBhZGRpbmc6IDE1cHg7XG59XG5cbi5xdWVzdGlvbiBsaSB7XG4gICAgbGlzdC1zdHlsZS10eXBlOiBub25lO1xufSJdfQ== */"]
     });
     /*@__PURE__*/
 
