@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from './api.service';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,28 @@ import { ApiService } from './api.service';
 export class AppComponent implements OnInit {
   title = 'Questions and Answers';
   questions: any = [];
+  myForm: FormGroup;
 
-  constructor(private api: ApiService) {}
+  constructor(private api: ApiService, public fb: FormBuilder) {}
 
   ngOnInit() {
+    this.reactiveForm();
     this.getQuestions();
+  }
+
+  reactiveForm() {
+    this.myForm = this.fb.group({
+      question: ['', [Validators.required]],
+      answer: ['', [Validators.required]],
+    });
+  }
+
+  public errorHandling = (control: string, error: string) => {
+    return this.myForm.controls[control].hasError(error);
+  }
+
+  submitForm() {
+    console.log(this.myForm.value);
   }
 
   getQuestions() {

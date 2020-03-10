@@ -1,6 +1,27 @@
 <mat-toolbar>
   <span>{{ title }}</span>
 </mat-toolbar>
+<form [formGroup]="myForm" (ngSubmit)="submitForm()" novalidate>
+
+  <mat-form-field>
+    <input matInput placeholder="Question" formControlName="question">
+    <mat-error *ngIf="errorHandling('question', 'required')">
+      You must provide a <strong>question</strong>.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Answer" formControlName="answer">
+    <mat-error *ngIf="errorHandling('answer', 'required')">
+      You must provide an <strong>answer</strong>.
+    </mat-error>
+  </mat-form-field>
+
+  <div class="button-wrapper">
+    <button mat-flat-button color="primary">Add</button>
+  </div>
+
+</form>
 <div [className]="'question'" *ngFor="let question of questions">
   Q: {{ question.title }}
   <ul>
